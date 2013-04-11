@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="drone_blue_dead.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-962.14286"
+     inkscape:cy="520"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1304"
+     inkscape:window-height="746"
+     inkscape:window-x="54"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       sodipodi:type="arc"
+       style="fill:#48c7e7;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.19999980999999960;stroke-miterlimit:2;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;opacity:0.25"
+       id="path2985"
+       sodipodi:cx="380"
+       sodipodi:cy="429.50504"
+       sodipodi:rx="228.57143"
+       sodipodi:ry="228.57143"
+       d="m 608.57143,429.50504 a 228.57143,228.57143 0 1 1 -457.14286,0 228.57143,228.57143 0 1 1 457.14286,0 z"
+       inkscape:export-filename="C:\Users\benzap\Documents\Visual Studio 2012\Projects\armyBattle\images\drone_blue_dead.png"
+       inkscape:export-xdpi="19.687498"
+       inkscape:export-ydpi="19.687498" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.19999980999999960;stroke-miterlimit:2;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;opacity:0.25"
+       d="M 448.65625 324.3125 C 439.89576 324.56348 431.23918 328.15745 424.71875 335.0625 L 379.3125 383.125 L 335.28125 336.5 C 322.24039 322.6899 300.6226 322.08414 286.8125 335.125 C 273.0024 348.16586 272.39664 369.78365 285.4375 383.59375 L 332.15625 433.0625 L 285.4375 482.5625 C 272.39664 496.3726 273.0024 517.99039 286.8125 531.03125 C 300.6226 544.07211 322.24039 543.46635 335.28125 529.65625 L 379.34375 483 L 424.71875 531.0625 C 437.75961 544.8726 459.3774 545.50961 473.1875 532.46875 C 486.9976 519.42789 487.60336 497.8101 474.5625 484 L 426.46875 433.0625 L 474.5625 382.15625 C 487.60336 368.34615 486.9976 346.72836 473.1875 333.6875 C 466.28245 327.16707 457.41674 324.06152 448.65625 324.3125 z "
+       id="rect3755"
+       inkscape:export-filename="C:\Users\benzap\Documents\Visual Studio 2012\Projects\armyBattle\images\drone_blue_dead.png"
+       inkscape:export-xdpi="19.687498"
+       inkscape:export-ydpi="19.687498" />
+  </g>
+</svg>
