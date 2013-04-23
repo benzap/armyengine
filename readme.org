@@ -1,0 +1,50 @@
+* About
+  
+  ArmyEngine was written to be simple and modular, and was developed
+  in order to get a better understanding of design principles behind
+  game design.
+
+  The basic game design pattern used to develop this engine was the
+  Entity-Component-System pattern. The full approach is outlined in
+  this article [[http://piemaster.net/2011/07/entity-component-artemis/]]
+
+  For a basic understanding, the engine consists of entities, and
+  these entities are assigned components that describe what those
+  entities can do.
+
+* License
+  
+  Copyright (C) 2013  Benjamin Zaporzan
+  
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see [[http://www.gnu.org/licenses/]].
+
+* Installation
+  
+  Compiling requires Visual Studio 2012 (VS11)
+
+  Choose to configure for Release and compile. Several Examples can be
+  found in ./UnitTests/ with Test_ArmyEngine and Test_ArmyEngine2
+  being the most sophisticated.
+
+* Documentation
+
+  Documentation is coming soon
+
+* Upcoming Changes
+
+  - Physics Component with Physics System
+
+  - Refactoring Event System
+
+  - Optimizing Collision System and Sprite System
