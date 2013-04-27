@@ -39,7 +39,9 @@
 
 * Documentation
 
-  Documentation is coming soon
+  Documentation can be found at [[./docs/latex/refman.pdf]]
+  
+  Their is also an html site available at ./docs/html/
 
 * Upcoming Changes
 
