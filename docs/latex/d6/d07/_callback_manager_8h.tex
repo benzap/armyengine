@@ -1,0 +1,50 @@
+\hypertarget{_callback_manager_8h}{\section{Callback\-Manager.\-h File Reference}
+\label{d6/d07/_callback_manager_8h}\index{Callback\-Manager.\-h@{Callback\-Manager.\-h}}
+}
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$functional$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_callback_manager}{Callback\-Manager}
+\begin{DoxyCompactList}\small\item\em The callback manager is used to store and retrieve callbacks. \end{DoxyCompactList}\item 
+class \hyperlink{class_callback_function_wrapper}{Callback\-Function\-Wrapper}
+\begin{DoxyCompactList}\small\item\em Wrapper to store varying functions as one function type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_callback_manager_8h_afb6653b2315b76a8dcbae52ed1be8b8f}{typedef std\-::function$<$ int(void)$>$ \hyperlink{_callback_manager_8h_afb6653b2315b76a8dcbae52ed1be8b8f}{function\-Base\-Template}}\label{d6/d07/_callback_manager_8h_afb6653b2315b76a8dcbae52ed1be8b8f}
+
+\begin{DoxyCompactList}\small\item\em Template for a function callback with no parameters. \end{DoxyCompactList}\item 
+\hypertarget{_callback_manager_8h_a73a0c6254a0b5ab661ca1f3bd5f3d99c}{typedef std\-::function$<$ int(int)$>$ \hyperlink{_callback_manager_8h_a73a0c6254a0b5ab661ca1f3bd5f3d99c}{function\-Template}}\label{d6/d07/_callback_manager_8h_a73a0c6254a0b5ab661ca1f3bd5f3d99c}
+
+\begin{DoxyCompactList}\small\item\em Template for a function callback with one parameter. \end{DoxyCompactList}\item 
+\hypertarget{_callback_manager_8h_a3459e948765053b6cb9e3b0b5efb5906}{typedef std\-::function$<$ int(int, \\*
+int)$>$ \hyperlink{_callback_manager_8h_a3459e948765053b6cb9e3b0b5efb5906}{function\-Event\-Template}}\label{d6/d07/_callback_manager_8h_a3459e948765053b6cb9e3b0b5efb5906}
+
+\begin{DoxyCompactList}\small\item\em Template for a function callback with two parameters. \end{DoxyCompactList}\item 
+\hypertarget{_callback_manager_8h_a02157da2afdd895e55a8749149588e44}{typedef std\-::map$<$ std\-::string, \\*
+\hyperlink{_callback_manager_8h_a3459e948765053b6cb9e3b0b5efb5906}{function\-Event\-Template} $>$ \hyperlink{_callback_manager_8h_a02157da2afdd895e55a8749149588e44}{callback\-Map\-Type}}\label{d6/d07/_callback_manager_8h_a02157da2afdd895e55a8749149588e44}
+
+\begin{DoxyCompactList}\small\item\em Type used to store the list of callbacks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Benjamin Zaporzan \href{mailto:benzaporzan@gmail.com}{\tt benzaporzan@gmail.\-com}
+\end{DoxyAuthor}
+\hypertarget{d5/d67/_texture_manager_8h_LICENSE}{}\subsection{L\-I\-C\-E\-N\-S\-E}\label{d5/d67/_texture_manager_8h_LICENSE}
+Copyright (C) 2013 Benjamin Zaporzan
+
+This program is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \mbox{[}\mbox{[}\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}\mbox{]}\mbox{]}.\hypertarget{d5/d67/_texture_manager_8h_DESCRIPTION}{}\subsection{D\-E\-S\-C\-R\-I\-P\-T\-I\-O\-N}\label{d5/d67/_texture_manager_8h_DESCRIPTION}
+The callback manager contains lists of functions which are used as callbacks to components stored within the entities. It includes one parameter, which is the entities current I\-D the function must also return '0' in order to determine whether it was successful
+
+Given the design of the engine, the callback has full access to all of the managers, and is able to identify the entity it is contained in by the given I\-D, which makes it very flexible.
+
+Function Wrapper is used to wrap functions which contain only one parameter It wraps it into a function which can take two parameters and discards the second parameter. 

@@ -1,0 +1,189 @@
+\hypertarget{class_text_component}{\section{Text\-Component Class Reference}
+\label{d9/dde/class_text_component}\index{Text\-Component@{Text\-Component}}
+}
+
+
+{\ttfamily \#include $<$Text\-Component.\-h$>$}
+
+Inheritance diagram for Text\-Component\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d9/dde/class_text_component}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_text_component_ac58d01b01cc22d742cc32822510f3585}{Text\-Component} (std\-::string name)
+\begin{DoxyCompactList}\small\item\em Text component constructor. \end{DoxyCompactList}\item 
+int \hyperlink{class_text_component_a0157702090c5ab75071448dfefb7196e}{update} ()
+\begin{DoxyCompactList}\small\item\em Updates the component to include any modifications. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The text component inherits the abstract component, and is used to show text on the screen. Different attributes assigned change how the text is displayed. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_text_component_ac58d01b01cc22d742cc32822510f3585}{\index{Text\-Component@{Text\-Component}!Text\-Component@{Text\-Component}}
+\index{Text\-Component@{Text\-Component}!TextComponent@{Text\-Component}}
+\subsubsection[{Text\-Component}]{\setlength{\rightskip}{0pt plus 5cm}Text\-Component\-::\-Text\-Component (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{d9/dde/class_text_component_ac58d01b01cc22d742cc32822510f3585}
+
+
+Text component constructor. 
+
+The text component overrides the abstract component family to be \char`\"{}\-Text\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name assigned to the given text component. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+9                                            : 
+10     \hyperlink{class_abstract_component_ab08b845eddbdbe411b95a5385501ab97}{AbstractComponent}(name, \textcolor{stringliteral}{"Text"}) \{
+11 
+12     std::string keyname = name + std::to\_string(reinterpret\_cast<int>(\textcolor{keyword}{this}));
+13     \textcolor{comment}{//unique keyname for our referenced text object}
+14 
+15     \textcolor{comment}{//need to create our text object and place it within the text manager}
+16     \textcolor{keyword}{auto} textManager = \hyperlink{class_text_manager_abf9e79079b6ccf917b3cd3a100c7e7bb}{TextManager::getInstance}();
+17     textManager->addText(keyname, std::shared\_ptr<sf::Text> (\textcolor{keyword}{new} sf::Text()));
+18 
+19 
+20     \textcolor{comment}{//***********************************}
+21     \textcolor{comment}{//********** ATTRIBUTES *************}
+22     \textcolor{comment}{//***********************************}
+23     
+24     \textcolor{comment}{//the keyname is stored as an attribute for later retrieval}
+25     \hyperlink{class_abstract_component_a702ec2cc2624561ef51afcd9c8061fd2}{setAttribute\_string}(\hyperlink{_a_e___attributes_8h_a38d48cad306c55d90faa362aa5023de8}{ATTRIBUTE\_KEYNAME}, keyname);
+26 
+27     \textcolor{comment}{//Determines whether the given shape should be shown}
+28         \textcolor{comment}{//0 - disable}
+29         \textcolor{comment}{//1 - enable}
+30     \hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{setAttribute\_int}(\hyperlink{_a_e___attributes_8h_a4c775095baf8a9c99621ad9ad3b622db}{ATTRIBUTE\_ENABLE}, 1);
+31 
+32     \textcolor{comment}{//Text string to show on the screen}
+33     \hyperlink{class_abstract_component_a702ec2cc2624561ef51afcd9c8061fd2}{setAttribute\_string}(\hyperlink{_a_e___attributes_8h_a4d13d9bfe85868610a12fb7b392ff417}{ATTRIBUTE\_TEXT\_STRING}, 
+      \hyperlink{_a_e___attributes_8h_a64d322f8d0170e703ae53c4a39131ee0}{DEFAULT\_TEXT\_STRING});
+34 
+35     \textcolor{comment}{//Text string font}
+36     \hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{setAttribute\_int}(\hyperlink{_a_e___attributes_8h_a70c9ec177cd9577d55d0a6a80d1f42df}{ATTRIBUTE\_TEXT\_SIZE}, 30);
+37     \hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{setAttribute\_int}(\hyperlink{_a_e___attributes_8h_a918ec55de79782adea7bdd8c15f4e4ea}{ATTRIBUTE\_TEXT\_STYLE\_UNDERLINE}, 0);
+38     \hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{setAttribute\_int}(\hyperlink{_a_e___attributes_8h_a1d58f347df93f4aa7a658a90b6762917}{ATTRIBUTE\_TEXT\_STYLE\_BOLD}, 0);
+39     \hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{setAttribute\_int}(\hyperlink{_a_e___attributes_8h_a3393f6b47bd2b686269135c1fa532216}{ATTRIBUTE\_TEXT\_STYLE\_ITALIC}, 0);
+40     \hyperlink{class_abstract_component_a702ec2cc2624561ef51afcd9c8061fd2}{setAttribute\_string}(\hyperlink{_a_e___attributes_8h_a13b5d39e16142e79a137e0377f0f56cf}{ATTRIBUTE\_TEXT\_FONT}, 
+      \hyperlink{_text_manager_8h_a0502f8673f5b0a113d593b9a84f5f775}{DEFAULT\_FONT});
+41 
+42     \textcolor{comment}{//The text fill color}
+43     \hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{setAttribute\_int}(\hyperlink{_a_e___attributes_8h_a3725edfd1b846140eb49aa34b027b2cb}{ATTRIBUTE\_FILL\_COLOR\_RED}, 255);
+44     \hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{setAttribute\_int}(\hyperlink{_a_e___attributes_8h_a44093150b0166936e44f0748babd201c}{ATTRIBUTE\_FILL\_COLOR\_GREEN}, 255);
+45     \hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{setAttribute\_int}(\hyperlink{_a_e___attributes_8h_a7c1ee03e64d7b6dd251b709f0130cc62}{ATTRIBUTE\_FILL\_COLOR\_BLUE}, 255);
+46     \hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{setAttribute\_int}(\hyperlink{_a_e___attributes_8h_a66939dddc263c09ff273450168b31918}{ATTRIBUTE\_FILL\_COLOR\_ALPHA}, 255);
+47 
+48     \textcolor{comment}{//Related Sprite attributes}
+49     \textcolor{comment}{//This provides the offset of the collision bound from its origin within the X and Y direction}
+50     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_aa003b6ad3f43053c9d43e1acc0098691}{ATTRIBUTE\_OFFSET\_X}, 0.0);
+51     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_a8ebf91b8ee9dfdfad18bc10c3c42d564}{ATTRIBUTE\_OFFSET\_Y}, 0.0);
+52 
+53     \textcolor{comment}{//This provides the origin, or center point where rotation and the point of positioning is determined}
+54     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_a5c5a5ae3ea4130db3dfd08029a17a17c}{ATTRIBUTE\_ORIGIN\_X}, 0.0);
+55     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_af45315d7cdc2f4ecdb28d0a9d6bb15c7}{ATTRIBUTE\_ORIGIN\_Y}, 0.0);
+56 
+57     \textcolor{comment}{//Provides the depth of the sprite, lower means farther away, which means it}
+58         \textcolor{comment}{//will be covered by anything with a higher z-buffer \{ex A(0.1) covers B(0.0)\}}
+59     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_af11539bb711833d6321aaccd369e9e4b}{ATTRIBUTE\_ZBUFFER}, 1.0);
+60 
+61     \textcolor{comment}{//The scale of the sprite being used}
+62         \textcolor{comment}{//relative to the position component}
+63     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_a8104e81b9e1e7fd7e21f1f5f850ca636}{ATTRIBUTE\_SCALE\_X}, 1.0);
+64     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_aa800ca9799c1b216f086becf36509ea5}{ATTRIBUTE\_SCALE\_Y}, 1.0);
+65 
+66     \textcolor{comment}{//Determines the rotation of the sprite}
+67         \textcolor{comment}{//relative to a given position component}
+68         \textcolor{comment}{//given in radians}
+69     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_a70254d936ce8b3662e1a7472c36832d5}{ATTRIBUTE\_ROTATION}, 0.0);
+70 
+71     \textcolor{comment}{//After all of the attributes are added, we perform an update to push}
+72     \textcolor{comment}{//  all of our defaults onto the text instance}
+73     this->\hyperlink{class_text_component_a0157702090c5ab75071448dfefb7196e}{update}();
+74 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_text_component_a0157702090c5ab75071448dfefb7196e}{\index{Text\-Component@{Text\-Component}!update@{update}}
+\index{update@{update}!TextComponent@{Text\-Component}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}int Text\-Component\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{d9/dde/class_text_component_a0157702090c5ab75071448dfefb7196e}
+
+
+Updates the component to include any modifications. 
+
+The text component update command needs to be called anytime an attribute is modified.
+
+\begin{DoxyReturn}{Returns}
+A zero value when it is successful. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_abstract_component_a35c9cab4e3845a947609b6ada8dc89cf}{Abstract\-Component}.
+
+
+\begin{DoxyCode}
+76                           \{
+77     \textcolor{keyword}{auto} textManager = \hyperlink{class_text_manager_abf9e79079b6ccf917b3cd3a100c7e7bb}{TextManager::getInstance}();
+78     \textcolor{keyword}{auto} theText = textManager->getText(\hyperlink{class_abstract_component_a4140957094ef40c4ffaa0ef381d00ce5}{getAttribute\_string}(
+      \hyperlink{_a_e___attributes_8h_a38d48cad306c55d90faa362aa5023de8}{ATTRIBUTE\_KEYNAME}));
+79 
+80     \textcolor{comment}{//set the string to display}
+81     theText->setString(\hyperlink{class_abstract_component_a4140957094ef40c4ffaa0ef381d00ce5}{getAttribute\_string}(
+      \hyperlink{_a_e___attributes_8h_a4d13d9bfe85868610a12fb7b392ff417}{ATTRIBUTE\_TEXT\_STRING}));
+82 
+83     \textcolor{comment}{//set the character size}
+84     theText->setCharacterSize(\hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(
+      \hyperlink{_a_e___attributes_8h_a70c9ec177cd9577d55d0a6a80d1f42df}{ATTRIBUTE\_TEXT\_SIZE}));
+85 
+86     \textcolor{comment}{//set the text style}
+87     \textcolor{keywordtype}{int} textAttributes = (\hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(
+      \hyperlink{_a_e___attributes_8h_a1d58f347df93f4aa7a658a90b6762917}{ATTRIBUTE\_TEXT\_STYLE\_BOLD})) ?
+88         sf::Text::Bold : 0;
+89     textAttributes |= (\hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(
+      \hyperlink{_a_e___attributes_8h_a3393f6b47bd2b686269135c1fa532216}{ATTRIBUTE\_TEXT\_STYLE\_ITALIC})) ?
+90         sf::Text::Italic : 0;
+91     textAttributes |= (\hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(
+      \hyperlink{_a_e___attributes_8h_a918ec55de79782adea7bdd8c15f4e4ea}{ATTRIBUTE\_TEXT\_STYLE\_UNDERLINE})) ?
+92         sf::Text::Underlined : 0;
+93     theText->setStyle(textAttributes);
+94 
+95     \textcolor{comment}{//check and set our font}
+96     \textcolor{keywordflow}{if} (textManager->hasFont(\hyperlink{class_abstract_component_a4140957094ef40c4ffaa0ef381d00ce5}{getAttribute\_string}(
+      \hyperlink{_a_e___attributes_8h_a13b5d39e16142e79a137e0377f0f56cf}{ATTRIBUTE\_TEXT\_FONT}))) \{
+97         theText->setFont(*(textManager->getFont(\hyperlink{class_abstract_component_a4140957094ef40c4ffaa0ef381d00ce5}{getAttribute\_string}(
+      \hyperlink{_a_e___attributes_8h_a13b5d39e16142e79a137e0377f0f56cf}{ATTRIBUTE\_TEXT\_FONT}))));
+98     \}
+99 
+100     \textcolor{comment}{//set our text color}
+101     theText->setColor(
+102         sf::Color(
+103             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a3725edfd1b846140eb49aa34b027b2cb}{ATTRIBUTE\_FILL\_COLOR\_RED}),
+104             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a44093150b0166936e44f0748babd201c}{ATTRIBUTE\_FILL\_COLOR\_GREEN}),
+105             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a7c1ee03e64d7b6dd251b709f0130cc62}{ATTRIBUTE\_FILL\_COLOR\_BLUE}),
+106             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a66939dddc263c09ff273450168b31918}{ATTRIBUTE\_FILL\_COLOR\_ALPHA}))
+107     );
+108 
+109     \textcolor{keywordflow}{return} 0;
+110 \}\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_text_component_8h}{Text\-Component.\-h}\item 
+Text\-Component.\-cpp\end{DoxyCompactItemize}

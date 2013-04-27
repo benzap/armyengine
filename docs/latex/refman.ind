@@ -1,0 +1,504 @@
+\begin{theindex}
+
+  \item {A\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Attributes.\discretionary {-}{}{}h}, 
+		\hyperpage{74}
+  \item {A\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Events.\discretionary {-}{}{}h}, 
+		\hyperpage{78}
+  \item {A\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Utilities.\discretionary {-}{}{}h}, 
+		\hyperpage{79}
+    \subitem {check\discretionary {-}{}{}Polygon\discretionary {-}{}{}Line\discretionary {-}{}{}Intersections}, 
+		\hyperpage{80}
+    \subitem {Cross}, \hyperpage{80}
+    \subitem {Dot}, \hyperpage{81}
+    \subitem {point\discretionary {-}{}{}In\discretionary {-}{}{}Polygon}, 
+		\hyperpage{81}
+    \subitem {Test2\discretionary {-}{}{}D\discretionary {-}{}{}Line\discretionary {-}{}{}Intersection}, 
+		\hyperpage{82}
+    \subitem {triangle2\discretionary {-}{}{}D\discretionary {-}{}{}Area}, 
+		\hyperpage{83}
+    \subitem {triangle\discretionary {-}{}{}Is\discretionary {-}{}{}C\discretionary {-}{}{}C\discretionary {-}{}{}W}, 
+		\hyperpage{83}
+  \item {A\discretionary {-}{}{}T\discretionary {-}{}{}T\discretionary {-}{}{}R\discretionary {-}{}{}I\discretionary {-}{}{}B\discretionary {-}{}{}U\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}C\discretionary {-}{}{}R\discretionary {-}{}{}E\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}D}
+    \subitem {A\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Attributes.\discretionary {-}{}{}h}, 
+		\hyperpage{77}
+  \item {A\discretionary {-}{}{}T\discretionary {-}{}{}T\discretionary {-}{}{}R\discretionary {-}{}{}I\discretionary {-}{}{}B\discretionary {-}{}{}U\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}K\discretionary {-}{}{}E\discretionary {-}{}{}Y\discretionary {-}{}{}N\discretionary {-}{}{}A\discretionary {-}{}{}M\discretionary {-}{}{}E}
+    \subitem {A\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Attributes.\discretionary {-}{}{}h}, 
+		\hyperpage{77}
+  \item {A\discretionary {-}{}{}T\discretionary {-}{}{}T\discretionary {-}{}{}R\discretionary {-}{}{}I\discretionary {-}{}{}B\discretionary {-}{}{}U\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Z\discretionary {-}{}{}B\discretionary {-}{}{}U\discretionary {-}{}{}F\discretionary {-}{}{}F\discretionary {-}{}{}E\discretionary {-}{}{}R}
+    \subitem {A\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Attributes.\discretionary {-}{}{}h}, 
+		\hyperpage{78}
+  \item {Abstract\discretionary {-}{}{}Component}, \hyperpage{7}
+    \subitem {get\discretionary {-}{}{}Attribute}, \hyperpage{8}
+    \subitem {get\discretionary {-}{}{}Attribute\discretionary {-}{}{}\_\discretionary {-}{}{}float}, 
+		\hyperpage{9}
+    \subitem {get\discretionary {-}{}{}Attribute\discretionary {-}{}{}\_\discretionary {-}{}{}float\discretionary {-}{}{}Array}, 
+		\hyperpage{9}
+    \subitem {get\discretionary {-}{}{}Attribute\discretionary {-}{}{}\_\discretionary {-}{}{}int}, 
+		\hyperpage{9}
+    \subitem {get\discretionary {-}{}{}Attribute\discretionary {-}{}{}\_\discretionary {-}{}{}int\discretionary {-}{}{}Array}, 
+		\hyperpage{10}
+    \subitem {get\discretionary {-}{}{}Attribute\discretionary {-}{}{}\_\discretionary {-}{}{}string}, 
+		\hyperpage{10}
+    \subitem {get\discretionary {-}{}{}Attribute\discretionary {-}{}{}Type}, 
+		\hyperpage{10}
+    \subitem {get\discretionary {-}{}{}Name}, \hyperpage{11}
+    \subitem {has\discretionary {-}{}{}Attribute}, \hyperpage{11}
+    \subitem {set\discretionary {-}{}{}Attribute\discretionary {-}{}{}\_\discretionary {-}{}{}float}, 
+		\hyperpage{11}
+    \subitem {set\discretionary {-}{}{}Attribute\discretionary {-}{}{}\_\discretionary {-}{}{}float\discretionary {-}{}{}Array}, 
+		\hyperpage{12}
+    \subitem {set\discretionary {-}{}{}Attribute\discretionary {-}{}{}\_\discretionary {-}{}{}int}, 
+		\hyperpage{12}
+    \subitem {set\discretionary {-}{}{}Attribute\discretionary {-}{}{}\_\discretionary {-}{}{}int\discretionary {-}{}{}Array}, 
+		\hyperpage{13}
+    \subitem {set\discretionary {-}{}{}Attribute\discretionary {-}{}{}\_\discretionary {-}{}{}string}, 
+		\hyperpage{13}
+    \subitem {update}, \hyperpage{13}
+  \item {Abstract\discretionary {-}{}{}Component.\discretionary {-}{}{}h}, 
+		\hyperpage{71}
+    \subitem {attribute}, \hyperpage{72}
+    \subitem {attribute\discretionary {-}{}{}\_\discretionary {-}{}{}container}, 
+		\hyperpage{72}
+    \subitem {attribute\discretionary {-}{}{}\_\discretionary {-}{}{}type}, 
+		\hyperpage{72}
+  \item {Abstract\discretionary {-}{}{}Entity}, \hyperpage{14}
+    \subitem {add\discretionary {-}{}{}Component}, \hyperpage{15}
+    \subitem {get\discretionary {-}{}{}All\discretionary {-}{}{}Components}, 
+		\hyperpage{15}
+    \subitem {get\discretionary {-}{}{}Component\discretionary {-}{}{}By\discretionary {-}{}{}Name}, 
+		\hyperpage{15}
+    \subitem {get\discretionary {-}{}{}Components\discretionary {-}{}{}By\discretionary {-}{}{}Family}, 
+		\hyperpage{16}
+    \subitem {get\discretionary {-}{}{}Family}, \hyperpage{16}
+    \subitem {get\discretionary {-}{}{}I\discretionary {-}{}{}D}, 
+		\hyperpage{16}
+    \subitem {get\discretionary {-}{}{}Name}, \hyperpage{16}
+    \subitem {handle}, \hyperpage{16}
+    \subitem {has\discretionary {-}{}{}Component\discretionary {-}{}{}Family}, 
+		\hyperpage{17}
+    \subitem {has\discretionary {-}{}{}Component\discretionary {-}{}{}Name}, 
+		\hyperpage{17}
+  \item {Abstract\discretionary {-}{}{}Entity.\discretionary {-}{}{}h}, 
+		\hyperpage{73}
+  \item {Abstract\discretionary {-}{}{}System}, \hyperpage{18}
+    \subitem {get\discretionary {-}{}{}Name}, \hyperpage{18}
+    \subitem {process}, \hyperpage{19}
+  \item {Abstract\discretionary {-}{}{}System.\discretionary {-}{}{}h}, 
+		\hyperpage{74}
+  \item {add\discretionary {-}{}{}Callback}
+    \subitem {Callback\discretionary {-}{}{}Manager}, 
+		\hyperpage{23, 24}
+    \subitem {Collision\discretionary {-}{}{}Manager}, \hyperpage{27}
+  \item {add\discretionary {-}{}{}Component}
+    \subitem {Abstract\discretionary {-}{}{}Entity}, \hyperpage{15}
+  \item {add\discretionary {-}{}{}Entity}
+    \subitem {Entity\discretionary {-}{}{}Manager}, \hyperpage{36}
+  \item {add\discretionary {-}{}{}Font}
+    \subitem {Text\discretionary {-}{}{}Manager}, \hyperpage{65}
+  \item {add\discretionary {-}{}{}Sprite}
+    \subitem {Sprite\discretionary {-}{}{}Manager}, \hyperpage{54}
+  \item {add\discretionary {-}{}{}Text}
+    \subitem {Text\discretionary {-}{}{}Manager}, \hyperpage{65}
+  \item {add\discretionary {-}{}{}Texture}
+    \subitem {Texture\discretionary {-}{}{}Manager}, \hyperpage{68}
+  \item {Army\discretionary {-}{}{}Engine}, \hyperpage{19}
+    \subitem {get\discretionary {-}{}{}Instance}, \hyperpage{20}
+  \item {Army\discretionary {-}{}{}Engine.\discretionary {-}{}{}h}, 
+		\hyperpage{84}
+  \item {attribute}
+    \subitem {Abstract\discretionary {-}{}{}Component.\discretionary {-}{}{}h}, 
+		\hyperpage{72}
+  \item {attribute\discretionary {-}{}{}\_\discretionary {-}{}{}container}
+    \subitem {Abstract\discretionary {-}{}{}Component.\discretionary {-}{}{}h}, 
+		\hyperpage{72}
+  \item {attribute\discretionary {-}{}{}\_\discretionary {-}{}{}struct}, 
+		\hyperpage{20}
+  \item {attribute\discretionary {-}{}{}\_\discretionary {-}{}{}type}
+    \subitem {Abstract\discretionary {-}{}{}Component.\discretionary {-}{}{}h}, 
+		\hyperpage{72}
+  \item {attribute\discretionary {-}{}{}Container\discretionary {-}{}{}\_\discretionary {-}{}{}union}, 
+		\hyperpage{21}
+
+  \indexspace
+
+  \item {Callback\discretionary {-}{}{}Function\discretionary {-}{}{}Wrapper}, 
+		\hyperpage{21}
+    \subitem {operator()}, \hyperpage{22}
+  \item {Callback\discretionary {-}{}{}Manager}, \hyperpage{22}
+    \subitem {add\discretionary {-}{}{}Callback}, \hyperpage{23, 24}
+    \subitem {get\discretionary {-}{}{}Instance}, \hyperpage{24}
+    \subitem {has\discretionary {-}{}{}Callback}, \hyperpage{24}
+    \subitem {remove\discretionary {-}{}{}Callback}, \hyperpage{25}
+    \subitem {trigger\discretionary {-}{}{}Callback}, \hyperpage{25}
+  \item {Callback\discretionary {-}{}{}Manager.\discretionary {-}{}{}h}, 
+		\hyperpage{85}
+  \item {check\discretionary {-}{}{}Polygon\discretionary {-}{}{}Line\discretionary {-}{}{}Intersections}
+    \subitem {A\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Utilities.\discretionary {-}{}{}h}, 
+		\hyperpage{80}
+  \item {Collision\discretionary {-}{}{}Component}, \hyperpage{25}
+    \subitem {Collision\discretionary {-}{}{}Component}, \hyperpage{26}
+    \subitem {Collision\discretionary {-}{}{}Component}, \hyperpage{26}
+  \item {Collision\discretionary {-}{}{}Component.\discretionary {-}{}{}h}, 
+		\hyperpage{86}
+  \item {Collision\discretionary {-}{}{}Manager}, \hyperpage{27}
+    \subitem {add\discretionary {-}{}{}Callback}, \hyperpage{27}
+    \subitem {get\discretionary {-}{}{}Instance}, \hyperpage{27}
+    \subitem {has\discretionary {-}{}{}Callback}, \hyperpage{28}
+    \subitem {has\discretionary {-}{}{}Registered\discretionary {-}{}{}Collision}, 
+		\hyperpage{28}
+    \subitem {register\discretionary {-}{}{}Collision}, \hyperpage{28}
+    \subitem {trigger\discretionary {-}{}{}Callback}, \hyperpage{28}
+    \subitem {unregister\discretionary {-}{}{}Collision}, 
+		\hyperpage{29}
+  \item {Collision\discretionary {-}{}{}Manager.\discretionary {-}{}{}h}, 
+		\hyperpage{87}
+    \subitem {collision\discretionary {-}{}{}Param\discretionary {-}{}{}Tuple}, 
+		\hyperpage{88}
+    \subitem {collision\discretionary {-}{}{}Tag\discretionary {-}{}{}Tuple}, 
+		\hyperpage{88}
+    \subitem {registered\discretionary {-}{}{}Collision\discretionary {-}{}{}Tuple}, 
+		\hyperpage{88}
+  \item {collision\discretionary {-}{}{}Param\discretionary {-}{}{}Tuple}
+    \subitem {Collision\discretionary {-}{}{}Manager.\discretionary {-}{}{}h}, 
+		\hyperpage{88}
+  \item {Collision\discretionary {-}{}{}System}, \hyperpage{29}
+    \subitem {process}, \hyperpage{29}
+  \item {Collision\discretionary {-}{}{}System.\discretionary {-}{}{}h}, 
+		\hyperpage{89}
+  \item {collision\discretionary {-}{}{}Tag\discretionary {-}{}{}Tuple}
+    \subitem {Collision\discretionary {-}{}{}Manager.\discretionary {-}{}{}h}, 
+		\hyperpage{88}
+  \item {Component\discretionary {-}{}{}Factory}, \hyperpage{32}
+    \subitem {create\discretionary {-}{}{}Collision\discretionary {-}{}{}Component}, 
+		\hyperpage{33}
+    \subitem {create\discretionary {-}{}{}Health\discretionary {-}{}{}Component}, 
+		\hyperpage{33}
+    \subitem {create\discretionary {-}{}{}Input\discretionary {-}{}{}Component}, 
+		\hyperpage{33}
+    \subitem {create\discretionary {-}{}{}Position\discretionary {-}{}{}Component}, 
+		\hyperpage{33}
+    \subitem {create\discretionary {-}{}{}Shape\discretionary {-}{}{}Component}, 
+		\hyperpage{34}
+    \subitem {create\discretionary {-}{}{}Sprite\discretionary {-}{}{}Component}, 
+		\hyperpage{34}
+    \subitem {create\discretionary {-}{}{}State\discretionary {-}{}{}Component}, 
+		\hyperpage{34}
+    \subitem {create\discretionary {-}{}{}Text\discretionary {-}{}{}Component}, 
+		\hyperpage{34}
+  \item {Component\discretionary {-}{}{}Factory.\discretionary {-}{}{}h}, 
+		\hyperpage{89}
+  \item {create\discretionary {-}{}{}Collision\discretionary {-}{}{}Component}
+    \subitem {Component\discretionary {-}{}{}Factory}, \hyperpage{33}
+  \item {create\discretionary {-}{}{}Health\discretionary {-}{}{}Component}
+    \subitem {Component\discretionary {-}{}{}Factory}, \hyperpage{33}
+  \item {create\discretionary {-}{}{}Input\discretionary {-}{}{}Component}
+    \subitem {Component\discretionary {-}{}{}Factory}, \hyperpage{33}
+  \item {create\discretionary {-}{}{}Main\discretionary {-}{}{}Entity}
+    \subitem {Entity\discretionary {-}{}{}Factory}, \hyperpage{35}
+  \item {create\discretionary {-}{}{}Position\discretionary {-}{}{}Component}
+    \subitem {Component\discretionary {-}{}{}Factory}, \hyperpage{33}
+  \item {create\discretionary {-}{}{}Shape\discretionary {-}{}{}Component}
+    \subitem {Component\discretionary {-}{}{}Factory}, \hyperpage{34}
+  \item {create\discretionary {-}{}{}Sprite\discretionary {-}{}{}Component}
+    \subitem {Component\discretionary {-}{}{}Factory}, \hyperpage{34}
+  \item {create\discretionary {-}{}{}State\discretionary {-}{}{}Component}
+    \subitem {Component\discretionary {-}{}{}Factory}, \hyperpage{34}
+  \item {create\discretionary {-}{}{}Text\discretionary {-}{}{}Component}
+    \subitem {Component\discretionary {-}{}{}Factory}, \hyperpage{34}
+  \item {Cross}
+    \subitem {A\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Utilities.\discretionary {-}{}{}h}, 
+		\hyperpage{80}
+
+  \indexspace
+
+  \item {delete\discretionary {-}{}{}Texture}
+    \subitem {Texture\discretionary {-}{}{}Manager}, \hyperpage{68}
+  \item {Dot}
+    \subitem {A\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Utilities.\discretionary {-}{}{}h}, 
+		\hyperpage{81}
+
+  \indexspace
+
+  \item {Entity\discretionary {-}{}{}Factory}, \hyperpage{35}
+    \subitem {create\discretionary {-}{}{}Main\discretionary {-}{}{}Entity}, 
+		\hyperpage{35}
+  \item {Entity\discretionary {-}{}{}Factory.\discretionary {-}{}{}h}, 
+		\hyperpage{90}
+  \item {Entity\discretionary {-}{}{}Manager}, \hyperpage{36}
+    \subitem {add\discretionary {-}{}{}Entity}, \hyperpage{36}
+    \subitem {get\discretionary {-}{}{}All\discretionary {-}{}{}Entities}, 
+		\hyperpage{37}
+    \subitem {get\discretionary {-}{}{}Entities\discretionary {-}{}{}By\discretionary {-}{}{}Family}, 
+		\hyperpage{37}
+    \subitem {get\discretionary {-}{}{}Entities\discretionary {-}{}{}By\discretionary {-}{}{}Name}, 
+		\hyperpage{37}
+    \subitem {get\discretionary {-}{}{}Entity\discretionary {-}{}{}By\discretionary {-}{}{}Id}, 
+		\hyperpage{38}
+    \subitem {get\discretionary {-}{}{}Instance}, \hyperpage{38}
+    \subitem {has\discretionary {-}{}{}Entity\discretionary {-}{}{}By\discretionary {-}{}{}Id}, 
+		\hyperpage{38}
+    \subitem {remove\discretionary {-}{}{}Entity}, \hyperpage{38}
+    \subitem {sort\discretionary {-}{}{}Entity\discretionary {-}{}{}List}, 
+		\hyperpage{39}
+  \item {Entity\discretionary {-}{}{}Manager.\discretionary {-}{}{}h}, 
+		\hyperpage{91}
+  \item {Event\discretionary {-}{}{}Manager}, \hyperpage{40}
+    \subitem {get\discretionary {-}{}{}Events}, \hyperpage{40}
+    \subitem {get\discretionary {-}{}{}Instance}, \hyperpage{40}
+    \subitem {poll\discretionary {-}{}{}Events}, \hyperpage{41}
+    \subitem {set\discretionary {-}{}{}Window}, \hyperpage{41}
+  \item {Event\discretionary {-}{}{}Manager.\discretionary {-}{}{}h}, 
+		\hyperpage{92}
+  \item {Event\discretionary {-}{}{}System}, \hyperpage{41}
+  \item {Event\discretionary {-}{}{}System.\discretionary {-}{}{}h}, 
+		\hyperpage{93}
+
+  \indexspace
+
+  \item {get\discretionary {-}{}{}All\discretionary {-}{}{}Components}
+    \subitem {Abstract\discretionary {-}{}{}Entity}, \hyperpage{15}
+  \item {get\discretionary {-}{}{}All\discretionary {-}{}{}Entities}
+    \subitem {Entity\discretionary {-}{}{}Manager}, \hyperpage{37}
+  \item {get\discretionary {-}{}{}Attribute}
+    \subitem {Abstract\discretionary {-}{}{}Component}, \hyperpage{8}
+  \item {get\discretionary {-}{}{}Attribute\discretionary {-}{}{}\_\discretionary {-}{}{}float}
+    \subitem {Abstract\discretionary {-}{}{}Component}, \hyperpage{9}
+  \item {get\discretionary {-}{}{}Attribute\discretionary {-}{}{}\_\discretionary {-}{}{}float\discretionary {-}{}{}Array}
+    \subitem {Abstract\discretionary {-}{}{}Component}, \hyperpage{9}
+  \item {get\discretionary {-}{}{}Attribute\discretionary {-}{}{}\_\discretionary {-}{}{}int}
+    \subitem {Abstract\discretionary {-}{}{}Component}, \hyperpage{9}
+  \item {get\discretionary {-}{}{}Attribute\discretionary {-}{}{}\_\discretionary {-}{}{}int\discretionary {-}{}{}Array}
+    \subitem {Abstract\discretionary {-}{}{}Component}, \hyperpage{10}
+  \item {get\discretionary {-}{}{}Attribute\discretionary {-}{}{}\_\discretionary {-}{}{}string}
+    \subitem {Abstract\discretionary {-}{}{}Component}, \hyperpage{10}
+  \item {get\discretionary {-}{}{}Attribute\discretionary {-}{}{}Type}
+    \subitem {Abstract\discretionary {-}{}{}Component}, \hyperpage{10}
+  \item {get\discretionary {-}{}{}Component\discretionary {-}{}{}By\discretionary {-}{}{}Name}
+    \subitem {Abstract\discretionary {-}{}{}Entity}, \hyperpage{15}
+  \item {get\discretionary {-}{}{}Components\discretionary {-}{}{}By\discretionary {-}{}{}Family}
+    \subitem {Abstract\discretionary {-}{}{}Entity}, \hyperpage{16}
+  \item {get\discretionary {-}{}{}Entities\discretionary {-}{}{}By\discretionary {-}{}{}Family}
+    \subitem {Entity\discretionary {-}{}{}Manager}, \hyperpage{37}
+  \item {get\discretionary {-}{}{}Entities\discretionary {-}{}{}By\discretionary {-}{}{}Name}
+    \subitem {Entity\discretionary {-}{}{}Manager}, \hyperpage{37}
+  \item {get\discretionary {-}{}{}Entity\discretionary {-}{}{}By\discretionary {-}{}{}Id}
+    \subitem {Entity\discretionary {-}{}{}Manager}, \hyperpage{38}
+  \item {get\discretionary {-}{}{}Events}
+    \subitem {Event\discretionary {-}{}{}Manager}, \hyperpage{40}
+  \item {get\discretionary {-}{}{}Family}
+    \subitem {Abstract\discretionary {-}{}{}Entity}, \hyperpage{16}
+  \item {get\discretionary {-}{}{}Font}
+    \subitem {Text\discretionary {-}{}{}Manager}, \hyperpage{65}
+  \item {get\discretionary {-}{}{}I\discretionary {-}{}{}D}
+    \subitem {Abstract\discretionary {-}{}{}Entity}, \hyperpage{16}
+  \item {get\discretionary {-}{}{}Instance}
+    \subitem {Army\discretionary {-}{}{}Engine}, \hyperpage{20}
+    \subitem {Callback\discretionary {-}{}{}Manager}, \hyperpage{24}
+    \subitem {Collision\discretionary {-}{}{}Manager}, \hyperpage{27}
+    \subitem {Entity\discretionary {-}{}{}Manager}, \hyperpage{38}
+    \subitem {Event\discretionary {-}{}{}Manager}, \hyperpage{40}
+    \subitem {Shape\discretionary {-}{}{}Manager}, \hyperpage{52}
+    \subitem {Sprite\discretionary {-}{}{}Manager}, \hyperpage{54}
+    \subitem {Text\discretionary {-}{}{}Manager}, \hyperpage{65}
+    \subitem {Texture\discretionary {-}{}{}Manager}, \hyperpage{68}
+  \item {get\discretionary {-}{}{}Name}
+    \subitem {Abstract\discretionary {-}{}{}Component}, \hyperpage{11}
+    \subitem {Abstract\discretionary {-}{}{}Entity}, \hyperpage{16}
+    \subitem {Abstract\discretionary {-}{}{}System}, \hyperpage{18}
+  \item {get\discretionary {-}{}{}Sprite}
+    \subitem {Sprite\discretionary {-}{}{}Manager}, \hyperpage{54}
+  \item {get\discretionary {-}{}{}Text}
+    \subitem {Text\discretionary {-}{}{}Manager}, \hyperpage{65}
+  \item {get\discretionary {-}{}{}Texture}
+    \subitem {Texture\discretionary {-}{}{}Manager}, \hyperpage{68}
+
+  \indexspace
+
+  \item {handle}
+    \subitem {Abstract\discretionary {-}{}{}Entity}, \hyperpage{16}
+    \subitem {Main\discretionary {-}{}{}Entity}, \hyperpage{46}
+  \item {has\discretionary {-}{}{}Attribute}
+    \subitem {Abstract\discretionary {-}{}{}Component}, \hyperpage{11}
+  \item {has\discretionary {-}{}{}Callback}
+    \subitem {Callback\discretionary {-}{}{}Manager}, \hyperpage{24}
+    \subitem {Collision\discretionary {-}{}{}Manager}, \hyperpage{28}
+  \item {has\discretionary {-}{}{}Component\discretionary {-}{}{}Family}
+    \subitem {Abstract\discretionary {-}{}{}Entity}, \hyperpage{17}
+  \item {has\discretionary {-}{}{}Component\discretionary {-}{}{}Name}
+    \subitem {Abstract\discretionary {-}{}{}Entity}, \hyperpage{17}
+  \item {has\discretionary {-}{}{}Entity\discretionary {-}{}{}By\discretionary {-}{}{}Id}
+    \subitem {Entity\discretionary {-}{}{}Manager}, \hyperpage{38}
+  \item {has\discretionary {-}{}{}Font}
+    \subitem {Text\discretionary {-}{}{}Manager}, \hyperpage{66}
+  \item {has\discretionary {-}{}{}Registered\discretionary {-}{}{}Collision}
+    \subitem {Collision\discretionary {-}{}{}Manager}, \hyperpage{28}
+  \item {has\discretionary {-}{}{}Sprite}
+    \subitem {Sprite\discretionary {-}{}{}Manager}, \hyperpage{54}
+  \item {has\discretionary {-}{}{}Text}
+    \subitem {Text\discretionary {-}{}{}Manager}, \hyperpage{66}
+  \item {has\discretionary {-}{}{}Texture}
+    \subitem {Texture\discretionary {-}{}{}Manager}, \hyperpage{68}
+  \item {Health\discretionary {-}{}{}Component}, \hyperpage{42}
+    \subitem {update}, \hyperpage{43}
+
+  \indexspace
+
+  \item {Input\discretionary {-}{}{}Component}, \hyperpage{43}
+    \subitem {update}, \hyperpage{43}
+  \item {Input\discretionary {-}{}{}System}, \hyperpage{44}
+    \subitem {process}, \hyperpage{44}
+
+  \indexspace
+
+  \item {Main\discretionary {-}{}{}Entity}, \hyperpage{45}
+    \subitem {handle}, \hyperpage{46}
+
+  \indexspace
+
+  \item {operator()}
+    \subitem {Callback\discretionary {-}{}{}Function\discretionary {-}{}{}Wrapper}, 
+		\hyperpage{22}
+
+  \indexspace
+
+  \item {point\discretionary {-}{}{}In\discretionary {-}{}{}Polygon}
+    \subitem {A\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Utilities.\discretionary {-}{}{}h}, 
+		\hyperpage{81}
+  \item {poll\discretionary {-}{}{}Events}
+    \subitem {Event\discretionary {-}{}{}Manager}, \hyperpage{41}
+  \item {Position\discretionary {-}{}{}Component}, \hyperpage{46}
+    \subitem {Position\discretionary {-}{}{}Component}, \hyperpage{47}
+    \subitem {Position\discretionary {-}{}{}Component}, \hyperpage{47}
+  \item {Position\discretionary {-}{}{}Component.\discretionary {-}{}{}h}, 
+		\hyperpage{94}
+  \item {process}
+    \subitem {Abstract\discretionary {-}{}{}System}, \hyperpage{19}
+    \subitem {Collision\discretionary {-}{}{}System}, \hyperpage{29}
+    \subitem {Input\discretionary {-}{}{}System}, \hyperpage{44}
+    \subitem {Sprite\discretionary {-}{}{}System}, \hyperpage{55}
+    \subitem {State\discretionary {-}{}{}System}, \hyperpage{60}
+
+  \indexspace
+
+  \item {register\discretionary {-}{}{}Collision}
+    \subitem {Collision\discretionary {-}{}{}Manager}, \hyperpage{28}
+  \item {registered\discretionary {-}{}{}Collision\discretionary {-}{}{}Tuple}
+    \subitem {Collision\discretionary {-}{}{}Manager.\discretionary {-}{}{}h}, 
+		\hyperpage{88}
+  \item {remove\discretionary {-}{}{}Callback}
+    \subitem {Callback\discretionary {-}{}{}Manager}, \hyperpage{25}
+  \item {remove\discretionary {-}{}{}Entity}
+    \subitem {Entity\discretionary {-}{}{}Manager}, \hyperpage{38}
+  \item {remove\discretionary {-}{}{}Font}
+    \subitem {Text\discretionary {-}{}{}Manager}, \hyperpage{66}
+  \item {remove\discretionary {-}{}{}Sprite}
+    \subitem {Sprite\discretionary {-}{}{}Manager}, \hyperpage{55}
+  \item {remove\discretionary {-}{}{}Text}
+    \subitem {Text\discretionary {-}{}{}Manager}, \hyperpage{67}
+
+  \indexspace
+
+  \item {set\discretionary {-}{}{}Attribute\discretionary {-}{}{}\_\discretionary {-}{}{}float}
+    \subitem {Abstract\discretionary {-}{}{}Component}, \hyperpage{11}
+  \item {set\discretionary {-}{}{}Attribute\discretionary {-}{}{}\_\discretionary {-}{}{}float\discretionary {-}{}{}Array}
+    \subitem {Abstract\discretionary {-}{}{}Component}, \hyperpage{12}
+  \item {set\discretionary {-}{}{}Attribute\discretionary {-}{}{}\_\discretionary {-}{}{}int}
+    \subitem {Abstract\discretionary {-}{}{}Component}, \hyperpage{12}
+  \item {set\discretionary {-}{}{}Attribute\discretionary {-}{}{}\_\discretionary {-}{}{}int\discretionary {-}{}{}Array}
+    \subitem {Abstract\discretionary {-}{}{}Component}, \hyperpage{13}
+  \item {set\discretionary {-}{}{}Attribute\discretionary {-}{}{}\_\discretionary {-}{}{}string}
+    \subitem {Abstract\discretionary {-}{}{}Component}, \hyperpage{13}
+  \item {set\discretionary {-}{}{}Window}
+    \subitem {Event\discretionary {-}{}{}Manager}, \hyperpage{41}
+  \item {Shape\discretionary {-}{}{}Component}, \hyperpage{47}
+    \subitem {Shape\discretionary {-}{}{}Component}, \hyperpage{48}
+    \subitem {Shape\discretionary {-}{}{}Component}, \hyperpage{48}
+    \subitem {update}, \hyperpage{49}
+  \item {Shape\discretionary {-}{}{}Component.\discretionary {-}{}{}h}, 
+		\hyperpage{94}
+  \item {Shape\discretionary {-}{}{}Manager}, \hyperpage{51}
+    \subitem {get\discretionary {-}{}{}Instance}, \hyperpage{52}
+  \item {Shape\discretionary {-}{}{}Manager.\discretionary {-}{}{}h}, 
+		\hyperpage{95}
+  \item {Singleton\discretionary {-}{}{}T$<$ Instance\discretionary {-}{}{}Class $>$}, 
+		\hyperpage{52}
+  \item {sort\discretionary {-}{}{}Entity\discretionary {-}{}{}List}
+    \subitem {Entity\discretionary {-}{}{}Manager}, \hyperpage{39}
+  \item {Sprite\discretionary {-}{}{}Component}, \hyperpage{52}
+    \subitem {update}, \hyperpage{53}
+  \item {Sprite\discretionary {-}{}{}Manager}, \hyperpage{53}
+    \subitem {add\discretionary {-}{}{}Sprite}, \hyperpage{54}
+    \subitem {get\discretionary {-}{}{}Instance}, \hyperpage{54}
+    \subitem {get\discretionary {-}{}{}Sprite}, \hyperpage{54}
+    \subitem {has\discretionary {-}{}{}Sprite}, \hyperpage{54}
+    \subitem {remove\discretionary {-}{}{}Sprite}, \hyperpage{55}
+  \item {Sprite\discretionary {-}{}{}Manager.\discretionary {-}{}{}h}, 
+		\hyperpage{96}
+  \item {Sprite\discretionary {-}{}{}System}, \hyperpage{55}
+    \subitem {process}, \hyperpage{55}
+  \item {State\discretionary {-}{}{}Component}, \hyperpage{58}
+    \subitem {State\discretionary {-}{}{}Component}, \hyperpage{59}
+    \subitem {State\discretionary {-}{}{}Component}, \hyperpage{59}
+    \subitem {update}, \hyperpage{59}
+  \item {State\discretionary {-}{}{}Component.\discretionary {-}{}{}h}, 
+		\hyperpage{97}
+  \item {State\discretionary {-}{}{}Manager}, \hyperpage{60}
+  \item {State\discretionary {-}{}{}System}, \hyperpage{60}
+    \subitem {process}, \hyperpage{60}
+  \item {System\discretionary {-}{}{}Manager}, \hyperpage{61}
+
+  \indexspace
+
+  \item {Test2\discretionary {-}{}{}D\discretionary {-}{}{}Line\discretionary {-}{}{}Intersection}
+    \subitem {A\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Utilities.\discretionary {-}{}{}h}, 
+		\hyperpage{82}
+  \item {Text\discretionary {-}{}{}Component}, \hyperpage{62}
+    \subitem {Text\discretionary {-}{}{}Component}, \hyperpage{62}
+    \subitem {Text\discretionary {-}{}{}Component}, \hyperpage{62}
+    \subitem {update}, \hyperpage{63}
+  \item {Text\discretionary {-}{}{}Component.\discretionary {-}{}{}h}, 
+		\hyperpage{98}
+  \item {Text\discretionary {-}{}{}Manager}, \hyperpage{64}
+    \subitem {add\discretionary {-}{}{}Font}, \hyperpage{65}
+    \subitem {add\discretionary {-}{}{}Text}, \hyperpage{65}
+    \subitem {get\discretionary {-}{}{}Font}, \hyperpage{65}
+    \subitem {get\discretionary {-}{}{}Instance}, \hyperpage{65}
+    \subitem {get\discretionary {-}{}{}Text}, \hyperpage{65}
+    \subitem {has\discretionary {-}{}{}Font}, \hyperpage{66}
+    \subitem {has\discretionary {-}{}{}Text}, \hyperpage{66}
+    \subitem {remove\discretionary {-}{}{}Font}, \hyperpage{66}
+    \subitem {remove\discretionary {-}{}{}Text}, \hyperpage{67}
+  \item {Text\discretionary {-}{}{}Manager.\discretionary {-}{}{}h}, 
+		\hyperpage{98}
+  \item {Texture\discretionary {-}{}{}Manager}, \hyperpage{67}
+    \subitem {add\discretionary {-}{}{}Texture}, \hyperpage{68}
+    \subitem {delete\discretionary {-}{}{}Texture}, \hyperpage{68}
+    \subitem {get\discretionary {-}{}{}Instance}, \hyperpage{68}
+    \subitem {get\discretionary {-}{}{}Texture}, \hyperpage{68}
+    \subitem {has\discretionary {-}{}{}Texture}, \hyperpage{68}
+  \item {Texture\discretionary {-}{}{}Manager.\discretionary {-}{}{}h}, 
+		\hyperpage{99}
+  \item {triangle2\discretionary {-}{}{}D\discretionary {-}{}{}Area}
+    \subitem {A\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Utilities.\discretionary {-}{}{}h}, 
+		\hyperpage{83}
+  \item {triangle\discretionary {-}{}{}Is\discretionary {-}{}{}C\discretionary {-}{}{}C\discretionary {-}{}{}W}
+    \subitem {A\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Utilities.\discretionary {-}{}{}h}, 
+		\hyperpage{83}
+  \item {trigger\discretionary {-}{}{}Callback}
+    \subitem {Callback\discretionary {-}{}{}Manager}, \hyperpage{25}
+    \subitem {Collision\discretionary {-}{}{}Manager}, \hyperpage{28}
+
+  \indexspace
+
+  \item {unregister\discretionary {-}{}{}Collision}
+    \subitem {Collision\discretionary {-}{}{}Manager}, \hyperpage{29}
+  \item {update}
+    \subitem {Abstract\discretionary {-}{}{}Component}, \hyperpage{13}
+    \subitem {Health\discretionary {-}{}{}Component}, \hyperpage{43}
+    \subitem {Input\discretionary {-}{}{}Component}, \hyperpage{43}
+    \subitem {Shape\discretionary {-}{}{}Component}, \hyperpage{49}
+    \subitem {Sprite\discretionary {-}{}{}Component}, \hyperpage{53}
+    \subitem {State\discretionary {-}{}{}Component}, \hyperpage{59}
+    \subitem {Text\discretionary {-}{}{}Component}, \hyperpage{63}
+
+\end{theindex}

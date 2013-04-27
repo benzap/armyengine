@@ -1,0 +1,231 @@
+\hypertarget{class_component_factory}{\section{Component\-Factory Class Reference}
+\label{db/d28/class_component_factory}\index{Component\-Factory@{Component\-Factory}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{_abstract_component_8h_a2fb71c745bae7eefb130b6bd26fec141}{component\-Type} $>$ \hyperlink{class_component_factory_a535bb905fc8bebd51ea0ba422a9a60c2}{create\-Collision\-Component} (std\-::string name)
+\begin{DoxyCompactList}\small\item\em Used to create \hyperlink{class_collision_component}{Collision\-Component}. \end{DoxyCompactList}\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{_abstract_component_8h_a2fb71c745bae7eefb130b6bd26fec141}{component\-Type} $>$ \hyperlink{class_component_factory_aabec687e57b5ab4b1125f32508d38188}{create\-Health\-Component} (std\-::string name)
+\begin{DoxyCompactList}\small\item\em Used to create \hyperlink{class_health_component}{Health\-Component}. \end{DoxyCompactList}\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{_abstract_component_8h_a2fb71c745bae7eefb130b6bd26fec141}{component\-Type} $>$ \hyperlink{class_component_factory_aa48a8044f5c65738dcfbca91dd840c5c}{create\-Input\-Component} (std\-::string name)
+\begin{DoxyCompactList}\small\item\em Used to create \hyperlink{class_input_component}{Input\-Component}. \end{DoxyCompactList}\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{_abstract_component_8h_a2fb71c745bae7eefb130b6bd26fec141}{component\-Type} $>$ \hyperlink{class_component_factory_a4678e34498f26e608da37f8497e07ced}{create\-Position\-Component} (std\-::string name)
+\begin{DoxyCompactList}\small\item\em Used to create \hyperlink{class_position_component}{Position\-Component}. \end{DoxyCompactList}\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{_abstract_component_8h_a2fb71c745bae7eefb130b6bd26fec141}{component\-Type} $>$ \hyperlink{class_component_factory_a35fe0e71de9a5eceda762748618c266a}{create\-Shape\-Component} (std\-::string name)
+\begin{DoxyCompactList}\small\item\em Used to create \hyperlink{class_shape_component}{Shape\-Component}. \end{DoxyCompactList}\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{_abstract_component_8h_a2fb71c745bae7eefb130b6bd26fec141}{component\-Type} $>$ \hyperlink{class_component_factory_a522a29c5da7c4aff6aa655ab97a5598f}{create\-Sprite\-Component} (std\-::string name)
+\begin{DoxyCompactList}\small\item\em Used to create \hyperlink{class_sprite_component}{Sprite\-Component}. \end{DoxyCompactList}\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{_abstract_component_8h_a2fb71c745bae7eefb130b6bd26fec141}{component\-Type} $>$ \hyperlink{class_component_factory_a1965122e60a497971be191b69381e0cc}{create\-State\-Component} (std\-::string name)
+\begin{DoxyCompactList}\small\item\em Used to create \hyperlink{class_state_component}{State\-Component}. \end{DoxyCompactList}\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{_abstract_component_8h_a2fb71c745bae7eefb130b6bd26fec141}{component\-Type} $>$ \hyperlink{class_component_factory_a4d855504433e7962c2a91a76272f020a}{create\-Text\-Component} (std\-::string name)
+\begin{DoxyCompactList}\small\item\em Used to create \hyperlink{class_text_component}{Text\-Component}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_component_factory_a535bb905fc8bebd51ea0ba422a9a60c2}{\index{Component\-Factory@{Component\-Factory}!create\-Collision\-Component@{create\-Collision\-Component}}
+\index{create\-Collision\-Component@{create\-Collision\-Component}!ComponentFactory@{Component\-Factory}}
+\subsubsection[{create\-Collision\-Component}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$ {\bf component\-Type} $>$ Component\-Factory\-::create\-Collision\-Component (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{db/d28/class_component_factory_a535bb905fc8bebd51ea0ba422a9a60c2}
+
+
+Used to create \hyperlink{class_collision_component}{Collision\-Component}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name to be assigned to the component\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the newly created component. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+7                                                                                       \{
+8     \textcolor{keywordflow}{return} std::shared\_ptr<componentType>(\textcolor{keyword}{new} \hyperlink{class_collision_component}{CollisionComponent}(name));
+9 \}
+\end{DoxyCode}
+\hypertarget{class_component_factory_aabec687e57b5ab4b1125f32508d38188}{\index{Component\-Factory@{Component\-Factory}!create\-Health\-Component@{create\-Health\-Component}}
+\index{create\-Health\-Component@{create\-Health\-Component}!ComponentFactory@{Component\-Factory}}
+\subsubsection[{create\-Health\-Component}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$ {\bf component\-Type} $>$ Component\-Factory\-::create\-Health\-Component (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{db/d28/class_component_factory_aabec687e57b5ab4b1125f32508d38188}
+
+
+Used to create \hyperlink{class_health_component}{Health\-Component}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name to be assigned to the component\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the newly created component. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+11                                                                                    \{
+12     \textcolor{keywordflow}{return} std::shared\_ptr<componentType>(\textcolor{keyword}{new} \hyperlink{class_health_component}{HealthComponent}(name));
+13 \}
+\end{DoxyCode}
+\hypertarget{class_component_factory_aa48a8044f5c65738dcfbca91dd840c5c}{\index{Component\-Factory@{Component\-Factory}!create\-Input\-Component@{create\-Input\-Component}}
+\index{create\-Input\-Component@{create\-Input\-Component}!ComponentFactory@{Component\-Factory}}
+\subsubsection[{create\-Input\-Component}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$ {\bf component\-Type} $>$ Component\-Factory\-::create\-Input\-Component (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{db/d28/class_component_factory_aa48a8044f5c65738dcfbca91dd840c5c}
+
+
+Used to create \hyperlink{class_input_component}{Input\-Component}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name to be assigned to the component\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the newly created component. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+15                                                                                   \{
+16     \textcolor{keywordflow}{return} std::shared\_ptr<componentType>(\textcolor{keyword}{new} \hyperlink{class_input_component}{InputComponent}(name));
+17 \}
+\end{DoxyCode}
+\hypertarget{class_component_factory_a4678e34498f26e608da37f8497e07ced}{\index{Component\-Factory@{Component\-Factory}!create\-Position\-Component@{create\-Position\-Component}}
+\index{create\-Position\-Component@{create\-Position\-Component}!ComponentFactory@{Component\-Factory}}
+\subsubsection[{create\-Position\-Component}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$ {\bf component\-Type} $>$ Component\-Factory\-::create\-Position\-Component (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{db/d28/class_component_factory_a4678e34498f26e608da37f8497e07ced}
+
+
+Used to create \hyperlink{class_position_component}{Position\-Component}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name to be assigned to the component\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the newly created component. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+19                                                                                      \{
+20     \textcolor{keywordflow}{return} std::shared\_ptr<componentType>(\textcolor{keyword}{new} \hyperlink{class_position_component}{PositionComponent}(name));
+21 \}
+\end{DoxyCode}
+\hypertarget{class_component_factory_a35fe0e71de9a5eceda762748618c266a}{\index{Component\-Factory@{Component\-Factory}!create\-Shape\-Component@{create\-Shape\-Component}}
+\index{create\-Shape\-Component@{create\-Shape\-Component}!ComponentFactory@{Component\-Factory}}
+\subsubsection[{create\-Shape\-Component}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$ {\bf component\-Type} $>$ Component\-Factory\-::create\-Shape\-Component (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{db/d28/class_component_factory_a35fe0e71de9a5eceda762748618c266a}
+
+
+Used to create \hyperlink{class_shape_component}{Shape\-Component}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name to be assigned to the component\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the newly created component. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+23                                                                                   \{
+24     \textcolor{keywordflow}{return} std::shared\_ptr<componentType>(\textcolor{keyword}{new} \hyperlink{class_shape_component}{ShapeComponent}(name));
+25 \}
+\end{DoxyCode}
+\hypertarget{class_component_factory_a522a29c5da7c4aff6aa655ab97a5598f}{\index{Component\-Factory@{Component\-Factory}!create\-Sprite\-Component@{create\-Sprite\-Component}}
+\index{create\-Sprite\-Component@{create\-Sprite\-Component}!ComponentFactory@{Component\-Factory}}
+\subsubsection[{create\-Sprite\-Component}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$ {\bf component\-Type} $>$ Component\-Factory\-::create\-Sprite\-Component (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{db/d28/class_component_factory_a522a29c5da7c4aff6aa655ab97a5598f}
+
+
+Used to create \hyperlink{class_sprite_component}{Sprite\-Component}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name to be assigned to the component\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the newly created component. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+27                                                                                    \{
+28     \textcolor{keywordflow}{return} std::shared\_ptr<componentType>(\textcolor{keyword}{new} \hyperlink{class_sprite_component}{SpriteComponent}(name));
+29 \}
+\end{DoxyCode}
+\hypertarget{class_component_factory_a1965122e60a497971be191b69381e0cc}{\index{Component\-Factory@{Component\-Factory}!create\-State\-Component@{create\-State\-Component}}
+\index{create\-State\-Component@{create\-State\-Component}!ComponentFactory@{Component\-Factory}}
+\subsubsection[{create\-State\-Component}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$ {\bf component\-Type} $>$ Component\-Factory\-::create\-State\-Component (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{db/d28/class_component_factory_a1965122e60a497971be191b69381e0cc}
+
+
+Used to create \hyperlink{class_state_component}{State\-Component}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name to be assigned to the component\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the newly created component. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+31                                                                                   \{
+32     \textcolor{keywordflow}{return} std::shared\_ptr<componentType>(\textcolor{keyword}{new} \hyperlink{class_state_component}{StateComponent}(name));
+33 \}
+\end{DoxyCode}
+\hypertarget{class_component_factory_a4d855504433e7962c2a91a76272f020a}{\index{Component\-Factory@{Component\-Factory}!create\-Text\-Component@{create\-Text\-Component}}
+\index{create\-Text\-Component@{create\-Text\-Component}!ComponentFactory@{Component\-Factory}}
+\subsubsection[{create\-Text\-Component}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$ {\bf component\-Type} $>$ Component\-Factory\-::create\-Text\-Component (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{db/d28/class_component_factory_a4d855504433e7962c2a91a76272f020a}
+
+
+Used to create \hyperlink{class_text_component}{Text\-Component}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name to be assigned to the component\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the newly created component. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+35                                                                                  \{
+36     \textcolor{keywordflow}{return} std::shared\_ptr<componentType>(\textcolor{keyword}{new} \hyperlink{class_text_component}{TextComponent}(name));
+37 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_component_factory_8h}{Component\-Factory.\-h}\item 
+Component\-Factory.\-cpp\end{DoxyCompactItemize}

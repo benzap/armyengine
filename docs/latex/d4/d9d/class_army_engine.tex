@@ -1,0 +1,98 @@
+\hypertarget{class_army_engine}{\section{Army\-Engine Class Reference}
+\label{d4/d9d/class_army_engine}\index{Army\-Engine@{Army\-Engine}}
+}
+
+
+Army engine singleton facade. Frontend to the engine.  
+
+
+
+
+{\ttfamily \#include $<$Army\-Engine.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_army_engine_a3dd8d3d4995bf02ca28664f197bac5f5}{\hyperlink{class_component_factory}{Component\-Factory} \& \hyperlink{class_army_engine_a3dd8d3d4995bf02ca28664f197bac5f5}{get\-Component\-Factory} ()}\label{d4/d9d/class_army_engine_a3dd8d3d4995bf02ca28664f197bac5f5}
+
+\begin{DoxyCompactList}\small\item\em Used to get the component factory instance. \end{DoxyCompactList}\item 
+\hypertarget{class_army_engine_ad7376a61473a6c71e2da08694349bf23}{\hyperlink{class_entity_factory}{Entity\-Factory} \& \hyperlink{class_army_engine_ad7376a61473a6c71e2da08694349bf23}{get\-Entity\-Factory} ()}\label{d4/d9d/class_army_engine_ad7376a61473a6c71e2da08694349bf23}
+
+\begin{DoxyCompactList}\small\item\em Used to get the entity factory instance. \end{DoxyCompactList}\item 
+\hypertarget{class_army_engine_a0c06643415c132f8db70339c37ec9488}{void \hyperlink{class_army_engine_a0c06643415c132f8db70339c37ec9488}{set\-State\-Machine\-Function} (function\-State\-Machine\-Template func)}\label{d4/d9d/class_army_engine_a0c06643415c132f8db70339c37ec9488}
+
+\begin{DoxyCompactList}\small\item\em Used to set the state machine function. \end{DoxyCompactList}\item 
+\hypertarget{class_army_engine_a095705b23a31c1356b2ebb3b227dd142}{void \hyperlink{class_army_engine_a095705b23a31c1356b2ebb3b227dd142}{add\-Entity} (std\-::shared\-\_\-ptr$<$ \hyperlink{_abstract_entity_8h_a5b087f4ada5a2395ba03ae7d01b56568}{entity\-Type} $>$)}\label{d4/d9d/class_army_engine_a095705b23a31c1356b2ebb3b227dd142}
+
+\begin{DoxyCompactList}\small\item\em Add an entity to the engine. \end{DoxyCompactList}\item 
+\hypertarget{class_army_engine_ab8eaf903f7c7d5415ec34e3f985e6328}{void \hyperlink{class_army_engine_ab8eaf903f7c7d5415ec34e3f985e6328}{add\-Collision\-Callback} (\hyperlink{_collision_manager_8h_a59fec3c97983b1c074529cfdd245515a}{collision\-Tag\-Tuple}, \hyperlink{_collision_manager_8h_a141eae5ec36e58aae61b3cb494451210}{function\-Collision\-Template})}\label{d4/d9d/class_army_engine_ab8eaf903f7c7d5415ec34e3f985e6328}
+
+\begin{DoxyCompactList}\small\item\em Add a collision callback to the engine. \end{DoxyCompactList}\item 
+\hypertarget{class_army_engine_ae942a6f5f5dafd2d6f67671d3c8016bd}{void \hyperlink{class_army_engine_ae942a6f5f5dafd2d6f67671d3c8016bd}{add\-State\-Callback} (std\-::string, \hyperlink{_callback_manager_8h_a73a0c6254a0b5ab661ca1f3bd5f3d99c}{function\-Template})}\label{d4/d9d/class_army_engine_ae942a6f5f5dafd2d6f67671d3c8016bd}
+
+\begin{DoxyCompactList}\small\item\em Add a state callback to the engine. \end{DoxyCompactList}\item 
+\hypertarget{class_army_engine_aabdc47d50ce1c821fa23a44939bf5626}{void \hyperlink{class_army_engine_aabdc47d50ce1c821fa23a44939bf5626}{add\-Event\-Callback} (\hyperlink{_army_engine_8h_a696053605a0b27bfc265da70b5a70453}{Enum\-Event\-Type}, \hyperlink{_army_engine_8h_a159c12b96350841dc66f26d871738d24}{function\-Register\-Template})}\label{d4/d9d/class_army_engine_aabdc47d50ce1c821fa23a44939bf5626}
+
+\begin{DoxyCompactList}\small\item\em Add an event callback to the engine. \end{DoxyCompactList}\item 
+\hypertarget{class_army_engine_a6ae6547c3959043801392e0cfb6c78e6}{void \hyperlink{class_army_engine_a6ae6547c3959043801392e0cfb6c78e6}{add\-Input\-Callback} (std\-::string, \hyperlink{_callback_manager_8h_a3459e948765053b6cb9e3b0b5efb5906}{function\-Event\-Template})}\label{d4/d9d/class_army_engine_a6ae6547c3959043801392e0cfb6c78e6}
+
+\begin{DoxyCompactList}\small\item\em Add an input callback to the engine. \end{DoxyCompactList}\item 
+\hypertarget{class_army_engine_a09eda82a3334bd614007671eca515593}{sf\-::\-Render\-Window $\ast$ \hyperlink{class_army_engine_a09eda82a3334bd614007671eca515593}{get\-Window} ()}\label{d4/d9d/class_army_engine_a09eda82a3334bd614007671eca515593}
+
+\begin{DoxyCompactList}\small\item\em Get the instance of the application window. \end{DoxyCompactList}\item 
+\hypertarget{class_army_engine_a2d5a28392e8d5491dde4107b3547564e}{void \hyperlink{class_army_engine_a2d5a28392e8d5491dde4107b3547564e}{set\-Window\-Size} (int width, int height)}\label{d4/d9d/class_army_engine_a2d5a28392e8d5491dde4107b3547564e}
+
+\begin{DoxyCompactList}\small\item\em Set the window size (T\-O\-D\-O\-: fix this) \end{DoxyCompactList}\item 
+\hypertarget{class_army_engine_aa388ae42a9751f22e3355930004f6e7e}{void \hyperlink{class_army_engine_aa388ae42a9751f22e3355930004f6e7e}{set\-State\-Enable} (const std\-::string \&)}\label{d4/d9d/class_army_engine_aa388ae42a9751f22e3355930004f6e7e}
+
+\begin{DoxyCompactList}\small\item\em Enable the state of a given state component. \end{DoxyCompactList}\item 
+\hypertarget{class_army_engine_a64defcec3593394c174be2685e85cd77}{void \hyperlink{class_army_engine_a64defcec3593394c174be2685e85cd77}{set\-State\-Disable} (const std\-::string \&)}\label{d4/d9d/class_army_engine_a64defcec3593394c174be2685e85cd77}
+
+\begin{DoxyCompactList}\small\item\em Disable the state of a given state component. \end{DoxyCompactList}\item 
+\hypertarget{class_army_engine_ab586311ec0530c494af4b93244ac8a2d}{state\-Type \hyperlink{class_army_engine_ab586311ec0530c494af4b93244ac8a2d}{get\-State} (const std\-::string \&)}\label{d4/d9d/class_army_engine_ab586311ec0530c494af4b93244ac8a2d}
+
+\begin{DoxyCompactList}\small\item\em Get the state of a given state component. \end{DoxyCompactList}\item 
+\hypertarget{class_army_engine_ad06c2c6098a0879320228e4925e4c8b1}{void \hyperlink{class_army_engine_ad06c2c6098a0879320228e4925e4c8b1}{load\-Sprite\-From\-File} (std\-::string name, std\-::string filename)}\label{d4/d9d/class_army_engine_ad06c2c6098a0879320228e4925e4c8b1}
+
+\begin{DoxyCompactList}\small\item\em Load a sprite into the engine. \end{DoxyCompactList}\item 
+\hypertarget{class_army_engine_a4e3bffed9fad4456a318282b8d1d9388}{void \hyperlink{class_army_engine_a4e3bffed9fad4456a318282b8d1d9388}{run\-Main\-Loop} ()}\label{d4/d9d/class_army_engine_a4e3bffed9fad4456a318282b8d1d9388}
+
+\begin{DoxyCompactList}\small\item\em Run the main engine loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_army_engine}{Army\-Engine} $\ast$ \hyperlink{class_army_engine_a6402377a6f304aea19cc746332028b67}{get\-Instance} ()
+\begin{DoxyCompactList}\small\item\em Singleton method used to retrieve the single instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Army engine singleton facade. Frontend to the engine. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_army_engine_a6402377a6f304aea19cc746332028b67}{\index{Army\-Engine@{Army\-Engine}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!ArmyEngine@{Army\-Engine}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Army\-Engine}$\ast$ Army\-Engine\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{d4/d9d/class_army_engine_a6402377a6f304aea19cc746332028b67}
+
+
+Singleton method used to retrieve the single instance. 
+
+\begin{DoxyReturn}{Returns}
+Returns the army engine instance. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+113                                    \{
+114     \textcolor{keyword}{static} \hyperlink{class_army_engine}{ArmyEngine} \_instance;
+115     \textcolor{keywordflow}{return} &\_instance;
+116   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_army_engine_8h}{Army\-Engine.\-h}\item 
+Army\-Engine.\-cpp\end{DoxyCompactItemize}

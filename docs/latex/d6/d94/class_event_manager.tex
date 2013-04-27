@@ -1,0 +1,130 @@
+\hypertarget{class_event_manager}{\section{Event\-Manager Class Reference}
+\label{d6/d94/class_event_manager}\index{Event\-Manager@{Event\-Manager}}
+}
+
+
+Used to Poll for events and store them for later retrieval each frame.  
+
+
+
+
+{\ttfamily \#include $<$Event\-Manager.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_event_manager_a27be54b647b22fddc0f8f53592ce3d8b}{set\-Window} (sf\-::\-Render\-Window $\ast$window)
+\begin{DoxyCompactList}\small\item\em Sets the current window to retrieve events from. \end{DoxyCompactList}\item 
+void \hyperlink{class_event_manager_ad4d1c917d12e4bc0e7aa946c64e16cd7}{poll\-Events} ()
+\begin{DoxyCompactList}\small\item\em polls the assigned window for events and stores them. \end{DoxyCompactList}\item 
+\hyperlink{_event_manager_8h_a6ce9eb912b58654c59461fee2a8e7994}{event\-List\-Type} \& \hyperlink{class_event_manager_a7cd671ef1543ec52aac1db8c48655995}{get\-Events} ()
+\begin{DoxyCompactList}\small\item\em Gets the list of events from the event manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_event_manager}{Event\-Manager} $\ast$ \hyperlink{class_event_manager_aef79fefe8afd354f1fa02e7bd4e87052}{get\-Instance} ()
+\begin{DoxyCompactList}\small\item\em Singletone method, returns the single instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Used to Poll for events and store them for later retrieval each frame. 
+
+The Event manager polls for events and stores them. The current implementation stores events only from the S\-F\-M\-L event polling system, which will be changed in the future. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_event_manager_a7cd671ef1543ec52aac1db8c48655995}{\index{Event\-Manager@{Event\-Manager}!get\-Events@{get\-Events}}
+\index{get\-Events@{get\-Events}!EventManager@{Event\-Manager}}
+\subsubsection[{get\-Events}]{\setlength{\rightskip}{0pt plus 5cm}{\bf event\-List\-Type} \& Event\-Manager\-::get\-Events (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d6/d94/class_event_manager_a7cd671ef1543ec52aac1db8c48655995}
+
+
+Gets the list of events from the event manager. 
+
+\begin{DoxyReturn}{Returns}
+The list of events. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+28                                        \{
+29     assert(this->window != \textcolor{keyword}{nullptr} && \textcolor{stringliteral}{"sf::RenderWindow instance must be assigned to EventManager"});
+30     \textcolor{keywordflow}{return} this->eventList;
+31 \}\end{DoxyCode}
+\hypertarget{class_event_manager_aef79fefe8afd354f1fa02e7bd4e87052}{\index{Event\-Manager@{Event\-Manager}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!EventManager@{Event\-Manager}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Event\-Manager}$\ast$ Event\-Manager\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{d6/d94/class_event_manager_aef79fefe8afd354f1fa02e7bd4e87052}
+
+
+Singletone method, returns the single instance. 
+
+\begin{DoxyReturn}{Returns}
+Returns the single instance of the event manager 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+83                                      \{
+84     \textcolor{keyword}{static} \hyperlink{class_event_manager}{EventManager} \_instance;
+85     \textcolor{keywordflow}{return} &\_instance;
+86   \}
+\end{DoxyCode}
+\hypertarget{class_event_manager_ad4d1c917d12e4bc0e7aa946c64e16cd7}{\index{Event\-Manager@{Event\-Manager}!poll\-Events@{poll\-Events}}
+\index{poll\-Events@{poll\-Events}!EventManager@{Event\-Manager}}
+\subsubsection[{poll\-Events}]{\setlength{\rightskip}{0pt plus 5cm}void Event\-Manager\-::poll\-Events (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d6/d94/class_event_manager_ad4d1c917d12e4bc0e7aa946c64e16cd7}
+
+
+polls the assigned window for events and stores them. 
+
+The event manager clears the list, polls the events that have occured and stores them within the event manager. 
+\begin{DoxyCode}
+14                               \{
+15     assert(this->window != \textcolor{keyword}{nullptr} && \textcolor{stringliteral}{"sf::RenderWindow instance must be assigned to EventManager"});
+16 
+17     \textcolor{comment}{//first, we clear out whatever events were in the list before}
+18     this->eventList.clear();
+19 
+20     \hyperlink{_event_manager_8h_a2df2dd760d1993a3b77192ab230e3115}{eventType} event;
+21     \textcolor{keywordflow}{while}(this->window->pollEvent(event)) \{
+22         \textcolor{keyword}{auto} allocEvent = std::shared\_ptr<eventType> (\textcolor{keyword}{new} \hyperlink{_event_manager_8h_a2df2dd760d1993a3b77192ab230e3115}{eventType});
+23         *allocEvent = event;
+24         this->eventList.push\_back(allocEvent);
+25     \}
+26 \}
+\end{DoxyCode}
+\hypertarget{class_event_manager_a27be54b647b22fddc0f8f53592ce3d8b}{\index{Event\-Manager@{Event\-Manager}!set\-Window@{set\-Window}}
+\index{set\-Window@{set\-Window}!EventManager@{Event\-Manager}}
+\subsubsection[{set\-Window}]{\setlength{\rightskip}{0pt plus 5cm}void Event\-Manager\-::set\-Window (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Render\-Window $\ast$}]{window}
+\end{DoxyParamCaption}
+)}}\label{d6/d94/class_event_manager_a27be54b647b22fddc0f8f53592ce3d8b}
+
+
+Sets the current window to retrieve events from. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & is the window we wish to retreive events from. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+10                                                    \{
+11     this->window = window;
+12 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_event_manager_8h}{Event\-Manager.\-h}\item 
+Event\-Manager.\-cpp\end{DoxyCompactItemize}

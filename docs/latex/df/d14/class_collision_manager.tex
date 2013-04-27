@@ -1,0 +1,221 @@
+\hypertarget{class_collision_manager}{\section{Collision\-Manager Class Reference}
+\label{df/d14/class_collision_manager}\index{Collision\-Manager@{Collision\-Manager}}
+}
+
+
+Collision manager used to perform callbacks on collisions.  
+
+
+
+
+{\ttfamily \#include $<$Collision\-Manager.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_collision_manager_ac839e83d753caf39efa2d80efa29d2f4}{add\-Callback} (const \hyperlink{_collision_manager_8h_a59fec3c97983b1c074529cfdd245515a}{collision\-Tag\-Tuple} \&tag\-Tuple, \hyperlink{_collision_manager_8h_a141eae5ec36e58aae61b3cb494451210}{function\-Collision\-Template} func)
+\begin{DoxyCompactList}\small\item\em used to add a callback to the callback table \end{DoxyCompactList}\item 
+int \hyperlink{class_collision_manager_aaf5aa4a712415540ce7313ec9e96dcef}{trigger\-Callback} (const \hyperlink{_collision_manager_8h_a59fec3c97983b1c074529cfdd245515a}{collision\-Tag\-Tuple} \&tag\-Tuple, const \hyperlink{_collision_manager_8h_aa4e5677732161da0be677d67bec17ea6}{collision\-Param\-Tuple} \&param\-Tuple)
+\begin{DoxyCompactList}\small\item\em called by the collision system to trigger a desired callback \end{DoxyCompactList}\item 
+\hypertarget{class_collision_manager_a65eb99c8ae19565076c0a3968403b221}{void \hyperlink{class_collision_manager_a65eb99c8ae19565076c0a3968403b221}{remove\-Callback} (const \hyperlink{_collision_manager_8h_a59fec3c97983b1c074529cfdd245515a}{collision\-Tag\-Tuple} \&tag\-Tuple)}\label{df/d14/class_collision_manager_a65eb99c8ae19565076c0a3968403b221}
+
+\begin{DoxyCompactList}\small\item\em deletes the callback described by the provided tuple \end{DoxyCompactList}\item 
+bool \hyperlink{class_collision_manager_a98395760494f7976f75c1d50072dcc5a}{has\-Callback} (const \hyperlink{_collision_manager_8h_a59fec3c97983b1c074529cfdd245515a}{collision\-Tag\-Tuple} \&tag\-Tuple)
+\begin{DoxyCompactList}\small\item\em checks if the callback table has the provided tag \end{DoxyCompactList}\item 
+void \hyperlink{class_collision_manager_abe04add405129184fdb5b76c079fd34a}{register\-Collision} (const \hyperlink{_collision_manager_8h_ada58768e1593bf8b68e443116782f54e}{registered\-Collision\-Tuple} \&the\-Tuple)
+\begin{DoxyCompactList}\small\item\em registers the collision within the list \end{DoxyCompactList}\item 
+void \hyperlink{class_collision_manager_ad92675882f024a11730b1276b0949f04}{unregister\-Collision} (const \hyperlink{_collision_manager_8h_ada58768e1593bf8b68e443116782f54e}{registered\-Collision\-Tuple} \&the\-Tuple)
+\begin{DoxyCompactList}\small\item\em unregisters and removes from the list \end{DoxyCompactList}\item 
+bool \hyperlink{class_collision_manager_a3dd0b50dcdee6bfd6ddcdaf7eec0c66b}{has\-Registered\-Collision} (const \hyperlink{_collision_manager_8h_ada58768e1593bf8b68e443116782f54e}{registered\-Collision\-Tuple} \&the\-Tuple)
+\begin{DoxyCompactList}\small\item\em checks to see if the current collision is registered \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_collision_manager}{Collision\-Manager} $\ast$ \hyperlink{class_collision_manager_ac51da5d2ebdf95cef311c9c23280f806}{get\-Instance} ()
+\begin{DoxyCompactList}\small\item\em Singleton method, returns an instance of the manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Collision manager used to perform callbacks on collisions. 
+
+Collision manager is used to manage what happens when two entities collide with eachother. Callbacks are added to the collision manager to handle situations where given collision types collide. Depending on the type of collision, the resulting collision may be handled differently. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_collision_manager_ac839e83d753caf39efa2d80efa29d2f4}{\index{Collision\-Manager@{Collision\-Manager}!add\-Callback@{add\-Callback}}
+\index{add\-Callback@{add\-Callback}!CollisionManager@{Collision\-Manager}}
+\subsubsection[{add\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\-Manager\-::add\-Callback (
+\begin{DoxyParamCaption}
+\item[{const {\bf collision\-Tag\-Tuple} \&}]{tag\-Tuple, }
+\item[{{\bf function\-Collision\-Template}}]{func}
+\end{DoxyParamCaption}
+)}}\label{df/d14/class_collision_manager_ac839e83d753caf39efa2d80efa29d2f4}
+
+
+used to add a callback to the callback table 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag\-Tuple} & is two tags representing the type of collision performed.\\
+\hline
+{\em func} & is the function to assign as a callback when the collision is performed. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+7                                                                                                     \{
+8     assert(!this->\hyperlink{class_collision_manager_a98395760494f7976f75c1d50072dcc5a}{hasCallback}(tagTuple) && \textcolor{stringliteral}{"Already has the given relationship"});
+9     this->callbackTable[tagTuple] = func;
+10 \}
+\end{DoxyCode}
+\hypertarget{class_collision_manager_ac51da5d2ebdf95cef311c9c23280f806}{\index{Collision\-Manager@{Collision\-Manager}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!CollisionManager@{Collision\-Manager}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Collision\-Manager}$\ast$ Collision\-Manager\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{df/d14/class_collision_manager_ac51da5d2ebdf95cef311c9c23280f806}
+
+
+Singleton method, returns an instance of the manager. 
+
+\begin{DoxyReturn}{Returns}
+The instance of the \hyperlink{class_collision_manager}{Collision\-Manager} 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+132                                          \{
+133     \textcolor{keyword}{static} \hyperlink{class_collision_manager}{CollisionManager} \_instance;
+134     \textcolor{keywordflow}{return} &\_instance;
+135   \}
+\end{DoxyCode}
+\hypertarget{class_collision_manager_a98395760494f7976f75c1d50072dcc5a}{\index{Collision\-Manager@{Collision\-Manager}!has\-Callback@{has\-Callback}}
+\index{has\-Callback@{has\-Callback}!CollisionManager@{Collision\-Manager}}
+\subsubsection[{has\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}bool Collision\-Manager\-::has\-Callback (
+\begin{DoxyParamCaption}
+\item[{const {\bf collision\-Tag\-Tuple} \&}]{tag\-Tuple}
+\end{DoxyParamCaption}
+)}}\label{df/d14/class_collision_manager_a98395760494f7976f75c1d50072dcc5a}
+
+
+checks if the callback table has the provided tag 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag\-Tuple} & is two tags representing the type of collision performed. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+12                                                                     \{
+13     \textcolor{keywordflow}{if} (this->callbackTable.find(tagTuple) == this->callbackTable.end()) \{
+14         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+15     \}
+16     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+17 \}
+\end{DoxyCode}
+\hypertarget{class_collision_manager_a3dd0b50dcdee6bfd6ddcdaf7eec0c66b}{\index{Collision\-Manager@{Collision\-Manager}!has\-Registered\-Collision@{has\-Registered\-Collision}}
+\index{has\-Registered\-Collision@{has\-Registered\-Collision}!CollisionManager@{Collision\-Manager}}
+\subsubsection[{has\-Registered\-Collision}]{\setlength{\rightskip}{0pt plus 5cm}bool Collision\-Manager\-::has\-Registered\-Collision (
+\begin{DoxyParamCaption}
+\item[{const {\bf registered\-Collision\-Tuple} \&}]{the\-Tuple}
+\end{DoxyParamCaption}
+)}}\label{df/d14/class_collision_manager_a3dd0b50dcdee6bfd6ddcdaf7eec0c66b}
+
+
+checks to see if the current collision is registered 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\-Tuple} & is a unique description for a collision performed between two entities \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+39                                                                                       \{
+40     \textcolor{keyword}{auto} iter = std::find(this->registeredCollisionList.begin(),
+41         this->registeredCollisionList.end(), 
+42         theTuple);
+43     \textcolor{keywordflow}{if} (iter == this->registeredCollisionList.end()) \{
+44         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+45     \}
+46     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+47 \}\end{DoxyCode}
+\hypertarget{class_collision_manager_abe04add405129184fdb5b76c079fd34a}{\index{Collision\-Manager@{Collision\-Manager}!register\-Collision@{register\-Collision}}
+\index{register\-Collision@{register\-Collision}!CollisionManager@{Collision\-Manager}}
+\subsubsection[{register\-Collision}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\-Manager\-::register\-Collision (
+\begin{DoxyParamCaption}
+\item[{const {\bf registered\-Collision\-Tuple} \&}]{the\-Tuple}
+\end{DoxyParamCaption}
+)}}\label{df/d14/class_collision_manager_abe04add405129184fdb5b76c079fd34a}
+
+
+registers the collision within the list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\-Tuple} & is a unique description for a collision performed between two entities \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+29                                                                                  \{
+30     assert(!this->\hyperlink{class_collision_manager_a3dd0b50dcdee6bfd6ddcdaf7eec0c66b}{hasRegisteredCollision}(theTuple) && \textcolor{stringliteral}{"theTuple already exists"});
+31     this->registeredCollisionList.push\_back(theTuple);
+32 \}
+\end{DoxyCode}
+\hypertarget{class_collision_manager_aaf5aa4a712415540ce7313ec9e96dcef}{\index{Collision\-Manager@{Collision\-Manager}!trigger\-Callback@{trigger\-Callback}}
+\index{trigger\-Callback@{trigger\-Callback}!CollisionManager@{Collision\-Manager}}
+\subsubsection[{trigger\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}int Collision\-Manager\-::trigger\-Callback (
+\begin{DoxyParamCaption}
+\item[{const {\bf collision\-Tag\-Tuple} \&}]{tag\-Tuple, }
+\item[{const {\bf collision\-Param\-Tuple} \&}]{param\-Tuple}
+\end{DoxyParamCaption}
+)}}\label{df/d14/class_collision_manager_aaf5aa4a712415540ce7313ec9e96dcef}
+
+
+called by the collision system to trigger a desired callback 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag\-Tuple} & is two tags representing the type of collision performed.\\
+\hline
+{\em param\-Tuple} & is the parameters to bind to the given callback described by the tag\-Tuple. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+19                                                                                                            
+         \{
+20     assert(this->\hyperlink{class_collision_manager_a98395760494f7976f75c1d50072dcc5a}{hasCallback}(tagTuple) && \textcolor{stringliteral}{"Can't trigger callback, callback doesn't exist"});
+21     \textcolor{keywordflow}{return} this->callbackTable[tagTuple](paramTuple);
+22 \}
+\end{DoxyCode}
+\hypertarget{class_collision_manager_ad92675882f024a11730b1276b0949f04}{\index{Collision\-Manager@{Collision\-Manager}!unregister\-Collision@{unregister\-Collision}}
+\index{unregister\-Collision@{unregister\-Collision}!CollisionManager@{Collision\-Manager}}
+\subsubsection[{unregister\-Collision}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\-Manager\-::unregister\-Collision (
+\begin{DoxyParamCaption}
+\item[{const {\bf registered\-Collision\-Tuple} \&}]{the\-Tuple}
+\end{DoxyParamCaption}
+)}}\label{df/d14/class_collision_manager_ad92675882f024a11730b1276b0949f04}
+
+
+unregisters and removes from the list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\-Tuple} & is a unique description for a collision performed between two entities \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+34                                                                                    \{
+35     assert(this->\hyperlink{class_collision_manager_a3dd0b50dcdee6bfd6ddcdaf7eec0c66b}{hasRegisteredCollision}(theTuple) && \textcolor{stringliteral}{"theTuple doesn't exist"});
+36     this->registeredCollisionList.remove(theTuple);
+37 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_collision_manager_8h}{Collision\-Manager.\-h}\item 
+Collision\-Manager.\-cpp\end{DoxyCompactItemize}

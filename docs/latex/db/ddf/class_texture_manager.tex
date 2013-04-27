@@ -1,0 +1,165 @@
+\hypertarget{class_texture_manager}{\section{Texture\-Manager Class Reference}
+\label{db/ddf/class_texture_manager}\index{Texture\-Manager@{Texture\-Manager}}
+}
+
+
+Used to store / add and retrieve textures for the sprites.  
+
+
+
+
+{\ttfamily \#include $<$Texture\-Manager.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_texture_manager_a5813b701fac3e4835db3b26d9847123e}{add\-Texture} (const std\-::string \&name, std\-::shared\-\_\-ptr$<$ \hyperlink{_texture_manager_8h_a6985b069f3b16586ac115345fb9f297f}{texture\-Type} $>$ texture)
+\begin{DoxyCompactList}\small\item\em Add texture to the texture manager. \end{DoxyCompactList}\item 
+void \hyperlink{class_texture_manager_a850efc7a20484e2477738a2621dbb8c3}{delete\-Texture} (const std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em Remove texture from the texture manager. \end{DoxyCompactList}\item 
+bool \hyperlink{class_texture_manager_a12fec197f62b9427b8cdd2dde7019647}{has\-Texture} (const std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em Checks if the texture exists. \end{DoxyCompactList}\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{_texture_manager_8h_a6985b069f3b16586ac115345fb9f297f}{texture\-Type} $>$ \hyperlink{class_texture_manager_a43649a430b840bf86fd5616c404ef9ff}{get\-Texture} (const std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em Gets the texture described by the given name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_texture_manager}{Texture\-Manager} $\ast$ \hyperlink{class_texture_manager_a637228ccedc8fcb1d1da9f02f21c8f54}{get\-Instance} ()
+\begin{DoxyCompactList}\small\item\em Singleton method, used to retrieve the single instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Used to store / add and retrieve textures for the sprites. 
+
+\hyperlink{class_texture_manager}{Texture\-Manager} is a singleton
+
+Sprites require a reference to a texture in order to display properly. This class is used to store / add and retrieve these textures. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_texture_manager_a5813b701fac3e4835db3b26d9847123e}{\index{Texture\-Manager@{Texture\-Manager}!add\-Texture@{add\-Texture}}
+\index{add\-Texture@{add\-Texture}!TextureManager@{Texture\-Manager}}
+\subsubsection[{add\-Texture}]{\setlength{\rightskip}{0pt plus 5cm}void Texture\-Manager\-::add\-Texture (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{std\-::shared\-\_\-ptr$<$ {\bf texture\-Type} $>$}]{texture}
+\end{DoxyParamCaption}
+)}}\label{db/ddf/class_texture_manager_a5813b701fac3e4835db3b26d9847123e}
+
+
+Add texture to the texture manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name assigned to the texture \\
+\hline
+{\em texture} & is the texture object \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+9                                                                                          \{
+10     assert(!this->\hyperlink{class_texture_manager_a12fec197f62b9427b8cdd2dde7019647}{hasTexture}(name) && \textcolor{stringliteral}{"Texture by that name already exists"});
+11     this->textureMap[name] = texture;
+12 \}
+\end{DoxyCode}
+\hypertarget{class_texture_manager_a850efc7a20484e2477738a2621dbb8c3}{\index{Texture\-Manager@{Texture\-Manager}!delete\-Texture@{delete\-Texture}}
+\index{delete\-Texture@{delete\-Texture}!TextureManager@{Texture\-Manager}}
+\subsubsection[{delete\-Texture}]{\setlength{\rightskip}{0pt plus 5cm}void Texture\-Manager\-::delete\-Texture (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{db/ddf/class_texture_manager_a850efc7a20484e2477738a2621dbb8c3}
+
+
+Remove texture from the texture manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name assigned to the texture \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+14                                                         \{
+15     assert(this->\hyperlink{class_texture_manager_a12fec197f62b9427b8cdd2dde7019647}{hasTexture}(name) && \textcolor{stringliteral}{"Texture by that name doesn't exist"});
+16     \textcolor{keywordtype}{int} numkeys = this->textureMap.erase(name);
+17     assert(numkeys == 1 && \textcolor{stringliteral}{"Shouldn't be more than one key"});
+18 \}
+\end{DoxyCode}
+\hypertarget{class_texture_manager_a637228ccedc8fcb1d1da9f02f21c8f54}{\index{Texture\-Manager@{Texture\-Manager}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!TextureManager@{Texture\-Manager}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Texture\-Manager}$\ast$ Texture\-Manager\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{db/ddf/class_texture_manager_a637228ccedc8fcb1d1da9f02f21c8f54}
+
+
+Singleton method, used to retrieve the single instance. 
+
+\begin{DoxyReturn}{Returns}
+Returns the single instance of the texture manager. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+76                                        \{
+77     \textcolor{keyword}{static} \hyperlink{class_texture_manager}{TextureManager} \_instance;
+78     \textcolor{keywordflow}{return} &\_instance;
+79   \}
+\end{DoxyCode}
+\hypertarget{class_texture_manager_a43649a430b840bf86fd5616c404ef9ff}{\index{Texture\-Manager@{Texture\-Manager}!get\-Texture@{get\-Texture}}
+\index{get\-Texture@{get\-Texture}!TextureManager@{Texture\-Manager}}
+\subsubsection[{get\-Texture}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$ {\bf texture\-Type} $>$ Texture\-Manager\-::get\-Texture (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{db/ddf/class_texture_manager_a43649a430b840bf86fd5616c404ef9ff}
+
+
+Gets the texture described by the given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name assigned to the texture\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the given texture exists, otherwise it returns false. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+27                                                                            \{
+28     assert(this->\hyperlink{class_texture_manager_a12fec197f62b9427b8cdd2dde7019647}{hasTexture}(name) && \textcolor{stringliteral}{"Texture does not exist"});
+29     \textcolor{keywordflow}{return} this->textureMap[name];
+30 \}\end{DoxyCode}
+\hypertarget{class_texture_manager_a12fec197f62b9427b8cdd2dde7019647}{\index{Texture\-Manager@{Texture\-Manager}!has\-Texture@{has\-Texture}}
+\index{has\-Texture@{has\-Texture}!TextureManager@{Texture\-Manager}}
+\subsubsection[{has\-Texture}]{\setlength{\rightskip}{0pt plus 5cm}bool Texture\-Manager\-::has\-Texture (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{db/ddf/class_texture_manager_a12fec197f62b9427b8cdd2dde7019647}
+
+
+Checks if the texture exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name assigned to the texture \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+20                                                      \{
+21     \textcolor{keywordflow}{if} (this->textureMap.find(name) == this->textureMap.end()) \{
+22         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+23     \}
+24     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+25 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_texture_manager_8h}{Texture\-Manager.\-h}\item 
+Texture\-Manager.\-cpp\end{DoxyCompactItemize}

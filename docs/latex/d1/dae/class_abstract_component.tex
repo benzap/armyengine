@@ -1,0 +1,556 @@
+\hypertarget{class_abstract_component}{\section{Abstract\-Component Class Reference}
+\label{d1/dae/class_abstract_component}\index{Abstract\-Component@{Abstract\-Component}}
+}
+
+
+The abstract representation for each component.  
+
+
+
+
+{\ttfamily \#include $<$Abstract\-Component.\-h$>$}
+
+Inheritance diagram for Abstract\-Component\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.000000cm]{d1/dae/class_abstract_component}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_abstract_component_ab08b845eddbdbe411b95a5385501ab97}{\hyperlink{class_abstract_component_ab08b845eddbdbe411b95a5385501ab97}{Abstract\-Component} (std\-::string, std\-::string)}\label{d1/dae/class_abstract_component_ab08b845eddbdbe411b95a5385501ab97}
+
+\begin{DoxyCompactList}\small\item\em Constructor for abstract component. \end{DoxyCompactList}\item 
+\hypertarget{class_abstract_component_afaec63065d4d9c9d4c51ae558f5aa822}{\hyperlink{class_abstract_component_afaec63065d4d9c9d4c51ae558f5aa822}{$\sim$\-Abstract\-Component} ()}\label{d1/dae/class_abstract_component_afaec63065d4d9c9d4c51ae558f5aa822}
+
+\begin{DoxyCompactList}\small\item\em Destructor for abstract component. \end{DoxyCompactList}\item 
+const std\-::string \& \hyperlink{class_abstract_component_af4bae0249d512eee5085557039e2c6a4}{get\-Name} ()
+\begin{DoxyCompactList}\small\item\em Returns the name of the component. \end{DoxyCompactList}\item 
+\hypertarget{class_abstract_component_a87edb785966a8ff735241192ce7c4267}{const std\-::string \& \hyperlink{class_abstract_component_a87edb785966a8ff735241192ce7c4267}{get\-Family} ()}\label{d1/dae/class_abstract_component_a87edb785966a8ff735241192ce7c4267}
+
+\begin{DoxyCompactList}\small\item\em Returns the family of the component. \end{DoxyCompactList}\item 
+bool \hyperlink{class_abstract_component_ad4b70f22cedf55ce2d7b58c87ccbfcab}{has\-Attribute} (const std\-::string \&attr\-\_\-key)
+\begin{DoxyCompactList}\small\item\em Checks the attribute\-List for the given attribute. \end{DoxyCompactList}\item 
+\hyperlink{_abstract_component_8h_a7d090069888e2837cee65351f2e86d73}{attribute\-\_\-type} \hyperlink{class_abstract_component_a6debeb112e68311573bf641815e1e111}{get\-Attribute\-Type} (const std\-::string \&attr\-\_\-key)
+\begin{DoxyCompactList}\small\item\em Gets the attribute type. \end{DoxyCompactList}\item 
+int \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{get\-Attribute\-\_\-int} (const std\-::string \&attr\-\_\-key)
+\begin{DoxyCompactList}\small\item\em Get the attribute in the form of an integer. \end{DoxyCompactList}\item 
+void \hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{set\-Attribute\-\_\-int} (const std\-::string \&attr\-\_\-key, int ivalue)
+\begin{DoxyCompactList}\small\item\em Set the attribute for the given key with the given integer value. \end{DoxyCompactList}\item 
+float \hyperlink{class_abstract_component_a890ca92530f6b39afe8c261ce27709c7}{get\-Attribute\-\_\-float} (const std\-::string \&attr\-\_\-key)
+\begin{DoxyCompactList}\small\item\em Get the attribute in the form of an float. \end{DoxyCompactList}\item 
+void \hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{set\-Attribute\-\_\-float} (const std\-::string \&attr\-\_\-key, float fvalue)
+\begin{DoxyCompactList}\small\item\em Set the attribute for the given key with the given float value. \end{DoxyCompactList}\item 
+const std\-::string \& \hyperlink{class_abstract_component_a4140957094ef40c4ffaa0ef381d00ce5}{get\-Attribute\-\_\-string} (const std\-::string \&attr\-\_\-key)
+\begin{DoxyCompactList}\small\item\em Get the attribute in the form of an string. \end{DoxyCompactList}\item 
+void \hyperlink{class_abstract_component_a702ec2cc2624561ef51afcd9c8061fd2}{set\-Attribute\-\_\-string} (const std\-::string \&attr\-\_\-key, std\-::string svalue)
+\begin{DoxyCompactList}\small\item\em Set the attribute for the given key with the given string value. \end{DoxyCompactList}\item 
+\hyperlink{_abstract_component_8h_a55cf170262c3d7123f8b95208293e36d}{component\-Float\-Array\-Type} $\ast$ \hyperlink{class_abstract_component_a7289cf7b6f2bfdb9819f3cf337af9845}{get\-Attribute\-\_\-float\-Array} (const std\-::string \&attr\-\_\-key)
+\begin{DoxyCompactList}\small\item\em Get the attribute in the form of an float array. \end{DoxyCompactList}\item 
+void \hyperlink{class_abstract_component_a8829d475d858bc03e3e3be0e18f18fdb}{set\-Attribute\-\_\-float\-Array} (const std\-::string \&attr\-\_\-key, \hyperlink{_abstract_component_8h_a55cf170262c3d7123f8b95208293e36d}{component\-Float\-Array\-Type} sfvalue)
+\begin{DoxyCompactList}\small\item\em Set the attribute for the given key with the given float array value. \end{DoxyCompactList}\item 
+\hyperlink{_abstract_component_8h_a8bf1376a7e433919172c6631520f34b4}{component\-Integer\-Array\-Type} $\ast$ \hyperlink{class_abstract_component_a666015a89f6e5fbf07395f652df99f7e}{get\-Attribute\-\_\-int\-Array} (std\-::string attr\-\_\-key)
+\begin{DoxyCompactList}\small\item\em Get the attribute in the form of an integer array. \end{DoxyCompactList}\item 
+void \hyperlink{class_abstract_component_a309929ad461fc269cc21485a92e211d3}{set\-Attribute\-\_\-int\-Array} (const std\-::string \&attr\-\_\-key, \hyperlink{_abstract_component_8h_a8bf1376a7e433919172c6631520f34b4}{component\-Integer\-Array\-Type} sivalue)
+\begin{DoxyCompactList}\small\item\em Set the attribute for the given key with the given integer array value. \end{DoxyCompactList}\item 
+\hyperlink{_abstract_component_8h_a0eb4c6ea4bde1edbf1a86d0261e35706}{attribute} \hyperlink{class_abstract_component_aef199147690828f5f9b1c9b3ac3fa5f2}{get\-Attribute} (const std\-::string \&attr\-\_\-key)
+\begin{DoxyCompactList}\small\item\em Gets the attribute structure. \end{DoxyCompactList}\item 
+\hypertarget{class_abstract_component_a33abaccc7ba5ac6e6ca70b721e9358c4}{void {\bfseries set\-Attribute} (const std\-::string \&, int)}\label{d1/dae/class_abstract_component_a33abaccc7ba5ac6e6ca70b721e9358c4}
+
+\item 
+\hypertarget{class_abstract_component_a60c1eecf469128d698c1a638d639233f}{void {\bfseries set\-Attribute} (const std\-::string \&, float)}\label{d1/dae/class_abstract_component_a60c1eecf469128d698c1a638d639233f}
+
+\item 
+\hypertarget{class_abstract_component_af657681fc0d330b4df16c9df0d0c631b}{void {\bfseries set\-Attribute} (const std\-::string \&, std\-::string)}\label{d1/dae/class_abstract_component_af657681fc0d330b4df16c9df0d0c631b}
+
+\item 
+\hypertarget{class_abstract_component_a6e0c4430a642bf593939070a77a71119}{void {\bfseries set\-Attribute} (const std\-::string \&, \hyperlink{_abstract_component_8h_a55cf170262c3d7123f8b95208293e36d}{component\-Float\-Array\-Type})}\label{d1/dae/class_abstract_component_a6e0c4430a642bf593939070a77a71119}
+
+\item 
+\hypertarget{class_abstract_component_aa3eaa7fd9ee9ad045d04c1b2cda62edb}{void {\bfseries set\-Attribute} (const std\-::string \&, \hyperlink{_abstract_component_8h_a8bf1376a7e433919172c6631520f34b4}{component\-Integer\-Array\-Type})}\label{d1/dae/class_abstract_component_aa3eaa7fd9ee9ad045d04c1b2cda62edb}
+
+\item 
+virtual int \hyperlink{class_abstract_component_a35c9cab4e3845a947609b6ada8dc89cf}{update} ()=0
+\begin{DoxyCompactList}\small\item\em Updates the component based on the current set of attributes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The abstract representation for each component. 
+
+The abstract component contains methods to add, remove and modify attributes within the component. The family member is overidden to describe the component type, and the name member is a unique name assigned to the given component. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_abstract_component_aef199147690828f5f9b1c9b3ac3fa5f2}{\index{Abstract\-Component@{Abstract\-Component}!get\-Attribute@{get\-Attribute}}
+\index{get\-Attribute@{get\-Attribute}!AbstractComponent@{Abstract\-Component}}
+\subsubsection[{get\-Attribute}]{\setlength{\rightskip}{0pt plus 5cm}{\bf attribute} Abstract\-Component\-::get\-Attribute (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{attr\-\_\-key}
+\end{DoxyParamCaption}
+)}}\label{d1/dae/class_abstract_component_aef199147690828f5f9b1c9b3ac3fa5f2}
+
+
+Gets the attribute structure. 
+
+Gets the attribute by the given key name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em attr\-\_\-key} & The key name for the attribute\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The attribute structure. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+140                                                                    \{
+141     assert(this->\hyperlink{class_abstract_component_ad4b70f22cedf55ce2d7b58c87ccbfcab}{hasAttribute}(attr\_key) && \textcolor{stringliteral}{"attr\_key does not exist"});
+142     \textcolor{keywordflow}{return} this->attributeList[attr\_key];
+143 \}
+\end{DoxyCode}
+\hypertarget{class_abstract_component_a890ca92530f6b39afe8c261ce27709c7}{\index{Abstract\-Component@{Abstract\-Component}!get\-Attribute\-\_\-float@{get\-Attribute\-\_\-float}}
+\index{get\-Attribute\-\_\-float@{get\-Attribute\-\_\-float}!AbstractComponent@{Abstract\-Component}}
+\subsubsection[{get\-Attribute\-\_\-float}]{\setlength{\rightskip}{0pt plus 5cm}float Abstract\-Component\-::get\-Attribute\-\_\-float (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{attr\-\_\-key}
+\end{DoxyParamCaption}
+)}}\label{d1/dae/class_abstract_component_a890ca92530f6b39afe8c261ce27709c7}
+
+
+Get the attribute in the form of an float. 
+
+Gets the attribute with the given keyname, and returns the value stored for that attribute. If the attribute has a different type than described by the attribute, you will get unwanted behaviour.
+
+
+\begin{DoxyParams}{Parameters}
+{\em attr\-\_\-key} & The key name for the attribute\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value for the given attribute. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+62                                                                      \{
+63     assert(this->\hyperlink{class_abstract_component_ad4b70f22cedf55ce2d7b58c87ccbfcab}{hasAttribute}(attr\_key) && \textcolor{stringliteral}{"attr\_key does not exist"});
+64     assert(this->attributeList[attr\_key].attr\_type == ATTR\_FLOAT && \textcolor{stringliteral}{"attribute not of type float"});
+65     \textcolor{keywordflow}{return} this->attributeList[attr\_key].attr\_container.f;
+66 \}
+\end{DoxyCode}
+\hypertarget{class_abstract_component_a7289cf7b6f2bfdb9819f3cf337af9845}{\index{Abstract\-Component@{Abstract\-Component}!get\-Attribute\-\_\-float\-Array@{get\-Attribute\-\_\-float\-Array}}
+\index{get\-Attribute\-\_\-float\-Array@{get\-Attribute\-\_\-float\-Array}!AbstractComponent@{Abstract\-Component}}
+\subsubsection[{get\-Attribute\-\_\-float\-Array}]{\setlength{\rightskip}{0pt plus 5cm}{\bf component\-Float\-Array\-Type} $\ast$ Abstract\-Component\-::get\-Attribute\-\_\-float\-Array (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{attr\-\_\-key}
+\end{DoxyParamCaption}
+)}}\label{d1/dae/class_abstract_component_a7289cf7b6f2bfdb9819f3cf337af9845}
+
+
+Get the attribute in the form of an float array. 
+
+Gets the attribute with the given keyname, and returns the value stored for that attribute. If the attribute has a different type than described by the attribute, you will get unwanted behaviour.
+
+
+\begin{DoxyParams}{Parameters}
+{\em attr\-\_\-key} & The key name for the attribute\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value for the given attribute. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+100                                                                                              \{
+101     assert(this->\hyperlink{class_abstract_component_ad4b70f22cedf55ce2d7b58c87ccbfcab}{hasAttribute}(attr\_key) && \textcolor{stringliteral}{"attr\_key does not exist"});
+102     assert(this->attributeList[attr\_key].attr\_type == ATTR\_FLOATARRAY && \textcolor{stringliteral}{"attribute not of type float array
+      "});
+103     \textcolor{keywordflow}{return} this->attributeList[attr\_key].attr\_container.sf;
+104 \}
+\end{DoxyCode}
+\hypertarget{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{\index{Abstract\-Component@{Abstract\-Component}!get\-Attribute\-\_\-int@{get\-Attribute\-\_\-int}}
+\index{get\-Attribute\-\_\-int@{get\-Attribute\-\_\-int}!AbstractComponent@{Abstract\-Component}}
+\subsubsection[{get\-Attribute\-\_\-int}]{\setlength{\rightskip}{0pt plus 5cm}int Abstract\-Component\-::get\-Attribute\-\_\-int (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{attr\-\_\-key}
+\end{DoxyParamCaption}
+)}}\label{d1/dae/class_abstract_component_a16ac644f742683149b78d01b787eb3bd}
+
+
+Get the attribute in the form of an integer. 
+
+Gets the attribute with the given keyname, and returns the value stored for that attribute. If the attribute has a different type than described by the attribute, you will get unwanted behaviour.
+
+
+\begin{DoxyParams}{Parameters}
+{\em attr\-\_\-key} & The key name for the attribute\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value for the given attribute. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+43                                                                  \{
+44     assert(this->\hyperlink{class_abstract_component_ad4b70f22cedf55ce2d7b58c87ccbfcab}{hasAttribute}(attr\_key) && \textcolor{stringliteral}{"attr\_key does not exist"});
+45     assert(this->attributeList[attr\_key].attr\_type == ATTR\_INTEGER && \textcolor{stringliteral}{"attribute not of type integer"});
+46     \textcolor{keywordflow}{return} this->attributeList[attr\_key].attr\_container.i;
+47 \}
+\end{DoxyCode}
+\hypertarget{class_abstract_component_a666015a89f6e5fbf07395f652df99f7e}{\index{Abstract\-Component@{Abstract\-Component}!get\-Attribute\-\_\-int\-Array@{get\-Attribute\-\_\-int\-Array}}
+\index{get\-Attribute\-\_\-int\-Array@{get\-Attribute\-\_\-int\-Array}!AbstractComponent@{Abstract\-Component}}
+\subsubsection[{get\-Attribute\-\_\-int\-Array}]{\setlength{\rightskip}{0pt plus 5cm}{\bf component\-Integer\-Array\-Type} $\ast$ Abstract\-Component\-::get\-Attribute\-\_\-int\-Array (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{attr\-\_\-key}
+\end{DoxyParamCaption}
+)}}\label{d1/dae/class_abstract_component_a666015a89f6e5fbf07395f652df99f7e}
+
+
+Get the attribute in the form of an integer array. 
+
+Gets the attribute with the given keyname, and returns the value stored for that attribute. If the attribute has a different type than described by the attribute, you will get unwanted behaviour.
+
+
+\begin{DoxyParams}{Parameters}
+{\em attr\-\_\-key} & The key name for the attribute\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value for the given attribute. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+120                                                                                       \{
+121     assert(this->\hyperlink{class_abstract_component_ad4b70f22cedf55ce2d7b58c87ccbfcab}{hasAttribute}(attr\_key) && \textcolor{stringliteral}{"attr\_key does not exist"});
+122     assert(this->attributeList[attr\_key].attr\_type == ATTR\_INTEGERARRAY && \textcolor{stringliteral}{"attribute not of type int array
+      "});
+123     \textcolor{keywordflow}{return} this->attributeList[attr\_key].attr\_container.si;
+124 \}
+\end{DoxyCode}
+\hypertarget{class_abstract_component_a4140957094ef40c4ffaa0ef381d00ce5}{\index{Abstract\-Component@{Abstract\-Component}!get\-Attribute\-\_\-string@{get\-Attribute\-\_\-string}}
+\index{get\-Attribute\-\_\-string@{get\-Attribute\-\_\-string}!AbstractComponent@{Abstract\-Component}}
+\subsubsection[{get\-Attribute\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string \& Abstract\-Component\-::get\-Attribute\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{attr\-\_\-key}
+\end{DoxyParamCaption}
+)}}\label{d1/dae/class_abstract_component_a4140957094ef40c4ffaa0ef381d00ce5}
+
+
+Get the attribute in the form of an string. 
+
+Gets the attribute with the given keyname, and returns the value stored for that attribute. If the attribute has a different type than described by the attribute, you will get unwanted behaviour.
+
+
+\begin{DoxyParams}{Parameters}
+{\em attr\-\_\-key} & The key name for the attribute\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value for the given attribute. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+81                                                                                  \{
+82     assert(this->\hyperlink{class_abstract_component_ad4b70f22cedf55ce2d7b58c87ccbfcab}{hasAttribute}(attr\_key) && \textcolor{stringliteral}{"attr\_key does not exist"});
+83     assert(this->attributeList[attr\_key].attr\_type == ATTR\_STRING && \textcolor{stringliteral}{"attribute not of type string"});
+84     \textcolor{keywordflow}{return} *(this->attributeList[attr\_key].attr\_container.s);
+85 \}
+\end{DoxyCode}
+\hypertarget{class_abstract_component_a6debeb112e68311573bf641815e1e111}{\index{Abstract\-Component@{Abstract\-Component}!get\-Attribute\-Type@{get\-Attribute\-Type}}
+\index{get\-Attribute\-Type@{get\-Attribute\-Type}!AbstractComponent@{Abstract\-Component}}
+\subsubsection[{get\-Attribute\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf attribute\-\_\-type} Abstract\-Component\-::get\-Attribute\-Type (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{attr\-\_\-key}
+\end{DoxyParamCaption}
+)}}\label{d1/dae/class_abstract_component_a6debeb112e68311573bf641815e1e111}
+
+
+Gets the attribute type. 
+
+Returns the enum value for the given attribute key
+
+
+\begin{DoxyParams}{Parameters}
+{\em attr\-\_\-key} & The key name for the attribute.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The type of the attribute 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+38                                                                             \{
+39     assert(this->\hyperlink{class_abstract_component_ad4b70f22cedf55ce2d7b58c87ccbfcab}{hasAttribute}(attr\_key) && \textcolor{stringliteral}{"attr\_key does not exist"});
+40     \textcolor{keywordflow}{return} this->attributeList[attr\_key].attr\_type;
+41 \}
+\end{DoxyCode}
+\hypertarget{class_abstract_component_af4bae0249d512eee5085557039e2c6a4}{\index{Abstract\-Component@{Abstract\-Component}!get\-Name@{get\-Name}}
+\index{get\-Name@{get\-Name}!AbstractComponent@{Abstract\-Component}}
+\subsubsection[{get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string \& Abstract\-Component\-::get\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d1/dae/class_abstract_component_af4bae0249d512eee5085557039e2c6a4}
+
+
+Returns the name of the component. 
+
+\begin{DoxyReturn}{Returns}
+The name of the component 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+23                                             \{
+24     \textcolor{keywordflow}{return} this->name;
+25 \}
+\end{DoxyCode}
+\hypertarget{class_abstract_component_ad4b70f22cedf55ce2d7b58c87ccbfcab}{\index{Abstract\-Component@{Abstract\-Component}!has\-Attribute@{has\-Attribute}}
+\index{has\-Attribute@{has\-Attribute}!AbstractComponent@{Abstract\-Component}}
+\subsubsection[{has\-Attribute}]{\setlength{\rightskip}{0pt plus 5cm}bool Abstract\-Component\-::has\-Attribute (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{attr\-\_\-key}
+\end{DoxyParamCaption}
+)}}\label{d1/dae/class_abstract_component_ad4b70f22cedf55ce2d7b58c87ccbfcab}
+
+
+Checks the attribute\-List for the given attribute. 
+
+The attribute key name is passed, and the attribute list is searched. The function returns a boolean on whether or not it was successful in finding that attribute by the given key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em attr\-\_\-key} & The key name of the attribute.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean, where {\itshape true} means that the given attribute exists. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+31                                                               \{
+32     \textcolor{keywordflow}{if} (this->attributeList.find(attr\_key) == this->attributeList.end()) \{
+33         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+34     \}
+35     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+36 \}
+\end{DoxyCode}
+\hypertarget{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{\index{Abstract\-Component@{Abstract\-Component}!set\-Attribute\-\_\-float@{set\-Attribute\-\_\-float}}
+\index{set\-Attribute\-\_\-float@{set\-Attribute\-\_\-float}!AbstractComponent@{Abstract\-Component}}
+\subsubsection[{set\-Attribute\-\_\-float}]{\setlength{\rightskip}{0pt plus 5cm}void Abstract\-Component\-::set\-Attribute\-\_\-float (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{attr\-\_\-key, }
+\item[{float}]{fvalue}
+\end{DoxyParamCaption}
+)}}\label{d1/dae/class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}
+
+
+Set the attribute for the given key with the given float value. 
+
+The attribute key provided is checked for its existence. If it exists, the attribute is modified to be of the float type, and the data is modified to be of the float value.
+
+If the attribute doesn't already exist, the attribute is created with the given key and value and placed within the attribute\-List.
+
+
+\begin{DoxyParams}{Parameters}
+{\em attr\-\_\-key} & The key name for the attribute\\
+\hline
+{\em fvalue} & The float value to set the given attribute to. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+68                                                                                   \{
+69     \textcolor{keywordflow}{if} (this->\hyperlink{class_abstract_component_ad4b70f22cedf55ce2d7b58c87ccbfcab}{hasAttribute}(attr\_key)) \{
+70         this->attributeList[attr\_key].attr\_container.f = fvalue;
+71         this->attributeList[attr\_key].attr\_type = ATTR\_FLOAT;
+72     \}
+73     \textcolor{keywordflow}{else} \{
+74         \hyperlink{structattribute__struct}{attribute} attr;
+75         attr.attr\_container.\hyperlink{unionattribute_container__union_a8b7fa07f036da8f8590ffde9cce25562}{f} = fvalue;
+76         attr.attr\_type = ATTR\_FLOAT;
+77         this->attributeList[attr\_key] = attr;
+78     \}   
+79 \}
+\end{DoxyCode}
+\hypertarget{class_abstract_component_a8829d475d858bc03e3e3be0e18f18fdb}{\index{Abstract\-Component@{Abstract\-Component}!set\-Attribute\-\_\-float\-Array@{set\-Attribute\-\_\-float\-Array}}
+\index{set\-Attribute\-\_\-float\-Array@{set\-Attribute\-\_\-float\-Array}!AbstractComponent@{Abstract\-Component}}
+\subsubsection[{set\-Attribute\-\_\-float\-Array}]{\setlength{\rightskip}{0pt plus 5cm}void Abstract\-Component\-::set\-Attribute\-\_\-float\-Array (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{attr\-\_\-key, }
+\item[{{\bf component\-Float\-Array\-Type}}]{sfvalue}
+\end{DoxyParamCaption}
+)}}\label{d1/dae/class_abstract_component_a8829d475d858bc03e3e3be0e18f18fdb}
+
+
+Set the attribute for the given key with the given float array value. 
+
+The attribute key provided is checked for its existence. If it exists, the attribute is modified to be of the float array type, and the data is modified to be of the float array value.
+
+If the attribute doesn't already exist, the attribute is created with the given key and value and placed within the attribute\-List.
+
+
+\begin{DoxyParams}{Parameters}
+{\em attr\-\_\-key} & The key name for the attribute\\
+\hline
+{\em sfvalue} & The float array value to set the given attribute to. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+106                                                                                                           \{
+107     \textcolor{keywordflow}{if} (this->\hyperlink{class_abstract_component_ad4b70f22cedf55ce2d7b58c87ccbfcab}{hasAttribute}(attr\_key)) \{
+108         \textcolor{keyword}{delete} this->attributeList[attr\_key].attr\_container.sf;
+109         this->attributeList[attr\_key].attr\_container.sf = \textcolor{keyword}{new} 
+      \hyperlink{_abstract_component_8h_a55cf170262c3d7123f8b95208293e36d}{componentFloatArrayType}(sfvalue);
+110         this->attributeList[attr\_key].attr\_type = ATTR\_FLOATARRAY;
+111     \}
+112     \textcolor{keywordflow}{else} \{
+113         \hyperlink{structattribute__struct}{attribute} attr;
+114         attr.attr\_container.\hyperlink{unionattribute_container__union_af8f7cda67ab2f1ed902179e505598118}{sf} = \textcolor{keyword}{new} \hyperlink{_abstract_component_8h_a55cf170262c3d7123f8b95208293e36d}{componentFloatArrayType}(sfvalue);
+115         attr.attr\_type = ATTR\_FLOATARRAY;
+116         this->attributeList[attr\_key] = attr;
+117     \}   
+118 \}
+\end{DoxyCode}
+\hypertarget{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{\index{Abstract\-Component@{Abstract\-Component}!set\-Attribute\-\_\-int@{set\-Attribute\-\_\-int}}
+\index{set\-Attribute\-\_\-int@{set\-Attribute\-\_\-int}!AbstractComponent@{Abstract\-Component}}
+\subsubsection[{set\-Attribute\-\_\-int}]{\setlength{\rightskip}{0pt plus 5cm}void Abstract\-Component\-::set\-Attribute\-\_\-int (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{attr\-\_\-key, }
+\item[{int}]{ivalue}
+\end{DoxyParamCaption}
+)}}\label{d1/dae/class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}
+
+
+Set the attribute for the given key with the given integer value. 
+
+The attribute key provided is checked for its existence. If it exists, the attribute is modified to be of the integer type, and the data is modified to be of the integer value.
+
+If the attribute doesn't already exist, the attribute is created with the given key and value and placed within the attribute\-List.
+
+
+\begin{DoxyParams}{Parameters}
+{\em attr\-\_\-key} & The key name for the attribute\\
+\hline
+{\em ivalue} & The integer value to set the given attribute to. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+49                                                                               \{
+50     \textcolor{keywordflow}{if} (this->\hyperlink{class_abstract_component_ad4b70f22cedf55ce2d7b58c87ccbfcab}{hasAttribute}(attr\_key)) \{
+51         this->attributeList[attr\_key].attr\_container.i = ivalue;
+52         this->attributeList[attr\_key].attr\_type = ATTR\_INTEGER;
+53     \}
+54     \textcolor{keywordflow}{else} \{
+55         \hyperlink{structattribute__struct}{attribute} attr;
+56         attr.attr\_container.\hyperlink{unionattribute_container__union_a8ccd0904a303e6b5df3358f7847ccc32}{i} = ivalue;
+57         attr.attr\_type = ATTR\_INTEGER;
+58         this->attributeList[attr\_key] = attr;
+59     \}
+60 \}
+\end{DoxyCode}
+\hypertarget{class_abstract_component_a309929ad461fc269cc21485a92e211d3}{\index{Abstract\-Component@{Abstract\-Component}!set\-Attribute\-\_\-int\-Array@{set\-Attribute\-\_\-int\-Array}}
+\index{set\-Attribute\-\_\-int\-Array@{set\-Attribute\-\_\-int\-Array}!AbstractComponent@{Abstract\-Component}}
+\subsubsection[{set\-Attribute\-\_\-int\-Array}]{\setlength{\rightskip}{0pt plus 5cm}void Abstract\-Component\-::set\-Attribute\-\_\-int\-Array (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{attr\-\_\-key, }
+\item[{{\bf component\-Integer\-Array\-Type}}]{sivalue}
+\end{DoxyParamCaption}
+)}}\label{d1/dae/class_abstract_component_a309929ad461fc269cc21485a92e211d3}
+
+
+Set the attribute for the given key with the given integer array value. 
+
+The attribute key provided is checked for its existence. If it exists, the attribute is modified to be of the integer array type, and the data is modified to be of the integer array value.
+
+If the attribute doesn't already exist, the attribute is created with the given key and value and placed within the attribute\-List.
+
+
+\begin{DoxyParams}{Parameters}
+{\em attr\-\_\-key} & The key name for the attribute\\
+\hline
+{\em sivalue} & The integer array value to set the given attribute to. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+126                                                                                                           \{
+127     \textcolor{keywordflow}{if} (this->\hyperlink{class_abstract_component_ad4b70f22cedf55ce2d7b58c87ccbfcab}{hasAttribute}(attr\_key)) \{
+128         \textcolor{keyword}{delete} this->attributeList[attr\_key].attr\_container.si;
+129         this->attributeList[attr\_key].attr\_container.si = \textcolor{keyword}{new} 
+      \hyperlink{_abstract_component_8h_a8bf1376a7e433919172c6631520f34b4}{componentIntegerArrayType}(sivalue);
+130         this->attributeList[attr\_key].attr\_type = ATTR\_INTEGERARRAY;
+131     \}
+132     \textcolor{keywordflow}{else} \{
+133         \hyperlink{structattribute__struct}{attribute} attr;
+134         attr.attr\_container.\hyperlink{unionattribute_container__union_a2b29c846194a2339949b09868796eebe}{si} = \textcolor{keyword}{new} \hyperlink{_abstract_component_8h_a8bf1376a7e433919172c6631520f34b4}{componentIntegerArrayType}(sivalue);
+135         attr.attr\_type = ATTR\_INTEGERARRAY;
+136         this->attributeList[attr\_key] = attr;
+137     \}
+138 \}
+\end{DoxyCode}
+\hypertarget{class_abstract_component_a702ec2cc2624561ef51afcd9c8061fd2}{\index{Abstract\-Component@{Abstract\-Component}!set\-Attribute\-\_\-string@{set\-Attribute\-\_\-string}}
+\index{set\-Attribute\-\_\-string@{set\-Attribute\-\_\-string}!AbstractComponent@{Abstract\-Component}}
+\subsubsection[{set\-Attribute\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}void Abstract\-Component\-::set\-Attribute\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{attr\-\_\-key, }
+\item[{std\-::string}]{svalue}
+\end{DoxyParamCaption}
+)}}\label{d1/dae/class_abstract_component_a702ec2cc2624561ef51afcd9c8061fd2}
+
+
+Set the attribute for the given key with the given string value. 
+
+The attribute key provided is checked for its existence. If it exists, the attribute is modified to be of the string type, and the data is modified to be of the string value.
+
+If the attribute doesn't already exist, the attribute is created with the given key and value and placed within the attribute\-List.
+
+
+\begin{DoxyParams}{Parameters}
+{\em attr\-\_\-key} & The key name for the attribute\\
+\hline
+{\em svalue} & The string value to set the given attribute to. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+87                                                                                        \{
+88     \textcolor{keywordflow}{if} (this->\hyperlink{class_abstract_component_ad4b70f22cedf55ce2d7b58c87ccbfcab}{hasAttribute}(attr\_key)) \{
+89         *(this->attributeList[attr\_key].attr\_container.s) = svalue;
+90         this->attributeList[attr\_key].attr\_type = ATTR\_STRING;
+91     \}
+92     \textcolor{keywordflow}{else} \{
+93         \hyperlink{structattribute__struct}{attribute} attr;
+94         attr.attr\_container.\hyperlink{unionattribute_container__union_a739b5d76690df93b19380a78cb7ddbd3}{s} = \textcolor{keyword}{new} std::string(svalue);
+95         attr.attr\_type = ATTR\_STRING;
+96         this->attributeList[attr\_key] = attr;
+97     \}   
+98 \}
+\end{DoxyCode}
+\hypertarget{class_abstract_component_a35c9cab4e3845a947609b6ada8dc89cf}{\index{Abstract\-Component@{Abstract\-Component}!update@{update}}
+\index{update@{update}!AbstractComponent@{Abstract\-Component}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Abstract\-Component\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{d1/dae/class_abstract_component_a35c9cab4e3845a947609b6ada8dc89cf}
+
+
+Updates the component based on the current set of attributes. 
+
+Used to update the component. This should be performed after modifications have been made on the component's attributes or members.
+
+\begin{DoxyReturn}{Returns}
+Returns a non-\/zero value if it is successful. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_shape_component_ae62aa31a3d5c65c675243fdcc5f60904}{Shape\-Component}, \hyperlink{class_text_component_a0157702090c5ab75071448dfefb7196e}{Text\-Component}, \hyperlink{class_collision_component_a03f6ad68a39a5f7df79d5ed3e85a31eb}{Collision\-Component}, \hyperlink{class_state_component_a202841453e2d2bebc43079ec2da344bb}{State\-Component}, \hyperlink{class_position_component_a1c966c7291bcf3b8c8101bb70f046f7f}{Position\-Component}, \hyperlink{class_input_component_a1577c43e70f7e7f4ac6647fb4a8563fa}{Input\-Component}, \hyperlink{class_sprite_component_a3518ccb69a3c829d5dcdc2dc024447ea}{Sprite\-Component}, and \hyperlink{class_health_component_a1cec30820565ff476375715daf245ada}{Health\-Component}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_abstract_component_8h}{Abstract\-Component.\-h}\item 
+Abstract\-Component.\-cpp\end{DoxyCompactItemize}

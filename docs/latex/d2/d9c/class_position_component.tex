@@ -1,0 +1,77 @@
+\hypertarget{class_position_component}{\section{Position\-Component Class Reference}
+\label{d2/d9c/class_position_component}\index{Position\-Component@{Position\-Component}}
+}
+
+
+Used to describe the position of an entity.  
+
+
+
+
+{\ttfamily \#include $<$Position\-Component.\-h$>$}
+
+Inheritance diagram for Position\-Component\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d2/d9c/class_position_component}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_position_component_af36423e068f4c960b7b620fb76ae16b7}{Position\-Component} (std\-::string name)
+\begin{DoxyCompactList}\small\item\em constructor for position component \end{DoxyCompactList}\item 
+\hypertarget{class_position_component_a1c966c7291bcf3b8c8101bb70f046f7f}{int \hyperlink{class_position_component_a1c966c7291bcf3b8c8101bb70f046f7f}{update} ()}\label{d2/d9c/class_position_component_a1c966c7291bcf3b8c8101bb70f046f7f}
+
+\begin{DoxyCompactList}\small\item\em updates the position component. Not implemented. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Used to describe the position of an entity. 
+
+The position of the entity is important for the \hyperlink{class_sprite_component}{Sprite\-Component}, \hyperlink{class_text_component}{Text\-Component}, \hyperlink{class_shape_component}{Shape\-Component} and Collision Component. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_position_component_af36423e068f4c960b7b620fb76ae16b7}{\index{Position\-Component@{Position\-Component}!Position\-Component@{Position\-Component}}
+\index{Position\-Component@{Position\-Component}!PositionComponent@{Position\-Component}}
+\subsubsection[{Position\-Component}]{\setlength{\rightskip}{0pt plus 5cm}Position\-Component\-::\-Position\-Component (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{d2/d9c/class_position_component_af36423e068f4c960b7b620fb76ae16b7}
+
+
+constructor for position component 
+
+The position component overrides the family value as \char`\"{}\-Position\char`\"{} and should not be assigned to any further components.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name assigned to the component. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+5     : \hyperlink{class_abstract_component_ab08b845eddbdbe411b95a5385501ab97}{AbstractComponent}(name, \textcolor{stringliteral}{"Position"}) \{
+6 
+7     \textcolor{comment}{//Determines the position of the entity as a whole}
+8         \textcolor{comment}{//Currently used by the sprite system to determine the position}
+9     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_af6d494c0177e73da9ce2c06e77d8ca03}{ATTRIBUTE\_POSITION\_X}, 0.0);
+10     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_a38e831ab6c249750393e3007fa035507}{ATTRIBUTE\_POSITION\_Y}, 0.0);
+11 
+12     \textcolor{comment}{//Determines the offset of the position. This is particularly useful}
+13         \textcolor{comment}{//for providing a view offset}
+14     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_aa003b6ad3f43053c9d43e1acc0098691}{ATTRIBUTE\_OFFSET\_X}, 0.0);
+15     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_a8ebf91b8ee9dfdfad18bc10c3c42d564}{ATTRIBUTE\_OFFSET\_Y}, 0.0);
+16 
+17     \textcolor{comment}{//Determines the overall objects rotation}
+18         \textcolor{comment}{//Given in radians}
+19     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_a70254d936ce8b3662e1a7472c36832d5}{ATTRIBUTE\_ROTATION}, 0.0);
+20 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_position_component_8h}{Position\-Component.\-h}\item 
+Position\-Component.\-cpp\end{DoxyCompactItemize}

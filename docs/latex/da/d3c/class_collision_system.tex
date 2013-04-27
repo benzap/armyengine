@@ -1,0 +1,241 @@
+\hypertarget{class_collision_system}{\section{Collision\-System Class Reference}
+\label{da/d3c/class_collision_system}\index{Collision\-System@{Collision\-System}}
+}
+Inheritance diagram for Collision\-System\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{da/d3c/class_collision_system}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_collision_system_a8172916254667a746b257c38f04018d8}{process} ()
+\begin{DoxyCompactList}\small\item\em Processes the entities with collision components. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_collision_system_a8172916254667a746b257c38f04018d8}{\index{Collision\-System@{Collision\-System}!process@{process}}
+\index{process@{process}!CollisionSystem@{Collision\-System}}
+\subsubsection[{process}]{\setlength{\rightskip}{0pt plus 5cm}int Collision\-System\-::process (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{da/d3c/class_collision_system_a8172916254667a746b257c38f04018d8}
+
+
+Processes the entities with collision components. 
+
+This method is run on each frame.
+
+It checks each of the entities for a collision component and a position component. And performs checks between entities that could potentialy perform a collision callback. If they are checked and it turns out they are colliding, the callback is triggered with information pertaining to the two entities affected. 
+
+Implements \hyperlink{class_abstract_system_af8bfe74feb5df2b5e3fff67bfe1106b9}{Abstract\-System}.
+
+
+\begin{DoxyCode}
+564                              \{
+565     \textcolor{comment}{//need to grab all of the entities that include a collision components}
+566     std::vector<std::shared\_ptr<entityType>> collidableEntities;
+567     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} entity : this->entityManager->\hyperlink{class_entity_manager_a452113e422a9c501bb008761f7609e33}{getAllEntities}()) \{
+568         \textcolor{keywordflow}{if} ((!entity->hasComponentFamily(\textcolor{stringliteral}{"Collision"}) ||
+569             !entity->hasComponentFamily(\textcolor{stringliteral}{"Position"}))) \{
+570             \textcolor{keywordflow}{continue};
+571         \}
+572         \textcolor{keywordflow}{else} \{
+573             collidableEntities.push\_back(entity);
+574         \}
+575     \} \textcolor{comment}{//END for (auto entity : entityManager->getAllEntities()) \{}
+576 
+577     \textcolor{comment}{//testing collision components to eachother.}
+578     \textcolor{comment}{//the robustness of the test depends on what types of bounded objects will end up colliding.}
+579     \textcolor{comment}{//need to form tests between}
+580       \textcolor{comment}{//Bounded Rectangle}
+581       \textcolor{comment}{//Bounded Circle}
+582       \textcolor{comment}{//Bounded Triangle}
+583       \textcolor{comment}{//Bounded Polygon (not implemented)}
+584     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} entityFirst : collidableEntities) \{
+585         \textcolor{keyword}{auto} positionComponentFirst = entityFirst->getComponentsByFamily(\textcolor{stringliteral}{"Position"}).front();
+586         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} collisionComponentFirst : entityFirst->getComponentsByFamily(\textcolor{stringliteral}{"Collision"})) \{
+587         \textcolor{keyword}{auto} collisionBoundTypeFirst = collisionComponentFirst->getAttribute\_string(
+      \hyperlink{_a_e___attributes_8h_a22ab960bb5b8b4b1350c7a25cadc49a5}{ATTRIBUTE\_COLLISION\_BOUND\_TYPE});
+588         \textcolor{keyword}{auto} collisionTagFirst = collisionComponentFirst->getAttribute\_string(
+      \hyperlink{_a_e___attributes_8h_a26b14cbbf2e63e42061d132e25412f59}{ATTRIBUTE\_COLLISION\_TAG});
+589 
+590         \textcolor{comment}{//continue if the given collision component isn't enabled}
+591         \textcolor{keywordflow}{if} (!(collisionComponentFirst->getAttribute\_int(\hyperlink{_a_e___attributes_8h_a4c775095baf8a9c99621ad9ad3b622db}{ATTRIBUTE\_ENABLE}))) \{
+592             \textcolor{keywordflow}{continue};
+593         \}
+594 
+595         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} entitySecond : collidableEntities) \{
+596             \textcolor{comment}{//don't compare to itself}
+597             \textcolor{keywordflow}{if} (entityFirst->getID() == entitySecond->getID()) \{
+598                 \textcolor{keywordflow}{continue};
+599             \}
+600 
+601             \textcolor{comment}{//assuming that our entities only have one}
+602             \textcolor{comment}{//collision component and one position component}
+603             \textcolor{comment}{//  need to consider doing collision hierarchies later}
+604             \textcolor{keyword}{auto} positionComponentSecond = entitySecond->getComponentsByFamily(\textcolor{stringliteral}{"Position"}).front();
+605             \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} collisionComponentSecond : entitySecond->getComponentsByFamily(\textcolor{stringliteral}{"Collision"})) \{
+606 
+607             \textcolor{comment}{//continue if it isn't enabled}
+608             \textcolor{keywordflow}{if} (!(collisionComponentSecond->getAttribute\_int(\hyperlink{_a_e___attributes_8h_a4c775095baf8a9c99621ad9ad3b622db}{ATTRIBUTE\_ENABLE}))) \{
+609                 \textcolor{keywordflow}{continue};
+610             \}
+611 
+612             \textcolor{keyword}{auto} collisionBoundTypeSecond = collisionComponentSecond->getAttribute\_string(
+      \hyperlink{_a_e___attributes_8h_a22ab960bb5b8b4b1350c7a25cadc49a5}{ATTRIBUTE\_COLLISION\_BOUND\_TYPE});
+613             \textcolor{keyword}{auto} collisionTagSecond = collisionComponentSecond->getAttribute\_string(
+      \hyperlink{_a_e___attributes_8h_a26b14cbbf2e63e42061d132e25412f59}{ATTRIBUTE\_COLLISION\_TAG});
+614 
+615             \textcolor{comment}{//make the tagTuple}
+616             \textcolor{keyword}{auto} tagTuple = \hyperlink{_collision_manager_8h_a59fec3c97983b1c074529cfdd245515a}{collisionTagTuple}(collisionTagFirst, collisionTagSecond);
+617 
+618             \textcolor{comment}{//no point in checking for collisions if their is no registered callback}
+619             \textcolor{keywordflow}{if} (!collisionManager->\hyperlink{class_collision_manager_a98395760494f7976f75c1d50072dcc5a}{hasCallback}(tagTuple)) \{
+620                 \textcolor{keywordflow}{continue};
+621             \}
+622 
+623             \textcolor{comment}{//check to see if they have collided}
+624             \textcolor{comment}{//perform collision tests for each unique case}
+625             \textcolor{keywordtype}{bool} bHasCollided = \textcolor{keyword}{false};
+626 
+627             \textcolor{comment}{//collision between two rectangles}
+628             \textcolor{keywordflow}{if} (collisionBoundTypeFirst == \hyperlink{_a_e___attributes_8h_a3a31a6297a55375fdc090f881de08327}{COLLISION\_BOUND\_RECTANGLE} &&
+629                 collisionBoundTypeSecond == \hyperlink{_a_e___attributes_8h_a3a31a6297a55375fdc090f881de08327}{COLLISION\_BOUND\_RECTANGLE}) \{
+630                 bHasCollided = this->collision\_rect\_rect(
+631                     positionComponentFirst,
+632                     collisionComponentFirst,
+633                     positionComponentSecond,
+634                     collisionComponentSecond
+635                     );
+636             \}
+637             \textcolor{comment}{//collision between two circles}
+638             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (collisionBoundTypeFirst == \hyperlink{_a_e___attributes_8h_a50b28a4aee049371f130f3eafa9c942f}{COLLISION\_BOUND\_CIRCLE} &&
+639                 collisionBoundTypeSecond == \hyperlink{_a_e___attributes_8h_a50b28a4aee049371f130f3eafa9c942f}{COLLISION\_BOUND\_CIRCLE}) \{
+640                 bHasCollided = this->collision\_circle\_circle(
+641                     positionComponentFirst,
+642                     collisionComponentFirst,
+643                     positionComponentSecond,
+644                     collisionComponentSecond
+645                     );
+646             \}
+647 
+648             \textcolor{comment}{//collision between a rectangle and a circle}
+649             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (collisionBoundTypeFirst == \hyperlink{_a_e___attributes_8h_a3a31a6297a55375fdc090f881de08327}{COLLISION\_BOUND\_RECTANGLE} &&
+650                 collisionBoundTypeSecond == \hyperlink{_a_e___attributes_8h_a50b28a4aee049371f130f3eafa9c942f}{COLLISION\_BOUND\_CIRCLE}) \{
+651                 bHasCollided = this->collision\_rect\_circle(
+652                     positionComponentFirst,
+653                     collisionComponentFirst,
+654                     positionComponentSecond,
+655                     collisionComponentSecond
+656                     );
+657             \}
+658             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (collisionBoundTypeFirst == \hyperlink{_a_e___attributes_8h_a50b28a4aee049371f130f3eafa9c942f}{COLLISION\_BOUND\_CIRCLE} &&
+659                 collisionBoundTypeSecond == \hyperlink{_a_e___attributes_8h_a3a31a6297a55375fdc090f881de08327}{COLLISION\_BOUND\_RECTANGLE}) \{
+660                 \textcolor{comment}{//swap the parameters}
+661                 bHasCollided = this->collision\_rect\_circle(
+662                     positionComponentSecond,
+663                     collisionComponentSecond,
+664                     positionComponentFirst,
+665                     collisionComponentFirst
+666                     );
+667             \}
+668             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (collisionBoundTypeFirst == \hyperlink{_a_e___attributes_8h_a3a31a6297a55375fdc090f881de08327}{COLLISION\_BOUND\_RECTANGLE} &&
+669                 collisionBoundTypeSecond == \hyperlink{_a_e___attributes_8h_a71ab491ab7b44947b07d7b05974387d9}{COLLISION\_BOUND\_POLYGON}) \{
+670                 bHasCollided = this->collision\_rect\_polygon(
+671                     positionComponentFirst,
+672                     collisionComponentFirst,
+673                     positionComponentSecond,
+674                     collisionComponentSecond
+675                     );
+676             \}
+677             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (collisionBoundTypeFirst == \hyperlink{_a_e___attributes_8h_a71ab491ab7b44947b07d7b05974387d9}{COLLISION\_BOUND\_POLYGON} &&
+678                 collisionBoundTypeSecond == \hyperlink{_a_e___attributes_8h_a3a31a6297a55375fdc090f881de08327}{COLLISION\_BOUND\_RECTANGLE}) \{
+679                     \textcolor{comment}{//swap the parameters}
+680                 bHasCollided = this->collision\_rect\_polygon(
+681                     positionComponentSecond,
+682                     collisionComponentSecond,
+683                     positionComponentFirst,
+684                     collisionComponentFirst
+685                     );
+686             \}
+687             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (collisionBoundTypeFirst == \hyperlink{_a_e___attributes_8h_a71ab491ab7b44947b07d7b05974387d9}{COLLISION\_BOUND\_POLYGON} &&
+688                 collisionBoundTypeSecond == \hyperlink{_a_e___attributes_8h_a71ab491ab7b44947b07d7b05974387d9}{COLLISION\_BOUND\_POLYGON}) \{
+689                 bHasCollided = this->collision\_polygon\_polygon(
+690                     positionComponentFirst,
+691                     collisionComponentFirst,
+692                     positionComponentSecond,
+693                     collisionComponentSecond
+694                     );
+695             \}
+696             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (collisionBoundTypeFirst == \hyperlink{_a_e___attributes_8h_a50b28a4aee049371f130f3eafa9c942f}{COLLISION\_BOUND\_CIRCLE} &&
+697                 collisionBoundTypeSecond == \hyperlink{_a_e___attributes_8h_a71ab491ab7b44947b07d7b05974387d9}{COLLISION\_BOUND\_POLYGON}) \{
+698                 bHasCollided = this->collision\_circle\_polygon(
+699                     positionComponentFirst,
+700                     collisionComponentFirst,
+701                     positionComponentSecond,
+702                     collisionComponentSecond
+703                     );
+704             \}
+705             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (collisionBoundTypeFirst == \hyperlink{_a_e___attributes_8h_a71ab491ab7b44947b07d7b05974387d9}{COLLISION\_BOUND\_POLYGON} &&
+706                 collisionBoundTypeSecond == \hyperlink{_a_e___attributes_8h_a50b28a4aee049371f130f3eafa9c942f}{COLLISION\_BOUND\_CIRCLE}) \{
+707                 bHasCollided = this->collision\_circle\_polygon(
+708                     positionComponentSecond,
+709                     collisionComponentSecond,
+710                     positionComponentFirst,
+711                     collisionComponentFirst
+712                     );
+713             \}
+714 
+715 
+716             \textcolor{comment}{//make the registered collision tuple}
+717             \textcolor{keyword}{auto} regTuple = \hyperlink{_collision_manager_8h_ada58768e1593bf8b68e443116782f54e}{registeredCollisionTuple}(
+718                 entityFirst->getID(), collisionComponentFirst->getName(),
+719                 entitySecond->getID(), collisionComponentSecond->getName()
+720                 );
+721 
+722             \textcolor{comment}{//if they have collided, trigger a callback if a callback exists by the given tag pair}
+723             \textcolor{comment}{//if it's already been registered, then we can simply skip over it}
+724             \textcolor{keywordflow}{if} (bHasCollided) \{
+725                 \textcolor{comment}{//make the tag pair}
+726                 \textcolor{keywordflow}{if} (collisionManager->\hyperlink{class_collision_manager_a98395760494f7976f75c1d50072dcc5a}{hasCallback}(tagTuple)) \{
+727                     \textcolor{comment}{//we only need to call the collision callback once, so if it's}
+728                     \textcolor{comment}{// already registered, there is no point in calling it again}
+729                     \textcolor{keywordflow}{if} (this->collisionManager->\hyperlink{class_collision_manager_a3dd0b50dcdee6bfd6ddcdaf7eec0c66b}{hasRegisteredCollision}(regTuple)) \{
+730                         \textcolor{keywordflow}{continue};
+731                     \}
+732                     \textcolor{keywordflow}{else} \{
+733                         this->collisionManager->\hyperlink{class_collision_manager_abe04add405129184fdb5b76c079fd34a}{registerCollision}(regTuple);
+734                         \textcolor{comment}{//create our param tuple}
+735                         \hyperlink{_collision_manager_8h_aa4e5677732161da0be677d67bec17ea6}{collisionParamTuple} paramTuple = std::tuple\_cat(regTuple, 
+      std::tuple<bool>(\textcolor{keyword}{true}));
+736                         collisionManager->\hyperlink{class_collision_manager_aaf5aa4a712415540ce7313ec9e96dcef}{triggerCallback}(tagTuple, paramTuple);
+737                     \}
+738                     
+739                 \}
+740             \}
+741             \textcolor{keywordflow}{else} \{ \textcolor{comment}{//if (!bHasCollided)}
+742                 \textcolor{keywordflow}{if} (collisionManager->\hyperlink{class_collision_manager_a3dd0b50dcdee6bfd6ddcdaf7eec0c66b}{hasRegisteredCollision}(regTuple)) \{
+743                     \textcolor{comment}{//need to unregister and perform the callback with a false boolean}
+744                     this->collisionManager->\hyperlink{class_collision_manager_ad92675882f024a11730b1276b0949f04}{unregisterCollision}(regTuple);
+745                     \hyperlink{_collision_manager_8h_aa4e5677732161da0be677d67bec17ea6}{collisionParamTuple} paramTuple = std::tuple\_cat(regTuple, 
+      std::tuple<bool>(\textcolor{keyword}{false}));
+746                     collisionManager->\hyperlink{class_collision_manager_aaf5aa4a712415540ce7313ec9e96dcef}{triggerCallback}(tagTuple, paramTuple);
+747                 \}
+748             \}
+749 
+750         \} \textcolor{comment}{//END for (auto collisionComponentSecond : entitySecond->getComponentsByFamily("Collision")) \{}
+751         \} \textcolor{comment}{//END for (auto entity2 : collidableEntities) \{}
+752     \} \textcolor{comment}{//END for (auto collisionComponentFirst : entityFirst->getComponentsByFamily("Collision")) \{}
+753     \} \textcolor{comment}{//END for (auto entity1 : collidableEntities) \{}
+754     \textcolor{keywordflow}{return} 0;
+755 \}\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_collision_system_8h}{Collision\-System.\-h}\item 
+Collision\-System.\-cpp\end{DoxyCompactItemize}

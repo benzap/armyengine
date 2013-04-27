@@ -1,0 +1,166 @@
+\hypertarget{class_sprite_manager}{\section{Sprite\-Manager Class Reference}
+\label{d2/ddd/class_sprite_manager}\index{Sprite\-Manager@{Sprite\-Manager}}
+}
+
+
+Used to manage the sprites for sprite components.  
+
+
+
+
+{\ttfamily \#include $<$Sprite\-Manager.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_sprite_manager_ae7fbcf7339802c90557637b5efa87b78}{add\-Sprite} (const std\-::string \&name, std\-::shared\-\_\-ptr$<$ \hyperlink{_sprite_manager_8h_ae9a8a87b3b59b367a6567a36dbd96222}{sprite\-Type} $>$ the\-Sprite)
+\begin{DoxyCompactList}\small\item\em Adds a sprite to the sprite manager. \end{DoxyCompactList}\item 
+void \hyperlink{class_sprite_manager_af23d8d0946cf4f3be858a62f651adb28}{remove\-Sprite} (const std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em Removes a sprite from the sprite manager. \end{DoxyCompactList}\item 
+bool \hyperlink{class_sprite_manager_a0b181cc3cec5eff62881911772e73a1a}{has\-Sprite} (const std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em Checks if the sprite by the given name exists. \end{DoxyCompactList}\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{_sprite_manager_8h_ae9a8a87b3b59b367a6567a36dbd96222}{sprite\-Type} $>$ \hyperlink{class_sprite_manager_a8473bca1fad87ad11cb2249eb810889e}{get\-Sprite} (const std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em Gets the sprite by the given unique name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_sprite_manager}{Sprite\-Manager} $\ast$ \hyperlink{class_sprite_manager_a575172f8b08b9e3f1f2d31f21412e14c}{get\-Instance} ()
+\begin{DoxyCompactList}\small\item\em Singleton class method to get the single instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Used to manage the sprites for sprite components. 
+
+Sprite manager is a class which manages the sprites that are to be used within the game. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_sprite_manager_ae7fbcf7339802c90557637b5efa87b78}{\index{Sprite\-Manager@{Sprite\-Manager}!add\-Sprite@{add\-Sprite}}
+\index{add\-Sprite@{add\-Sprite}!SpriteManager@{Sprite\-Manager}}
+\subsubsection[{add\-Sprite}]{\setlength{\rightskip}{0pt plus 5cm}void Sprite\-Manager\-::add\-Sprite (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{std\-::shared\-\_\-ptr$<$ {\bf sprite\-Type} $>$}]{the\-Sprite}
+\end{DoxyParamCaption}
+)}}\label{d2/ddd/class_sprite_manager_ae7fbcf7339802c90557637b5efa87b78}
+
+
+Adds a sprite to the sprite manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name that is assigned to the sprite \\
+\hline
+{\em the\-Sprite} & is the sprite to assign to the manager. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+9                                                                                         \{
+10     assert(!this->\hyperlink{class_sprite_manager_a0b181cc3cec5eff62881911772e73a1a}{hasSprite}(name) && \textcolor{stringliteral}{"Sprite by that name already exists"}); 
+11     this->spriteList[name] = theSprite;
+12 \}
+\end{DoxyCode}
+\hypertarget{class_sprite_manager_a575172f8b08b9e3f1f2d31f21412e14c}{\index{Sprite\-Manager@{Sprite\-Manager}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!SpriteManager@{Sprite\-Manager}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Sprite\-Manager}$\ast$ Sprite\-Manager\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{d2/ddd/class_sprite_manager_a575172f8b08b9e3f1f2d31f21412e14c}
+
+
+Singleton class method to get the single instance. 
+
+\begin{DoxyReturn}{Returns}
+Returns the sprite manager single instance. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+99                                       \{
+100     \textcolor{keyword}{static} \hyperlink{class_sprite_manager}{SpriteManager} \_instance;
+101     \textcolor{keywordflow}{return} &\_instance;
+102   \}
+\end{DoxyCode}
+\hypertarget{class_sprite_manager_a8473bca1fad87ad11cb2249eb810889e}{\index{Sprite\-Manager@{Sprite\-Manager}!get\-Sprite@{get\-Sprite}}
+\index{get\-Sprite@{get\-Sprite}!SpriteManager@{Sprite\-Manager}}
+\subsubsection[{get\-Sprite}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$ {\bf sprite\-Type} $>$ Sprite\-Manager\-::get\-Sprite (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{d2/ddd/class_sprite_manager_a8473bca1fad87ad11cb2249eb810889e}
+
+
+Gets the sprite by the given unique name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name that is assigned to the sprite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the shared\-\_\-ptr referencing the sprite.
+\end{DoxyReturn}
+T\-O\-D\-O\-: exception handling. 
+\begin{DoxyCode}
+27                                                                         \{
+28     assert(this->\hyperlink{class_sprite_manager_a0b181cc3cec5eff62881911772e73a1a}{hasSprite}(name) && \textcolor{stringliteral}{"Sprite doesn't exist by that name"});
+29     \textcolor{keywordflow}{return} this->spriteList[name];
+30 \}\end{DoxyCode}
+\hypertarget{class_sprite_manager_a0b181cc3cec5eff62881911772e73a1a}{\index{Sprite\-Manager@{Sprite\-Manager}!has\-Sprite@{has\-Sprite}}
+\index{has\-Sprite@{has\-Sprite}!SpriteManager@{Sprite\-Manager}}
+\subsubsection[{has\-Sprite}]{\setlength{\rightskip}{0pt plus 5cm}bool Sprite\-Manager\-::has\-Sprite (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{d2/ddd/class_sprite_manager_a0b181cc3cec5eff62881911772e73a1a}
+
+
+Checks if the sprite by the given name exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name that is assigned to the sprite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the given sprite exists, otherwise it returns false. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+20                                                    \{
+21     \textcolor{keywordflow}{if}(this->spriteList.find(name) == this->spriteList.end()) \{
+22         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+23     \}
+24     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+25 \}
+\end{DoxyCode}
+\hypertarget{class_sprite_manager_af23d8d0946cf4f3be858a62f651adb28}{\index{Sprite\-Manager@{Sprite\-Manager}!remove\-Sprite@{remove\-Sprite}}
+\index{remove\-Sprite@{remove\-Sprite}!SpriteManager@{Sprite\-Manager}}
+\subsubsection[{remove\-Sprite}]{\setlength{\rightskip}{0pt plus 5cm}void Sprite\-Manager\-::remove\-Sprite (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{d2/ddd/class_sprite_manager_af23d8d0946cf4f3be858a62f651adb28}
+
+
+Removes a sprite from the sprite manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name that is assigned to the sprite \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+14                                                       \{
+15     assert(this->\hyperlink{class_sprite_manager_a0b181cc3cec5eff62881911772e73a1a}{hasSprite}(name) && \textcolor{stringliteral}{"Sprite doesn't exist"});
+16     \textcolor{comment}{//remove element by key}
+17     this->spriteList.erase(name);
+18 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_sprite_manager_8h}{Sprite\-Manager.\-h}\item 
+Sprite\-Manager.\-cpp\end{DoxyCompactItemize}

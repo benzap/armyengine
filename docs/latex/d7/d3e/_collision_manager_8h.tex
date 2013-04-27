@@ -1,0 +1,94 @@
+\hypertarget{_collision_manager_8h}{\section{Collision\-Manager.\-h File Reference}
+\label{d7/d3e/_collision_manager_8h}\index{Collision\-Manager.\-h@{Collision\-Manager.\-h}}
+}
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$functional$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$tuple$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_collision_manager}{Collision\-Manager}
+\begin{DoxyCompactList}\small\item\em Collision manager used to perform callbacks on collisions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::tuple$<$ int, \\*
+std\-::string, int, std\-::string, \\*
+bool $>$ \hyperlink{_collision_manager_8h_aa4e5677732161da0be677d67bec17ea6}{collision\-Param\-Tuple}
+\begin{DoxyCompactList}\small\item\em Tuple for storing collision information as a parameter. \end{DoxyCompactList}\item 
+typedef std\-::tuple$<$ int, \\*
+std\-::string, int, std\-::string $>$ \hyperlink{_collision_manager_8h_ada58768e1593bf8b68e443116782f54e}{registered\-Collision\-Tuple}
+\begin{DoxyCompactList}\small\item\em Tuple for storing collision information as a callback. \end{DoxyCompactList}\item 
+typedef std\-::pair$<$ std\-::string, \\*
+std\-::string $>$ \hyperlink{_collision_manager_8h_a59fec3c97983b1c074529cfdd245515a}{collision\-Tag\-Tuple}
+\begin{DoxyCompactList}\small\item\em Pair Tuple that holds two collision tags. \end{DoxyCompactList}\item 
+\hypertarget{_collision_manager_8h_a141eae5ec36e58aae61b3cb494451210}{typedef std\-::function$<$ int(\hyperlink{_collision_manager_8h_aa4e5677732161da0be677d67bec17ea6}{collision\-Param\-Tuple})$>$ \hyperlink{_collision_manager_8h_a141eae5ec36e58aae61b3cb494451210}{function\-Collision\-Template}}\label{d7/d3e/_collision_manager_8h_a141eae5ec36e58aae61b3cb494451210}
+
+\begin{DoxyCompactList}\small\item\em Function Type to assign to the callback. \end{DoxyCompactList}\item 
+\hypertarget{_collision_manager_8h_aec2d98a7f5131b338682ec68f007c444}{typedef std\-::map\\*
+$<$ \hyperlink{_collision_manager_8h_a59fec3c97983b1c074529cfdd245515a}{collision\-Tag\-Tuple}, \\*
+\hyperlink{_collision_manager_8h_a141eae5ec36e58aae61b3cb494451210}{function\-Collision\-Template} $>$ \hyperlink{_collision_manager_8h_aec2d98a7f5131b338682ec68f007c444}{collision\-Callback\-Table\-Type}}\label{d7/d3e/_collision_manager_8h_aec2d98a7f5131b338682ec68f007c444}
+
+\begin{DoxyCompactList}\small\item\em Type to hold the callbacks. \end{DoxyCompactList}\item 
+\hypertarget{_collision_manager_8h_abdad0d35408fee6c0d2881d65bf951ce}{typedef std\-::list\\*
+$<$ \hyperlink{_collision_manager_8h_ada58768e1593bf8b68e443116782f54e}{registered\-Collision\-Tuple} $>$ \hyperlink{_collision_manager_8h_abdad0d35408fee6c0d2881d65bf951ce}{registered\-Collision\-List\-Type}}\label{d7/d3e/_collision_manager_8h_abdad0d35408fee6c0d2881d65bf951ce}
+
+\begin{DoxyCompactList}\small\item\em Type for holding registered collisions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Benjamin Zaporzan \href{mailto:benzaporzan@gmail.com}{\tt benzaporzan@gmail.\-com}
+\end{DoxyAuthor}
+\hypertarget{d5/d67/_texture_manager_8h_LICENSE}{}\subsection{L\-I\-C\-E\-N\-S\-E}\label{d5/d67/_texture_manager_8h_LICENSE}
+Copyright (C) 2013 Benjamin Zaporzan
+
+This program is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \mbox{[}\mbox{[}\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}\mbox{]}\mbox{]}.\hypertarget{d5/d67/_texture_manager_8h_DESCRIPTION}{}\subsection{D\-E\-S\-C\-R\-I\-P\-T\-I\-O\-N}\label{d5/d67/_texture_manager_8h_DESCRIPTION}
+Collision manager is used to manage what happens when two entities collide with eachother. Callbacks are added to the collision manager to handle situations where given collision types collide. Depending on the type of collision, the resulting collision may be handled differently.
+
+For example Player tagged \char`\"{}\-Player\char`\"{} collides with a wall \char`\"{}\-Physical\char`\"{}, which will invoke a collision callback to prevent the character from moving in that direction. It must also be noted that a second callback where the wall collides with the player will also be invoked.
+
+Information for the callback includes a tuple, which includes 5 values. These 5 values should be enough to perform all the functions desired tuple$<$entity id 1, collisioncomponent name 1, entity id 2, collisioncomponent name 2, b\-Registered$>$
+
+the callback is chosen based on the pair$<$collisiontag1, collisiontag2$>$ which needs to be registered within the manager. 
+
+\subsection{Typedef Documentation}
+\hypertarget{_collision_manager_8h_aa4e5677732161da0be677d67bec17ea6}{\index{Collision\-Manager.\-h@{Collision\-Manager.\-h}!collision\-Param\-Tuple@{collision\-Param\-Tuple}}
+\index{collision\-Param\-Tuple@{collision\-Param\-Tuple}!CollisionManager.h@{Collision\-Manager.\-h}}
+\subsubsection[{collision\-Param\-Tuple}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::tuple$<$int, std\-::string, int, std\-::string, bool$>$ {\bf collision\-Param\-Tuple}}}\label{d7/d3e/_collision_manager_8h_aa4e5677732161da0be677d67bec17ea6}
+
+
+Tuple for storing collision information as a parameter. 
+
+tuple for storing
+
+first collided entity id and collisioncomponent name
+
+second collided entity id and collisioncomponent name
+
+last value is a boolean representing if it has stopped colliding. \hypertarget{_collision_manager_8h_a59fec3c97983b1c074529cfdd245515a}{\index{Collision\-Manager.\-h@{Collision\-Manager.\-h}!collision\-Tag\-Tuple@{collision\-Tag\-Tuple}}
+\index{collision\-Tag\-Tuple@{collision\-Tag\-Tuple}!CollisionManager.h@{Collision\-Manager.\-h}}
+\subsubsection[{collision\-Tag\-Tuple}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::pair$<$std\-::string, std\-::string$>$ {\bf collision\-Tag\-Tuple}}}\label{d7/d3e/_collision_manager_8h_a59fec3c97983b1c074529cfdd245515a}
+
+
+Pair Tuple that holds two collision tags. 
+
+pair tuple holding first collision tag attribute string second collision tag attribute string \hypertarget{_collision_manager_8h_ada58768e1593bf8b68e443116782f54e}{\index{Collision\-Manager.\-h@{Collision\-Manager.\-h}!registered\-Collision\-Tuple@{registered\-Collision\-Tuple}}
+\index{registered\-Collision\-Tuple@{registered\-Collision\-Tuple}!CollisionManager.h@{Collision\-Manager.\-h}}
+\subsubsection[{registered\-Collision\-Tuple}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::tuple$<$int, std\-::string, int, std\-::string$>$ {\bf registered\-Collision\-Tuple}}}\label{d7/d3e/_collision_manager_8h_ada58768e1593bf8b68e443116782f54e}
+
+
+Tuple for storing collision information as a callback. 
+
+tuple for storing
+
+first collided entity id and collisioncomponent name
+
+second collided entity id and collisioncomponent name 

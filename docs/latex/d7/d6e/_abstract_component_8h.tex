@@ -1,0 +1,110 @@
+\hypertarget{_abstract_component_8h}{\section{Abstract\-Component.\-h File Reference}
+\label{d7/d6e/_abstract_component_8h}\index{Abstract\-Component.\-h@{Abstract\-Component.\-h}}
+}
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionattribute_container__union}{attribute\-Container\-\_\-union}
+\begin{DoxyCompactList}\small\item\em union container to store the attribute values \end{DoxyCompactList}\item 
+struct \hyperlink{structattribute__struct}{attribute\-\_\-struct}
+\begin{DoxyCompactList}\small\item\em structure used to represent the attribute \end{DoxyCompactList}\item 
+class \hyperlink{class_abstract_component}{Abstract\-Component}
+\begin{DoxyCompactList}\small\item\em The abstract representation for each component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_abstract_component_8h_a8bf1376a7e433919172c6631520f34b4}{typedef std\-::vector$<$ int $>$ \hyperlink{_abstract_component_8h_a8bf1376a7e433919172c6631520f34b4}{component\-Integer\-Array\-Type}}\label{d7/d6e/_abstract_component_8h_a8bf1376a7e433919172c6631520f34b4}
+
+\begin{DoxyCompactList}\small\item\em Type to represent integer arrays in the attribute container. \end{DoxyCompactList}\item 
+\hypertarget{_abstract_component_8h_a55cf170262c3d7123f8b95208293e36d}{typedef std\-::vector$<$ float $>$ \hyperlink{_abstract_component_8h_a55cf170262c3d7123f8b95208293e36d}{component\-Float\-Array\-Type}}\label{d7/d6e/_abstract_component_8h_a55cf170262c3d7123f8b95208293e36d}
+
+\begin{DoxyCompactList}\small\item\em Type to represent the float arrays in the attribute container. \end{DoxyCompactList}\item 
+typedef union \\*
+\hyperlink{unionattribute_container__union}{attribute\-Container\-\_\-union} \hyperlink{_abstract_component_8h_a5ea0c69d6d8d1c92894095de560a634b}{attribute\-\_\-container}
+\begin{DoxyCompactList}\small\item\em union container to store the attribute values \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structattribute__struct}{attribute\-\_\-struct} \hyperlink{_abstract_component_8h_a0eb4c6ea4bde1edbf1a86d0261e35706}{attribute}
+\begin{DoxyCompactList}\small\item\em structure used to represent the attribute \end{DoxyCompactList}\item 
+\hypertarget{_abstract_component_8h_a0153a6f799cbd9bfbe29848d90ebbb6d}{typedef std\-::map$<$ std\-::string, \\*
+\hyperlink{_abstract_component_8h_a0eb4c6ea4bde1edbf1a86d0261e35706}{attribute} $>$ \hyperlink{_abstract_component_8h_a0153a6f799cbd9bfbe29848d90ebbb6d}{attribute\-List\-Type}}\label{d7/d6e/_abstract_component_8h_a0153a6f799cbd9bfbe29848d90ebbb6d}
+
+\begin{DoxyCompactList}\small\item\em The type used to represent the list of attributes for the component. \end{DoxyCompactList}\item 
+\hypertarget{_abstract_component_8h_a2fb71c745bae7eefb130b6bd26fec141}{typedef \hyperlink{class_abstract_component}{Abstract\-Component} \hyperlink{_abstract_component_8h_a2fb71c745bae7eefb130b6bd26fec141}{component\-Type}}\label{d7/d6e/_abstract_component_8h_a2fb71c745bae7eefb130b6bd26fec141}
+
+\begin{DoxyCompactList}\small\item\em Simple typedef to abstract the abstract... \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_abstract_component_8h_a7d090069888e2837cee65351f2e86d73}{attribute\-\_\-type} \{ \\*
+{\bfseries A\-T\-T\-R\-\_\-\-I\-N\-T\-E\-G\-E\-R}, 
+{\bfseries A\-T\-T\-R\-\_\-\-F\-L\-O\-A\-T}, 
+{\bfseries A\-T\-T\-R\-\_\-\-S\-T\-R\-I\-N\-G}, 
+{\bfseries A\-T\-T\-R\-\_\-\-F\-L\-O\-A\-T\-A\-R\-R\-A\-Y}, 
+\\*
+{\bfseries A\-T\-T\-R\-\_\-\-I\-N\-T\-E\-G\-E\-R\-A\-R\-R\-A\-Y}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to describe the attribute type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Benjamin Zaporzan \href{mailto:benzaporzan@gmail.com}{\tt benzaporzan@gmail.\-com}
+\end{DoxyAuthor}
+\hypertarget{d5/d67/_texture_manager_8h_LICENSE}{}\subsection{L\-I\-C\-E\-N\-S\-E}\label{d5/d67/_texture_manager_8h_LICENSE}
+Copyright (C) 2013 Benjamin Zaporzan
+
+This program is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \mbox{[}\mbox{[}\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}\mbox{]}\mbox{]}.\hypertarget{d5/d67/_texture_manager_8h_DESCRIPTION}{}\subsection{D\-E\-S\-C\-R\-I\-P\-T\-I\-O\-N}\label{d5/d67/_texture_manager_8h_DESCRIPTION}
+Contains the abstract for the components within the entity component system 
+
+\subsection{Typedef Documentation}
+\hypertarget{_abstract_component_8h_a0eb4c6ea4bde1edbf1a86d0261e35706}{\index{Abstract\-Component.\-h@{Abstract\-Component.\-h}!attribute@{attribute}}
+\index{attribute@{attribute}!AbstractComponent.h@{Abstract\-Component.\-h}}
+\subsubsection[{attribute}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf attribute\-\_\-struct}  {\bf attribute}}}\label{d7/d6e/_abstract_component_8h_a0eb4c6ea4bde1edbf1a86d0261e35706}
+
+
+structure used to represent the attribute 
+
+The attribute is a structure which holds both the enumeration which describes the type of value stored, and the union container which holds the value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em attr\-\_\-container} & Union holding the data that represents the attribute \\
+\hline
+{\em attr\-\_\-type} & The type of the data being stored for the attribute \\
+\hline
+\end{DoxyParams}
+\hypertarget{_abstract_component_8h_a5ea0c69d6d8d1c92894095de560a634b}{\index{Abstract\-Component.\-h@{Abstract\-Component.\-h}!attribute\-\_\-container@{attribute\-\_\-container}}
+\index{attribute\-\_\-container@{attribute\-\_\-container}!AbstractComponent.h@{Abstract\-Component.\-h}}
+\subsubsection[{attribute\-\_\-container}]{\setlength{\rightskip}{0pt plus 5cm}typedef union {\bf attribute\-Container\-\_\-union}  {\bf attribute\-\_\-container}}}\label{d7/d6e/_abstract_component_8h_a5ea0c69d6d8d1c92894095de560a634b}
+
+
+union container to store the attribute values 
+
+The container holds the attribute value, and the type of value is described by the attribute\-\_\-type 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_abstract_component_8h_a7d090069888e2837cee65351f2e86d73}{\index{Abstract\-Component.\-h@{Abstract\-Component.\-h}!attribute\-\_\-type@{attribute\-\_\-type}}
+\index{attribute\-\_\-type@{attribute\-\_\-type}!AbstractComponent.h@{Abstract\-Component.\-h}}
+\subsubsection[{attribute\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf attribute\-\_\-type}}}\label{d7/d6e/_abstract_component_8h_a7d090069888e2837cee65351f2e86d73}
+
+
+Enumeration to describe the attribute type. 
+
+Enumeration used to describe what type is being stored within the \hyperlink{unionattribute_container__union}{attribute\-Container\-\_\-union}. 
+\begin{DoxyCode}
+49                     \{ 
+50     ATTR\_INTEGER, 
+51     ATTR\_FLOAT, 
+52     ATTR\_STRING, 
+53     ATTR\_FLOATARRAY,
+54     ATTR\_INTEGERARRAY
+55 \};
+\end{DoxyCode}

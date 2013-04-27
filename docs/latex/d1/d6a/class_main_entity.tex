@@ -1,0 +1,65 @@
+\hypertarget{class_main_entity}{\section{Main\-Entity Class Reference}
+\label{d1/d6a/class_main_entity}\index{Main\-Entity@{Main\-Entity}}
+}
+Inheritance diagram for Main\-Entity\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d1/d6a/class_main_entity}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_main_entity_a2973538fe411c639b0eaf5d03f21a607}{{\bfseries Main\-Entity} (std\-::string, int)}\label{d1/d6a/class_main_entity_a2973538fe411c639b0eaf5d03f21a607}
+
+\item 
+int \hyperlink{class_main_entity_ade561821779e704c48c019b4bc64d34c}{handle} ()
+\begin{DoxyCompactList}\small\item\em virtual function to perform pre-\/initialization and handling \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_main_entity_ade561821779e704c48c019b4bc64d34c}{\index{Main\-Entity@{Main\-Entity}!handle@{handle}}
+\index{handle@{handle}!MainEntity@{Main\-Entity}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}int Main\-Entity\-::handle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{d1/d6a/class_main_entity_ade561821779e704c48c019b4bc64d34c}
+
+
+virtual function to perform pre-\/initialization and handling 
+
+Currently it is being used to sort the shape, text, and sprite components to provide Z-\/buffer ordering. It is advised that this method be used if any components are added during execution to prevent erroneous behaviour.
+
+\begin{DoxyReturn}{Returns}
+A non-\/zero value when it is successful. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_abstract_entity_af14b173190f84093b5498d3c0139e71f}{Abstract\-Entity}.
+
+
+\begin{DoxyCode}
+14                        \{
+15     \textcolor{keyword}{auto} componentVector = this->\hyperlink{class_abstract_entity_af67659713b7d451168d53206c1d71de7}{getAllComponents}();
+16     std::sort(componentVector.begin(), componentVector.end(),
+17         [] (std::shared\_ptr<componentType> first, std::shared\_ptr<componentType> second) \{
+18             \textcolor{keywordflow}{if} (!first->hasAttribute(\hyperlink{_a_e___attributes_8h_af11539bb711833d6321aaccd369e9e4b}{ATTRIBUTE\_ZBUFFER})) \{
+19                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+20             \}
+21             \textcolor{keywordflow}{if} (!second->hasAttribute(\hyperlink{_a_e___attributes_8h_af11539bb711833d6321aaccd369e9e4b}{ATTRIBUTE\_ZBUFFER})) \{
+22                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+23             \}
+24 
+25             \textcolor{keywordtype}{float} zFirst = first->getAttribute\_float(\hyperlink{_a_e___attributes_8h_af11539bb711833d6321aaccd369e9e4b}{ATTRIBUTE\_ZBUFFER});
+26             \textcolor{keywordtype}{float} zSecond = second->getAttribute\_float(\hyperlink{_a_e___attributes_8h_af11539bb711833d6321aaccd369e9e4b}{ATTRIBUTE\_ZBUFFER});
+27             \textcolor{keywordflow}{return} (zFirst < zSecond);
+28     \});
+29     \textcolor{keywordflow}{return} 0;
+30 \}\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Main\-Entity.\-h\item 
+Main\-Entity.\-cpp\end{DoxyCompactItemize}

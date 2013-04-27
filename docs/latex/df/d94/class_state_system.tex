@@ -1,0 +1,85 @@
+\hypertarget{class_state_system}{\section{State\-System Class Reference}
+\label{df/d94/class_state_system}\index{State\-System@{State\-System}}
+}
+Inheritance diagram for State\-System\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{df/d94/class_state_system}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_state_system_a437f4d0bc0e24713e582a635b83ec365}{void {\bfseries set\-State\-Machine\-Function} (function\-State\-Machine\-Template)}\label{df/d94/class_state_system_a437f4d0bc0e24713e582a635b83ec365}
+
+\item 
+\hypertarget{class_state_system_a97c35c1215cca9cf897770777f2ef0f1}{int {\bfseries trigger\-State\-Machine} ()}\label{df/d94/class_state_system_a97c35c1215cca9cf897770777f2ef0f1}
+
+\item 
+int \hyperlink{class_state_system_acd4ff634e180a921f3d40448cff994ca}{process} ()
+\begin{DoxyCompactList}\small\item\em Perform actions on entities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_state_system_acd4ff634e180a921f3d40448cff994ca}{\index{State\-System@{State\-System}!process@{process}}
+\index{process@{process}!StateSystem@{State\-System}}
+\subsubsection[{process}]{\setlength{\rightskip}{0pt plus 5cm}int State\-System\-::process (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{df/d94/class_state_system_acd4ff634e180a921f3d40448cff994ca}
+
+
+Perform actions on entities. 
+
+The process method is a pure virtual function that processes all of th entities stored within the entity manager. Some systems do not use the entity manager for processing, but may process other things that require processing per frame.
+
+What is processed is fully dependant on the implementation.
+
+\begin{DoxyReturn}{Returns}
+A non-\/zero value if the processing was successful. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_abstract_system_af8bfe74feb5df2b5e3fff67bfe1106b9}{Abstract\-System}.
+
+
+\begin{DoxyCode}
+25                          \{
+26     \textcolor{comment}{//run the state machine function}
+27     \textcolor{keywordflow}{if} (this->stateMachineFunction()) \{
+28         assert(0 && \textcolor{stringliteral}{"State machine returned a non-zero value"});
+29     \}
+30 
+31     \textcolor{comment}{//grab the state components from the entities}
+32     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} entity : this->\hyperlink{class_abstract_system_ac0d16e94f5cea4b1a6bf489d35d7a14d}{entityManager}->\hyperlink{class_entity_manager_a452113e422a9c501bb008761f7609e33}{getAllEntities}()) \{
+33         \textcolor{comment}{//get only the state components}
+34         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} stateComponent : entity->getComponentsByFamily(
+      \hyperlink{_state_component_8h_aac90c254d3963717ccf0661a124a0d20}{COMPONENT\_FAMILY\_STATE})) \{
+35             \textcolor{comment}{//weed out the components that aren't enabled}
+36             \textcolor{keywordflow}{if} (!stateComponent->getAttribute\_int(\hyperlink{_a_e___attributes_8h_a4c775095baf8a9c99621ad9ad3b622db}{ATTRIBUTE\_ENABLE})) \{
+37                 \textcolor{keywordflow}{continue};
+38             \}
+39 
+40             \textcolor{comment}{//perform the state component callback}
+41             \textcolor{keyword}{auto} callbackString = stateComponent->getAttribute\_string(
+      \hyperlink{_a_e___attributes_8h_a8602d00b356bb7e6ba95069a94fd5555}{ATTRIBUTE\_CALLBACK});
+42             callbackManager->\hyperlink{class_callback_manager_a4c5dc4430f0fb5cebe240be020a8fbe9}{triggerCallback}(callbackString, entity->getID());
+43 
+44             \textcolor{comment}{//check to see if it's on repeat, otherwise disable the state component}
+45             \textcolor{comment}{// from executing again}
+46             \textcolor{keywordflow}{if} (!stateComponent->getAttribute\_int(\textcolor{stringliteral}{"bRepeat"})) \{
+47                 stateComponent->setAttribute\_int(\hyperlink{_a_e___attributes_8h_a4c775095baf8a9c99621ad9ad3b622db}{ATTRIBUTE\_ENABLE}, 0);
+48             \}
+49 
+50         \} \textcolor{comment}{//END for (auto stateComponent : ...}
+51     \} \textcolor{comment}{//END for (auto entity : ...}
+52     \textcolor{keywordflow}{return} 0;
+53 \}\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+State\-System.\-h\item 
+State\-System.\-cpp\end{DoxyCompactItemize}

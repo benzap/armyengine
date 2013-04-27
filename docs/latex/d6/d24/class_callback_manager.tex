@@ -1,0 +1,245 @@
+\hypertarget{class_callback_manager}{\section{Callback\-Manager Class Reference}
+\label{d6/d24/class_callback_manager}\index{Callback\-Manager@{Callback\-Manager}}
+}
+
+
+The callback manager is used to store and retrieve callbacks.  
+
+
+
+
+{\ttfamily \#include $<$Callback\-Manager.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_callback_manager_a0e6019364d757f9a575b05a749360d46}{add\-Callback} (const std\-::string \&name, \hyperlink{_callback_manager_8h_afb6653b2315b76a8dcbae52ed1be8b8f}{function\-Base\-Template} func)
+\begin{DoxyCompactList}\small\item\em Add a callback to the callback manager with zero parameters. \end{DoxyCompactList}\item 
+void \hyperlink{class_callback_manager_ab90d8ef9caf4ef1f05863c074a68228d}{add\-Callback} (const std\-::string \&name, \hyperlink{_callback_manager_8h_a73a0c6254a0b5ab661ca1f3bd5f3d99c}{function\-Template} func)
+\begin{DoxyCompactList}\small\item\em Add a callback to the callback manager with one parameter. \end{DoxyCompactList}\item 
+void \hyperlink{class_callback_manager_afd7add06423bd69b799528b9b864f646}{add\-Callback} (const std\-::string \&name, \hyperlink{_callback_manager_8h_a3459e948765053b6cb9e3b0b5efb5906}{function\-Event\-Template} func)
+\begin{DoxyCompactList}\small\item\em Add a callback to the callback manager with one parameter. \end{DoxyCompactList}\item 
+int \hyperlink{class_callback_manager_a4c5dc4430f0fb5cebe240be020a8fbe9}{trigger\-Callback} (const std\-::string \&name, int I\-D=0, int event\-Index=0)
+\begin{DoxyCompactList}\small\item\em triggers the given callback, and returns whether it was successful \end{DoxyCompactList}\item 
+void \hyperlink{class_callback_manager_a5883cc430cacbbd39a2b44893feca0ad}{remove\-Callback} (const std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em deletes a callback by its key \end{DoxyCompactList}\item 
+bool \hyperlink{class_callback_manager_a60aeb116e1cb38de4091e978d9aa8197}{has\-Callback} (const std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em Checks if the manager has the callback by the given keyname. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_callback_manager}{Callback\-Manager} $\ast$ \hyperlink{class_callback_manager_a79c0c77cd533fbbe093c2055cd96637b}{get\-Instance} ()
+\begin{DoxyCompactList}\small\item\em $<$ Singleton method to grab the entity manager instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The callback manager is used to store and retrieve callbacks. 
+
+The callback manager contains lists of functions which are used as callbacks to components stored within the entities. It includes one parameter, which is the entities current I\-D the function must also return '0' in order to determine whether it was successful 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_callback_manager_a0e6019364d757f9a575b05a749360d46}{\index{Callback\-Manager@{Callback\-Manager}!add\-Callback@{add\-Callback}}
+\index{add\-Callback@{add\-Callback}!CallbackManager@{Callback\-Manager}}
+\subsubsection[{add\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void Callback\-Manager\-::add\-Callback (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{{\bf function\-Base\-Template}}]{func}
+\end{DoxyParamCaption}
+)}}\label{d6/d24/class_callback_manager_a0e6019364d757f9a575b05a749360d46}
+
+
+Add a callback to the callback manager with zero parameters. 
+
+add a callback to the map the function.
+
+It is of the form int {\itshape f()}, and can be a lambda, std\-::bind, or class object, see the Unit Test Callback\-Tests
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the keyname assigned to the callback\\
+\hline
+{\em func} & is the function you wish to execute for the callback \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+25                                                                                   \{
+26     assert(!this->\hyperlink{class_callback_manager_a60aeb116e1cb38de4091e978d9aa8197}{hasCallback}(name) && \textcolor{stringliteral}{"Callback already exists by that name"});
+27     \textcolor{keyword}{auto} funcWrapper = \hyperlink{class_callback_function_wrapper}{CallbackFunctionWrapper}((
+      \hyperlink{_callback_manager_8h_afb6653b2315b76a8dcbae52ed1be8b8f}{functionBaseTemplate}) func);
+28     this->callbackMap[name] = funcWrapper;  
+29 \}
+\end{DoxyCode}
+\hypertarget{class_callback_manager_ab90d8ef9caf4ef1f05863c074a68228d}{\index{Callback\-Manager@{Callback\-Manager}!add\-Callback@{add\-Callback}}
+\index{add\-Callback@{add\-Callback}!CallbackManager@{Callback\-Manager}}
+\subsubsection[{add\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void Callback\-Manager\-::add\-Callback (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{{\bf function\-Template}}]{func}
+\end{DoxyParamCaption}
+)}}\label{d6/d24/class_callback_manager_ab90d8ef9caf4ef1f05863c074a68228d}
+
+
+Add a callback to the callback manager with one parameter. 
+
+add a callback to the map the function.
+
+It is of the form {\itshape int f(int)}, and can be a lambda, std\-::bind, or class object, see the Unit Test Callback\-Tests
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the keyname assigned to the callback\\
+\hline
+{\em func} & is the function you wish to execute for the callback \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+17                                                                               \{
+18     assert(!this->\hyperlink{class_callback_manager_a60aeb116e1cb38de4091e978d9aa8197}{hasCallback}(name) && \textcolor{stringliteral}{"Callback already exists by that name"});
+19 
+20     \textcolor{comment}{//wrap our function in our functionwrapper}
+21     \textcolor{keyword}{auto} funcWrapper = \hyperlink{class_callback_function_wrapper}{CallbackFunctionWrapper}((
+      \hyperlink{_callback_manager_8h_a73a0c6254a0b5ab661ca1f3bd5f3d99c}{functionTemplate}) func);
+22     this->callbackMap[name] = funcWrapper;  
+23 \}
+\end{DoxyCode}
+\hypertarget{class_callback_manager_afd7add06423bd69b799528b9b864f646}{\index{Callback\-Manager@{Callback\-Manager}!add\-Callback@{add\-Callback}}
+\index{add\-Callback@{add\-Callback}!CallbackManager@{Callback\-Manager}}
+\subsubsection[{add\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void Callback\-Manager\-::add\-Callback (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{{\bf function\-Event\-Template}}]{func}
+\end{DoxyParamCaption}
+)}}\label{d6/d24/class_callback_manager_afd7add06423bd69b799528b9b864f646}
+
+
+Add a callback to the callback manager with one parameter. 
+
+add a callback to the map the function.
+
+It is of the form {\itshape int f(int, int)}, and can be a lambda, std\-::bind, or class object, see the Unit Test Callback\-Tests
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the keyname assigned to the callback\\
+\hline
+{\em func} & is the function you wish to execute for the callback \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+12                                                                                    \{
+13     assert(!this->\hyperlink{class_callback_manager_a60aeb116e1cb38de4091e978d9aa8197}{hasCallback}(name) && \textcolor{stringliteral}{"Callback already exists by that name"});
+14     this->callbackMap[name] = func; 
+15 \}
+\end{DoxyCode}
+\hypertarget{class_callback_manager_a79c0c77cd533fbbe093c2055cd96637b}{\index{Callback\-Manager@{Callback\-Manager}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!CallbackManager@{Callback\-Manager}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Callback\-Manager}$\ast$ Callback\-Manager\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{d6/d24/class_callback_manager_a79c0c77cd533fbbe093c2055cd96637b}
+
+
+$<$ Singleton method to grab the entity manager instance. 
+
+\begin{DoxyReturn}{Returns}
+The callback manager instance. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+89                                         \{
+90     \textcolor{keyword}{static} \hyperlink{class_callback_manager}{CallbackManager} \_instance;
+91     \textcolor{keywordflow}{return} &\_instance;
+92   \}
+\end{DoxyCode}
+\hypertarget{class_callback_manager_a60aeb116e1cb38de4091e978d9aa8197}{\index{Callback\-Manager@{Callback\-Manager}!has\-Callback@{has\-Callback}}
+\index{has\-Callback@{has\-Callback}!CallbackManager@{Callback\-Manager}}
+\subsubsection[{has\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}bool Callback\-Manager\-::has\-Callback (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{d6/d24/class_callback_manager_a60aeb116e1cb38de4091e978d9aa8197}
+
+
+Checks if the manager has the callback by the given keyname. 
+
+returns true, if the provided parameter matches a callback key stored within the callback\-Map
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the keyname of the callback you wish to check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The method returns true if the callback exists, otherwise it returns false. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+5                                                        \{
+6     \textcolor{keywordflow}{if} (this->callbackMap.find(name) == this->callbackMap.end()) \{
+7         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+8     \}
+9     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+10 \}
+\end{DoxyCode}
+\hypertarget{class_callback_manager_a5883cc430cacbbd39a2b44893feca0ad}{\index{Callback\-Manager@{Callback\-Manager}!remove\-Callback@{remove\-Callback}}
+\index{remove\-Callback@{remove\-Callback}!CallbackManager@{Callback\-Manager}}
+\subsubsection[{remove\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void Callback\-Manager\-::remove\-Callback (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{d6/d24/class_callback_manager_a5883cc430cacbbd39a2b44893feca0ad}
+
+
+deletes a callback by its key 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the keyname of the callback to remove. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+36                                                           \{
+37     assert(this->\hyperlink{class_callback_manager_a60aeb116e1cb38de4091e978d9aa8197}{hasCallback}(name) && \textcolor{stringliteral}{"Callback does not exist by that name"});
+38     this->callbackMap.erase(name);
+39 \}
+\end{DoxyCode}
+\hypertarget{class_callback_manager_a4c5dc4430f0fb5cebe240be020a8fbe9}{\index{Callback\-Manager@{Callback\-Manager}!trigger\-Callback@{trigger\-Callback}}
+\index{trigger\-Callback@{trigger\-Callback}!CallbackManager@{Callback\-Manager}}
+\subsubsection[{trigger\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}int Callback\-Manager\-::trigger\-Callback (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{int}]{I\-D = {\ttfamily 0}, }
+\item[{int}]{event\-Index = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{d6/d24/class_callback_manager_a4c5dc4430f0fb5cebe240be020a8fbe9}
+
+
+triggers the given callback, and returns whether it was successful 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the keyname of the callback to call\\
+\hline
+{\em I\-D} & is the first parameter, which is usually designated to the I\-D of an entity.\\
+\hline
+{\em event\-Index} & is the second parameter, which is usually designated to the index of the event within the \hyperlink{class_event_manager}{Event\-Manager}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+31                                                                                   \{
+32     assert(this->\hyperlink{class_callback_manager_a60aeb116e1cb38de4091e978d9aa8197}{hasCallback}(name) && \textcolor{stringliteral}{"Callback does not exist by that name"});
+33     \textcolor{keywordflow}{return} this->callbackMap[name](ID, eventIndex);
+34 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_callback_manager_8h}{Callback\-Manager.\-h}\item 
+Callback\-Manager.\-cpp\end{DoxyCompactItemize}

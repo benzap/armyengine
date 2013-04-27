@@ -1,0 +1,104 @@
+\hypertarget{class_collision_component}{\section{Collision\-Component Class Reference}
+\label{d7/db6/class_collision_component}\index{Collision\-Component@{Collision\-Component}}
+}
+
+
+The collision component is used to assign a collision bound to an entity.  
+
+
+
+
+{\ttfamily \#include $<$Collision\-Component.\-h$>$}
+
+Inheritance diagram for Collision\-Component\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d7/db6/class_collision_component}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_collision_component_a2e6dcebc033b2d63d3ed685506232f1d}{Collision\-Component} (std\-::string name)
+\begin{DoxyCompactList}\small\item\em Constructor for the collision component. \end{DoxyCompactList}\item 
+\hypertarget{class_collision_component_a03f6ad68a39a5f7df79d5ed3e85a31eb}{int \hyperlink{class_collision_component_a03f6ad68a39a5f7df79d5ed3e85a31eb}{update} ()}\label{d7/db6/class_collision_component_a03f6ad68a39a5f7df79d5ed3e85a31eb}
+
+\begin{DoxyCompactList}\small\item\em Dynamically bound function that updates the component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The collision component is used to assign a collision bound to an entity. 
+
+The collision component includes attributes to determine the positioning of a figmentary shape on the screen that represents the bounds of that given entity.
+
+All attributes that contribute to the offset, origin and position of a shape component also have the same attributes associated with the collision component. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_collision_component_a2e6dcebc033b2d63d3ed685506232f1d}{\index{Collision\-Component@{Collision\-Component}!Collision\-Component@{Collision\-Component}}
+\index{Collision\-Component@{Collision\-Component}!CollisionComponent@{Collision\-Component}}
+\subsubsection[{Collision\-Component}]{\setlength{\rightskip}{0pt plus 5cm}Collision\-Component\-::\-Collision\-Component (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{d7/db6/class_collision_component_a2e6dcebc033b2d63d3ed685506232f1d}
+
+
+Constructor for the collision component. 
+
+The constructor for the collision component overrides the family to the fixed \char`\"{}\-Collision\char`\"{} family name. It is recommended that no other components created override this name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name assigned to the given collision component. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+5                                                      :
+6     \hyperlink{class_abstract_component_ab08b845eddbdbe411b95a5385501ab97}{AbstractComponent}(name, \textcolor{stringliteral}{"Collision"}) \{
+7     \textcolor{comment}{//Determines whether the given shape should be shown}
+8         \textcolor{comment}{//0 - disable}
+9         \textcolor{comment}{//1 - enable}
+10     \hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{setAttribute\_int}(\hyperlink{_a_e___attributes_8h_a4c775095baf8a9c99621ad9ad3b622db}{ATTRIBUTE\_ENABLE}, 1);
+11 
+12     \textcolor{comment}{//the collision tag, which is an identifier for determining the collision}
+13      \textcolor{comment}{//provides the manager with unique collisions to provide callbacks for}
+14     \hyperlink{class_abstract_component_a702ec2cc2624561ef51afcd9c8061fd2}{setAttribute\_string}(\hyperlink{_a_e___attributes_8h_a26b14cbbf2e63e42061d132e25412f59}{ATTRIBUTE\_COLLISION\_TAG}, 
+      \hyperlink{_a_e___attributes_8h_ad6932d214295ee70eecab27c5eb3e51a}{COLLISION\_DEFAULT\_TAG});
+15 
+16     \textcolor{comment}{//the collision bound shape type}
+17     \hyperlink{class_abstract_component_a702ec2cc2624561ef51afcd9c8061fd2}{setAttribute\_string}(\hyperlink{_a_e___attributes_8h_a22ab960bb5b8b4b1350c7a25cadc49a5}{ATTRIBUTE\_COLLISION\_BOUND\_TYPE}, 
+      \hyperlink{_a_e___attributes_8h_a3a31a6297a55375fdc090f881de08327}{COLLISION\_BOUND\_RECTANGLE});
+18 
+19     \textcolor{comment}{//the collision bound attributes}
+20     \textcolor{comment}{//  rectangle depends on width and height}
+21     \textcolor{comment}{//  circle depends on radius}
+22 
+23     \textcolor{comment}{//width of the rectangle bound (x)}
+24     \hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_aade9a992cd068c12793a1bb56d015022}{ATTRIBUTE\_WIDTH}, 0.0);
+25     \textcolor{comment}{//height of the rectangle bound (y)}
+26     \hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_ad1f046fde393a66e7c49f97b08af1c0d}{ATTRIBUTE\_HEIGHT}, 0.0);
+27     \textcolor{comment}{//radius of the circle bound (r)}
+28     \hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_a5b0feddcf4ea3df07d1a9a2f9dd3bf70}{ATTRIBUTE\_RADIUS}, 0.0);
+29     \textcolor{comment}{//Used by polygons to represent the points making up the bounds}
+30     \hyperlink{class_abstract_component_a8829d475d858bc03e3e3be0e18f18fdb}{setAttribute\_floatArray}(\hyperlink{_a_e___attributes_8h_a26ee781739ac518473cf414ecc968239}{ATTRIBUTE\_POLYGON\_POINTS}, 
+      \hyperlink{_abstract_component_8h_a55cf170262c3d7123f8b95208293e36d}{componentFloatArrayType}());
+31 
+32     \textcolor{comment}{//Related Sprite attributes}
+33     \textcolor{comment}{//This provides the offset of the collision bound from its origin within the X and Y direction}
+34     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_aa003b6ad3f43053c9d43e1acc0098691}{ATTRIBUTE\_OFFSET\_X}, 0.0);
+35     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_a8ebf91b8ee9dfdfad18bc10c3c42d564}{ATTRIBUTE\_OFFSET\_Y}, 0.0);
+36 
+37     \textcolor{comment}{//Is the origin of the collision bound with respect to the}
+38       \textcolor{comment}{//position component}
+39     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_a5c5a5ae3ea4130db3dfd08029a17a17c}{ATTRIBUTE\_ORIGIN\_X}, 0.0);
+40     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_af45315d7cdc2f4ecdb28d0a9d6bb15c7}{ATTRIBUTE\_ORIGIN\_Y}, 0.0);
+41 
+\}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_collision_component_8h}{Collision\-Component.\-h}\item 
+Collision\-Component.\-cpp\end{DoxyCompactItemize}

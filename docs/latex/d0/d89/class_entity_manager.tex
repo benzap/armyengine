@@ -1,0 +1,335 @@
+\hypertarget{class_entity_manager}{\section{Entity\-Manager Class Reference}
+\label{d0/d89/class_entity_manager}\index{Entity\-Manager@{Entity\-Manager}}
+}
+
+
+The entity manager used to store and manager entities.  
+
+
+
+
+{\ttfamily \#include $<$Entity\-Manager.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_entity_manager_ad9dca8a5918113b2ed10b330e0c1b8f3}{add\-Entity} (std\-::shared\-\_\-ptr$<$ \hyperlink{_abstract_entity_8h_a5b087f4ada5a2395ba03ae7d01b56568}{entity\-Type} $>$ entity)
+\begin{DoxyCompactList}\small\item\em Add entity to the entity manager. \end{DoxyCompactList}\item 
+void \hyperlink{class_entity_manager_a2f46084a98181c3f8e1c09182104e385}{remove\-Entity} (std\-::shared\-\_\-ptr$<$ \hyperlink{_abstract_entity_8h_a5b087f4ada5a2395ba03ae7d01b56568}{entity\-Type} $>$ entity)
+\begin{DoxyCompactList}\small\item\em Remove entity from the entity manager. \end{DoxyCompactList}\item 
+bool \hyperlink{class_entity_manager_a4a7fa9f2086a4dfc890211111a86675c}{has\-Entity\-By\-Id} (const int I\-D)
+\begin{DoxyCompactList}\small\item\em Checks if an entity with the given I\-D exists within the manager. \end{DoxyCompactList}\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{_abstract_entity_8h_a5b087f4ada5a2395ba03ae7d01b56568}{entity\-Type} $>$ \hyperlink{class_entity_manager_a7f18391fbaa2ddd29957b74789dd487b}{get\-Entity\-By\-Id} (const int I\-D)
+\begin{DoxyCompactList}\small\item\em Gets the first entity with the given unique I\-D. \end{DoxyCompactList}\item 
+\hyperlink{_entity_manager_8h_ac6eefa7a2a0560298c06e549b535f58f}{entity\-Vector\-Type} \hyperlink{class_entity_manager_a452113e422a9c501bb008761f7609e33}{get\-All\-Entities} ()
+\begin{DoxyCompactList}\small\item\em Gets all of the entities within the manager. \end{DoxyCompactList}\item 
+\hyperlink{_entity_manager_8h_ad498cce7240e0ba6c86bd9acaa5ba2ff}{entity\-List\-Type} \hyperlink{class_entity_manager_aa7e75a5cec1e2f2f3584bd2780722fe4}{get\-Entities\-By\-Name} (const std\-::string \&entity\-Name)
+\begin{DoxyCompactList}\small\item\em Gets all of the entities by the given name. \end{DoxyCompactList}\item 
+\hyperlink{_entity_manager_8h_ad498cce7240e0ba6c86bd9acaa5ba2ff}{entity\-List\-Type} \hyperlink{class_entity_manager_ab9d4afacf0e0720d7c53eff351dd358e}{get\-Entities\-By\-Family} (const std\-::string \&entity\-Family)
+\begin{DoxyCompactList}\small\item\em Gets all of the entities with the given family. \end{DoxyCompactList}\item 
+void \hyperlink{class_entity_manager_ae75aae1a46961a44a450a79add5e8921}{sort\-Entity\-List} ()
+\begin{DoxyCompactList}\small\item\em operation sorts the entity\-List based on a sorting criteria \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_entity_manager}{Entity\-Manager} $\ast$ \hyperlink{class_entity_manager_a65ec69ca7631238bfb45c65de80a26b1}{get\-Instance} ()
+\begin{DoxyCompactList}\small\item\em Singleton method to grab the entity manager instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The entity manager used to store and manager entities. 
+
+The entity manager is a singleton that has methods to add / store, remove, retrieve one or many entities. Any entities that you want to be processed within the engine should be added to the entity manager. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_entity_manager_ad9dca8a5918113b2ed10b330e0c1b8f3}{\index{Entity\-Manager@{Entity\-Manager}!add\-Entity@{add\-Entity}}
+\index{add\-Entity@{add\-Entity}!EntityManager@{Entity\-Manager}}
+\subsubsection[{add\-Entity}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\-Manager\-::add\-Entity (
+\begin{DoxyParamCaption}
+\item[{std\-::shared\-\_\-ptr$<$ {\bf entity\-Type} $>$}]{entity}
+\end{DoxyParamCaption}
+)}}\label{d0/d89/class_entity_manager_ad9dca8a5918113b2ed10b330e0c1b8f3}
+
+
+Add entity to the entity manager. 
+
+Used to add an entity to the entity manager. The entity needs to be in the form of a shared\-\_\-ptr.
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & is the shared\-\_\-ptr of the entity you wish to add. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+12                                                               \{
+13     this->entityList.push\_back(entity);
+14 \}
+\end{DoxyCode}
+\hypertarget{class_entity_manager_a452113e422a9c501bb008761f7609e33}{\index{Entity\-Manager@{Entity\-Manager}!get\-All\-Entities@{get\-All\-Entities}}
+\index{get\-All\-Entities@{get\-All\-Entities}!EntityManager@{Entity\-Manager}}
+\subsubsection[{get\-All\-Entities}]{\setlength{\rightskip}{0pt plus 5cm}{\bf entity\-Vector\-Type} Entity\-Manager\-::get\-All\-Entities (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/d89/class_entity_manager_a452113e422a9c501bb008761f7609e33}
+
+
+Gets all of the entities within the manager. 
+
+\begin{DoxyReturn}{Returns}
+The list of all the entities. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+43                                                \{
+44     \textcolor{keywordflow}{return} this->entityList;
+45 \}
+\end{DoxyCode}
+\hypertarget{class_entity_manager_ab9d4afacf0e0720d7c53eff351dd358e}{\index{Entity\-Manager@{Entity\-Manager}!get\-Entities\-By\-Family@{get\-Entities\-By\-Family}}
+\index{get\-Entities\-By\-Family@{get\-Entities\-By\-Family}!EntityManager@{Entity\-Manager}}
+\subsubsection[{get\-Entities\-By\-Family}]{\setlength{\rightskip}{0pt plus 5cm}{\bf entity\-List\-Type} Entity\-Manager\-::get\-Entities\-By\-Family (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{entity\-Family}
+\end{DoxyParamCaption}
+)}}\label{d0/d89/class_entity_manager_ab9d4afacf0e0720d7c53eff351dd358e}
+
+
+Gets all of the entities with the given family. 
+
+This list returned will contain all entities that belong to the same family.
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity\-Family} & is the family you wish to retrieve\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The method returns a list of entities that are a part of the given family. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+57                                                                                \{
+58     std::list<std::shared\_ptr<entityType>> entityList;
+59     \textcolor{keywordflow}{for} ( \textcolor{keyword}{auto} entity : this->entityList) \{
+60         \textcolor{keywordflow}{if} (entityFamily == entity->getFamily()) \{
+61             entityList.push\_back(entity);
+62         \}
+63     \}
+64     \textcolor{keywordflow}{return} entityList;
+65 \}
+\end{DoxyCode}
+\hypertarget{class_entity_manager_aa7e75a5cec1e2f2f3584bd2780722fe4}{\index{Entity\-Manager@{Entity\-Manager}!get\-Entities\-By\-Name@{get\-Entities\-By\-Name}}
+\index{get\-Entities\-By\-Name@{get\-Entities\-By\-Name}!EntityManager@{Entity\-Manager}}
+\subsubsection[{get\-Entities\-By\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf entity\-List\-Type} Entity\-Manager\-::get\-Entities\-By\-Name (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{entity\-Name}
+\end{DoxyParamCaption}
+)}}\label{d0/d89/class_entity_manager_aa7e75a5cec1e2f2f3584bd2780722fe4}
+
+
+Gets all of the entities by the given name. 
+
+This list returned will contain all of the entities with the given name. This suggests that entities do not have a unique name, which would be correct. T\-O\-D\-O\-: fix this.
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity\-Name} & is the name of the entities you wish to retrieve.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The method returns a list of entities with the given name 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+47                                                                            \{
+48     std::list<std::shared\_ptr<entityType>> entityList;
+49     \textcolor{keywordflow}{for} ( \textcolor{keyword}{auto} entity : this->entityList) \{
+50         \textcolor{keywordflow}{if} (entityName == entity->getName()) \{
+51             entityList.push\_back(entity);
+52         \}
+53     \}
+54     \textcolor{keywordflow}{return} entityList;
+55 \}
+\end{DoxyCode}
+\hypertarget{class_entity_manager_a7f18391fbaa2ddd29957b74789dd487b}{\index{Entity\-Manager@{Entity\-Manager}!get\-Entity\-By\-Id@{get\-Entity\-By\-Id}}
+\index{get\-Entity\-By\-Id@{get\-Entity\-By\-Id}!EntityManager@{Entity\-Manager}}
+\subsubsection[{get\-Entity\-By\-Id}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$ {\bf entity\-Type} $>$ Entity\-Manager\-::get\-Entity\-By\-Id (
+\begin{DoxyParamCaption}
+\item[{const int}]{I\-D}
+\end{DoxyParamCaption}
+)}}\label{d0/d89/class_entity_manager_a7f18391fbaa2ddd29957b74789dd487b}
+
+
+Gets the first entity with the given unique I\-D. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em I\-D} & is the unique identifier for the entity\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The entity, or a shared\-\_\-ptr(nullptr) if the entity does not exist. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+33                                                                    \{
+34     assert(this->\hyperlink{class_entity_manager_a4a7fa9f2086a4dfc890211111a86675c}{hasEntityById}(ID) && \textcolor{stringliteral}{"No entity with the given ID"});
+35     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} entity : this->entityList) \{
+36         \textcolor{keywordflow}{if} (ID == entity->getID()) \{
+37             \textcolor{keywordflow}{return} entity;
+38         \}
+39     \}
+40     \textcolor{keywordflow}{return} std::shared\_ptr<entityType> (\textcolor{keyword}{nullptr});
+41 \}
+\end{DoxyCode}
+\hypertarget{class_entity_manager_a65ec69ca7631238bfb45c65de80a26b1}{\index{Entity\-Manager@{Entity\-Manager}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!EntityManager@{Entity\-Manager}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Entity\-Manager}$\ast$ Entity\-Manager\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{d0/d89/class_entity_manager_a65ec69ca7631238bfb45c65de80a26b1}
+
+
+Singleton method to grab the entity manager instance. 
+
+\begin{DoxyReturn}{Returns}
+The entity manager instance. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+71                                       \{
+72     \textcolor{keyword}{static} \hyperlink{class_entity_manager}{EntityManager} \_instance;
+73     \textcolor{keywordflow}{return} &\_instance;
+74   \}
+\end{DoxyCode}
+\hypertarget{class_entity_manager_a4a7fa9f2086a4dfc890211111a86675c}{\index{Entity\-Manager@{Entity\-Manager}!has\-Entity\-By\-Id@{has\-Entity\-By\-Id}}
+\index{has\-Entity\-By\-Id@{has\-Entity\-By\-Id}!EntityManager@{Entity\-Manager}}
+\subsubsection[{has\-Entity\-By\-Id}]{\setlength{\rightskip}{0pt plus 5cm}bool Entity\-Manager\-::has\-Entity\-By\-Id (
+\begin{DoxyParamCaption}
+\item[{const int}]{I\-D}
+\end{DoxyParamCaption}
+)}}\label{d0/d89/class_entity_manager_a4a7fa9f2086a4dfc890211111a86675c}
+
+
+Checks if an entity with the given I\-D exists within the manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em I\-D} & is the unique identifier for the entity\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the entity with the given I\-D exists, otherwise it returns false. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+24                                               \{
+25     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} entity : this->entityList) \{
+26         \textcolor{keywordflow}{if} (ID == entity->getID()) \{
+27             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+28         \}
+29     \}
+30     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+31 \}
+\end{DoxyCode}
+\hypertarget{class_entity_manager_a2f46084a98181c3f8e1c09182104e385}{\index{Entity\-Manager@{Entity\-Manager}!remove\-Entity@{remove\-Entity}}
+\index{remove\-Entity@{remove\-Entity}!EntityManager@{Entity\-Manager}}
+\subsubsection[{remove\-Entity}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\-Manager\-::remove\-Entity (
+\begin{DoxyParamCaption}
+\item[{std\-::shared\-\_\-ptr$<$ {\bf entity\-Type} $>$}]{entity}
+\end{DoxyParamCaption}
+)}}\label{d0/d89/class_entity_manager_a2f46084a98181c3f8e1c09182104e385}
+
+
+Remove entity from the entity manager. 
+
+Used to remove entity from the entity manager. This does not necessarily deallocate the entity if references are still made between with the shared\-\_\-ptr.
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & is the shared\-\_\-ptr of the entity. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+16                                                                  \{
+17     assert(this->\hyperlink{class_entity_manager_a4a7fa9f2086a4dfc890211111a86675c}{hasEntityById}(entity->getID()) && \textcolor{stringliteral}{"No entity exists with the given ID"});
+18     \textcolor{keyword}{auto} iter = std::find(this->entityList.begin(), this->entityList.end(), entity);
+19     \textcolor{keywordflow}{if} (iter != this->entityList.end()) \{
+20         this->entityList.erase(iter);
+21     \}
+22 \}
+\end{DoxyCode}
+\hypertarget{class_entity_manager_ae75aae1a46961a44a450a79add5e8921}{\index{Entity\-Manager@{Entity\-Manager}!sort\-Entity\-List@{sort\-Entity\-List}}
+\index{sort\-Entity\-List@{sort\-Entity\-List}!EntityManager@{Entity\-Manager}}
+\subsubsection[{sort\-Entity\-List}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\-Manager\-::sort\-Entity\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/d89/class_entity_manager_ae75aae1a46961a44a450a79add5e8921}
+
+
+operation sorts the entity\-List based on a sorting criteria 
+
+The entity\-List stored within the entity manager is currently being sorted baed on the lowest Z-\/\-Buffer value for components stored within each entity. Given the large number of entities that would likely be present, this would present a very unwelcome performance hit if it is called each frame. 
+\begin{DoxyCode}
+67                                    \{
+68     \textcolor{comment}{//call the handle on each of our entities}
+69     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} entity : this->entityList) \{
+70         entity->handle();
+71     \}
+72     
+73     std::sort(entityList.begin(), entityList.end(),
+74         [] (std::shared\_ptr<entityType> first, std::shared\_ptr<entityType> second) \{
+75             \textcolor{keyword}{auto} componentVector = first->getAllComponents();
+76             \textcolor{comment}{//grab first component with a z-buffer,}
+77             \textcolor{comment}{// assuming components were sorted by entity.handle() function}
+78             \textcolor{comment}{// for this particular situation}
+79             \textcolor{keyword}{auto} compIter = std::find\_if(componentVector.begin(), componentVector.end(),
+80                 [] (std::shared\_ptr<componentType> elem) \{
+81                     \textcolor{keywordflow}{if} (elem->hasAttribute(\hyperlink{_a_e___attributes_8h_af11539bb711833d6321aaccd369e9e4b}{ATTRIBUTE\_ZBUFFER})) \{
+82                         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+83                     \}
+84                     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+85             \});
+86             \textcolor{comment}{//if our first entity doesn't have a component}
+87             \textcolor{comment}{// with a Z-buffer, we return false}
+88             \textcolor{keywordflow}{if} (compIter == componentVector.end()) \{
+89                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+90             \}
+91             \textcolor{comment}{//grab our Z-Buffer value from the component stored within}
+92             \textcolor{comment}{// the iterator}
+93             \textcolor{keyword}{auto} componentFirst = *compIter;
+94             \textcolor{keywordtype}{float} firstZ = componentFirst->getAttribute\_float(\hyperlink{_a_e___attributes_8h_af11539bb711833d6321aaccd369e9e4b}{ATTRIBUTE\_ZBUFFER});
+95 
+96             componentVector = second->getAllComponents();
+97             compIter = std::find\_if(componentVector.begin(), componentVector.end(),
+98                 [] (std::shared\_ptr<componentType> elem) \{
+99                     \textcolor{keywordflow}{if} (elem->hasAttribute(\hyperlink{_a_e___attributes_8h_af11539bb711833d6321aaccd369e9e4b}{ATTRIBUTE\_ZBUFFER})) \{
+100                         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+101                     \}
+102                     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+103             \});
+104 
+105             \textcolor{comment}{//if our second entity doesn't have a component}
+106             \textcolor{comment}{// with a Z-buffer, we return true}
+107             \textcolor{keywordflow}{if} (compIter == componentVector.end()) \{
+108                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+109             \}
+110             \textcolor{comment}{//grab our Z-Buffer value from the component stored within}
+111             \textcolor{comment}{// the iterator}
+112             \textcolor{keyword}{auto} componentSecond = *compIter;
+113             \textcolor{keywordtype}{float} secondZ = componentSecond->getAttribute\_float(
+      \hyperlink{_a_e___attributes_8h_af11539bb711833d6321aaccd369e9e4b}{ATTRIBUTE\_ZBUFFER});
+114 
+115             \textcolor{keywordflow}{return} (firstZ < secondZ);
+116     \});
+117 \}\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_entity_manager_8h}{Entity\-Manager.\-h}\item 
+Entity\-Manager.\-cpp\end{DoxyCompactItemize}

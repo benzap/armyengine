@@ -1,0 +1,274 @@
+\hypertarget{class_sprite_system}{\section{Sprite\-System Class Reference}
+\label{d8/df1/class_sprite_system}\index{Sprite\-System@{Sprite\-System}}
+}
+Inheritance diagram for Sprite\-System\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d8/df1/class_sprite_system}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_sprite_system_a48fdbbca36dc69068c31fdc065ea92a8}{{\bfseries Sprite\-System} (sf\-::\-Render\-Window \&)}\label{d8/df1/class_sprite_system_a48fdbbca36dc69068c31fdc065ea92a8}
+
+\item 
+int \hyperlink{class_sprite_system_a0303dbb745168bbf0278e4f9a6b5be0c}{process} ()
+\begin{DoxyCompactList}\small\item\em Perform actions on entities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_sprite_system_a0303dbb745168bbf0278e4f9a6b5be0c}{\index{Sprite\-System@{Sprite\-System}!process@{process}}
+\index{process@{process}!SpriteSystem@{Sprite\-System}}
+\subsubsection[{process}]{\setlength{\rightskip}{0pt plus 5cm}int Sprite\-System\-::process (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{d8/df1/class_sprite_system_a0303dbb745168bbf0278e4f9a6b5be0c}
+
+
+Perform actions on entities. 
+
+The process method is a pure virtual function that processes all of th entities stored within the entity manager. Some systems do not use the entity manager for processing, but may process other things that require processing per frame.
+
+What is processed is fully dependant on the implementation.
+
+\begin{DoxyReturn}{Returns}
+A non-\/zero value if the processing was successful. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_abstract_system_af8bfe74feb5df2b5e3fff67bfe1106b9}{Abstract\-System}.
+
+
+\begin{DoxyCode}
+26                           \{
+27     \textcolor{comment}{//first we need to grab the list of entities}
+28     \textcolor{comment}{//for now, we're going to grab all of the entities}
+29     \textcolor{keyword}{auto} entityVector = this->\hyperlink{class_abstract_system_ac0d16e94f5cea4b1a6bf489d35d7a14d}{entityManager}->\hyperlink{class_entity_manager_a452113e422a9c501bb008761f7609e33}{getAllEntities}();
+30     std::list<std::shared\_ptr<entityType>> entityList;
+31     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} entityValue : entityVector) \{
+32         entityList.push\_back(entityValue);
+33     \}
+34     \textcolor{comment}{//sort the entities based on it's Z-buffer. The sorting criteria is based on the minimum Z-buffer found}
+35     \textcolor{comment}{// within the entities}
+36     
+37 
+38     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} entity : entityList) \{
+39         \textcolor{comment}{//determine if the entity has the desired components to work with}
+40         \textcolor{keywordflow}{if} ((!entity->hasComponentFamily(\textcolor{stringliteral}{"Sprite"}) ||
+41             !entity->hasComponentFamily(\textcolor{stringliteral}{"Position"})) &&
+42             (!entity->hasComponentFamily(\textcolor{stringliteral}{"Shape"}) ||
+43             !entity->hasComponentFamily(\textcolor{stringliteral}{"Position"})) &&
+44             (!entity->hasComponentFamily(\textcolor{stringliteral}{"Text"}) ||
+45             !entity->hasComponentFamily(\textcolor{stringliteral}{"Position"}))) \{
+46             \textcolor{keywordflow}{continue};
+47         \}
+48 
+49         \textcolor{comment}{//grab all of the desired components}
+50         \textcolor{keyword}{auto} theSpriteComponents = entity->getComponentsByFamily(\textcolor{stringliteral}{"Sprite"});
+51         \textcolor{keyword}{auto} theShapeComponents = entity->getComponentsByFamily(\textcolor{stringliteral}{"Shape"});
+52         \textcolor{keyword}{auto} theTextComponents = entity->getComponentsByFamily(\textcolor{stringliteral}{"Text"});
+53         \textcolor{keyword}{auto} thePositionComponents = entity->getComponentsByFamily(\textcolor{stringliteral}{"Position"});
+54 
+55         \textcolor{comment}{//merge the shape, sprite and text components within the same list}
+56         std::list<std::shared\_ptr<componentType>> drawableComponents;
+57         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} sprite : theSpriteComponents) \{
+58             drawableComponents.push\_back(sprite);
+59         \}
+60         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} shape : theShapeComponents) \{
+61             drawableComponents.push\_back(shape);
+62         \}
+63 
+64         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} text : theTextComponents) \{
+65             drawableComponents.push\_back(text);
+66         \}
+67 
+68         \textcolor{comment}{//we need to sort the drawables based on the provided Z-Buffer Attribute}
+69         drawableComponents.sort([] (std::shared\_ptr<componentType> first, std::shared\_ptr<componentType> 
+      second) \{
+70             \textcolor{keywordtype}{float} zFirst = first->getAttribute\_float(\hyperlink{_a_e___attributes_8h_af11539bb711833d6321aaccd369e9e4b}{ATTRIBUTE\_ZBUFFER});
+71             \textcolor{keywordtype}{float} zSecond = second->getAttribute\_float(\hyperlink{_a_e___attributes_8h_af11539bb711833d6321aaccd369e9e4b}{ATTRIBUTE\_ZBUFFER});
+72             \textcolor{keywordflow}{return} (zFirst < zSecond);
+73         \});
+74 
+75         \textcolor{comment}{//we are going limit the scope of entities to one position component for now}
+76         assert(thePositionComponents.size() == 1 && \textcolor{stringliteral}{"Entities are limited to one position component"});
+77 
+78         \textcolor{comment}{//now we can just assume that we have only one position component}
+79         \textcolor{keyword}{auto} positionComponent = thePositionComponents.front();
+80 
+81         \textcolor{comment}{//grab and store the position and rotation for our entities}
+82         \textcolor{keywordtype}{float} positionX = positionComponent->getAttribute\_float(
+      \hyperlink{_a_e___attributes_8h_af6d494c0177e73da9ce2c06e77d8ca03}{ATTRIBUTE\_POSITION\_X});
+83         \textcolor{keywordtype}{float} positionY = positionComponent->getAttribute\_float(
+      \hyperlink{_a_e___attributes_8h_a38e831ab6c249750393e3007fa035507}{ATTRIBUTE\_POSITION\_Y});
+84 
+85         \textcolor{keywordtype}{float} rotation = positionComponent->getAttribute\_float(
+      \hyperlink{_a_e___attributes_8h_a70254d936ce8b3662e1a7472c36832d5}{ATTRIBUTE\_ROTATION});
+86 
+87         \textcolor{comment}{//next, we need to process each sprite component and offset it}
+88         \textcolor{comment}{//by the position component}
+89         \textcolor{comment}{//TODO: sort by Z-buffer}
+90         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} theComponent : drawableComponents) \{
+91             \textcolor{comment}{//first, we determine if the sprite is enabled to draw}
+92             \textcolor{keywordtype}{int} bEnabled = theComponent->getAttribute\_int(\hyperlink{_a_e___attributes_8h_a4c775095baf8a9c99621ad9ad3b622db}{ATTRIBUTE\_ENABLE});
+93             \textcolor{keywordflow}{if} (!bEnabled) \{
+94                 \textcolor{keywordflow}{continue};
+95             \}
+96 
+97             \textcolor{comment}{//Intialize our drawable ptr object}
+98             std::shared\_ptr<sf::Drawable> theDrawable;
+99             std::shared\_ptr<sf::Transformable> theTransform;
+100             std::shared\_ptr<sf::Shape> theShape;
+101             std::shared\_ptr<spriteType> theSprite;
+102             std::shared\_ptr<sf::CircleShape> theCircle;
+103             std::shared\_ptr<sf::RectangleShape> theRectangle;
+104             std::shared\_ptr<sf::ConvexShape> theConvexShape;
+105             std::shared\_ptr<sf::Text> theText;
+106 
+107             \textcolor{comment}{//get our sprite from the shape component, or use the default}
+108             \textcolor{keywordflow}{if} (theComponent->getFamily() == \textcolor{stringliteral}{"Sprite"}) \{
+109                 \textcolor{keywordtype}{bool} bDefault = \textcolor{keyword}{true};
+110                 \textcolor{comment}{//get the name of the sprite key name being stored in the manager}
+111                 std::string spriteName = theComponent->getAttribute\_string(\textcolor{stringliteral}{"SpriteName"});
+112                 \textcolor{comment}{//Check if the sprite being used is the default}
+113                 \textcolor{keywordflow}{if} (spriteName != \textcolor{stringliteral}{"None"}) \{
+114                     bDefault = \textcolor{keyword}{false};
+115                 \}
+116 
+117                 \textcolor{comment}{//if it's a default, use the default sprite image}
+118                 \textcolor{keywordflow}{if} (bDefault) \{
+119                     theSprite = this->spriteManager->\hyperlink{class_sprite_manager_a8473bca1fad87ad11cb2249eb810889e}{getSprite}(
+      \hyperlink{_sprite_manager_8h_a68f8f7c1ee25829a75d9c4f6a092ff8f}{DEFAULT\_SPRITE});
+120                 \}
+121                 \textcolor{comment}{//else, grab our sprite TODO: checking}
+122                 \textcolor{keywordflow}{else} \{ \textcolor{comment}{//bDefault == false}
+123                     theSprite = this->spriteManager->\hyperlink{class_sprite_manager_a8473bca1fad87ad11cb2249eb810889e}{getSprite}(spriteName);
+124                 \}
+125 
+126                 \textcolor{comment}{//cast to a drawable and a transformable}
+127                 theTransform = std::static\_pointer\_cast<sf::Transformable> (theSprite);
+128                 assert(theTransform != \textcolor{keyword}{nullptr} && \textcolor{stringliteral}{"Nullptr in transform"});
+129                 theDrawable = std::static\_pointer\_cast<sf::Drawable> (theSprite);
+130                 assert(theDrawable != \textcolor{keyword}{nullptr} && \textcolor{stringliteral}{"Nullptr in drawable"});
+131             \} \textcolor{comment}{//END if (theComponent->getFamily() == "Sprite") \{ ...}
+132             \textcolor{comment}{//figure out the shape to place within our sprite}
+133             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (theComponent->getFamily() == \textcolor{stringliteral}{"Shape"}) \{
+134                 \textcolor{comment}{//intialize the shape base class}
+135                 std::string shapeType = theComponent->getAttribute\_string(
+      \hyperlink{_a_e___attributes_8h_a4f8798cc305e537725c57bb8f47ba740}{ATTRIBUTE\_SHAPE\_TYPE});
+136                 \textcolor{keywordflow}{if} (shapeType == \hyperlink{_a_e___attributes_8h_ab5acdc705507cd35bfe5a25d403aaef7}{SHAPETYPE\_CIRCLE}) \{
+137                     theCircle = shapeManager->\hyperlink{class_shape_manager_a7767defde1e2e295054cbe7e0084b0f7}{getCircleShape}(theComponent->
+      getAttribute\_string(\hyperlink{_a_e___attributes_8h_a38d48cad306c55d90faa362aa5023de8}{ATTRIBUTE\_KEYNAME}));
+138                     theShape = std::static\_pointer\_cast<sf::Shape> (theCircle);
+139                     assert(theShape != \textcolor{keyword}{nullptr} && \textcolor{stringliteral}{"Nullptr in circle shape"});
+140                 \}
+141                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (shapeType == \hyperlink{_a_e___attributes_8h_afcd66434a1fe0cb68cca8dbd87a596f9}{SHAPETYPE\_RECTANGLE}) \{
+142                     theRectangle = shapeManager->\hyperlink{class_shape_manager_ae6db2abfe598532e3a04634377958bab}{getRectangleShape}(theComponent->
+      getAttribute\_string(\hyperlink{_a_e___attributes_8h_a38d48cad306c55d90faa362aa5023de8}{ATTRIBUTE\_KEYNAME})); 
+143                     \textcolor{comment}{//cast it to the base class sf::Shape}
+144                     theShape = std::static\_pointer\_cast<sf::Shape> (theRectangle);
+145                     assert(theShape != \textcolor{keyword}{nullptr} && \textcolor{stringliteral}{"Nullptr in rectangle shape"});
+146                 \}
+147                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (shapeType == \hyperlink{_a_e___attributes_8h_a8cdd66786d6e0ac4a43efc26533ff4e1}{SHAPETYPE\_POLYGON}) \{
+148                     theConvexShape = shapeManager->\hyperlink{class_shape_manager_a0a07b7e7690736e972a17c31cf6ea7af}{getConvexShape}(theComponent->
+      getAttribute\_string(\hyperlink{_a_e___attributes_8h_a38d48cad306c55d90faa362aa5023de8}{ATTRIBUTE\_KEYNAME}));
+149                     \textcolor{comment}{//cast to the base class sf::Shape}
+150                     theShape = std::static\_pointer\_cast<sf::Shape> (theConvexShape);
+151                     assert(theShape != \textcolor{keyword}{nullptr} && \textcolor{stringliteral}{"Nullptr in convex shape"});
+152                 \}
+153                 \textcolor{keywordflow}{else} \{
+154                     assert(0 && \textcolor{stringliteral}{"Shape Type does not exist"});
+155                 \}
+156 
+157                 \textcolor{comment}{//we cast to pointers representing transformable}
+158                 \textcolor{comment}{//  and drawable objects in order to relate to the other given sprite}
+159                 \textcolor{comment}{//  class. This allows it to be transformed like the sprite}
+160                 theTransform = std::static\_pointer\_cast<sf::Transformable> (theShape);
+161                 assert(theTransform != \textcolor{keyword}{nullptr} && \textcolor{stringliteral}{"Nullptr in shape transform"});
+162                 theDrawable = std::static\_pointer\_cast<sf::Drawable> (theShape);
+163                 assert(theDrawable != \textcolor{keyword}{nullptr} && \textcolor{stringliteral}{"Nullptr in shape drawable"});
+164             \} \textcolor{comment}{//END if (theComponent->getFamily() == "Shape") \{ ...}
+165             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (theComponent->getFamily() == \textcolor{stringliteral}{"Text"}) \{
+166                 theText = textManager->\hyperlink{class_text_manager_abb1b5688839e2da0a14e6c6527438b43}{getText}(theComponent->getAttribute\_string(
+      \hyperlink{_a_e___attributes_8h_a38d48cad306c55d90faa362aa5023de8}{ATTRIBUTE\_KEYNAME}));
+167 
+168                 \textcolor{comment}{//we cast to pointers representing transformable}
+169                 \textcolor{comment}{//  and drawable objects in order to relate to the other given sprite}
+170                 \textcolor{comment}{//  class. This allows it to be transformed like the sprite}
+171                 theTransform = std::static\_pointer\_cast<sf::Transformable> (theText);
+172                 assert(theTransform != \textcolor{keyword}{nullptr} && \textcolor{stringliteral}{"Nullptr in shape transform"});
+173                 theDrawable = std::static\_pointer\_cast<sf::Drawable> (theText);
+174                 assert(theDrawable != \textcolor{keyword}{nullptr} && \textcolor{stringliteral}{"Nullptr in shape drawable"});
+175             \}\textcolor{comment}{//END else if (theComponent->getFamily() == "Text") \{}
+176 
+177             \textcolor{comment}{//grab the rest of the desired attributes}
+178 
+179             \textcolor{comment}{//get the transformable offset, which is }
+180             \textcolor{comment}{//  relative to the position component and its offset}
+181             \textcolor{keywordtype}{float} offsetX = theComponent->getAttribute\_float(\hyperlink{_a_e___attributes_8h_aa003b6ad3f43053c9d43e1acc0098691}{ATTRIBUTE\_OFFSET\_X}) +
+182                 positionComponent->getAttribute\_float(\hyperlink{_a_e___attributes_8h_aa003b6ad3f43053c9d43e1acc0098691}{ATTRIBUTE\_OFFSET\_X});
+183             \textcolor{keywordtype}{float} offsetY = theComponent->getAttribute\_float(\hyperlink{_a_e___attributes_8h_a8ebf91b8ee9dfdfad18bc10c3c42d564}{ATTRIBUTE\_OFFSET\_Y}) + 
+184                 positionComponent->getAttribute\_float(\hyperlink{_a_e___attributes_8h_a8ebf91b8ee9dfdfad18bc10c3c42d564}{ATTRIBUTE\_OFFSET\_Y});
+185 
+186             \textcolor{comment}{//get the transformable scale}
+187             \textcolor{keywordtype}{float} scaleX = theComponent->getAttribute\_float(\hyperlink{_a_e___attributes_8h_a8104e81b9e1e7fd7e21f1f5f850ca636}{ATTRIBUTE\_SCALE\_X});
+188             \textcolor{keywordtype}{float} scaleY = theComponent->getAttribute\_float(\hyperlink{_a_e___attributes_8h_aa800ca9799c1b216f086becf36509ea5}{ATTRIBUTE\_SCALE\_Y});
+189 
+190             \textcolor{comment}{//get the transformable origin point}
+191             \textcolor{keywordtype}{float} originX = theComponent->getAttribute\_float(\hyperlink{_a_e___attributes_8h_a5c5a5ae3ea4130db3dfd08029a17a17c}{ATTRIBUTE\_ORIGIN\_X});
+192             \textcolor{keywordtype}{float} originY = theComponent->getAttribute\_float(\hyperlink{_a_e___attributes_8h_af45315d7cdc2f4ecdb28d0a9d6bb15c7}{ATTRIBUTE\_ORIGIN\_Y});
+193 
+194             \textcolor{comment}{//get the rotation of the transformable relative to the position}
+195             \textcolor{keywordtype}{float} spriteRotation = theComponent->getAttribute\_float(
+      \hyperlink{_a_e___attributes_8h_a70254d936ce8b3662e1a7472c36832d5}{ATTRIBUTE\_ROTATION});
+196 
+197             \textcolor{comment}{//PERFORM TRANSFORM OPERATIONS}
+198 
+199             \textcolor{comment}{//First we set the origin of our transformable object}
+200             theTransform->setOrigin(originX, originY);
+201 
+202             \textcolor{comment}{//SFML rotation is presented in degrees, converting from radians}
+203             \textcolor{keywordtype}{float} rot = ((rotation + spriteRotation) / (2.f * \hyperlink{_a_e___utilities_8h_a598a3330b3c21701223ee0ca14316eca}{PI})) * 360.f;
+204 
+205             \textcolor{comment}{//fix the angle between 0 and 360 degrees}
+206             \textcolor{keywordflow}{if} (rot >= 360) \{
+207                 \textcolor{keywordtype}{int} numRotations = (int)rot / 360;
+208                 rot = rot - 360 * numRotations;
+209             \}
+210 
+211             \textcolor{comment}{//given situations where it is close to zero, set it to zero}
+212             \textcolor{keywordflow}{if} ((\textcolor{keywordtype}{int})rot % 360 == 0)\{
+213                 \textcolor{keywordflow}{if} ((rot - floor(rot)) < FULL\_ROTATION\_THRESHOLD) \{
+214                     theComponent->setAttribute\_float(\hyperlink{_a_e___attributes_8h_a70254d936ce8b3662e1a7472c36832d5}{ATTRIBUTE\_ROTATION}, 0.);
+215                     positionComponent->setAttribute\_float(\hyperlink{_a_e___attributes_8h_a70254d936ce8b3662e1a7472c36832d5}{ATTRIBUTE\_ROTATION}, 0.);
+216                     rot = 0;
+217                 \}
+218             \}
+219             theTransform->setRotation(rot);
+220 
+221             \textcolor{comment}{//Scale the sprite}
+222             theTransform->setScale(scaleX, scaleY);
+223 
+224             \textcolor{comment}{//move the sprite}
+225             \textcolor{comment}{//we need to correct for the changed origin}
+226             theTransform->setPosition(
+227                 positionX + offsetX, 
+228                 positionY + offsetY
+229                 );
+230 
+231             \textcolor{comment}{//Finally, draw our sprite}
+232             window.draw(*theDrawable);
+233 
+234         \} \textcolor{comment}{//END for (auto theComponent : ...}
+235     \} \textcolor{comment}{//END for (auto entity : ...}
+236     \textcolor{keywordflow}{return} 0;
+237 \}\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Sprite\-System.\-h\item 
+Sprite\-System.\-cpp\end{DoxyCompactItemize}

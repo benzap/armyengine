@@ -1,0 +1,35 @@
+This is c:\Program Files\MiKTeX 2.9\miktex\bin\makeindex.exe, version 2.15 [MiKTeX 2.9] (kpathsea + Thai support).
+Scanning input file refman.idx....
+!! Input index error (file = refman.idx, line = 247):
+   -- First argument too long (max 1024).
+!! Input index error (file = refman.idx, line = 248):
+   -- First argument too long (max 1024).
+!! Input index error (file = refman.idx, line = 249):
+   -- First argument too long (max 1024).
+
+!! Input index error (file = refman.idx, line = 251):
+   -- First argument too long (max 1024).
+
+!! Input index error (file = refman.idx, line = 253):
+   -- First argument too long (max 1024).
+!! Input index error (file = refman.idx, line = 254):
+   -- First argument too long (max 1024).
+!! Input index error (file = refman.idx, line = 255):
+   -- First argument too long (max 1024).
+!! Input index error (file = refman.idx, line = 256):
+   -- First argument too long (max 1024).
+!! Input index error (file = refman.idx, line = 257):
+   -- First argument too long (max 1024).
+!! Input index error (file = refman.idx, line = 258):
+   -- First argument too long (max 1024).
+!! Input index error (file = refman.idx, line = 259):
+   -- First argument too long (max 1024).
+!! Input index error (file = refman.idx, line = 260):
+   -- First argument too long (max 1024).
+!! Input index error (file = refman.idx, line = 261):
+   -- First argument too long (max 1024).
+done (289 entries accepted, 13 rejected).
+Sorting entries.....done (2564 comparisons).
+Generating output file refman.ind....done (504 lines written, 0 warnings).
+Output written in refman.ind.
+Transcript written in refman.ilg.

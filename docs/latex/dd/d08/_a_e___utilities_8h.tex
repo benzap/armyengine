@@ -1,0 +1,394 @@
+\hypertarget{_a_e___utilities_8h}{\section{A\-E\-\_\-\-Utilities.\-h File Reference}
+\label{dd/d08/_a_e___utilities_8h}\index{A\-E\-\_\-\-Utilities.\-h@{A\-E\-\_\-\-Utilities.\-h}}
+}
+{\ttfamily \#include \char`\"{}Abstract\-Component.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_a_e___utilities_8h_a598a3330b3c21701223ee0ca14316eca}{\#define \hyperlink{_a_e___utilities_8h_a598a3330b3c21701223ee0ca14316eca}{P\-I}~3.\-14159265359f}\label{dd/d08/_a_e___utilities_8h_a598a3330b3c21701223ee0ca14316eca}
+
+\begin{DoxyCompactList}\small\item\em The math constant Pi. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{_a_e___utilities_8h_abc4fe1569cb6787f999f866f5732e932}{Dot} (T x0, T y0, T x1, T y1)
+\begin{DoxyCompactList}\small\item\em The dot product between two point vectors (x0,y0) and (x1,y1) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{_a_e___utilities_8h_a6b2925d1fda2b9066c8832d630f368e1}{Cross} (T x0, T y0, T x1, T y1)
+\begin{DoxyCompactList}\small\item\em The cross product between two point vectors (x0,y0) and (x1,y1) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\bool \hyperlink{_a_e___utilities_8h_a3a6263497db5c1722087fe0ff036ccaf}{triangle\-Is\-C\-C\-W} (T x0, T y0, T x1, T y1, T x2, T y2)
+\begin{DoxyCompactList}\small\item\em Checks if the three points, when traversed performs a C\-C\-W movement. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{_a_e___utilities_8h_a5969ea05321213cefe69dd00abd4f71a}{triangle2\-D\-Area} (T x0, T y0, T x1, T y1, T x2, T y2)
+\begin{DoxyCompactList}\small\item\em Returns the area of the triangle (May return negative area) \end{DoxyCompactList}\item 
+bool \hyperlink{_a_e___utilities_8h_af1ca97a041bdda85d65d8e84f8d845b5}{point\-In\-Polygon} (float px0, float py0, const \hyperlink{_abstract_component_8h_a55cf170262c3d7123f8b95208293e36d}{component\-Float\-Array\-Type} \&polygon)
+\begin{DoxyCompactList}\small\item\em Checks to see if the point is within the bounds of the polygon. \end{DoxyCompactList}\item 
+bool \hyperlink{_a_e___utilities_8h_adc5067bf18c1d884138b9780423a6f89}{Test2\-D\-Line\-Intersection} (float ax0, float ay0, float ax1, float ay1, float bx0, float by0, float bx1, float by1)
+\begin{DoxyCompactList}\small\item\em Checks if the two line segments are intersecting. \end{DoxyCompactList}\item 
+bool \hyperlink{_a_e___utilities_8h_a311821f673793602d4fa4e875f637bf7}{check\-Polygon\-Line\-Intersections} (const \hyperlink{_abstract_component_8h_a55cf170262c3d7123f8b95208293e36d}{component\-Float\-Array\-Type} \&polygon1, const \hyperlink{_abstract_component_8h_a55cf170262c3d7123f8b95208293e36d}{component\-Float\-Array\-Type} \&polygon2)
+\begin{DoxyCompactList}\small\item\em checks the intersection of the line segments between two polygons \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Benjamin Zaporzan \href{mailto:benzaporzan@gmail.com}{\tt benzaporzan@gmail.\-com}
+\end{DoxyAuthor}
+\hypertarget{d5/d67/_texture_manager_8h_LICENSE}{}\subsection{L\-I\-C\-E\-N\-S\-E}\label{d5/d67/_texture_manager_8h_LICENSE}
+Copyright (C) 2013 Benjamin Zaporzan
+
+This program is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \mbox{[}\mbox{[}\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}\mbox{]}\mbox{]}.\hypertarget{d5/d67/_texture_manager_8h_DESCRIPTION}{}\subsection{D\-E\-S\-C\-R\-I\-P\-T\-I\-O\-N}\label{d5/d67/_texture_manager_8h_DESCRIPTION}
+A set of utilities and globally dependant constants shared 
+
+\subsection{Function Documentation}
+\hypertarget{_a_e___utilities_8h_a311821f673793602d4fa4e875f637bf7}{\index{A\-E\-\_\-\-Utilities.\-h@{A\-E\-\_\-\-Utilities.\-h}!check\-Polygon\-Line\-Intersections@{check\-Polygon\-Line\-Intersections}}
+\index{check\-Polygon\-Line\-Intersections@{check\-Polygon\-Line\-Intersections}!AE_Utilities.h@{A\-E\-\_\-\-Utilities.\-h}}
+\subsubsection[{check\-Polygon\-Line\-Intersections}]{\setlength{\rightskip}{0pt plus 5cm}bool check\-Polygon\-Line\-Intersections (
+\begin{DoxyParamCaption}
+\item[{const {\bf component\-Float\-Array\-Type} \&}]{polygon1, }
+\item[{const {\bf component\-Float\-Array\-Type} \&}]{polygon2}
+\end{DoxyParamCaption}
+)}}\label{dd/d08/_a_e___utilities_8h_a311821f673793602d4fa4e875f637bf7}
+
+
+checks the intersection of the line segments between two polygons 
+
+This is a very robust and performance heavy test that checks for the intersection of each line segment of the first polygon to the second polygon.
+
+Is the first polygon  Is the second polygon
+
+\begin{DoxyReturn}{Returns}
+Returns whether the two polygons are intersecting, otherwise it returns false. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+94                                                                                                            
+                \{
+95     \textcolor{keywordtype}{int} numPoints1 = polygon1.size()/2;
+96     \textcolor{keywordtype}{int} numPoints2 = polygon2.size()/2;
+97     \textcolor{comment}{//next, the edge check is performed between the two polygons}
+98     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < numPoints1; i++) \{
+99         \textcolor{comment}{// treat the rectangle line segment as AB}
+100         \textcolor{keywordtype}{float} ax, ay, bx, by;
+101         ax = polygon1[i*2];
+102         ay = polygon1[i*2+1];
+103         \textcolor{keywordflow}{if} (i != numPoints1 - 1) \{
+104             bx = polygon1[(i+1)*2];
+105             by = polygon1[(i+1)*2+1];
+106         \}
+107         \textcolor{keywordflow}{else} \{
+108             bx = polygon1[0];
+109             by = polygon1[1];
+110         \}
+111         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < numPoints2; j++) \{
+112             \textcolor{keywordtype}{float} cx, cy, dx, dy;
+113             cx = polygon2[j*2];
+114             cy = polygon2[j*2+1];
+115             \textcolor{keywordflow}{if} (j != numPoints2-1) \{
+116                 dx = polygon2[(j+1)*2];
+117                 dy = polygon2[(j+1)*2+1];
+118             \}
+119             \textcolor{keywordflow}{else} \{
+120                 dx = polygon2[0];
+121                 dy = polygon2[1];
+122             \}
+123 
+124             \textcolor{comment}{//test the line segments, if they intersect}
+125             \textcolor{comment}{// it means they collided}
+126             \textcolor{keywordflow}{if} (Test2DLineIntersection(
+127                 ax, ay, bx, by,
+128                 cx, cy, dx, dy)) \{
+129                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+130             \}
+131         \}\textcolor{comment}{// END for (int j = 0; j < numPoints; j++) \{}
+132     \}\textcolor{comment}{// END for (int i = 0; i < rectNumPoints; i++) \{}
+133     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+134 \}\end{DoxyCode}
+\hypertarget{_a_e___utilities_8h_a6b2925d1fda2b9066c8832d630f368e1}{\index{A\-E\-\_\-\-Utilities.\-h@{A\-E\-\_\-\-Utilities.\-h}!Cross@{Cross}}
+\index{Cross@{Cross}!AE_Utilities.h@{A\-E\-\_\-\-Utilities.\-h}}
+\subsubsection[{Cross}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T Cross (
+\begin{DoxyParamCaption}
+\item[{T}]{x0, }
+\item[{T}]{y0, }
+\item[{T}]{x1, }
+\item[{T}]{y1}
+\end{DoxyParamCaption}
+)}}\label{dd/d08/_a_e___utilities_8h_a6b2925d1fda2b9066c8832d630f368e1}
+
+
+The cross product between two point vectors (x0,y0) and (x1,y1) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x0} & is the x component of the first vector \\
+\hline
+{\em y0} & is the y component of the first vector \\
+\hline
+{\em x1} & is the x component of the second vector \\
+\hline
+{\em y1} & is the y component of the second vector\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The cross product of the two vectors 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+9                                 \{
+10     \textcolor{comment}{//|x0 y0| = |a b|}
+11     \textcolor{comment}{//|x1 y1|   |c d|}
+12     
+13     \textcolor{comment}{//ad * bc}
+14     \textcolor{comment}{//x0 * y1 - x1 * y0}
+15 
+16     \textcolor{keywordflow}{return} (x0 * y1) - (y0 * x1);
+17 \}
+\end{DoxyCode}
+\hypertarget{_a_e___utilities_8h_abc4fe1569cb6787f999f866f5732e932}{\index{A\-E\-\_\-\-Utilities.\-h@{A\-E\-\_\-\-Utilities.\-h}!Dot@{Dot}}
+\index{Dot@{Dot}!AE_Utilities.h@{A\-E\-\_\-\-Utilities.\-h}}
+\subsubsection[{Dot}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T Dot (
+\begin{DoxyParamCaption}
+\item[{T}]{x0, }
+\item[{T}]{y0, }
+\item[{T}]{x1, }
+\item[{T}]{y1}
+\end{DoxyParamCaption}
+)}}\label{dd/d08/_a_e___utilities_8h_abc4fe1569cb6787f999f866f5732e932}
+
+
+The dot product between two point vectors (x0,y0) and (x1,y1) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x0} & is the x component of the first vector \\
+\hline
+{\em y0} & is the y component of the first vector \\
+\hline
+{\em x1} & is the x component of the second vector \\
+\hline
+{\em y1} & is the y component of the second vector\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The dot product of the two vectors 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+4                             \{
+5     \textcolor{keywordflow}{return} (x0*x1 + y0*y1);
+6 \}
+\end{DoxyCode}
+\hypertarget{_a_e___utilities_8h_af1ca97a041bdda85d65d8e84f8d845b5}{\index{A\-E\-\_\-\-Utilities.\-h@{A\-E\-\_\-\-Utilities.\-h}!point\-In\-Polygon@{point\-In\-Polygon}}
+\index{point\-In\-Polygon@{point\-In\-Polygon}!AE_Utilities.h@{A\-E\-\_\-\-Utilities.\-h}}
+\subsubsection[{point\-In\-Polygon}]{\setlength{\rightskip}{0pt plus 5cm}bool point\-In\-Polygon (
+\begin{DoxyParamCaption}
+\item[{float}]{px0, }
+\item[{float}]{py0, }
+\item[{const {\bf component\-Float\-Array\-Type} \&}]{polygon}
+\end{DoxyParamCaption}
+)}}\label{dd/d08/_a_e___utilities_8h_af1ca97a041bdda85d65d8e84f8d845b5}
+
+
+Checks to see if the point is within the bounds of the polygon. 
+
+N\-O\-T\-E\-: The polygon is assumed to be a convex polygon. This test is not effective when determining the point within a non-\/convex polygon, which would require further testing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em px0} & is the point x component. \\
+\hline
+{\em py0} & is the point y component. \\
+\hline
+{\em polygon} & is a list of points making up the polygon.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the point is within the polygon, otherwise it returns false. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+37                                                                     \{
+38     \textcolor{comment}{// points represented by [(x0,y0), ... (xn,yn)]}
+39     \textcolor{keywordtype}{int} numPoints = polygon.size() / 2;
+40 
+41     \textcolor{keywordtype}{int} low = 0, high = numPoints;
+42     \textcolor{keywordflow}{do} \{ 
+43         \textcolor{keywordtype}{int} mid = (low + high) / 2;
+44         \textcolor{keywordtype}{bool} bIsCCW = triangleIsCCW<float>(
+45             polygon[0], polygon[1],
+46             polygon[mid*2], polygon[mid*2+1],
+47             px0, py0);
+48         \textcolor{keywordflow}{if} (bIsCCW) \{
+49             low = mid;
+50         \}
+51         \textcolor{keywordflow}{else} \{
+52             high = mid;
+53         \}
+54     \} \textcolor{keywordflow}{while} (low + 1 < high);
+55 
+56     \textcolor{keywordflow}{if} (low == 0 || high == numPoints) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+57 
+58     \textcolor{keywordflow}{return} triangleIsCCW<float>(
+59         polygon[low*2], polygon[low*2+1],
+60         polygon[high*2], polygon[high*2+1],
+61         px0, py0);
+62 \} \textcolor{comment}{//END bool polygonPointsInPolyg... }
+\end{DoxyCode}
+\hypertarget{_a_e___utilities_8h_adc5067bf18c1d884138b9780423a6f89}{\index{A\-E\-\_\-\-Utilities.\-h@{A\-E\-\_\-\-Utilities.\-h}!Test2\-D\-Line\-Intersection@{Test2\-D\-Line\-Intersection}}
+\index{Test2\-D\-Line\-Intersection@{Test2\-D\-Line\-Intersection}!AE_Utilities.h@{A\-E\-\_\-\-Utilities.\-h}}
+\subsubsection[{Test2\-D\-Line\-Intersection}]{\setlength{\rightskip}{0pt plus 5cm}bool Test2\-D\-Line\-Intersection (
+\begin{DoxyParamCaption}
+\item[{float}]{ax0, }
+\item[{float}]{ay0, }
+\item[{float}]{ax1, }
+\item[{float}]{ay1, }
+\item[{float}]{bx0, }
+\item[{float}]{by0, }
+\item[{float}]{bx1, }
+\item[{float}]{by1}
+\end{DoxyParamCaption}
+)}}\label{dd/d08/_a_e___utilities_8h_adc5067bf18c1d884138b9780423a6f89}
+
+
+Checks if the two line segments are intersecting. 
+
+The check forms two line segments between the given points, and determines whether they are intersecting. This test can be performed on non-\/convex shapes, but is very inefficient.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ax0} & is the first x component for the first line segment \\
+\hline
+{\em ay0} & is the first y component for the first line segment \\
+\hline
+{\em ax1} & is the second x component for the first line segment \\
+\hline
+{\em ay1} & is the second y component for the first line segment\\
+\hline
+{\em bx0} & is the first x component for the second line segment \\
+\hline
+{\em by0} & is the first y component for the second line segment \\
+\hline
+{\em bx1} & is the second x component for the second line segment \\
+\hline
+{\em by1} & is the second y component for the second line segment\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the two line segments intersect, otherwise it returns false. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+66                                             \{
+67 
+68     \textcolor{comment}{//test if AB and CD overlap}
+69     \textcolor{keywordtype}{float} area1 = triangle2DArea<float>(
+70         ax, ay,
+71         bx, by,
+72         dx, dy);
+73     \textcolor{keywordtype}{float} area2 = triangle2DArea<float>(
+74         ax, ay,
+75         bx, by,
+76         cx, cy);
+77 
+78     \textcolor{comment}{//both triangles should have opposite windings, check if the }
+79     \textcolor{comment}{// final sign is negative.}
+80     \textcolor{keywordflow}{if} (area1 * area2 < 0.0f) \{
+81         \textcolor{keywordtype}{float} area3 = triangle2DArea(
+82             cx, cy,
+83             dx, dy,
+84             ax, ay);
+85 
+86         \textcolor{keywordtype}{float} area4 = area3 + area2 - area1;
+87         \textcolor{keywordflow}{if} (area3 * area4 < 0.0f) \{
+88             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+89         \}\textcolor{comment}{// END if (area3 * area4 < 0.0f) \{}
+90     \}\textcolor{comment}{// END if (area1 * area2 < 0.0f) \{}
+91     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+92 \}
+\end{DoxyCode}
+\hypertarget{_a_e___utilities_8h_a5969ea05321213cefe69dd00abd4f71a}{\index{A\-E\-\_\-\-Utilities.\-h@{A\-E\-\_\-\-Utilities.\-h}!triangle2\-D\-Area@{triangle2\-D\-Area}}
+\index{triangle2\-D\-Area@{triangle2\-D\-Area}!AE_Utilities.h@{A\-E\-\_\-\-Utilities.\-h}}
+\subsubsection[{triangle2\-D\-Area}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T triangle2\-D\-Area (
+\begin{DoxyParamCaption}
+\item[{T}]{x0, }
+\item[{T}]{y0, }
+\item[{T}]{x1, }
+\item[{T}]{y1, }
+\item[{T}]{x2, }
+\item[{T}]{y2}
+\end{DoxyParamCaption}
+)}}\label{dd/d08/_a_e___utilities_8h_a5969ea05321213cefe69dd00abd4f71a}
+
+
+Returns the area of the triangle (May return negative area) 
+
+The three points form a triangle, and this function returns the area of that triangle. If the triangle was formed with a C\-C\-W winding, the area returned will be positive, otherwise the area returned will be negative.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x0} & is the x component of the first vector \\
+\hline
+{\em y0} & is the y component of the first vector \\
+\hline
+{\em x1} & is the x component of the second vector \\
+\hline
+{\em y1} & is the y component of the second vector \\
+\hline
+{\em x2} & is the x component of the third vector \\
+\hline
+{\em y2} & is the y component of the third vector\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The area of the triangle (+ if C\-C\-W, -\/ if C\-W) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+32                 \{
+33     \textcolor{keywordflow}{return} ((x0 - x2) * (y1 - y2)) - ((y0 - y2) * (x1 - x2));
+34 \}
+\end{DoxyCode}
+\hypertarget{_a_e___utilities_8h_a3a6263497db5c1722087fe0ff036ccaf}{\index{A\-E\-\_\-\-Utilities.\-h@{A\-E\-\_\-\-Utilities.\-h}!triangle\-Is\-C\-C\-W@{triangle\-Is\-C\-C\-W}}
+\index{triangle\-Is\-C\-C\-W@{triangle\-Is\-C\-C\-W}!AE_Utilities.h@{A\-E\-\_\-\-Utilities.\-h}}
+\subsubsection[{triangle\-Is\-C\-C\-W}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool triangle\-Is\-C\-C\-W (
+\begin{DoxyParamCaption}
+\item[{T}]{x0, }
+\item[{T}]{y0, }
+\item[{T}]{x1, }
+\item[{T}]{y1, }
+\item[{T}]{x2, }
+\item[{T}]{y2}
+\end{DoxyParamCaption}
+)}}\label{dd/d08/_a_e___utilities_8h_a3a6263497db5c1722087fe0ff036ccaf}
+
+
+Checks if the three points, when traversed performs a C\-C\-W movement. 
+
+This check is used to determine the winding for the positioning of points on the screen. This is useful in determining the winding, which decides on which way the face of the triangle is facing. Counter-\/clockwise points represents a face pointing out of the screen, with a clockwise motion representing the face pointing into the screen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x0} & is the x component of the first vector \\
+\hline
+{\em y0} & is the y component of the first vector \\
+\hline
+{\em x1} & is the x component of the second vector \\
+\hline
+{\em y1} & is the y component of the second vector \\
+\hline
+{\em x2} & is the x component of the third vector \\
+\hline
+{\em y2} & is the y component of the third vector\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the triangle is formed C\-C\-W, otherwise returns false. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+23                 \{
+24     \textcolor{keyword}{auto} cross = -(Cross<T>(x1-x0,y1-y0,x2-x0,y2-y0));
+25     \textcolor{keywordflow}{return} cross > 0;
+26 \}
+\end{DoxyCode}

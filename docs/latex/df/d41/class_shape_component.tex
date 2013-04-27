@@ -1,0 +1,277 @@
+\hypertarget{class_shape_component}{\section{Shape\-Component Class Reference}
+\label{df/d41/class_shape_component}\index{Shape\-Component@{Shape\-Component}}
+}
+
+
+Is used to express the entity as a shape on the screen.  
+
+
+
+
+{\ttfamily \#include $<$Shape\-Component.\-h$>$}
+
+Inheritance diagram for Shape\-Component\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{df/d41/class_shape_component}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_shape_component_a8e09d5e1624ee3b78ebed9abff0c3436}{Shape\-Component} (std\-::string name)
+\begin{DoxyCompactList}\small\item\em The constructor for shape component. \end{DoxyCompactList}\item 
+int \hyperlink{class_shape_component_ae62aa31a3d5c65c675243fdcc5f60904}{update} ()
+\begin{DoxyCompactList}\small\item\em updates the shape component when modifications are made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Is used to express the entity as a shape on the screen. 
+
+The shape component can be used to show the entity on the screen as the expressed shape as outlined in this shape components attributes.
+
+The shape component has also been fashioned to produce polygons. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_shape_component_a8e09d5e1624ee3b78ebed9abff0c3436}{\index{Shape\-Component@{Shape\-Component}!Shape\-Component@{Shape\-Component}}
+\index{Shape\-Component@{Shape\-Component}!ShapeComponent@{Shape\-Component}}
+\subsubsection[{Shape\-Component}]{\setlength{\rightskip}{0pt plus 5cm}Shape\-Component\-::\-Shape\-Component (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{df/d41/class_shape_component_a8e09d5e1624ee3b78ebed9abff0c3436}
+
+
+The constructor for shape component. 
+
+The shape component has overriden the family by using \char`\"{}\-Shape.\char`\"{} New components that inherit from the abstract component should not consider using this family name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name assigned to a created component. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+8                                              :
+9     \hyperlink{class_abstract_component_ab08b845eddbdbe411b95a5385501ab97}{AbstractComponent}(name, \textcolor{stringliteral}{"Shape"}) \{
+10     std::string keyname = name + std::to\_string(reinterpret\_cast<int>(\textcolor{keyword}{this}));
+11     \textcolor{comment}{//unique keyname for our referenced text object}
+12 
+13     \textcolor{keyword}{auto} shapeManager = \hyperlink{class_shape_manager_a94d827d6ef5cd970b05886b95fd32ece}{ShapeManager::getInstance}();
+14     \textcolor{comment}{//we don't know what type of shape it's going to be, so to simplify,}
+15     \textcolor{comment}{// just going to create one of each and decide from there}
+16     shapeManager->addCircleShape(keyname, std::shared\_ptr<sf::CircleShape> (\textcolor{keyword}{new} sf::CircleShape()));
+17     shapeManager->addRectangleShape(keyname, std::shared\_ptr<sf::RectangleShape> (\textcolor{keyword}{new} sf::RectangleShape())
+      );
+18     shapeManager->addConvexShape(keyname, std::shared\_ptr<sf::ConvexShape> (\textcolor{keyword}{new} sf::ConvexShape()));
+19 
+20     \textcolor{comment}{//***********************************}
+21     \textcolor{comment}{//********** ATTRIBUTES *************}
+22     \textcolor{comment}{//***********************************}
+23 
+24     \textcolor{comment}{//the keyname is stored as an attribute for later retrieval}
+25     \hyperlink{class_abstract_component_a702ec2cc2624561ef51afcd9c8061fd2}{setAttribute\_string}(\hyperlink{_a_e___attributes_8h_a38d48cad306c55d90faa362aa5023de8}{ATTRIBUTE\_KEYNAME}, keyname);
+26 
+27     \textcolor{comment}{//Determines whether the given shape should be shown}
+28         \textcolor{comment}{//0 - disable}
+29         \textcolor{comment}{//1 - enable}
+30     \hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{setAttribute\_int}(\hyperlink{_a_e___attributes_8h_a4c775095baf8a9c99621ad9ad3b622db}{ATTRIBUTE\_ENABLE}, 1);
+31 
+32     \textcolor{comment}{//The shape type}
+33     \hyperlink{class_abstract_component_a702ec2cc2624561ef51afcd9c8061fd2}{setAttribute\_string}(\hyperlink{_a_e___attributes_8h_a4f8798cc305e537725c57bb8f47ba740}{ATTRIBUTE\_SHAPE\_TYPE}, 
+      \hyperlink{_a_e___attributes_8h_ab5acdc705507cd35bfe5a25d403aaef7}{SHAPETYPE\_CIRCLE});
+34 
+35     \textcolor{comment}{//The shape attributes}
+36     \hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_a5b0feddcf4ea3df07d1a9a2f9dd3bf70}{ATTRIBUTE\_RADIUS}, 0.0);
+37     \hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_aade9a992cd068c12793a1bb56d015022}{ATTRIBUTE\_WIDTH}, 0.0);
+38     \hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_ad1f046fde393a66e7c49f97b08af1c0d}{ATTRIBUTE\_HEIGHT}, 0.0);
+39     \hyperlink{class_abstract_component_a8829d475d858bc03e3e3be0e18f18fdb}{setAttribute\_floatArray}(\hyperlink{_a_e___attributes_8h_a26ee781739ac518473cf414ecc968239}{ATTRIBUTE\_POLYGON\_POINTS}, 
+      \hyperlink{_abstract_component_8h_a55cf170262c3d7123f8b95208293e36d}{componentFloatArrayType}());
+40 
+41     \textcolor{comment}{//The shape fill}
+42     \hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{setAttribute\_int}(\hyperlink{_a_e___attributes_8h_a3725edfd1b846140eb49aa34b027b2cb}{ATTRIBUTE\_FILL\_COLOR\_RED}, 255);
+43     \hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{setAttribute\_int}(\hyperlink{_a_e___attributes_8h_a44093150b0166936e44f0748babd201c}{ATTRIBUTE\_FILL\_COLOR\_GREEN}, 255);
+44     \hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{setAttribute\_int}(\hyperlink{_a_e___attributes_8h_a7c1ee03e64d7b6dd251b709f0130cc62}{ATTRIBUTE\_FILL\_COLOR\_BLUE}, 255);
+45     \hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{setAttribute\_int}(\hyperlink{_a_e___attributes_8h_a66939dddc263c09ff273450168b31918}{ATTRIBUTE\_FILL\_COLOR\_ALPHA}, 255);
+46 
+47     \textcolor{comment}{//The shape outline}
+48     \hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{setAttribute\_int}(\hyperlink{_a_e___attributes_8h_a6b45a750496a3996f9a59fb190c22597}{ATTRIBUTE\_OUTLINE\_COLOR\_RED}, 255);
+49     \hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{setAttribute\_int}(\hyperlink{_a_e___attributes_8h_a63ec6f1bb23064d48d1e9443eae3e36c}{ATTRIBUTE\_OUTLINE\_COLOR\_GREEN}, 255);
+50     \hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{setAttribute\_int}(\hyperlink{_a_e___attributes_8h_a6f224f25c3045b0c0ff6eb9ebfb75b85}{ATTRIBUTE\_OUTLINE\_COLOR\_BLUE}, 255);
+51     \hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{setAttribute\_int}(\hyperlink{_a_e___attributes_8h_a5dc3e53458601ca0d4562198560c6e42}{ATTRIBUTE\_OUTLINE\_COLOR\_ALPHA}, 255);
+52 
+53     \textcolor{comment}{//The shape outline thickness}
+54     \hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_ad658dbd44975ac4e266311f3ae29ab00}{ATTRIBUTE\_OUTLINE\_THICKNESS}, 1.0);
+55 
+56     \textcolor{comment}{//Related Sprite attributes}
+57     \textcolor{comment}{//This provides the offset of the sprite from its origin within the X and Y direction}
+58         \textcolor{comment}{//Useful for a multisprite entity, you provide an offset to change its placement}
+59     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_aa003b6ad3f43053c9d43e1acc0098691}{ATTRIBUTE\_OFFSET\_X}, 0.0);
+60     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_a8ebf91b8ee9dfdfad18bc10c3c42d564}{ATTRIBUTE\_OFFSET\_Y}, 0.0);
+61 
+62     \textcolor{comment}{//This provides the origin, or center point where rotation and the point of positioning is determined}
+63     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_a5c5a5ae3ea4130db3dfd08029a17a17c}{ATTRIBUTE\_ORIGIN\_X}, 0.0);
+64     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_af45315d7cdc2f4ecdb28d0a9d6bb15c7}{ATTRIBUTE\_ORIGIN\_Y}, 0.0);
+65 
+66     \textcolor{comment}{//Provides the depth of the sprite, lower means farther away, which means it}
+67         \textcolor{comment}{//will get covered by anything with a higher z-buffer \{ex A(0.1) covers B(0.0)\}}
+68     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_af11539bb711833d6321aaccd369e9e4b}{ATTRIBUTE\_ZBUFFER}, 1.0);
+69 
+70     \textcolor{comment}{//The scale of the sprite being used}
+71         \textcolor{comment}{//relative to the position component}
+72     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_a8104e81b9e1e7fd7e21f1f5f850ca636}{ATTRIBUTE\_SCALE\_X}, 1.0);
+73     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_aa800ca9799c1b216f086becf36509ea5}{ATTRIBUTE\_SCALE\_Y}, 1.0);
+74 
+75     \textcolor{comment}{//Determines the rotation of the sprite}
+76         \textcolor{comment}{//relative to a given position component}
+77         \textcolor{comment}{//given in radians}
+78     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_a70254d936ce8b3662e1a7472c36832d5}{ATTRIBUTE\_ROTATION}, 0.0);
+79 
+80     \textcolor{comment}{//perform an update on our component to form the default shape instance}
+81     this->\hyperlink{class_shape_component_ae62aa31a3d5c65c675243fdcc5f60904}{update}();
+\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_shape_component_ae62aa31a3d5c65c675243fdcc5f60904}{\index{Shape\-Component@{Shape\-Component}!update@{update}}
+\index{update@{update}!ShapeComponent@{Shape\-Component}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}int Shape\-Component\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{df/d41/class_shape_component_ae62aa31a3d5c65c675243fdcc5f60904}
+
+
+updates the shape component when modifications are made. 
+
+It is important to perform updates on the shape component after any modifications are made during execution. Otherwise the effects will not be displayed on the screen.
+
+\begin{DoxyReturn}{Returns}
+Returns a zero value if the update was successful. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_abstract_component_a35c9cab4e3845a947609b6ada8dc89cf}{Abstract\-Component}.
+
+
+\begin{DoxyCode}
+83                            \{
+84     \textcolor{keyword}{auto} shapeManager = \hyperlink{class_shape_manager_a94d827d6ef5cd970b05886b95fd32ece}{ShapeManager::getInstance}();
+85     
+86     \textcolor{keyword}{auto} shapeType = this->\hyperlink{class_abstract_component_a4140957094ef40c4ffaa0ef381d00ce5}{getAttribute\_string}(
+      \hyperlink{_a_e___attributes_8h_a4f8798cc305e537725c57bb8f47ba740}{ATTRIBUTE\_SHAPE\_TYPE});
+87     \textcolor{keywordflow}{if} (shapeType == \hyperlink{_a_e___attributes_8h_ab5acdc705507cd35bfe5a25d403aaef7}{SHAPETYPE\_CIRCLE}) \{
+88         \textcolor{keyword}{auto} theShape = shapeManager->getCircleShape(\hyperlink{class_abstract_component_a4140957094ef40c4ffaa0ef381d00ce5}{getAttribute\_string}(
+      \hyperlink{_a_e___attributes_8h_a38d48cad306c55d90faa362aa5023de8}{ATTRIBUTE\_KEYNAME}));
+89 
+90         \textcolor{comment}{//set the radius}
+91         theShape->setRadius(\hyperlink{class_abstract_component_a890ca92530f6b39afe8c261ce27709c7}{getAttribute\_float}(
+      \hyperlink{_a_e___attributes_8h_a5b0feddcf4ea3df07d1a9a2f9dd3bf70}{ATTRIBUTE\_RADIUS}));
+92 
+93         \textcolor{comment}{//perform actions which are relevant to both the circle and shape}
+94         \textcolor{comment}{//get the attributes related to the outline color and apply it to the shape}
+95         theShape->setOutlineColor(sf::Color(
+96             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a6b45a750496a3996f9a59fb190c22597}{ATTRIBUTE\_OUTLINE\_COLOR\_RED}),
+97             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a63ec6f1bb23064d48d1e9443eae3e36c}{ATTRIBUTE\_OUTLINE\_COLOR\_GREEN}),
+98             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a6f224f25c3045b0c0ff6eb9ebfb75b85}{ATTRIBUTE\_OUTLINE\_COLOR\_BLUE}),
+99             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a5dc3e53458601ca0d4562198560c6e42}{ATTRIBUTE\_OUTLINE\_COLOR\_ALPHA})
+100             ));
+101         
+102         \textcolor{comment}{//get attribute related to the outline thickness and apply to the shape}
+103         \textcolor{keywordtype}{float} lineThickness = \hyperlink{class_abstract_component_a890ca92530f6b39afe8c261ce27709c7}{getAttribute\_float}(
+      \hyperlink{_a_e___attributes_8h_ad658dbd44975ac4e266311f3ae29ab00}{ATTRIBUTE\_OUTLINE\_THICKNESS});
+104         theShape->setOutlineThickness(lineThickness);
+105         
+106         \textcolor{comment}{//get attributes related to the fill color and apply it to the shape}
+107         theShape->setFillColor(sf::Color(
+108             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a3725edfd1b846140eb49aa34b027b2cb}{ATTRIBUTE\_FILL\_COLOR\_RED}),
+109             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a44093150b0166936e44f0748babd201c}{ATTRIBUTE\_FILL\_COLOR\_GREEN}),
+110             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a7c1ee03e64d7b6dd251b709f0130cc62}{ATTRIBUTE\_FILL\_COLOR\_BLUE}),
+111             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a66939dddc263c09ff273450168b31918}{ATTRIBUTE\_FILL\_COLOR\_ALPHA})));
+112 
+113     \}
+114     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (shapeType == \hyperlink{_a_e___attributes_8h_afcd66434a1fe0cb68cca8dbd87a596f9}{SHAPETYPE\_RECTANGLE}) \{
+115         \textcolor{keyword}{auto} theShape = shapeManager->getRectangleShape(\hyperlink{class_abstract_component_a4140957094ef40c4ffaa0ef381d00ce5}{getAttribute\_string}(
+      \hyperlink{_a_e___attributes_8h_a38d48cad306c55d90faa362aa5023de8}{ATTRIBUTE\_KEYNAME}));
+116 
+117         \textcolor{comment}{//set the width and height}
+118         \textcolor{keywordtype}{float} rectWidth = \hyperlink{class_abstract_component_a890ca92530f6b39afe8c261ce27709c7}{getAttribute\_float}(\hyperlink{_a_e___attributes_8h_aade9a992cd068c12793a1bb56d015022}{ATTRIBUTE\_WIDTH});
+119         \textcolor{keywordtype}{float} rectHeight = \hyperlink{class_abstract_component_a890ca92530f6b39afe8c261ce27709c7}{getAttribute\_float}(\hyperlink{_a_e___attributes_8h_ad1f046fde393a66e7c49f97b08af1c0d}{ATTRIBUTE\_HEIGHT});
+120         theShape->setSize(sf::Vector2f(rectWidth, rectHeight));
+121 
+122         \textcolor{comment}{//perform actions which are relevant to both the circle and shape}
+123         \textcolor{comment}{//get the attributes related to the outline color and apply it to the shape}
+124         theShape->setOutlineColor(sf::Color(
+125             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a6b45a750496a3996f9a59fb190c22597}{ATTRIBUTE\_OUTLINE\_COLOR\_RED}),
+126             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a63ec6f1bb23064d48d1e9443eae3e36c}{ATTRIBUTE\_OUTLINE\_COLOR\_GREEN}),
+127             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a6f224f25c3045b0c0ff6eb9ebfb75b85}{ATTRIBUTE\_OUTLINE\_COLOR\_BLUE}),
+128             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a5dc3e53458601ca0d4562198560c6e42}{ATTRIBUTE\_OUTLINE\_COLOR\_ALPHA})
+129             ));
+130         
+131         \textcolor{comment}{//get attribute related to the outline thickness and apply to the shape}
+132         \textcolor{keywordtype}{float} lineThickness = \hyperlink{class_abstract_component_a890ca92530f6b39afe8c261ce27709c7}{getAttribute\_float}(
+      \hyperlink{_a_e___attributes_8h_ad658dbd44975ac4e266311f3ae29ab00}{ATTRIBUTE\_OUTLINE\_THICKNESS});
+133         theShape->setOutlineThickness(lineThickness);
+134         
+135         \textcolor{comment}{//get attributes related to the fill color and apply it to the shape}
+136         theShape->setFillColor(sf::Color(
+137             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a3725edfd1b846140eb49aa34b027b2cb}{ATTRIBUTE\_FILL\_COLOR\_RED}),
+138             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a44093150b0166936e44f0748babd201c}{ATTRIBUTE\_FILL\_COLOR\_GREEN}),
+139             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a7c1ee03e64d7b6dd251b709f0130cc62}{ATTRIBUTE\_FILL\_COLOR\_BLUE}),
+140             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a66939dddc263c09ff273450168b31918}{ATTRIBUTE\_FILL\_COLOR\_ALPHA})));
+141     \}
+142     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (shapeType == \hyperlink{_a_e___attributes_8h_a8cdd66786d6e0ac4a43efc26533ff4e1}{SHAPETYPE\_POLYGON}) \{
+143         \textcolor{keyword}{auto} theShape = shapeManager->getConvexShape(\hyperlink{class_abstract_component_a4140957094ef40c4ffaa0ef381d00ce5}{getAttribute\_string}(
+      \hyperlink{_a_e___attributes_8h_a38d48cad306c55d90faa362aa5023de8}{ATTRIBUTE\_KEYNAME}));
+144 
+145         \textcolor{comment}{//find the polygon count}
+146         \textcolor{keyword}{auto} polygonPoints = *this->\hyperlink{class_abstract_component_a7289cf7b6f2bfdb9819f3cf337af9845}{getAttribute\_floatArray}(
+      \hyperlink{_a_e___attributes_8h_a26ee781739ac518473cf414ecc968239}{ATTRIBUTE\_POLYGON\_POINTS});
+147         assert((polygonPoints.size() % 2 == 0) && \textcolor{stringliteral}{"Odd number of coordinates to describe polygon, must be
+       even"});
+148         \textcolor{keywordtype}{int} numPoints = polygonPoints.size() / 2;
+149         
+150         \textcolor{comment}{//set the number of points}
+151         theShape->setPointCount(numPoints);
+152 
+153         \textcolor{comment}{//set the coordinates for each point}
+154         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < numPoints; i++) \{
+155             theShape->setPoint(i, sf::Vector2f(polygonPoints[i*2], polygonPoints[i*2+1]));
+156         \}
+157 
+158         \textcolor{comment}{//perform actions which are relevant to both the circle and shape}
+159         \textcolor{comment}{//get the attributes related to the outline color and apply it to the shape}
+160         theShape->setOutlineColor(sf::Color(
+161             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a6b45a750496a3996f9a59fb190c22597}{ATTRIBUTE\_OUTLINE\_COLOR\_RED}),
+162             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a63ec6f1bb23064d48d1e9443eae3e36c}{ATTRIBUTE\_OUTLINE\_COLOR\_GREEN}),
+163             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a6f224f25c3045b0c0ff6eb9ebfb75b85}{ATTRIBUTE\_OUTLINE\_COLOR\_BLUE}),
+164             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a5dc3e53458601ca0d4562198560c6e42}{ATTRIBUTE\_OUTLINE\_COLOR\_ALPHA})
+165             ));
+166         
+167         \textcolor{comment}{//get attribute related to the outline thickness and apply to the shape}
+168         \textcolor{keywordtype}{float} lineThickness = \hyperlink{class_abstract_component_a890ca92530f6b39afe8c261ce27709c7}{getAttribute\_float}(
+      \hyperlink{_a_e___attributes_8h_ad658dbd44975ac4e266311f3ae29ab00}{ATTRIBUTE\_OUTLINE\_THICKNESS});
+169         theShape->setOutlineThickness(lineThickness);
+170         
+171         \textcolor{comment}{//get attributes related to the fill color and apply it to the shape}
+172         theShape->setFillColor(sf::Color(
+173             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a3725edfd1b846140eb49aa34b027b2cb}{ATTRIBUTE\_FILL\_COLOR\_RED}),
+174             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a44093150b0166936e44f0748babd201c}{ATTRIBUTE\_FILL\_COLOR\_GREEN}),
+175             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a7c1ee03e64d7b6dd251b709f0130cc62}{ATTRIBUTE\_FILL\_COLOR\_BLUE}),
+176             \hyperlink{class_abstract_component_a16ac644f742683149b78d01b787eb3bd}{getAttribute\_int}(\hyperlink{_a_e___attributes_8h_a66939dddc263c09ff273450168b31918}{ATTRIBUTE\_FILL\_COLOR\_ALPHA})));
+177     \}
+178     \textcolor{keywordflow}{else} \{
+179         assert(0 && \textcolor{stringliteral}{"Not shape by that type"});
+180     \}
+181 
+182 
+183     \textcolor{keywordflow}{return} 0;
+184 \}\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_shape_component_8h}{Shape\-Component.\-h}\item 
+Shape\-Component.\-cpp\end{DoxyCompactItemize}

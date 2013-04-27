@@ -1,0 +1,55 @@
+\hypertarget{class_entity_factory}{\section{Entity\-Factory Class Reference}
+\label{d0/d08/class_entity_factory}\index{Entity\-Factory@{Entity\-Factory}}
+}
+
+
+Factory for creating entities.  
+
+
+
+
+{\ttfamily \#include $<$Entity\-Factory.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{_abstract_entity_8h_a5b087f4ada5a2395ba03ae7d01b56568}{entity\-Type} $>$ \hyperlink{class_entity_factory_a1580559f8a1b19fd6fdbb514e129cf0d}{create\-Main\-Entity} (std\-::string name)
+\begin{DoxyCompactList}\small\item\em Returns a newly created Main entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Factory for creating entities. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_entity_factory_a1580559f8a1b19fd6fdbb514e129cf0d}{\index{Entity\-Factory@{Entity\-Factory}!create\-Main\-Entity@{create\-Main\-Entity}}
+\index{create\-Main\-Entity@{create\-Main\-Entity}!EntityFactory@{Entity\-Factory}}
+\subsubsection[{create\-Main\-Entity}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$ {\bf entity\-Type} $>$ Entity\-Factory\-::create\-Main\-Entity (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{d0/d08/class_entity_factory_a1580559f8a1b19fd6fdbb514e129cf0d}
+
+
+Returns a newly created Main entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name assigned to the entity.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the newly created entity. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+8                                                                         \{
+9     \textcolor{keyword}{auto} entity = std::shared\_ptr<entityType>(\textcolor{keyword}{new} \hyperlink{class_main_entity}{MainEntity}(name, EntityFactory::idNum));
+10     EntityFactory::idNum += 1;
+11     \textcolor{keywordflow}{return} entity;
+12 \}\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_entity_factory_8h}{Entity\-Factory.\-h}\item 
+Entity\-Factory.\-cpp\end{DoxyCompactItemize}

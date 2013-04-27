@@ -1,0 +1,56 @@
+\hypertarget{_event_system_8h}{\section{Event\-System.\-h File Reference}
+\label{d6/d63/_event_system_8h}\index{Event\-System.\-h@{Event\-System.\-h}}
+}
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$tuple$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}Abstract\-System.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\-F\-M\-L\textbackslash{}\-Window.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Event\-Manager.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Callback\-Manager.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_event_system}{Event\-System}
+\begin{DoxyCompactList}\small\item\em Used to handle global events that affect the entire application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_event_system_8h_ac9d51ea7ced9bf3aeeb3d9561b5dd0c5}{\#define \hyperlink{_event_system_8h_ac9d51ea7ced9bf3aeeb3d9561b5dd0c5}{R\-E\-G\-I\-S\-T\-E\-R\-E\-D\-\_\-\-E\-V\-E\-N\-T\-\_\-\-C\-L\-O\-S\-E\-D}~\char`\"{}R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-E\-V\-E\-N\-T\-\_\-\-C\-L\-O\-S\-E\-D\char`\"{}}\label{d6/d63/_event_system_8h_ac9d51ea7ced9bf3aeeb3d9561b5dd0c5}
+
+\begin{DoxyCompactList}\small\item\em Describes the occurence of closing the application. \end{DoxyCompactList}\item 
+\hypertarget{_event_system_8h_ae98181e8110561728be02b48d41fb576}{\#define \hyperlink{_event_system_8h_ae98181e8110561728be02b48d41fb576}{R\-E\-G\-I\-S\-T\-E\-R\-E\-D\-\_\-\-E\-V\-E\-N\-T\-\_\-\-R\-E\-S\-I\-Z\-E\-D}~\char`\"{}R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-E\-V\-E\-N\-T\-\_\-\-R\-E\-S\-I\-Z\-E\-D\char`\"{}}\label{d6/d63/_event_system_8h_ae98181e8110561728be02b48d41fb576}
+
+\begin{DoxyCompactList}\small\item\em Describes the occurence of resizing the application window. \end{DoxyCompactList}\item 
+\hypertarget{_event_system_8h_aaa12e89852815f2e2eb25da90c102742}{\#define \hyperlink{_event_system_8h_aaa12e89852815f2e2eb25da90c102742}{R\-E\-G\-I\-S\-T\-E\-R\-E\-D\-\_\-\-E\-V\-E\-N\-T\-\_\-\-L\-O\-S\-T\-F\-O\-C\-U\-S}~\char`\"{}R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-E\-V\-E\-N\-T\-\_\-\-L\-O\-S\-T\-F\-O\-C\-U\-S\char`\"{}}\label{d6/d63/_event_system_8h_aaa12e89852815f2e2eb25da90c102742}
+
+\begin{DoxyCompactList}\small\item\em Describes the occurence of losing focus to the application. \end{DoxyCompactList}\item 
+\hypertarget{_event_system_8h_a6b0b175a6ef7ff3e26e9fbd132461964}{\#define \hyperlink{_event_system_8h_a6b0b175a6ef7ff3e26e9fbd132461964}{R\-E\-G\-I\-S\-T\-E\-R\-E\-D\-\_\-\-E\-V\-E\-N\-T\-\_\-\-G\-A\-I\-N\-E\-D\-F\-O\-C\-U\-S}~\char`\"{}R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-E\-V\-E\-N\-T\-\_\-\-G\-A\-I\-N\-E\-D\-F\-O\-C\-U\-S\char`\"{}}\label{d6/d63/_event_system_8h_a6b0b175a6ef7ff3e26e9fbd132461964}
+
+\begin{DoxyCompactList}\small\item\em Describes the occurence of gaining focus to the application. \end{DoxyCompactList}\item 
+\hypertarget{_event_system_8h_a3c2c316b9ee39f835e095852ad861f36}{\#define \hyperlink{_event_system_8h_a3c2c316b9ee39f835e095852ad861f36}{R\-E\-G\-I\-S\-T\-E\-R\-E\-D\-\_\-\-E\-V\-E\-N\-T\-\_\-\-T\-E\-X\-T\-E\-N\-T\-E\-R\-E\-D}~\char`\"{}R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-E\-V\-E\-N\-T\-\_\-\-T\-E\-X\-T\-E\-N\-T\-E\-R\-E\-D\char`\"{}}\label{d6/d63/_event_system_8h_a3c2c316b9ee39f835e095852ad861f36}
+
+\begin{DoxyCompactList}\small\item\em Describes the occurence of text being entered. \end{DoxyCompactList}\item 
+\hypertarget{_event_system_8h_a1aa9bdd2902a1f9b4fcdb8110e19e848}{\#define \hyperlink{_event_system_8h_a1aa9bdd2902a1f9b4fcdb8110e19e848}{R\-E\-G\-I\-S\-T\-E\-R\-E\-D\-\_\-\-E\-V\-E\-N\-T\-\_\-\-M\-O\-U\-S\-E\-\_\-\-E\-N\-T\-E\-R}~\char`\"{}R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-E\-V\-E\-N\-T\-\_\-\-M\-O\-U\-S\-E\-\_\-\-E\-N\-T\-E\-R\char`\"{}}\label{d6/d63/_event_system_8h_a1aa9bdd2902a1f9b4fcdb8110e19e848}
+
+\begin{DoxyCompactList}\small\item\em Describes the occurence of the mouse entering the application window. \end{DoxyCompactList}\item 
+\hypertarget{_event_system_8h_a2d0d50e93e61c731f5877beb0d7b0df7}{\#define \hyperlink{_event_system_8h_a2d0d50e93e61c731f5877beb0d7b0df7}{R\-E\-G\-I\-S\-T\-E\-R\-E\-D\-\_\-\-E\-V\-E\-N\-T\-\_\-\-M\-O\-U\-S\-E\-\_\-\-E\-X\-I\-T}~\char`\"{}R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-E\-V\-E\-N\-T\-\_\-\-M\-O\-U\-S\-E\-\_\-\-E\-X\-I\-T\char`\"{}}\label{d6/d63/_event_system_8h_a2d0d50e93e61c731f5877beb0d7b0df7}
+
+\begin{DoxyCompactList}\small\item\em Describes the occurence of the mouse leaving the application window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Benjamin Zaporzan \href{mailto:benzaporzan@gmail.com}{\tt benzaporzan@gmail.\-com}
+\end{DoxyAuthor}
+\hypertarget{d5/d67/_texture_manager_8h_LICENSE}{}\subsection{L\-I\-C\-E\-N\-S\-E}\label{d5/d67/_texture_manager_8h_LICENSE}
+Copyright (C) 2013 Benjamin Zaporzan
+
+This program is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \mbox{[}\mbox{[}\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}\mbox{]}\mbox{]}.\hypertarget{d5/d67/_texture_manager_8h_DESCRIPTION}{}\subsection{D\-E\-S\-C\-R\-I\-P\-T\-I\-O\-N}\label{d5/d67/_texture_manager_8h_DESCRIPTION}
+Contains the event system, which is a system for processing global events that may be consistent over the entire execution.
+
+This is useful for assigning callbacks for things like pressing the close button, or resizing the window. 

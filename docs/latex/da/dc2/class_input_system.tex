@@ -1,0 +1,121 @@
+\hypertarget{class_input_system}{\section{Input\-System Class Reference}
+\label{da/dc2/class_input_system}\index{Input\-System@{Input\-System}}
+}
+Inheritance diagram for Input\-System\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{da/dc2/class_input_system}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_input_system_a05c5413c337e228ef969d816fa6457a2}{process} ()
+\begin{DoxyCompactList}\small\item\em Perform actions on entities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_input_system_a05c5413c337e228ef969d816fa6457a2}{\index{Input\-System@{Input\-System}!process@{process}}
+\index{process@{process}!InputSystem@{Input\-System}}
+\subsubsection[{process}]{\setlength{\rightskip}{0pt plus 5cm}int Input\-System\-::process (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{da/dc2/class_input_system_a05c5413c337e228ef969d816fa6457a2}
+
+
+Perform actions on entities. 
+
+The process method is a pure virtual function that processes all of th entities stored within the entity manager. Some systems do not use the entity manager for processing, but may process other things that require processing per frame.
+
+What is processed is fully dependant on the implementation.
+
+\begin{DoxyReturn}{Returns}
+A non-\/zero value if the processing was successful. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_abstract_system_af8bfe74feb5df2b5e3fff67bfe1106b9}{Abstract\-System}.
+
+
+\begin{DoxyCode}
+23                          \{
+24 
+25     \textcolor{comment}{//we need to sift through the entities}
+26     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} entity : this->\hyperlink{class_abstract_system_ac0d16e94f5cea4b1a6bf489d35d7a14d}{entityManager}->\hyperlink{class_entity_manager_a452113e422a9c501bb008761f7609e33}{getAllEntities}()) \{
+27         \textcolor{comment}{//determine if the entity has what we desire}
+28         \textcolor{keywordflow}{if}(!entity->hasComponentFamily(\textcolor{stringliteral}{"Input"})) \{
+29             \textcolor{keywordflow}{continue};
+30         \}
+31 
+32         \textcolor{comment}{//grab all of the events}
+33         \textcolor{keyword}{auto} eventList = this->eventManager->\hyperlink{class_event_manager_a7cd671ef1543ec52aac1db8c48655995}{getEvents}();
+34 
+35         \textcolor{comment}{//grab all of the input components}
+36         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} inputComponent : entity->getComponentsByFamily(\textcolor{stringliteral}{"Input"})) \{
+37             \textcolor{comment}{//check to see if the input is enabled}
+38             \textcolor{keywordtype}{int} bEnabled = inputComponent->getAttribute\_int(\hyperlink{_a_e___attributes_8h_a4c775095baf8a9c99621ad9ad3b622db}{ATTRIBUTE\_ENABLE});
+39             \textcolor{keywordflow}{if} (bEnabled == 0) \{
+40                 \textcolor{keywordflow}{continue};
+41             \}
+42 
+43             \textcolor{comment}{//get the input type}
+44             std::string inputType = inputComponent->getAttribute\_string(\textcolor{stringliteral}{"InputType"});
+45 
+46             \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} event : eventList) \{
+47                 \textcolor{keywordtype}{bool} bIsEvent = \textcolor{keyword}{false};
+48                 \textcolor{keywordflow}{if} (inputType == \hyperlink{_a_e___events_8h_ac7747a0fbf37233b9361b91131edd0d7}{INPUT\_MOUSE\_MOVE}) \{
+49                     bIsEvent = this->isEvent(*event, inputType);
+50                 \}
+51                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (inputType == \hyperlink{_a_e___events_8h_a0dcdde95983d5fce1a7df006dc718ec3}{INPUT\_MOUSE\_PRESSED}) \{
+52                     bIsEvent = this->isEvent(*event, inputType);
+53                 \}
+54                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (inputType == \hyperlink{_a_e___events_8h_a4b4b675ca09b559cbae96027bc2ae915}{INPUT\_MOUSE\_RELEASED}) \{
+55                     bIsEvent = this->isEvent(*event, inputType);
+56                 \}
+57                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (inputType == \hyperlink{_a_e___events_8h_a1e35e7ec64832b1d0cc0bafe44589ef8}{INPUT\_MOUSE\_SCROLL}) \{
+58                     bIsEvent = this->isEvent(*event, inputType);
+59                 \}
+60                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (inputType == \hyperlink{_a_e___events_8h_a7274317c7bc468f9f3a2acb0c3c1af9e}{INPUT\_KEYBOARD\_PRESSED}) \{
+61                     bIsEvent = this->isEvent(*event, inputType);
+62                 \}
+63                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (inputType == \hyperlink{_a_e___events_8h_a52e3f3f9420b3574c792dfc9d57471d8}{INPUT\_KEYBOARD\_RELEASED}) \{
+64                     bIsEvent = this->isEvent(*event, inputType);
+65                 \}
+66                 \textcolor{keywordflow}{else} \{
+67                     \textcolor{keywordflow}{continue};
+68                 \}
+69 
+70                 \textcolor{keywordflow}{if} (bIsEvent) \{
+71                     \textcolor{comment}{//upon finding a matching event to the input, grab the callback, }
+72                       \textcolor{comment}{//and trigger it with the given component}
+73                     \textcolor{comment}{//get ID}
+74                     \textcolor{keywordtype}{int} entityID = entity->getID();
+75 
+76                     \textcolor{comment}{//get eventIndex}
+77                     \textcolor{keyword}{auto} iter = std::find(eventList.begin(), eventList.end(), event);
+78                     assert(!(iter == eventList.end()) && \textcolor{stringliteral}{"Event doesn't exist"});
+79                     \textcolor{keywordtype}{int} eventIndex = iter - eventList.begin();
+80 
+81                     \textcolor{comment}{//get the callback from the inputComponent}
+82                     std::string callbackString = inputComponent->getAttribute\_string(
+      \hyperlink{_a_e___attributes_8h_a8602d00b356bb7e6ba95069a94fd5555}{ATTRIBUTE\_CALLBACK});
+83                     
+84                     \textcolor{comment}{//trigger the callback}
+85                     assert(callbackManager->\hyperlink{class_callback_manager_a60aeb116e1cb38de4091e978d9aa8197}{hasCallback}(callbackString) && \textcolor{stringliteral}{"inputComponent
+       callback doesn't exist"});
+86                     callbackManager->\hyperlink{class_callback_manager_a4c5dc4430f0fb5cebe240be020a8fbe9}{triggerCallback}(callbackString, entityID, eventIndex);
+87                 \} \textcolor{comment}{//if (bIsEvent) \{ ...}
+88             \}\textcolor{comment}{//END for (auto event : ...}
+89         \} \textcolor{comment}{//END for (auto inputComponent : ...}
+90     \} \textcolor{comment}{//END for(auto entity : ...}
+91     \textcolor{keywordflow}{return} 0;
+92 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Input\-System.\-h\item 
+Input\-System.\-cpp\end{DoxyCompactItemize}

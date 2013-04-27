@@ -1,0 +1,95 @@
+\hypertarget{class_state_component}{\section{State\-Component Class Reference}
+\label{d0/d07/class_state_component}\index{State\-Component@{State\-Component}}
+}
+
+
+Used to store entity state (Not currently used)  
+
+
+
+
+{\ttfamily \#include $<$State\-Component.\-h$>$}
+
+Inheritance diagram for State\-Component\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d0/d07/class_state_component}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_state_component_a5b6986079c4a998d5313d7f8d8c4e053}{State\-Component} (std\-::string name)
+\begin{DoxyCompactList}\small\item\em Constructor overrides the \hyperlink{class_abstract_component}{Abstract\-Component} family to be \char`\"{}\-State\char`\"{}. \end{DoxyCompactList}\item 
+int \hyperlink{class_state_component_a202841453e2d2bebc43079ec2da344bb}{update} ()
+\begin{DoxyCompactList}\small\item\em Used when the component is modified (Not Implemented) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Used to store entity state (Not currently used) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_state_component_a5b6986079c4a998d5313d7f8d8c4e053}{\index{State\-Component@{State\-Component}!State\-Component@{State\-Component}}
+\index{State\-Component@{State\-Component}!StateComponent@{State\-Component}}
+\subsubsection[{State\-Component}]{\setlength{\rightskip}{0pt plus 5cm}State\-Component\-::\-State\-Component (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{d0/d07/class_state_component_a5b6986079c4a998d5313d7f8d8c4e053}
+
+
+Constructor overrides the \hyperlink{class_abstract_component}{Abstract\-Component} family to be \char`\"{}\-State\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name assigned to the component. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+5                                              :
+6     \hyperlink{class_abstract_component_ab08b845eddbdbe411b95a5385501ab97}{AbstractComponent}(name, \hyperlink{_state_component_8h_aac90c254d3963717ccf0661a124a0d20}{COMPONENT\_FAMILY\_STATE}) \{
+7 
+8     \textcolor{comment}{//Determines whether the given state is active, and should}
+9         \textcolor{comment}{//trigger the given callback}
+10     this->\hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{setAttribute\_int}(\hyperlink{_a_e___attributes_8h_a4c775095baf8a9c99621ad9ad3b622db}{ATTRIBUTE\_ENABLE}, 1);
+11 
+12     \textcolor{comment}{//Key of the callback function to trigger}
+13     this->\hyperlink{class_abstract_component_a702ec2cc2624561ef51afcd9c8061fd2}{setAttribute\_string}(\hyperlink{_a_e___attributes_8h_a8602d00b356bb7e6ba95069a94fd5555}{ATTRIBUTE\_CALLBACK}, \textcolor{stringliteral}{"None"});
+14 
+15     \textcolor{comment}{//determines if the given state callback will be repeated}
+16     this->\hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{setAttribute\_int}(\textcolor{stringliteral}{"bRepeat"}, 1);
+\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_state_component_a202841453e2d2bebc43079ec2da344bb}{\index{State\-Component@{State\-Component}!update@{update}}
+\index{update@{update}!StateComponent@{State\-Component}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}int State\-Component\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{d0/d07/class_state_component_a202841453e2d2bebc43079ec2da344bb}
+
+
+Used when the component is modified (Not Implemented) 
+
+\begin{DoxyReturn}{Returns}
+Returns a zero value if it was successful. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_abstract_component_a35c9cab4e3845a947609b6ada8dc89cf}{Abstract\-Component}.
+
+
+\begin{DoxyCode}
+18                            \{
+19     \textcolor{keywordflow}{return} 0;
+20 \}\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_state_component_8h}{State\-Component.\-h}\item 
+State\-Component.\-cpp\end{DoxyCompactItemize}

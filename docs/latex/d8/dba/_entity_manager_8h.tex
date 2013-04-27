@@ -1,0 +1,39 @@
+\hypertarget{_entity_manager_8h}{\section{Entity\-Manager.\-h File Reference}
+\label{d8/dba/_entity_manager_8h}\index{Entity\-Manager.\-h@{Entity\-Manager.\-h}}
+}
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$mutex$>$}\\*
+{\ttfamily \#include \char`\"{}Abstract\-Entity.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_entity_manager}{Entity\-Manager}
+\begin{DoxyCompactList}\small\item\em The entity manager used to store and manager entities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_entity_manager_8h_ac6eefa7a2a0560298c06e549b535f58f}{typedef std\-::vector\\*
+$<$ std\-::shared\-\_\-ptr$<$ \hyperlink{_abstract_entity_8h_a5b087f4ada5a2395ba03ae7d01b56568}{entity\-Type} $>$ $>$ \hyperlink{_entity_manager_8h_ac6eefa7a2a0560298c06e549b535f58f}{entity\-Vector\-Type}}\label{d8/dba/_entity_manager_8h_ac6eefa7a2a0560298c06e549b535f58f}
+
+\begin{DoxyCompactList}\small\item\em Type used to store the vector list of entities. \end{DoxyCompactList}\item 
+\hypertarget{_entity_manager_8h_ad498cce7240e0ba6c86bd9acaa5ba2ff}{typedef std\-::list\\*
+$<$ std\-::shared\-\_\-ptr$<$ \hyperlink{_abstract_entity_8h_a5b087f4ada5a2395ba03ae7d01b56568}{entity\-Type} $>$ $>$ \hyperlink{_entity_manager_8h_ad498cce7240e0ba6c86bd9acaa5ba2ff}{entity\-List\-Type}}\label{d8/dba/_entity_manager_8h_ad498cce7240e0ba6c86bd9acaa5ba2ff}
+
+\begin{DoxyCompactList}\small\item\em Type used to store temporary lists of entities when retrieving. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Benjamin Zaporzan \href{mailto:benzaporzan@gmail.com}{\tt benzaporzan@gmail.\-com}
+\end{DoxyAuthor}
+\hypertarget{d5/d67/_texture_manager_8h_LICENSE}{}\subsection{L\-I\-C\-E\-N\-S\-E}\label{d5/d67/_texture_manager_8h_LICENSE}
+Copyright (C) 2013 Benjamin Zaporzan
+
+This program is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \mbox{[}\mbox{[}\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}\mbox{]}\mbox{]}.\hypertarget{d5/d67/_texture_manager_8h_DESCRIPTION}{}\subsection{D\-E\-S\-C\-R\-I\-P\-T\-I\-O\-N}\label{d5/d67/_texture_manager_8h_DESCRIPTION}
+The entity manager is used to store and manage all of the entities that are currently within the game. 

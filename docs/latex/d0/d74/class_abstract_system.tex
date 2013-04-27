@@ -1,0 +1,94 @@
+\hypertarget{class_abstract_system}{\section{Abstract\-System Class Reference}
+\label{d0/d74/class_abstract_system}\index{Abstract\-System@{Abstract\-System}}
+}
+
+
+The abstract representation for each system.  
+
+
+
+
+{\ttfamily \#include $<$Abstract\-System.\-h$>$}
+
+Inheritance diagram for Abstract\-System\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d0/d74/class_abstract_system}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_abstract_system_aa298e56d5a792e662f83a28b9a38ff6b}{\hyperlink{class_abstract_system_aa298e56d5a792e662f83a28b9a38ff6b}{Abstract\-System} (std\-::string name)}\label{d0/d74/class_abstract_system_aa298e56d5a792e662f83a28b9a38ff6b}
+
+\begin{DoxyCompactList}\small\item\em Abstract system constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_abstract_system_a8a4574ecd1919c480927dbeeb24bc754}{\hyperlink{class_abstract_system_a8a4574ecd1919c480927dbeeb24bc754}{$\sim$\-Abstract\-System} ()}\label{d0/d74/class_abstract_system_a8a4574ecd1919c480927dbeeb24bc754}
+
+\begin{DoxyCompactList}\small\item\em Abstract system destructor. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_abstract_system_a82b244568fe057bf557e898510ecc97d}{get\-Name} ()
+\begin{DoxyCompactList}\small\item\em Gets the name of the current system. \end{DoxyCompactList}\item 
+virtual int \hyperlink{class_abstract_system_af8bfe74feb5df2b5e3fff67bfe1106b9}{process} ()=0
+\begin{DoxyCompactList}\small\item\em Perform actions on entities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_abstract_system_ac0d16e94f5cea4b1a6bf489d35d7a14d}{\hyperlink{class_entity_manager}{Entity\-Manager} $\ast$ \hyperlink{class_abstract_system_ac0d16e94f5cea4b1a6bf489d35d7a14d}{entity\-Manager}}\label{d0/d74/class_abstract_system_ac0d16e94f5cea4b1a6bf489d35d7a14d}
+
+\begin{DoxyCompactList}\small\item\em a pointer to the entity manager singleton \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The abstract representation for each system. 
+
+The abstract system has methods to get the name of the system, and to process entities stored within the entity manager.
+
+Systems carry out specific needs for the engine, such as rendering stuff onto the screen, detecting if two entities have collided, or checking to see if certain events have been performed, and reacting to it. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_abstract_system_a82b244568fe057bf557e898510ecc97d}{\index{Abstract\-System@{Abstract\-System}!get\-Name@{get\-Name}}
+\index{get\-Name@{get\-Name}!AbstractSystem@{Abstract\-System}}
+\subsubsection[{get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Abstract\-System\-::get\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/d74/class_abstract_system_a82b244568fe057bf557e898510ecc97d}
+
+
+Gets the name of the current system. 
+
+\begin{DoxyReturn}{Returns}
+The name of the current system 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+14                                   \{
+15     \textcolor{keywordflow}{return} this->name;
+16 \}\end{DoxyCode}
+\hypertarget{class_abstract_system_af8bfe74feb5df2b5e3fff67bfe1106b9}{\index{Abstract\-System@{Abstract\-System}!process@{process}}
+\index{process@{process}!AbstractSystem@{Abstract\-System}}
+\subsubsection[{process}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Abstract\-System\-::process (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{d0/d74/class_abstract_system_af8bfe74feb5df2b5e3fff67bfe1106b9}
+
+
+Perform actions on entities. 
+
+The process method is a pure virtual function that processes all of th entities stored within the entity manager. Some systems do not use the entity manager for processing, but may process other things that require processing per frame.
+
+What is processed is fully dependant on the implementation.
+
+\begin{DoxyReturn}{Returns}
+A non-\/zero value if the processing was successful. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_collision_system_a8172916254667a746b257c38f04018d8}{Collision\-System}, \hyperlink{class_event_system_abe8b09889b2238008f8b08785322b298}{Event\-System}, \hyperlink{class_state_system_acd4ff634e180a921f3d40448cff994ca}{State\-System}, \hyperlink{class_input_system_a05c5413c337e228ef969d816fa6457a2}{Input\-System}, and \hyperlink{class_sprite_system_a0303dbb745168bbf0278e4f9a6b5be0c}{Sprite\-System}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_abstract_system_8h}{Abstract\-System.\-h}\item 
+Abstract\-System.\-cpp\end{DoxyCompactItemize}

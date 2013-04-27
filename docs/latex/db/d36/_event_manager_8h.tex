@@ -1,0 +1,37 @@
+\hypertarget{_event_manager_8h}{\section{Event\-Manager.\-h File Reference}
+\label{db/d36/_event_manager_8h}\index{Event\-Manager.\-h@{Event\-Manager.\-h}}
+}
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}S\-F\-M\-L\textbackslash{}\-Graphics.\-hpp\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_event_manager}{Event\-Manager}
+\begin{DoxyCompactList}\small\item\em Used to Poll for events and store them for later retrieval each frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_event_manager_8h_a2df2dd760d1993a3b77192ab230e3115}{typedef sf\-::\-Event \hyperlink{_event_manager_8h_a2df2dd760d1993a3b77192ab230e3115}{event\-Type}}\label{db/d36/_event_manager_8h_a2df2dd760d1993a3b77192ab230e3115}
+
+\begin{DoxyCompactList}\small\item\em Type used to events. \end{DoxyCompactList}\item 
+\hypertarget{_event_manager_8h_a6ce9eb912b58654c59461fee2a8e7994}{typedef std\-::vector\\*
+$<$ std\-::shared\-\_\-ptr$<$ \hyperlink{_event_manager_8h_a2df2dd760d1993a3b77192ab230e3115}{event\-Type} $>$ $>$ \hyperlink{_event_manager_8h_a6ce9eb912b58654c59461fee2a8e7994}{event\-List\-Type}}\label{db/d36/_event_manager_8h_a6ce9eb912b58654c59461fee2a8e7994}
+
+\begin{DoxyCompactList}\small\item\em Type used for holding the events within the event managerx. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Benjamin Zaporzan \href{mailto:benzaporzan@gmail.com}{\tt benzaporzan@gmail.\-com}
+\end{DoxyAuthor}
+\hypertarget{d5/d67/_texture_manager_8h_LICENSE}{}\subsection{L\-I\-C\-E\-N\-S\-E}\label{d5/d67/_texture_manager_8h_LICENSE}
+Copyright (C) 2013 Benjamin Zaporzan
+
+This program is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \mbox{[}\mbox{[}\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}\mbox{]}\mbox{]}.\hypertarget{d5/d67/_texture_manager_8h_DESCRIPTION}{}\subsection{D\-E\-S\-C\-R\-I\-P\-T\-I\-O\-N}\label{d5/d67/_texture_manager_8h_DESCRIPTION}
+Used to manage the events within the game. All events are polled through an external source, and passed into the event manager to be retrieved. Any systems that can make use of the events will then retrieve the events and pass these events onto the components that make use of them. 

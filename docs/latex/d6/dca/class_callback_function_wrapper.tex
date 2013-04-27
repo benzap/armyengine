@@ -1,0 +1,76 @@
+\hypertarget{class_callback_function_wrapper}{\section{Callback\-Function\-Wrapper Class Reference}
+\label{d6/dca/class_callback_function_wrapper}\index{Callback\-Function\-Wrapper@{Callback\-Function\-Wrapper}}
+}
+
+
+Wrapper to store varying functions as one function type.  
+
+
+
+
+{\ttfamily \#include $<$Callback\-Manager.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_callback_function_wrapper_af8d8ef7b676450baa1c3c14a536d0460}{\hyperlink{class_callback_function_wrapper_af8d8ef7b676450baa1c3c14a536d0460}{Callback\-Function\-Wrapper} (\hyperlink{_callback_manager_8h_a73a0c6254a0b5ab661ca1f3bd5f3d99c}{function\-Template} func)}\label{d6/dca/class_callback_function_wrapper_af8d8ef7b676450baa1c3c14a536d0460}
+
+\begin{DoxyCompactList}\small\item\em Constructor to convert one-\/param to two-\/param. \end{DoxyCompactList}\item 
+\hypertarget{class_callback_function_wrapper_ae257988a69ea0f507b75fcc9b7d61f75}{\hyperlink{class_callback_function_wrapper_ae257988a69ea0f507b75fcc9b7d61f75}{Callback\-Function\-Wrapper} (\hyperlink{_callback_manager_8h_afb6653b2315b76a8dcbae52ed1be8b8f}{function\-Base\-Template} func)}\label{d6/dca/class_callback_function_wrapper_ae257988a69ea0f507b75fcc9b7d61f75}
+
+\begin{DoxyCompactList}\small\item\em Constructor to convert two-\/param to two-\/param. \end{DoxyCompactList}\item 
+int \hyperlink{class_callback_function_wrapper_a0fecf948ee0fa6e55ce77b0b5bb352b4}{operator()} (int I\-D, int event\-Index)
+\begin{DoxyCompactList}\small\item\em operator() override \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Wrapper to store varying functions as one function type. 
+
+Wrap function\-Templates into function\-Event\-Templates Wrap function\-Base\-Templates into function\-Event\-Templates
+
+Used to wrap the other given function types into the function\-Event\-Template type that is stored within the callback manager.
+
+The wrapper converts zero-\/paramter and one-\/parameter functions into the two-\/paramter function used within the callback manager, and assigns the unused parameters as zero-\/values. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_callback_function_wrapper_a0fecf948ee0fa6e55ce77b0b5bb352b4}{\index{Callback\-Function\-Wrapper@{Callback\-Function\-Wrapper}!operator()@{operator()}}
+\index{operator()@{operator()}!CallbackFunctionWrapper@{Callback\-Function\-Wrapper}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}int Callback\-Function\-Wrapper\-::operator() (
+\begin{DoxyParamCaption}
+\item[{int}]{I\-D, }
+\item[{int}]{event\-Index}
+\end{DoxyParamCaption}
+)}}\label{d6/dca/class_callback_function_wrapper_a0fecf948ee0fa6e55ce77b0b5bb352b4}
+
+
+operator() override 
+
+The function calls func\-\_\-one\-Param or func\-\_\-zero\-Param depending on the func\-Type of the assigned function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em I\-D} & is designated to the entity I\-D that performed the callback\\
+\hline
+{\em event\-Index} & is designated to the index of the event within the \hyperlink{class_event_manager}{Event\-Manager}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A non-\/zero value if the callback was successful 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+49                                                                \{
+50     \textcolor{keywordflow}{if} (this->funcType == ONE\_PARAM) \{
+51         \textcolor{keywordflow}{return} this->func\_oneParam(ID);
+52     \}
+53     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (this->funcType == ZERO\_PARAM) \{
+54         \textcolor{keywordflow}{return} this->func\_zeroParam();
+55     \}
+56     \textcolor{keywordflow}{return} 1;
+57 \}\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_callback_manager_8h}{Callback\-Manager.\-h}\item 
+Callback\-Manager.\-cpp\end{DoxyCompactItemize}

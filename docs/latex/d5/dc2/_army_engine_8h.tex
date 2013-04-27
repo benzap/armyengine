@@ -1,0 +1,70 @@
+\hypertarget{_army_engine_8h}{\section{Army\-Engine.\-h File Reference}
+\label{d5/dc2/_army_engine_8h}\index{Army\-Engine.\-h@{Army\-Engine.\-h}}
+}
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$functional$>$}\\*
+{\ttfamily \#include \char`\"{}S\-F\-M\-L\textbackslash{}\-Window.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\-F\-M\-L\textbackslash{}\-Graphics.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Managers.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Systems.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Entities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Components.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}A\-E\-\_\-\-Attributes.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}A\-E\-\_\-\-Events.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}A\-E\-\_\-\-Utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Component\-Factory.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Entity\-Factory.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_army_engine}{Army\-Engine}
+\begin{DoxyCompactList}\small\item\em Army engine singleton facade. Frontend to the engine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_army_engine_8h_a498d9f026138406895e9a34b504ac6a6}{\#define \hyperlink{_army_engine_8h_a498d9f026138406895e9a34b504ac6a6}{W\-I\-N\-D\-O\-W\-\_\-\-W\-I\-D\-T\-H}~800}\label{d5/dc2/_army_engine_8h_a498d9f026138406895e9a34b504ac6a6}
+
+\begin{DoxyCompactList}\small\item\em Sets the window width. \end{DoxyCompactList}\item 
+\hypertarget{_army_engine_8h_a5473cf64fa979b48335079c99532e243}{\#define \hyperlink{_army_engine_8h_a5473cf64fa979b48335079c99532e243}{W\-I\-N\-D\-O\-W\-\_\-\-H\-E\-I\-G\-H\-T}~600}\label{d5/dc2/_army_engine_8h_a5473cf64fa979b48335079c99532e243}
+
+\begin{DoxyCompactList}\small\item\em Sets the window height. \end{DoxyCompactList}\item 
+\hypertarget{_army_engine_8h_a3adf7b7b13572f2baf3379a8f2f4220a}{\#define \hyperlink{_army_engine_8h_a3adf7b7b13572f2baf3379a8f2f4220a}{W\-I\-N\-D\-O\-W\-\_\-\-T\-I\-T\-L\-E}~\char`\"{}Army\-Engine Game\char`\"{}}\label{d5/dc2/_army_engine_8h_a3adf7b7b13572f2baf3379a8f2f4220a}
+
+\begin{DoxyCompactList}\small\item\em Sets the default window title. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_army_engine_8h_a159c12b96350841dc66f26d871738d24}{typedef std\-::function$<$ int(int)$>$ \hyperlink{_army_engine_8h_a159c12b96350841dc66f26d871738d24}{function\-Register\-Template}}\label{d5/dc2/_army_engine_8h_a159c12b96350841dc66f26d871738d24}
+
+\begin{DoxyCompactList}\small\item\em Function Type for registering global events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_army_engine_8h_a696053605a0b27bfc265da70b5a70453}{Enum\-Event\-Type} \{ \\*
+{\bfseries E\-V\-E\-N\-T\-\_\-\-C\-L\-O\-S\-E\-D}, 
+{\bfseries E\-V\-E\-N\-T\-\_\-\-R\-E\-S\-I\-Z\-E\-D}, 
+{\bfseries E\-V\-E\-N\-T\-\_\-\-L\-O\-S\-T\-F\-O\-C\-U\-S}, 
+{\bfseries E\-V\-E\-N\-T\-\_\-\-G\-A\-I\-N\-E\-D\-F\-O\-C\-U\-S}, 
+\\*
+{\bfseries E\-V\-E\-N\-T\-\_\-\-T\-E\-X\-T\-E\-N\-T\-E\-R\-E\-D}, 
+{\bfseries E\-V\-E\-N\-T\-\_\-\-M\-O\-U\-S\-E\-\_\-\-E\-N\-T\-E\-R}, 
+{\bfseries E\-V\-E\-N\-T\-\_\-\-M\-O\-U\-S\-E\-\_\-\-E\-X\-I\-T}
+ \}
+\begin{DoxyCompactList}\small\item\em Used for the registered global events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Benjamin Zaporzan \href{mailto:benzaporzan@gmail.com}{\tt benzaporzan@gmail.\-com}
+\end{DoxyAuthor}
+\hypertarget{d5/d67/_texture_manager_8h_LICENSE}{}\subsection{L\-I\-C\-E\-N\-S\-E}\label{d5/d67/_texture_manager_8h_LICENSE}
+Copyright (C) 2013 Benjamin Zaporzan
+
+This program is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \mbox{[}\mbox{[}\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}\mbox{]}\mbox{]}.\hypertarget{d5/d67/_texture_manager_8h_DESCRIPTION}{}\subsection{D\-E\-S\-C\-R\-I\-P\-T\-I\-O\-N}\label{d5/d67/_texture_manager_8h_DESCRIPTION}
+Main class which should be used as an interface to access the functionality of the armyengine pieces
+
+The only other classes considered for modification are the Managers 
