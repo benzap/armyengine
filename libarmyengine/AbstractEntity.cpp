@@ -62,7 +62,7 @@ const componentVectorType& AbstractEntity::getAllComponents() {
 	return this->componentVector;
 }
 
-std::list<std::shared_ptr<componentType>> AbstractEntity::getComponentsByFamily(const std::string& family) {
+std::list<std::shared_ptr<componentType> > AbstractEntity::getComponentsByFamily(const std::string& family) {
 	std::list<std::shared_ptr<componentType>> componentList;
 	for(auto component : this->componentVector) {
 		if (family == component->getFamily()) {
