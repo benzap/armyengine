@@ -1,6 +1,15 @@
 \hypertarget{class_sprite_component}{\section{Sprite\-Component Class Reference}
 \label{d4/df5/class_sprite_component}\index{Sprite\-Component@{Sprite\-Component}}
 }
+
+
+Used to represent sprites for a given entity.  
+
+
+
+
+{\ttfamily \#include $<$Sprite\-Component.\-h$>$}
+
 Inheritance diagram for Sprite\-Component\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,11 +19,69 @@ Inheritance diagram for Sprite\-Component\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_sprite_component_a823876c6030fe292839b4e4b35f46391}{{\bfseries Sprite\-Component} (std\-::string)}\label{d4/df5/class_sprite_component_a823876c6030fe292839b4e4b35f46391}
-
+\hyperlink{class_sprite_component_a36cebab8b302188e1d6eddd24a166708}{Sprite\-Component} (std\-::string name)
 \item 
 int \hyperlink{class_sprite_component_a3518ccb69a3c829d5dcdc2dc024447ea}{update} ()
-\begin{DoxyCompactList}\small\item\em Updates the component based on the current set of attributes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Updates the sprite reference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Used to represent sprites for a given entity. 
+
+Sprite component is included in an entity to have it display itself given a set of attributes that describe the sprite to use, and the position. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_sprite_component_a36cebab8b302188e1d6eddd24a166708}{\index{Sprite\-Component@{Sprite\-Component}!Sprite\-Component@{Sprite\-Component}}
+\index{Sprite\-Component@{Sprite\-Component}!SpriteComponent@{Sprite\-Component}}
+\subsubsection[{Sprite\-Component}]{\setlength{\rightskip}{0pt plus 5cm}Sprite\-Component\-::\-Sprite\-Component (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{d4/df5/class_sprite_component_a36cebab8b302188e1d6eddd24a166708}
+Family is overloaded to \char`\"{}\-Sprite\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name assigned to the sprite component. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+4                                                : 
+5     \hyperlink{class_abstract_component_ab08b845eddbdbe411b95a5385501ab97}{AbstractComponent}(name, \textcolor{stringliteral}{"Sprite"}) \{
+6     \textcolor{comment}{//determines if the given sprite should be shown}
+7         \textcolor{comment}{//1 - show sprite}
+8         \textcolor{comment}{//0 - don't show sprite}
+9     this->\hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{setAttribute\_int}(\hyperlink{_a_e___attributes_8h_a4c775095baf8a9c99621ad9ad3b622db}{ATTRIBUTE\_ENABLE}, 1);
+10 
+11     \textcolor{comment}{//provides a name of a sprite which is stored within the sprite manager}
+12         \textcolor{comment}{//None is a default sprite, which will be a white square with an X in it}
+13     this->\hyperlink{class_abstract_component_a702ec2cc2624561ef51afcd9c8061fd2}{setAttribute\_string}(\hyperlink{_a_e___attributes_8h_a374d6a23ea1ee16468fa4f002bef492f}{ATTRIBUTE\_SPRITE\_NAME}, \textcolor{stringliteral}{"None"});
+14 
+15     \textcolor{comment}{//This provides the offset of the sprite from its origin within the X and Y direction}
+16         \textcolor{comment}{//Useful for a multisprite entity, you provide an offset to change its placement}
+17     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_aa003b6ad3f43053c9d43e1acc0098691}{ATTRIBUTE\_OFFSET\_X}, 0.0);
+18     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_a8ebf91b8ee9dfdfad18bc10c3c42d564}{ATTRIBUTE\_OFFSET\_Y}, 0.0);
+19 
+20     \textcolor{comment}{//This provides the origin, or center point where rotation and the point of positioning is determined}
+21     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_a5c5a5ae3ea4130db3dfd08029a17a17c}{ATTRIBUTE\_ORIGIN\_X}, 0.0);
+22     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_af45315d7cdc2f4ecdb28d0a9d6bb15c7}{ATTRIBUTE\_ORIGIN\_Y}, 0.0);
+23 
+24     \textcolor{comment}{//Provides the depth of the sprite, lower means farther away, which means it}
+25         \textcolor{comment}{//will be covered by anything with a higher z-buffer \{ex A(0.1) covers B(0.0)\}}
+26     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_af11539bb711833d6321aaccd369e9e4b}{ATTRIBUTE\_ZBUFFER}, 1.0);
+27 
+28     \textcolor{comment}{//The scale of the sprite being used}
+29         \textcolor{comment}{//relative to the position component}
+30     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_a8104e81b9e1e7fd7e21f1f5f850ca636}{ATTRIBUTE\_SCALE\_X}, 1.0);
+31     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_aa800ca9799c1b216f086becf36509ea5}{ATTRIBUTE\_SCALE\_Y}, 1.0);
+32 
+33     \textcolor{comment}{//Determines the rotation of the sprite}
+34         \textcolor{comment}{//relative to a given position component}
+35         \textcolor{comment}{//given in radians}
+36     this->\hyperlink{class_abstract_component_aadaf9dfbb371db5fb21f9c7cf2cbea98}{setAttribute\_float}(\hyperlink{_a_e___attributes_8h_a70254d936ce8b3662e1a7472c36832d5}{ATTRIBUTE\_ROTATION}, 0.0);
+37 \}
+\end{DoxyCode}
 
 
 \subsection{Member Function Documentation}
@@ -27,14 +94,9 @@ int \hyperlink{class_sprite_component_a3518ccb69a3c829d5dcdc2dc024447ea}{update}
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{d4/df5/class_sprite_component_a3518ccb69a3c829d5dcdc2dc024447ea}
 
 
-Updates the component based on the current set of attributes. 
+Updates the sprite reference. 
 
-Used to update the component. This should be performed after modifications have been made on the component's attributes or members.
-
-\begin{DoxyReturn}{Returns}
-Returns a non-\/zero value if it is successful. 
-\end{DoxyReturn}
-
+Within the sprite component, the update command is used to set the correct width and height of the rectangular sprite. 
 
 Implements \hyperlink{class_abstract_component_a35c9cab4e3845a947609b6ada8dc89cf}{Abstract\-Component}.
 
@@ -47,5 +109,5 @@ Implements \hyperlink{class_abstract_component_a35c9cab4e3845a947609b6ada8dc89cf
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-Sprite\-Component.\-h\item 
+\hyperlink{_sprite_component_8h}{Sprite\-Component.\-h}\item 
 Sprite\-Component.\-cpp\end{DoxyCompactItemize}

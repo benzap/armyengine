@@ -24,6 +24,7 @@ var searchData=
   ['removefont',['removeFont',['../d1/d47/class_text_manager.html#a2fbf85e7eb461535e44102d3c7652736',1,'TextManager']]],
   ['removerectangleshape',['removeRectangleShape',['../d0/d65/class_shape_manager.html#a35e44d8151f822afb1f3cc685f98411e',1,'ShapeManager']]],
   ['removesprite',['removeSprite',['../d2/ddd/class_sprite_manager.html#af23d8d0946cf4f3be858a62f651adb28',1,'SpriteManager']]],
+  ['removesystem',['removeSystem',['../d6/d8f/class_system_manager.html#a70a94ac38481c98cef33216ab335de6c',1,'SystemManager']]],
   ['removetext',['removeText',['../d1/d47/class_text_manager.html#a302d75a4ccdca9b7ec3662ca898f31db',1,'TextManager']]],
   ['runmainloop',['runMainLoop',['../d4/d9d/class_army_engine.html#a4e3bffed9fad4456a318282b8d1d9388',1,'ArmyEngine']]]
 ];

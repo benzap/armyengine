@@ -14,7 +14,8 @@ var searchData=
   ['addinputcallback',['addInputCallback',['../d4/d9d/class_army_engine.html#a6ae6547c3959043801392e0cfb6c78e6',1,'ArmyEngine']]],
   ['addrectangleshape',['addRectangleShape',['../d0/d65/class_shape_manager.html#a35bc658017d6f80e71edef1db1525021',1,'ShapeManager']]],
   ['addsprite',['addSprite',['../d2/ddd/class_sprite_manager.html#ae7fbcf7339802c90557637b5efa87b78',1,'SpriteManager']]],
-  ['addstatecallback',['addStateCallback',['../d4/d9d/class_army_engine.html#ae942a6f5f5dafd2d6f67671d3c8016bd',1,'ArmyEngine']]],
+  ['addstatecallback',['addStateCallback',['../d4/d9d/class_army_engine.html#ae942a6f5f5dafd2d6f67671d3c8016bd',1,'ArmyEngine::addStateCallback()'],['../d4/d44/class_state_manager.html#a5326cbc5f82060722a0f0517131d21da',1,'StateManager::addStateCallback()']]],
+  ['addsystem',['addSystem',['../d6/d8f/class_system_manager.html#ae839969e1eda73bf39c29948bcc3fde2',1,'SystemManager']]],
   ['addtext',['addText',['../d1/d47/class_text_manager.html#ab1d27839da980b5334d66ba993a7778f',1,'TextManager']]],
   ['addtexture',['addTexture',['../db/ddf/class_texture_manager.html#a5813b701fac3e4835db3b26d9847123e',1,'TextureManager']]]
 ];

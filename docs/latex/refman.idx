@@ -97,8 +97,8 @@
 \indexentry{Collision\discretionary {-}{}{}Manager@{Collision\discretionary {-}{}{}Manager}!unregister\discretionary {-}{}{}Collision@{unregister\discretionary {-}{}{}Collision}|hyperpage}{29}
 \indexentry{unregister\discretionary {-}{}{}Collision@{unregister\discretionary {-}{}{}Collision}!CollisionManager@{Collision\discretionary {-}{}{}Manager}|hyperpage}{29}
 \indexentry{Collision\discretionary {-}{}{}System@{Collision\discretionary {-}{}{}System}|hyperpage}{29}
-\indexentry{Collision\discretionary {-}{}{}System@{Collision\discretionary {-}{}{}System}!process@{process}|hyperpage}{29}
-\indexentry{process@{process}!CollisionSystem@{Collision\discretionary {-}{}{}System}|hyperpage}{29}
+\indexentry{Collision\discretionary {-}{}{}System@{Collision\discretionary {-}{}{}System}!process@{process}|hyperpage}{30}
+\indexentry{process@{process}!CollisionSystem@{Collision\discretionary {-}{}{}System}|hyperpage}{30}
 \indexentry{Component\discretionary {-}{}{}Factory@{Component\discretionary {-}{}{}Factory}|hyperpage}{32}
 \indexentry{Component\discretionary {-}{}{}Factory@{Component\discretionary {-}{}{}Factory}!create\discretionary {-}{}{}Collision\discretionary {-}{}{}Component@{create\discretionary {-}{}{}Collision\discretionary {-}{}{}Component}|hyperpage}{33}
 \indexentry{create\discretionary {-}{}{}Collision\discretionary {-}{}{}Component@{create\discretionary {-}{}{}Collision\discretionary {-}{}{}Component}!ComponentFactory@{Component\discretionary {-}{}{}Factory}|hyperpage}{33}
@@ -106,58 +106,58 @@
 \indexentry{create\discretionary {-}{}{}Health\discretionary {-}{}{}Component@{create\discretionary {-}{}{}Health\discretionary {-}{}{}Component}!ComponentFactory@{Component\discretionary {-}{}{}Factory}|hyperpage}{33}
 \indexentry{Component\discretionary {-}{}{}Factory@{Component\discretionary {-}{}{}Factory}!create\discretionary {-}{}{}Input\discretionary {-}{}{}Component@{create\discretionary {-}{}{}Input\discretionary {-}{}{}Component}|hyperpage}{33}
 \indexentry{create\discretionary {-}{}{}Input\discretionary {-}{}{}Component@{create\discretionary {-}{}{}Input\discretionary {-}{}{}Component}!ComponentFactory@{Component\discretionary {-}{}{}Factory}|hyperpage}{33}
-\indexentry{Component\discretionary {-}{}{}Factory@{Component\discretionary {-}{}{}Factory}!create\discretionary {-}{}{}Position\discretionary {-}{}{}Component@{create\discretionary {-}{}{}Position\discretionary {-}{}{}Component}|hyperpage}{33}
-\indexentry{create\discretionary {-}{}{}Position\discretionary {-}{}{}Component@{create\discretionary {-}{}{}Position\discretionary {-}{}{}Component}!ComponentFactory@{Component\discretionary {-}{}{}Factory}|hyperpage}{33}
+\indexentry{Component\discretionary {-}{}{}Factory@{Component\discretionary {-}{}{}Factory}!create\discretionary {-}{}{}Position\discretionary {-}{}{}Component@{create\discretionary {-}{}{}Position\discretionary {-}{}{}Component}|hyperpage}{34}
+\indexentry{create\discretionary {-}{}{}Position\discretionary {-}{}{}Component@{create\discretionary {-}{}{}Position\discretionary {-}{}{}Component}!ComponentFactory@{Component\discretionary {-}{}{}Factory}|hyperpage}{34}
 \indexentry{Component\discretionary {-}{}{}Factory@{Component\discretionary {-}{}{}Factory}!create\discretionary {-}{}{}Shape\discretionary {-}{}{}Component@{create\discretionary {-}{}{}Shape\discretionary {-}{}{}Component}|hyperpage}{34}
 \indexentry{create\discretionary {-}{}{}Shape\discretionary {-}{}{}Component@{create\discretionary {-}{}{}Shape\discretionary {-}{}{}Component}!ComponentFactory@{Component\discretionary {-}{}{}Factory}|hyperpage}{34}
 \indexentry{Component\discretionary {-}{}{}Factory@{Component\discretionary {-}{}{}Factory}!create\discretionary {-}{}{}Sprite\discretionary {-}{}{}Component@{create\discretionary {-}{}{}Sprite\discretionary {-}{}{}Component}|hyperpage}{34}
 \indexentry{create\discretionary {-}{}{}Sprite\discretionary {-}{}{}Component@{create\discretionary {-}{}{}Sprite\discretionary {-}{}{}Component}!ComponentFactory@{Component\discretionary {-}{}{}Factory}|hyperpage}{34}
-\indexentry{Component\discretionary {-}{}{}Factory@{Component\discretionary {-}{}{}Factory}!create\discretionary {-}{}{}State\discretionary {-}{}{}Component@{create\discretionary {-}{}{}State\discretionary {-}{}{}Component}|hyperpage}{34}
-\indexentry{create\discretionary {-}{}{}State\discretionary {-}{}{}Component@{create\discretionary {-}{}{}State\discretionary {-}{}{}Component}!ComponentFactory@{Component\discretionary {-}{}{}Factory}|hyperpage}{34}
-\indexentry{Component\discretionary {-}{}{}Factory@{Component\discretionary {-}{}{}Factory}!create\discretionary {-}{}{}Text\discretionary {-}{}{}Component@{create\discretionary {-}{}{}Text\discretionary {-}{}{}Component}|hyperpage}{34}
-\indexentry{create\discretionary {-}{}{}Text\discretionary {-}{}{}Component@{create\discretionary {-}{}{}Text\discretionary {-}{}{}Component}!ComponentFactory@{Component\discretionary {-}{}{}Factory}|hyperpage}{34}
+\indexentry{Component\discretionary {-}{}{}Factory@{Component\discretionary {-}{}{}Factory}!create\discretionary {-}{}{}State\discretionary {-}{}{}Component@{create\discretionary {-}{}{}State\discretionary {-}{}{}Component}|hyperpage}{35}
+\indexentry{create\discretionary {-}{}{}State\discretionary {-}{}{}Component@{create\discretionary {-}{}{}State\discretionary {-}{}{}Component}!ComponentFactory@{Component\discretionary {-}{}{}Factory}|hyperpage}{35}
+\indexentry{Component\discretionary {-}{}{}Factory@{Component\discretionary {-}{}{}Factory}!create\discretionary {-}{}{}Text\discretionary {-}{}{}Component@{create\discretionary {-}{}{}Text\discretionary {-}{}{}Component}|hyperpage}{35}
+\indexentry{create\discretionary {-}{}{}Text\discretionary {-}{}{}Component@{create\discretionary {-}{}{}Text\discretionary {-}{}{}Component}!ComponentFactory@{Component\discretionary {-}{}{}Factory}|hyperpage}{35}
 \indexentry{Entity\discretionary {-}{}{}Factory@{Entity\discretionary {-}{}{}Factory}|hyperpage}{35}
-\indexentry{Entity\discretionary {-}{}{}Factory@{Entity\discretionary {-}{}{}Factory}!create\discretionary {-}{}{}Main\discretionary {-}{}{}Entity@{create\discretionary {-}{}{}Main\discretionary {-}{}{}Entity}|hyperpage}{35}
-\indexentry{create\discretionary {-}{}{}Main\discretionary {-}{}{}Entity@{create\discretionary {-}{}{}Main\discretionary {-}{}{}Entity}!EntityFactory@{Entity\discretionary {-}{}{}Factory}|hyperpage}{35}
+\indexentry{Entity\discretionary {-}{}{}Factory@{Entity\discretionary {-}{}{}Factory}!create\discretionary {-}{}{}Main\discretionary {-}{}{}Entity@{create\discretionary {-}{}{}Main\discretionary {-}{}{}Entity}|hyperpage}{36}
+\indexentry{create\discretionary {-}{}{}Main\discretionary {-}{}{}Entity@{create\discretionary {-}{}{}Main\discretionary {-}{}{}Entity}!EntityFactory@{Entity\discretionary {-}{}{}Factory}|hyperpage}{36}
 \indexentry{Entity\discretionary {-}{}{}Manager@{Entity\discretionary {-}{}{}Manager}|hyperpage}{36}
-\indexentry{Entity\discretionary {-}{}{}Manager@{Entity\discretionary {-}{}{}Manager}!add\discretionary {-}{}{}Entity@{add\discretionary {-}{}{}Entity}|hyperpage}{36}
-\indexentry{add\discretionary {-}{}{}Entity@{add\discretionary {-}{}{}Entity}!EntityManager@{Entity\discretionary {-}{}{}Manager}|hyperpage}{36}
+\indexentry{Entity\discretionary {-}{}{}Manager@{Entity\discretionary {-}{}{}Manager}!add\discretionary {-}{}{}Entity@{add\discretionary {-}{}{}Entity}|hyperpage}{37}
+\indexentry{add\discretionary {-}{}{}Entity@{add\discretionary {-}{}{}Entity}!EntityManager@{Entity\discretionary {-}{}{}Manager}|hyperpage}{37}
 \indexentry{Entity\discretionary {-}{}{}Manager@{Entity\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}All\discretionary {-}{}{}Entities@{get\discretionary {-}{}{}All\discretionary {-}{}{}Entities}|hyperpage}{37}
 \indexentry{get\discretionary {-}{}{}All\discretionary {-}{}{}Entities@{get\discretionary {-}{}{}All\discretionary {-}{}{}Entities}!EntityManager@{Entity\discretionary {-}{}{}Manager}|hyperpage}{37}
 \indexentry{Entity\discretionary {-}{}{}Manager@{Entity\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Entities\discretionary {-}{}{}By\discretionary {-}{}{}Family@{get\discretionary {-}{}{}Entities\discretionary {-}{}{}By\discretionary {-}{}{}Family}|hyperpage}{37}
 \indexentry{get\discretionary {-}{}{}Entities\discretionary {-}{}{}By\discretionary {-}{}{}Family@{get\discretionary {-}{}{}Entities\discretionary {-}{}{}By\discretionary {-}{}{}Family}!EntityManager@{Entity\discretionary {-}{}{}Manager}|hyperpage}{37}
-\indexentry{Entity\discretionary {-}{}{}Manager@{Entity\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Entities\discretionary {-}{}{}By\discretionary {-}{}{}Name@{get\discretionary {-}{}{}Entities\discretionary {-}{}{}By\discretionary {-}{}{}Name}|hyperpage}{37}
-\indexentry{get\discretionary {-}{}{}Entities\discretionary {-}{}{}By\discretionary {-}{}{}Name@{get\discretionary {-}{}{}Entities\discretionary {-}{}{}By\discretionary {-}{}{}Name}!EntityManager@{Entity\discretionary {-}{}{}Manager}|hyperpage}{37}
+\indexentry{Entity\discretionary {-}{}{}Manager@{Entity\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Entities\discretionary {-}{}{}By\discretionary {-}{}{}Name@{get\discretionary {-}{}{}Entities\discretionary {-}{}{}By\discretionary {-}{}{}Name}|hyperpage}{38}
+\indexentry{get\discretionary {-}{}{}Entities\discretionary {-}{}{}By\discretionary {-}{}{}Name@{get\discretionary {-}{}{}Entities\discretionary {-}{}{}By\discretionary {-}{}{}Name}!EntityManager@{Entity\discretionary {-}{}{}Manager}|hyperpage}{38}
 \indexentry{Entity\discretionary {-}{}{}Manager@{Entity\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Entity\discretionary {-}{}{}By\discretionary {-}{}{}Id@{get\discretionary {-}{}{}Entity\discretionary {-}{}{}By\discretionary {-}{}{}Id}|hyperpage}{38}
 \indexentry{get\discretionary {-}{}{}Entity\discretionary {-}{}{}By\discretionary {-}{}{}Id@{get\discretionary {-}{}{}Entity\discretionary {-}{}{}By\discretionary {-}{}{}Id}!EntityManager@{Entity\discretionary {-}{}{}Manager}|hyperpage}{38}
 \indexentry{Entity\discretionary {-}{}{}Manager@{Entity\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Instance@{get\discretionary {-}{}{}Instance}|hyperpage}{38}
 \indexentry{get\discretionary {-}{}{}Instance@{get\discretionary {-}{}{}Instance}!EntityManager@{Entity\discretionary {-}{}{}Manager}|hyperpage}{38}
-\indexentry{Entity\discretionary {-}{}{}Manager@{Entity\discretionary {-}{}{}Manager}!has\discretionary {-}{}{}Entity\discretionary {-}{}{}By\discretionary {-}{}{}Id@{has\discretionary {-}{}{}Entity\discretionary {-}{}{}By\discretionary {-}{}{}Id}|hyperpage}{38}
-\indexentry{has\discretionary {-}{}{}Entity\discretionary {-}{}{}By\discretionary {-}{}{}Id@{has\discretionary {-}{}{}Entity\discretionary {-}{}{}By\discretionary {-}{}{}Id}!EntityManager@{Entity\discretionary {-}{}{}Manager}|hyperpage}{38}
-\indexentry{Entity\discretionary {-}{}{}Manager@{Entity\discretionary {-}{}{}Manager}!remove\discretionary {-}{}{}Entity@{remove\discretionary {-}{}{}Entity}|hyperpage}{38}
-\indexentry{remove\discretionary {-}{}{}Entity@{remove\discretionary {-}{}{}Entity}!EntityManager@{Entity\discretionary {-}{}{}Manager}|hyperpage}{38}
+\indexentry{Entity\discretionary {-}{}{}Manager@{Entity\discretionary {-}{}{}Manager}!has\discretionary {-}{}{}Entity\discretionary {-}{}{}By\discretionary {-}{}{}Id@{has\discretionary {-}{}{}Entity\discretionary {-}{}{}By\discretionary {-}{}{}Id}|hyperpage}{39}
+\indexentry{has\discretionary {-}{}{}Entity\discretionary {-}{}{}By\discretionary {-}{}{}Id@{has\discretionary {-}{}{}Entity\discretionary {-}{}{}By\discretionary {-}{}{}Id}!EntityManager@{Entity\discretionary {-}{}{}Manager}|hyperpage}{39}
+\indexentry{Entity\discretionary {-}{}{}Manager@{Entity\discretionary {-}{}{}Manager}!remove\discretionary {-}{}{}Entity@{remove\discretionary {-}{}{}Entity}|hyperpage}{39}
+\indexentry{remove\discretionary {-}{}{}Entity@{remove\discretionary {-}{}{}Entity}!EntityManager@{Entity\discretionary {-}{}{}Manager}|hyperpage}{39}
 \indexentry{Entity\discretionary {-}{}{}Manager@{Entity\discretionary {-}{}{}Manager}!sort\discretionary {-}{}{}Entity\discretionary {-}{}{}List@{sort\discretionary {-}{}{}Entity\discretionary {-}{}{}List}|hyperpage}{39}
 \indexentry{sort\discretionary {-}{}{}Entity\discretionary {-}{}{}List@{sort\discretionary {-}{}{}Entity\discretionary {-}{}{}List}!EntityManager@{Entity\discretionary {-}{}{}Manager}|hyperpage}{39}
 \indexentry{Event\discretionary {-}{}{}Manager@{Event\discretionary {-}{}{}Manager}|hyperpage}{40}
-\indexentry{Event\discretionary {-}{}{}Manager@{Event\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Events@{get\discretionary {-}{}{}Events}|hyperpage}{40}
-\indexentry{get\discretionary {-}{}{}Events@{get\discretionary {-}{}{}Events}!EventManager@{Event\discretionary {-}{}{}Manager}|hyperpage}{40}
-\indexentry{Event\discretionary {-}{}{}Manager@{Event\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Instance@{get\discretionary {-}{}{}Instance}|hyperpage}{40}
-\indexentry{get\discretionary {-}{}{}Instance@{get\discretionary {-}{}{}Instance}!EventManager@{Event\discretionary {-}{}{}Manager}|hyperpage}{40}
+\indexentry{Event\discretionary {-}{}{}Manager@{Event\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Events@{get\discretionary {-}{}{}Events}|hyperpage}{41}
+\indexentry{get\discretionary {-}{}{}Events@{get\discretionary {-}{}{}Events}!EventManager@{Event\discretionary {-}{}{}Manager}|hyperpage}{41}
+\indexentry{Event\discretionary {-}{}{}Manager@{Event\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Instance@{get\discretionary {-}{}{}Instance}|hyperpage}{41}
+\indexentry{get\discretionary {-}{}{}Instance@{get\discretionary {-}{}{}Instance}!EventManager@{Event\discretionary {-}{}{}Manager}|hyperpage}{41}
 \indexentry{Event\discretionary {-}{}{}Manager@{Event\discretionary {-}{}{}Manager}!poll\discretionary {-}{}{}Events@{poll\discretionary {-}{}{}Events}|hyperpage}{41}
 \indexentry{poll\discretionary {-}{}{}Events@{poll\discretionary {-}{}{}Events}!EventManager@{Event\discretionary {-}{}{}Manager}|hyperpage}{41}
 \indexentry{Event\discretionary {-}{}{}Manager@{Event\discretionary {-}{}{}Manager}!set\discretionary {-}{}{}Window@{set\discretionary {-}{}{}Window}|hyperpage}{41}
 \indexentry{set\discretionary {-}{}{}Window@{set\discretionary {-}{}{}Window}!EventManager@{Event\discretionary {-}{}{}Manager}|hyperpage}{41}
-\indexentry{Event\discretionary {-}{}{}System@{Event\discretionary {-}{}{}System}|hyperpage}{41}
-\indexentry{Health\discretionary {-}{}{}Component@{Health\discretionary {-}{}{}Component}|hyperpage}{42}
+\indexentry{Event\discretionary {-}{}{}System@{Event\discretionary {-}{}{}System}|hyperpage}{42}
+\indexentry{Health\discretionary {-}{}{}Component@{Health\discretionary {-}{}{}Component}|hyperpage}{43}
 \indexentry{Health\discretionary {-}{}{}Component@{Health\discretionary {-}{}{}Component}!update@{update}|hyperpage}{43}
 \indexentry{update@{update}!HealthComponent@{Health\discretionary {-}{}{}Component}|hyperpage}{43}
 \indexentry{Input\discretionary {-}{}{}Component@{Input\discretionary {-}{}{}Component}|hyperpage}{43}
-\indexentry{Input\discretionary {-}{}{}Component@{Input\discretionary {-}{}{}Component}!update@{update}|hyperpage}{43}
-\indexentry{update@{update}!InputComponent@{Input\discretionary {-}{}{}Component}|hyperpage}{43}
+\indexentry{Input\discretionary {-}{}{}Component@{Input\discretionary {-}{}{}Component}!Input\discretionary {-}{}{}Component@{Input\discretionary {-}{}{}Component}|hyperpage}{44}
+\indexentry{Input\discretionary {-}{}{}Component@{Input\discretionary {-}{}{}Component}!InputComponent@{Input\discretionary {-}{}{}Component}|hyperpage}{44}
 \indexentry{Input\discretionary {-}{}{}System@{Input\discretionary {-}{}{}System}|hyperpage}{44}
-\indexentry{Input\discretionary {-}{}{}System@{Input\discretionary {-}{}{}System}!process@{process}|hyperpage}{44}
-\indexentry{process@{process}!InputSystem@{Input\discretionary {-}{}{}System}|hyperpage}{44}
 \indexentry{Main\discretionary {-}{}{}Entity@{Main\discretionary {-}{}{}Entity}|hyperpage}{45}
+\indexentry{Main\discretionary {-}{}{}Entity@{Main\discretionary {-}{}{}Entity}!Main\discretionary {-}{}{}Entity@{Main\discretionary {-}{}{}Entity}|hyperpage}{46}
+\indexentry{Main\discretionary {-}{}{}Entity@{Main\discretionary {-}{}{}Entity}!MainEntity@{Main\discretionary {-}{}{}Entity}|hyperpage}{46}
 \indexentry{Main\discretionary {-}{}{}Entity@{Main\discretionary {-}{}{}Entity}!handle@{handle}|hyperpage}{46}
 \indexentry{handle@{handle}!MainEntity@{Main\discretionary {-}{}{}Entity}|hyperpage}{46}
 \indexentry{Position\discretionary {-}{}{}Component@{Position\discretionary {-}{}{}Component}|hyperpage}{46}
@@ -173,67 +173,83 @@
 \indexentry{get\discretionary {-}{}{}Instance@{get\discretionary {-}{}{}Instance}!ShapeManager@{Shape\discretionary {-}{}{}Manager}|hyperpage}{52}
 \indexentry{Singleton\discretionary {-}{}{}T$<$ Instance\discretionary {-}{}{}Class $>$@{Singleton\discretionary {-}{}{}T$<$ Instance\discretionary {-}{}{}Class $>$}|hyperpage}{52}
 \indexentry{Sprite\discretionary {-}{}{}Component@{Sprite\discretionary {-}{}{}Component}|hyperpage}{52}
+\indexentry{Sprite\discretionary {-}{}{}Component@{Sprite\discretionary {-}{}{}Component}!Sprite\discretionary {-}{}{}Component@{Sprite\discretionary {-}{}{}Component}|hyperpage}{53}
+\indexentry{Sprite\discretionary {-}{}{}Component@{Sprite\discretionary {-}{}{}Component}!SpriteComponent@{Sprite\discretionary {-}{}{}Component}|hyperpage}{53}
 \indexentry{Sprite\discretionary {-}{}{}Component@{Sprite\discretionary {-}{}{}Component}!update@{update}|hyperpage}{53}
 \indexentry{update@{update}!SpriteComponent@{Sprite\discretionary {-}{}{}Component}|hyperpage}{53}
-\indexentry{Sprite\discretionary {-}{}{}Manager@{Sprite\discretionary {-}{}{}Manager}|hyperpage}{53}
+\indexentry{Sprite\discretionary {-}{}{}Manager@{Sprite\discretionary {-}{}{}Manager}|hyperpage}{54}
 \indexentry{Sprite\discretionary {-}{}{}Manager@{Sprite\discretionary {-}{}{}Manager}!add\discretionary {-}{}{}Sprite@{add\discretionary {-}{}{}Sprite}|hyperpage}{54}
 \indexentry{add\discretionary {-}{}{}Sprite@{add\discretionary {-}{}{}Sprite}!SpriteManager@{Sprite\discretionary {-}{}{}Manager}|hyperpage}{54}
 \indexentry{Sprite\discretionary {-}{}{}Manager@{Sprite\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Instance@{get\discretionary {-}{}{}Instance}|hyperpage}{54}
 \indexentry{get\discretionary {-}{}{}Instance@{get\discretionary {-}{}{}Instance}!SpriteManager@{Sprite\discretionary {-}{}{}Manager}|hyperpage}{54}
-\indexentry{Sprite\discretionary {-}{}{}Manager@{Sprite\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Sprite@{get\discretionary {-}{}{}Sprite}|hyperpage}{54}
-\indexentry{get\discretionary {-}{}{}Sprite@{get\discretionary {-}{}{}Sprite}!SpriteManager@{Sprite\discretionary {-}{}{}Manager}|hyperpage}{54}
-\indexentry{Sprite\discretionary {-}{}{}Manager@{Sprite\discretionary {-}{}{}Manager}!has\discretionary {-}{}{}Sprite@{has\discretionary {-}{}{}Sprite}|hyperpage}{54}
-\indexentry{has\discretionary {-}{}{}Sprite@{has\discretionary {-}{}{}Sprite}!SpriteManager@{Sprite\discretionary {-}{}{}Manager}|hyperpage}{54}
+\indexentry{Sprite\discretionary {-}{}{}Manager@{Sprite\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Sprite@{get\discretionary {-}{}{}Sprite}|hyperpage}{55}
+\indexentry{get\discretionary {-}{}{}Sprite@{get\discretionary {-}{}{}Sprite}!SpriteManager@{Sprite\discretionary {-}{}{}Manager}|hyperpage}{55}
+\indexentry{Sprite\discretionary {-}{}{}Manager@{Sprite\discretionary {-}{}{}Manager}!has\discretionary {-}{}{}Sprite@{has\discretionary {-}{}{}Sprite}|hyperpage}{55}
+\indexentry{has\discretionary {-}{}{}Sprite@{has\discretionary {-}{}{}Sprite}!SpriteManager@{Sprite\discretionary {-}{}{}Manager}|hyperpage}{55}
 \indexentry{Sprite\discretionary {-}{}{}Manager@{Sprite\discretionary {-}{}{}Manager}!remove\discretionary {-}{}{}Sprite@{remove\discretionary {-}{}{}Sprite}|hyperpage}{55}
 \indexentry{remove\discretionary {-}{}{}Sprite@{remove\discretionary {-}{}{}Sprite}!SpriteManager@{Sprite\discretionary {-}{}{}Manager}|hyperpage}{55}
-\indexentry{Sprite\discretionary {-}{}{}System@{Sprite\discretionary {-}{}{}System}|hyperpage}{55}
-\indexentry{Sprite\discretionary {-}{}{}System@{Sprite\discretionary {-}{}{}System}!process@{process}|hyperpage}{55}
-\indexentry{process@{process}!SpriteSystem@{Sprite\discretionary {-}{}{}System}|hyperpage}{55}
-\indexentry{State\discretionary {-}{}{}Component@{State\discretionary {-}{}{}Component}|hyperpage}{58}
-\indexentry{State\discretionary {-}{}{}Component@{State\discretionary {-}{}{}Component}!State\discretionary {-}{}{}Component@{State\discretionary {-}{}{}Component}|hyperpage}{59}
-\indexentry{State\discretionary {-}{}{}Component@{State\discretionary {-}{}{}Component}!StateComponent@{State\discretionary {-}{}{}Component}|hyperpage}{59}
-\indexentry{State\discretionary {-}{}{}Component@{State\discretionary {-}{}{}Component}!update@{update}|hyperpage}{59}
-\indexentry{update@{update}!StateComponent@{State\discretionary {-}{}{}Component}|hyperpage}{59}
-\indexentry{State\discretionary {-}{}{}Manager@{State\discretionary {-}{}{}Manager}|hyperpage}{60}
+\indexentry{Sprite\discretionary {-}{}{}System@{Sprite\discretionary {-}{}{}System}|hyperpage}{56}
+\indexentry{Sprite\discretionary {-}{}{}System@{Sprite\discretionary {-}{}{}System}!Sprite\discretionary {-}{}{}System@{Sprite\discretionary {-}{}{}System}|hyperpage}{56}
+\indexentry{Sprite\discretionary {-}{}{}System@{Sprite\discretionary {-}{}{}System}!SpriteSystem@{Sprite\discretionary {-}{}{}System}|hyperpage}{56}
+\indexentry{State\discretionary {-}{}{}Component@{State\discretionary {-}{}{}Component}|hyperpage}{57}
+\indexentry{State\discretionary {-}{}{}Component@{State\discretionary {-}{}{}Component}!State\discretionary {-}{}{}Component@{State\discretionary {-}{}{}Component}|hyperpage}{57}
+\indexentry{State\discretionary {-}{}{}Component@{State\discretionary {-}{}{}Component}!StateComponent@{State\discretionary {-}{}{}Component}|hyperpage}{57}
+\indexentry{State\discretionary {-}{}{}Component@{State\discretionary {-}{}{}Component}!update@{update}|hyperpage}{57}
+\indexentry{update@{update}!StateComponent@{State\discretionary {-}{}{}Component}|hyperpage}{57}
+\indexentry{State\discretionary {-}{}{}Manager@{State\discretionary {-}{}{}Manager}|hyperpage}{58}
+\indexentry{State\discretionary {-}{}{}Manager@{State\discretionary {-}{}{}Manager}!add\discretionary {-}{}{}State\discretionary {-}{}{}Callback@{add\discretionary {-}{}{}State\discretionary {-}{}{}Callback}|hyperpage}{59}
+\indexentry{add\discretionary {-}{}{}State\discretionary {-}{}{}Callback@{add\discretionary {-}{}{}State\discretionary {-}{}{}Callback}!StateManager@{State\discretionary {-}{}{}Manager}|hyperpage}{59}
+\indexentry{State\discretionary {-}{}{}Manager@{State\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Instance@{get\discretionary {-}{}{}Instance}|hyperpage}{59}
+\indexentry{get\discretionary {-}{}{}Instance@{get\discretionary {-}{}{}Instance}!StateManager@{State\discretionary {-}{}{}Manager}|hyperpage}{59}
+\indexentry{State\discretionary {-}{}{}Manager@{State\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}State@{get\discretionary {-}{}{}State}|hyperpage}{59}
+\indexentry{get\discretionary {-}{}{}State@{get\discretionary {-}{}{}State}!StateManager@{State\discretionary {-}{}{}Manager}|hyperpage}{59}
+\indexentry{State\discretionary {-}{}{}Manager@{State\discretionary {-}{}{}Manager}!has\discretionary {-}{}{}State@{has\discretionary {-}{}{}State}|hyperpage}{59}
+\indexentry{has\discretionary {-}{}{}State@{has\discretionary {-}{}{}State}!StateManager@{State\discretionary {-}{}{}Manager}|hyperpage}{59}
+\indexentry{State\discretionary {-}{}{}Manager@{State\discretionary {-}{}{}Manager}!set\discretionary {-}{}{}Disable@{set\discretionary {-}{}{}Disable}|hyperpage}{60}
+\indexentry{set\discretionary {-}{}{}Disable@{set\discretionary {-}{}{}Disable}!StateManager@{State\discretionary {-}{}{}Manager}|hyperpage}{60}
+\indexentry{State\discretionary {-}{}{}Manager@{State\discretionary {-}{}{}Manager}!set\discretionary {-}{}{}Enable@{set\discretionary {-}{}{}Enable}|hyperpage}{60}
+\indexentry{set\discretionary {-}{}{}Enable@{set\discretionary {-}{}{}Enable}!StateManager@{State\discretionary {-}{}{}Manager}|hyperpage}{60}
 \indexentry{State\discretionary {-}{}{}System@{State\discretionary {-}{}{}System}|hyperpage}{60}
-\indexentry{State\discretionary {-}{}{}System@{State\discretionary {-}{}{}System}!process@{process}|hyperpage}{60}
-\indexentry{process@{process}!StateSystem@{State\discretionary {-}{}{}System}|hyperpage}{60}
-\indexentry{System\discretionary {-}{}{}Manager@{System\discretionary {-}{}{}Manager}|hyperpage}{61}
+\indexentry{State\discretionary {-}{}{}System@{State\discretionary {-}{}{}System}!process@{process}|hyperpage}{61}
+\indexentry{process@{process}!StateSystem@{State\discretionary {-}{}{}System}|hyperpage}{61}
+\indexentry{System\discretionary {-}{}{}Manager@{System\discretionary {-}{}{}Manager}|hyperpage}{62}
+\indexentry{System\discretionary {-}{}{}Manager@{System\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Instance@{get\discretionary {-}{}{}Instance}|hyperpage}{62}
+\indexentry{get\discretionary {-}{}{}Instance@{get\discretionary {-}{}{}Instance}!SystemManager@{System\discretionary {-}{}{}Manager}|hyperpage}{62}
 \indexentry{Text\discretionary {-}{}{}Component@{Text\discretionary {-}{}{}Component}|hyperpage}{62}
-\indexentry{Text\discretionary {-}{}{}Component@{Text\discretionary {-}{}{}Component}!Text\discretionary {-}{}{}Component@{Text\discretionary {-}{}{}Component}|hyperpage}{62}
-\indexentry{Text\discretionary {-}{}{}Component@{Text\discretionary {-}{}{}Component}!TextComponent@{Text\discretionary {-}{}{}Component}|hyperpage}{62}
-\indexentry{Text\discretionary {-}{}{}Component@{Text\discretionary {-}{}{}Component}!update@{update}|hyperpage}{63}
-\indexentry{update@{update}!TextComponent@{Text\discretionary {-}{}{}Component}|hyperpage}{63}
-\indexentry{Text\discretionary {-}{}{}Manager@{Text\discretionary {-}{}{}Manager}|hyperpage}{64}
-\indexentry{Text\discretionary {-}{}{}Manager@{Text\discretionary {-}{}{}Manager}!add\discretionary {-}{}{}Font@{add\discretionary {-}{}{}Font}|hyperpage}{65}
-\indexentry{add\discretionary {-}{}{}Font@{add\discretionary {-}{}{}Font}!TextManager@{Text\discretionary {-}{}{}Manager}|hyperpage}{65}
-\indexentry{Text\discretionary {-}{}{}Manager@{Text\discretionary {-}{}{}Manager}!add\discretionary {-}{}{}Text@{add\discretionary {-}{}{}Text}|hyperpage}{65}
-\indexentry{add\discretionary {-}{}{}Text@{add\discretionary {-}{}{}Text}!TextManager@{Text\discretionary {-}{}{}Manager}|hyperpage}{65}
-\indexentry{Text\discretionary {-}{}{}Manager@{Text\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Font@{get\discretionary {-}{}{}Font}|hyperpage}{65}
-\indexentry{get\discretionary {-}{}{}Font@{get\discretionary {-}{}{}Font}!TextManager@{Text\discretionary {-}{}{}Manager}|hyperpage}{65}
-\indexentry{Text\discretionary {-}{}{}Manager@{Text\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Instance@{get\discretionary {-}{}{}Instance}|hyperpage}{65}
-\indexentry{get\discretionary {-}{}{}Instance@{get\discretionary {-}{}{}Instance}!TextManager@{Text\discretionary {-}{}{}Manager}|hyperpage}{65}
-\indexentry{Text\discretionary {-}{}{}Manager@{Text\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Text@{get\discretionary {-}{}{}Text}|hyperpage}{65}
-\indexentry{get\discretionary {-}{}{}Text@{get\discretionary {-}{}{}Text}!TextManager@{Text\discretionary {-}{}{}Manager}|hyperpage}{65}
-\indexentry{Text\discretionary {-}{}{}Manager@{Text\discretionary {-}{}{}Manager}!has\discretionary {-}{}{}Font@{has\discretionary {-}{}{}Font}|hyperpage}{66}
-\indexentry{has\discretionary {-}{}{}Font@{has\discretionary {-}{}{}Font}!TextManager@{Text\discretionary {-}{}{}Manager}|hyperpage}{66}
-\indexentry{Text\discretionary {-}{}{}Manager@{Text\discretionary {-}{}{}Manager}!has\discretionary {-}{}{}Text@{has\discretionary {-}{}{}Text}|hyperpage}{66}
-\indexentry{has\discretionary {-}{}{}Text@{has\discretionary {-}{}{}Text}!TextManager@{Text\discretionary {-}{}{}Manager}|hyperpage}{66}
-\indexentry{Text\discretionary {-}{}{}Manager@{Text\discretionary {-}{}{}Manager}!remove\discretionary {-}{}{}Font@{remove\discretionary {-}{}{}Font}|hyperpage}{66}
-\indexentry{remove\discretionary {-}{}{}Font@{remove\discretionary {-}{}{}Font}!TextManager@{Text\discretionary {-}{}{}Manager}|hyperpage}{66}
-\indexentry{Text\discretionary {-}{}{}Manager@{Text\discretionary {-}{}{}Manager}!remove\discretionary {-}{}{}Text@{remove\discretionary {-}{}{}Text}|hyperpage}{67}
-\indexentry{remove\discretionary {-}{}{}Text@{remove\discretionary {-}{}{}Text}!TextManager@{Text\discretionary {-}{}{}Manager}|hyperpage}{67}
-\indexentry{Texture\discretionary {-}{}{}Manager@{Texture\discretionary {-}{}{}Manager}|hyperpage}{67}
-\indexentry{Texture\discretionary {-}{}{}Manager@{Texture\discretionary {-}{}{}Manager}!add\discretionary {-}{}{}Texture@{add\discretionary {-}{}{}Texture}|hyperpage}{68}
-\indexentry{add\discretionary {-}{}{}Texture@{add\discretionary {-}{}{}Texture}!TextureManager@{Texture\discretionary {-}{}{}Manager}|hyperpage}{68}
-\indexentry{Texture\discretionary {-}{}{}Manager@{Texture\discretionary {-}{}{}Manager}!delete\discretionary {-}{}{}Texture@{delete\discretionary {-}{}{}Texture}|hyperpage}{68}
-\indexentry{delete\discretionary {-}{}{}Texture@{delete\discretionary {-}{}{}Texture}!TextureManager@{Texture\discretionary {-}{}{}Manager}|hyperpage}{68}
-\indexentry{Texture\discretionary {-}{}{}Manager@{Texture\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Instance@{get\discretionary {-}{}{}Instance}|hyperpage}{68}
-\indexentry{get\discretionary {-}{}{}Instance@{get\discretionary {-}{}{}Instance}!TextureManager@{Texture\discretionary {-}{}{}Manager}|hyperpage}{68}
-\indexentry{Texture\discretionary {-}{}{}Manager@{Texture\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Texture@{get\discretionary {-}{}{}Texture}|hyperpage}{68}
-\indexentry{get\discretionary {-}{}{}Texture@{get\discretionary {-}{}{}Texture}!TextureManager@{Texture\discretionary {-}{}{}Manager}|hyperpage}{68}
-\indexentry{Texture\discretionary {-}{}{}Manager@{Texture\discretionary {-}{}{}Manager}!has\discretionary {-}{}{}Texture@{has\discretionary {-}{}{}Texture}|hyperpage}{68}
-\indexentry{has\discretionary {-}{}{}Texture@{has\discretionary {-}{}{}Texture}!TextureManager@{Texture\discretionary {-}{}{}Manager}|hyperpage}{68}
+\indexentry{Text\discretionary {-}{}{}Component@{Text\discretionary {-}{}{}Component}!Text\discretionary {-}{}{}Component@{Text\discretionary {-}{}{}Component}|hyperpage}{63}
+\indexentry{Text\discretionary {-}{}{}Component@{Text\discretionary {-}{}{}Component}!TextComponent@{Text\discretionary {-}{}{}Component}|hyperpage}{63}
+\indexentry{Text\discretionary {-}{}{}Component@{Text\discretionary {-}{}{}Component}!update@{update}|hyperpage}{64}
+\indexentry{update@{update}!TextComponent@{Text\discretionary {-}{}{}Component}|hyperpage}{64}
+\indexentry{Text\discretionary {-}{}{}Manager@{Text\discretionary {-}{}{}Manager}|hyperpage}{65}
+\indexentry{Text\discretionary {-}{}{}Manager@{Text\discretionary {-}{}{}Manager}!add\discretionary {-}{}{}Font@{add\discretionary {-}{}{}Font}|hyperpage}{66}
+\indexentry{add\discretionary {-}{}{}Font@{add\discretionary {-}{}{}Font}!TextManager@{Text\discretionary {-}{}{}Manager}|hyperpage}{66}
+\indexentry{Text\discretionary {-}{}{}Manager@{Text\discretionary {-}{}{}Manager}!add\discretionary {-}{}{}Text@{add\discretionary {-}{}{}Text}|hyperpage}{66}
+\indexentry{add\discretionary {-}{}{}Text@{add\discretionary {-}{}{}Text}!TextManager@{Text\discretionary {-}{}{}Manager}|hyperpage}{66}
+\indexentry{Text\discretionary {-}{}{}Manager@{Text\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Font@{get\discretionary {-}{}{}Font}|hyperpage}{66}
+\indexentry{get\discretionary {-}{}{}Font@{get\discretionary {-}{}{}Font}!TextManager@{Text\discretionary {-}{}{}Manager}|hyperpage}{66}
+\indexentry{Text\discretionary {-}{}{}Manager@{Text\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Instance@{get\discretionary {-}{}{}Instance}|hyperpage}{66}
+\indexentry{get\discretionary {-}{}{}Instance@{get\discretionary {-}{}{}Instance}!TextManager@{Text\discretionary {-}{}{}Manager}|hyperpage}{66}
+\indexentry{Text\discretionary {-}{}{}Manager@{Text\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Text@{get\discretionary {-}{}{}Text}|hyperpage}{66}
+\indexentry{get\discretionary {-}{}{}Text@{get\discretionary {-}{}{}Text}!TextManager@{Text\discretionary {-}{}{}Manager}|hyperpage}{66}
+\indexentry{Text\discretionary {-}{}{}Manager@{Text\discretionary {-}{}{}Manager}!has\discretionary {-}{}{}Font@{has\discretionary {-}{}{}Font}|hyperpage}{67}
+\indexentry{has\discretionary {-}{}{}Font@{has\discretionary {-}{}{}Font}!TextManager@{Text\discretionary {-}{}{}Manager}|hyperpage}{67}
+\indexentry{Text\discretionary {-}{}{}Manager@{Text\discretionary {-}{}{}Manager}!has\discretionary {-}{}{}Text@{has\discretionary {-}{}{}Text}|hyperpage}{67}
+\indexentry{has\discretionary {-}{}{}Text@{has\discretionary {-}{}{}Text}!TextManager@{Text\discretionary {-}{}{}Manager}|hyperpage}{67}
+\indexentry{Text\discretionary {-}{}{}Manager@{Text\discretionary {-}{}{}Manager}!remove\discretionary {-}{}{}Font@{remove\discretionary {-}{}{}Font}|hyperpage}{67}
+\indexentry{remove\discretionary {-}{}{}Font@{remove\discretionary {-}{}{}Font}!TextManager@{Text\discretionary {-}{}{}Manager}|hyperpage}{67}
+\indexentry{Text\discretionary {-}{}{}Manager@{Text\discretionary {-}{}{}Manager}!remove\discretionary {-}{}{}Text@{remove\discretionary {-}{}{}Text}|hyperpage}{68}
+\indexentry{remove\discretionary {-}{}{}Text@{remove\discretionary {-}{}{}Text}!TextManager@{Text\discretionary {-}{}{}Manager}|hyperpage}{68}
+\indexentry{Texture\discretionary {-}{}{}Manager@{Texture\discretionary {-}{}{}Manager}|hyperpage}{68}
+\indexentry{Texture\discretionary {-}{}{}Manager@{Texture\discretionary {-}{}{}Manager}!add\discretionary {-}{}{}Texture@{add\discretionary {-}{}{}Texture}|hyperpage}{69}
+\indexentry{add\discretionary {-}{}{}Texture@{add\discretionary {-}{}{}Texture}!TextureManager@{Texture\discretionary {-}{}{}Manager}|hyperpage}{69}
+\indexentry{Texture\discretionary {-}{}{}Manager@{Texture\discretionary {-}{}{}Manager}!delete\discretionary {-}{}{}Texture@{delete\discretionary {-}{}{}Texture}|hyperpage}{69}
+\indexentry{delete\discretionary {-}{}{}Texture@{delete\discretionary {-}{}{}Texture}!TextureManager@{Texture\discretionary {-}{}{}Manager}|hyperpage}{69}
+\indexentry{Texture\discretionary {-}{}{}Manager@{Texture\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Instance@{get\discretionary {-}{}{}Instance}|hyperpage}{69}
+\indexentry{get\discretionary {-}{}{}Instance@{get\discretionary {-}{}{}Instance}!TextureManager@{Texture\discretionary {-}{}{}Manager}|hyperpage}{69}
+\indexentry{Texture\discretionary {-}{}{}Manager@{Texture\discretionary {-}{}{}Manager}!get\discretionary {-}{}{}Texture@{get\discretionary {-}{}{}Texture}|hyperpage}{69}
+\indexentry{get\discretionary {-}{}{}Texture@{get\discretionary {-}{}{}Texture}!TextureManager@{Texture\discretionary {-}{}{}Manager}|hyperpage}{69}
+\indexentry{Texture\discretionary {-}{}{}Manager@{Texture\discretionary {-}{}{}Manager}!has\discretionary {-}{}{}Texture@{has\discretionary {-}{}{}Texture}|hyperpage}{69}
+\indexentry{has\discretionary {-}{}{}Texture@{has\discretionary {-}{}{}Texture}!TextureManager@{Texture\discretionary {-}{}{}Manager}|hyperpage}{69}
 \indexentry{Abstract\discretionary {-}{}{}Component.\discretionary {-}{}{}h@{Abstract\discretionary {-}{}{}Component.\discretionary {-}{}{}h}|hyperpage}{71}
 \indexentry{Abstract\discretionary {-}{}{}Component.\discretionary {-}{}{}h@{Abstract\discretionary {-}{}{}Component.\discretionary {-}{}{}h}!attribute@{attribute}|hyperpage}{72}
 \indexentry{attribute@{attribute}!AbstractComponent.h@{Abstract\discretionary {-}{}{}Component.\discretionary {-}{}{}h}|hyperpage}{72}
@@ -292,11 +308,18 @@
 \indexentry{Entity\discretionary {-}{}{}Manager.\discretionary {-}{}{}h@{Entity\discretionary {-}{}{}Manager.\discretionary {-}{}{}h}|hyperpage}{91}
 \indexentry{Event\discretionary {-}{}{}Manager.\discretionary {-}{}{}h@{Event\discretionary {-}{}{}Manager.\discretionary {-}{}{}h}|hyperpage}{92}
 \indexentry{Event\discretionary {-}{}{}System.\discretionary {-}{}{}h@{Event\discretionary {-}{}{}System.\discretionary {-}{}{}h}|hyperpage}{93}
-\indexentry{Position\discretionary {-}{}{}Component.\discretionary {-}{}{}h@{Position\discretionary {-}{}{}Component.\discretionary {-}{}{}h}|hyperpage}{94}
-\indexentry{Shape\discretionary {-}{}{}Component.\discretionary {-}{}{}h@{Shape\discretionary {-}{}{}Component.\discretionary {-}{}{}h}|hyperpage}{94}
-\indexentry{Shape\discretionary {-}{}{}Manager.\discretionary {-}{}{}h@{Shape\discretionary {-}{}{}Manager.\discretionary {-}{}{}h}|hyperpage}{95}
-\indexentry{Sprite\discretionary {-}{}{}Manager.\discretionary {-}{}{}h@{Sprite\discretionary {-}{}{}Manager.\discretionary {-}{}{}h}|hyperpage}{96}
-\indexentry{State\discretionary {-}{}{}Component.\discretionary {-}{}{}h@{State\discretionary {-}{}{}Component.\discretionary {-}{}{}h}|hyperpage}{97}
-\indexentry{Text\discretionary {-}{}{}Component.\discretionary {-}{}{}h@{Text\discretionary {-}{}{}Component.\discretionary {-}{}{}h}|hyperpage}{98}
-\indexentry{Text\discretionary {-}{}{}Manager.\discretionary {-}{}{}h@{Text\discretionary {-}{}{}Manager.\discretionary {-}{}{}h}|hyperpage}{98}
-\indexentry{Texture\discretionary {-}{}{}Manager.\discretionary {-}{}{}h@{Texture\discretionary {-}{}{}Manager.\discretionary {-}{}{}h}|hyperpage}{99}
+\indexentry{Input\discretionary {-}{}{}Component.\discretionary {-}{}{}h@{Input\discretionary {-}{}{}Component.\discretionary {-}{}{}h}|hyperpage}{94}
+\indexentry{Input\discretionary {-}{}{}System.\discretionary {-}{}{}h@{Input\discretionary {-}{}{}System.\discretionary {-}{}{}h}|hyperpage}{95}
+\indexentry{Main\discretionary {-}{}{}Entity.\discretionary {-}{}{}h@{Main\discretionary {-}{}{}Entity.\discretionary {-}{}{}h}|hyperpage}{95}
+\indexentry{Position\discretionary {-}{}{}Component.\discretionary {-}{}{}h@{Position\discretionary {-}{}{}Component.\discretionary {-}{}{}h}|hyperpage}{96}
+\indexentry{Shape\discretionary {-}{}{}Component.\discretionary {-}{}{}h@{Shape\discretionary {-}{}{}Component.\discretionary {-}{}{}h}|hyperpage}{97}
+\indexentry{Shape\discretionary {-}{}{}Manager.\discretionary {-}{}{}h@{Shape\discretionary {-}{}{}Manager.\discretionary {-}{}{}h}|hyperpage}{97}
+\indexentry{Sprite\discretionary {-}{}{}Component.\discretionary {-}{}{}h@{Sprite\discretionary {-}{}{}Component.\discretionary {-}{}{}h}|hyperpage}{98}
+\indexentry{Sprite\discretionary {-}{}{}Manager.\discretionary {-}{}{}h@{Sprite\discretionary {-}{}{}Manager.\discretionary {-}{}{}h}|hyperpage}{99}
+\indexentry{Sprite\discretionary {-}{}{}System.\discretionary {-}{}{}h@{Sprite\discretionary {-}{}{}System.\discretionary {-}{}{}h}|hyperpage}{100}
+\indexentry{State\discretionary {-}{}{}Component.\discretionary {-}{}{}h@{State\discretionary {-}{}{}Component.\discretionary {-}{}{}h}|hyperpage}{101}
+\indexentry{State\discretionary {-}{}{}Manager.\discretionary {-}{}{}h@{State\discretionary {-}{}{}Manager.\discretionary {-}{}{}h}|hyperpage}{101}
+\indexentry{System\discretionary {-}{}{}Manager.\discretionary {-}{}{}h@{System\discretionary {-}{}{}Manager.\discretionary {-}{}{}h}|hyperpage}{102}
+\indexentry{Text\discretionary {-}{}{}Component.\discretionary {-}{}{}h@{Text\discretionary {-}{}{}Component.\discretionary {-}{}{}h}|hyperpage}{103}
+\indexentry{Text\discretionary {-}{}{}Manager.\discretionary {-}{}{}h@{Text\discretionary {-}{}{}Manager.\discretionary {-}{}{}h}|hyperpage}{104}
+\indexentry{Texture\discretionary {-}{}{}Manager.\discretionary {-}{}{}h@{Texture\discretionary {-}{}{}Manager.\discretionary {-}{}{}h}|hyperpage}{105}

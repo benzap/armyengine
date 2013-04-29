@@ -1,6 +1,15 @@
 \hypertarget{class_main_entity}{\section{Main\-Entity Class Reference}
 \label{d1/d6a/class_main_entity}\index{Main\-Entity@{Main\-Entity}}
 }
+
+
+Barebones inheritance of \hyperlink{class_abstract_entity}{Abstract\-Entity}. Overloaded family to \char`\"{}\-Main\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$Main\-Entity.\-h$>$}
+
 Inheritance diagram for Main\-Entity\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,11 +19,37 @@ Inheritance diagram for Main\-Entity\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_main_entity_a2973538fe411c639b0eaf5d03f21a607}{{\bfseries Main\-Entity} (std\-::string, int)}\label{d1/d6a/class_main_entity_a2973538fe411c639b0eaf5d03f21a607}
-
+\hyperlink{class_main_entity_a1333a3fceed8e7370d1a4d921d3fd6b0}{Main\-Entity} (std\-::string name, int I\-D)
 \item 
 int \hyperlink{class_main_entity_ade561821779e704c48c019b4bc64d34c}{handle} ()
-\begin{DoxyCompactList}\small\item\em virtual function to perform pre-\/initialization and handling \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Handles the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Barebones inheritance of \hyperlink{class_abstract_entity}{Abstract\-Entity}. Overloaded family to \char`\"{}\-Main\char`\"{}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_main_entity_a1333a3fceed8e7370d1a4d921d3fd6b0}{\index{Main\-Entity@{Main\-Entity}!Main\-Entity@{Main\-Entity}}
+\index{Main\-Entity@{Main\-Entity}!MainEntity@{Main\-Entity}}
+\subsubsection[{Main\-Entity}]{\setlength{\rightskip}{0pt plus 5cm}Main\-Entity\-::\-Main\-Entity (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name, }
+\item[{int}]{I\-D}
+\end{DoxyParamCaption}
+)}}\label{d1/d6a/class_main_entity_a1333a3fceed8e7370d1a4d921d3fd6b0}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the name given to the particular entity. This name does not need to be unique.\\
+\hline
+{\em I\-D} & is the unique I\-D assigned to the entity. This does need to be unique. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+8     : \hyperlink{class_abstract_entity_a29525b5d30f53d5f2532647d29e5fb27}{AbstractEntity}(name, \textcolor{stringliteral}{"Main"}, ID) \{
+9 
+10 \}
+\end{DoxyCode}
 
 
 \subsection{Member Function Documentation}
@@ -27,14 +62,9 @@ int \hyperlink{class_main_entity_ade561821779e704c48c019b4bc64d34c}{handle} ()
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{d1/d6a/class_main_entity_ade561821779e704c48c019b4bc64d34c}
 
 
-virtual function to perform pre-\/initialization and handling 
+Handles the entity. 
 
-Currently it is being used to sort the shape, text, and sprite components to provide Z-\/buffer ordering. It is advised that this method be used if any components are added during execution to prevent erroneous behaviour.
-
-\begin{DoxyReturn}{Returns}
-A non-\/zero value when it is successful. 
-\end{DoxyReturn}
-
+The main entity when handled, sorts the underlying components so that visual components are displayed in the correct order. This is done by sorting based on the Z-\/\-Buffer. 
 
 Implements \hyperlink{class_abstract_entity_af14b173190f84093b5498d3c0139e71f}{Abstract\-Entity}.
 
@@ -61,5 +91,5 @@ Implements \hyperlink{class_abstract_entity_af14b173190f84093b5498d3c0139e71f}{A
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-Main\-Entity.\-h\item 
+\hyperlink{_main_entity_8h}{Main\-Entity.\-h}\item 
 Main\-Entity.\-cpp\end{DoxyCompactItemize}

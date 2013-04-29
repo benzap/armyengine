@@ -37,6 +37,7 @@ class ComponentFactory;
 
 #include "Components.h"
 
+//! Used to create components to assign to entities.
 class ComponentFactory {
  private:
   

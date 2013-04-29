@@ -90,6 +90,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="title">CollisionSystem Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Used to process collisions.  
+ <a href="../../da/d3c/class_collision_system.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../de/d26/_collision_system_8h_source.html">CollisionSystem.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Inheritance diagram for CollisionSystem:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -128,7 +133,11 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:ac0d16e94f5cea4b1a6bf489d35d7a14d inherit pro_attribs_class_abstract_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">a pointer to the entity manager singleton <br/></td></tr>
 <tr class="separator:ac0d16e94f5cea4b1a6bf489d35d7a14d inherit pro_attribs_class_abstract_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Used to process collisions. </p>
+<p>Processes collision components with a position component and checks to see if the entity containing the collision component is colliding with another entity containing another collision component</p>
+<p>If it determines that the two components have collided, the system performs the desired callback within the <a class="el" href="../../df/d14/class_collision_manager.html" title="Collision manager used to perform callbacks on collisions.">CollisionManager</a> and includes information about both components to the callback </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a8172916254667a746b257c38f04018d8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -356,7 +365,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 27 2013 16:51:58 for Armyengine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 29 2013 15:13:27 for Armyengine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

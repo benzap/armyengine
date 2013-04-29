@@ -91,31 +91,228 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="title">StateManager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Used to store the state of the currently executing application.  
+ <a href="../../d4/d44/class_state_manager.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../db/d97/_state_manager_8h_source.html">StateManager.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad9846b178b84ef63dbb10a14b7f3b41c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9846b178b84ef63dbb10a14b7f3b41c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addStateCallback</b> (const std::string &amp;, <a class="el" href="../../d6/d07/_callback_manager_8h.html#a73a0c6254a0b5ab661ca1f3bd5f3d99c">functionTemplate</a>)</td></tr>
-<tr class="separator:ad9846b178b84ef63dbb10a14b7f3b41c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa3190e62148f465421a3736aa4da74f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa3190e62148f465421a3736aa4da74f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setEnable</b> (const std::string &amp;)</td></tr>
-<tr class="separator:aaa3190e62148f465421a3736aa4da74f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cb5d48956152fdcb9b68bb9213db1a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0cb5d48956152fdcb9b68bb9213db1a3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setDisable</b> (const std::string &amp;)</td></tr>
-<tr class="separator:a0cb5d48956152fdcb9b68bb9213db1a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44f0d4f64570bfbbc177e6045a5e166f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a44f0d4f64570bfbbc177e6045a5e166f"></a>
-stateType&#160;</td><td class="memItemRight" valign="bottom"><b>getState</b> (const std::string &amp;)</td></tr>
-<tr class="separator:a44f0d4f64570bfbbc177e6045a5e166f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bd2dc523c130194261e20352dca2425"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0bd2dc523c130194261e20352dca2425"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasState</b> (const std::string &amp;)</td></tr>
-<tr class="separator:a0bd2dc523c130194261e20352dca2425"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5326cbc5f82060722a0f0517131d21da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d44/class_state_manager.html#a5326cbc5f82060722a0f0517131d21da">addStateCallback</a> (const std::string &amp;name, <a class="el" href="../../d6/d07/_callback_manager_8h.html#a73a0c6254a0b5ab661ca1f3bd5f3d99c">functionTemplate</a> func)</td></tr>
+<tr class="memdesc:a5326cbc5f82060722a0f0517131d21da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a state callback to the manager.  <a href="#a5326cbc5f82060722a0f0517131d21da">More...</a><br/></td></tr>
+<tr class="separator:a5326cbc5f82060722a0f0517131d21da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c2836c58bda4fbe6297eac2c0b4e3e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d44/class_state_manager.html#a1c2836c58bda4fbe6297eac2c0b4e3e1">setEnable</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a1c2836c58bda4fbe6297eac2c0b4e3e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the state for the given unique key name to true.  <a href="#a1c2836c58bda4fbe6297eac2c0b4e3e1">More...</a><br/></td></tr>
+<tr class="separator:a1c2836c58bda4fbe6297eac2c0b4e3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a076ee94a7709a74ce1b31721c19c7e27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d44/class_state_manager.html#a076ee94a7709a74ce1b31721c19c7e27">setDisable</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a076ee94a7709a74ce1b31721c19c7e27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the state for the given unique key name to false.  <a href="#a076ee94a7709a74ce1b31721c19c7e27">More...</a><br/></td></tr>
+<tr class="separator:a076ee94a7709a74ce1b31721c19c7e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf17c58841a6d2523af1505d9b6da46c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d97/_state_manager_8h.html#a63bb34c4863a6b3cf2b7d661aa1c4ff5">stateType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d44/class_state_manager.html#adf17c58841a6d2523af1505d9b6da46c">getState</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:adf17c58841a6d2523af1505d9b6da46c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the state of the given unique state.  <a href="#adf17c58841a6d2523af1505d9b6da46c">More...</a><br/></td></tr>
+<tr class="separator:adf17c58841a6d2523af1505d9b6da46c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32bec464e01ca3cb16824c1dedf71bb9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d44/class_state_manager.html#a32bec464e01ca3cb16824c1dedf71bb9">hasState</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a32bec464e01ca3cb16824c1dedf71bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see if the state exists.  <a href="#a32bec464e01ca3cb16824c1dedf71bb9">More...</a><br/></td></tr>
+<tr class="separator:a32bec464e01ca3cb16824c1dedf71bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:af46b68eb47c2eca13221aacf09997f89"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af46b68eb47c2eca13221aacf09997f89"></a>
-static <a class="el" href="../../d4/d44/class_state_manager.html">StateManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getInstance</b> ()</td></tr>
+<tr class="memitem:af46b68eb47c2eca13221aacf09997f89"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d4/d44/class_state_manager.html">StateManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d44/class_state_manager.html#af46b68eb47c2eca13221aacf09997f89">getInstance</a> ()</td></tr>
+<tr class="memdesc:af46b68eb47c2eca13221aacf09997f89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Singleton Method, returns the instance.  <a href="#af46b68eb47c2eca13221aacf09997f89">More...</a><br/></td></tr>
 <tr class="separator:af46b68eb47c2eca13221aacf09997f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Used to store the state of the currently executing application. </p>
+<p>The state manager holds information on the state of the system It is a global representation of the state of the system. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a5326cbc5f82060722a0f0517131d21da"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateManager::addStateCallback </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d07/_callback_manager_8h.html#a73a0c6254a0b5ab661ca1f3bd5f3d99c">functionTemplate</a>&#160;</td>
+          <td class="paramname"><em>func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a state callback to the manager. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>is the unique key name assigned to the callback </td></tr>
+    <tr><td class="paramname">func</td><td>is the function callback </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                                                                                {</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="keyword">auto</span> callbackManager = <a class="code" href="../../d6/d24/class_callback_manager.html#a79c0c77cd533fbbe093c2055cd96637b" title="&lt; Singleton method to grab the entity manager instance.">CallbackManager::getInstance</a>();</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    callbackManager-&gt;addCallback(name, (<a class="code" href="../../d6/d07/_callback_manager_8h.html#a73a0c6254a0b5ab661ca1f3bd5f3d99c" title="Template for a function callback with one parameter.">functionTemplate</a>) func);</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="af46b68eb47c2eca13221aacf09997f89"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../d4/d44/class_state_manager.html">StateManager</a>* StateManager::getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Singleton Method, returns the instance. </p>
+<dl class="section return"><dt>Returns</dt><dd>The singleton instance of state manager. </dd></dl>
+<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                                     {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../d4/d44/class_state_manager.html" title="Used to store the state of the currently executing application.">StateManager</a> _instance;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">return</span> &amp;_instance;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="adf17c58841a6d2523af1505d9b6da46c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d97/_state_manager_8h.html#a63bb34c4863a6b3cf2b7d661aa1c4ff5">stateType</a> StateManager::getState </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the state of the given unique state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>is the unique key name assigned to the state variable </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the state of the given variable. </dd></dl>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                                                      {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">if</span> (!this-&gt;<a class="code" href="../../d4/d44/class_state_manager.html#a32bec464e01ca3cb16824c1dedf71bb9" title="Checks to see if the state exists.">hasState</a>(name)) {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">return</span> this-&gt;stateList[name];</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a32bec464e01ca3cb16824c1dedf71bb9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StateManager::hasState </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks to see if the state exists. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>is the unique key name assigned to the state variable</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the state exists, otherwise it returns false. </dd></dl>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                                                 {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">if</span> (this-&gt;stateList.find(name) == this-&gt;stateList.end()) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a076ee94a7709a74ce1b31721c19c7e27"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateManager::setDisable </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the state for the given unique key name to false. </p>
+<p>If the state hasn't been created yet, the state will also be created within the state manager before setting it to false.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>is the unique key name assigned to the state variable </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                                                   {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    this-&gt;stateList[name] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a1c2836c58bda4fbe6297eac2c0b4e3e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateManager::setEnable </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the state for the given unique key name to true. </p>
+<p>If the state hasn't been created yet, the state will also be created within the state manager before setting it to true.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>is the unique key name assigned to the state variable </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                                                  {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    this-&gt;stateList[name] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="../../db/d97/_state_manager_8h_source.html">StateManager.h</a></li>
 <li>StateManager.cpp</li>
@@ -123,7 +320,7 @@ static <a class="el" href="../../d4/d44/class_state_manager.html">StateManager</
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 27 2013 16:52:02 for Armyengine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 29 2013 15:13:32 for Armyengine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

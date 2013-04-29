@@ -38,6 +38,8 @@ class TextComponent;
 
 #include "AbstractComponent.h"
 
+//! Used to display text on the screen representing an entity.
+
 /*!
 
   The text component inherits the abstract component, and is used to

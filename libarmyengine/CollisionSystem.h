@@ -30,19 +30,8 @@
 
 #ifndef AE__COLLISION_SYSTEM
 #define AE__COLLISION_SYSTEM
-//! The collision system used to process collisions.
 
-/*!  
-
-  Processes collision components with a position component and checks
-  to see if the entity containing the collision component is colliding
-  with another entity containing another collision component
-  
-  If it determines that the two components have collided, the system
-  performs the desired callback within the CollisionManager and
-  includes information about both components to the callback 
-
-*/
+//CLASSES
 class CollisionSystem;
 
 //INCLUDES
@@ -61,7 +50,19 @@ class CollisionSystem;
 // when comparing a circle to a polygon
 #define SYNTH_CIRCLE_POINT_NUM 20
 
-//BEGIN
+//! Used to process collisions.
+
+/*!  
+
+  Processes collision components with a position component and checks
+  to see if the entity containing the collision component is colliding
+  with another entity containing another collision component
+  
+  If it determines that the two components have collided, the system
+  performs the desired callback within the CollisionManager and
+  includes information about both components to the callback 
+
+*/
 class CollisionSystem : public AbstractSystem {
  private:
   //! Reference to the collision manager singleton

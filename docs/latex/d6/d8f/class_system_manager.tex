@@ -1,30 +1,67 @@
 \hypertarget{class_system_manager}{\section{System\-Manager Class Reference}
 \label{d6/d8f/class_system_manager}\index{System\-Manager@{System\-Manager}}
 }
+
+
+Used to hold all of the systems and process them per frame.  
+
+
+
+
+{\ttfamily \#include $<$System\-Manager.\-h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_system_manager_a65a803bea95eaeb3bebab00aecf46f22}{void {\bfseries add\-System} (std\-::shared\-\_\-ptr$<$ \hyperlink{_abstract_system_8h_a1411f3bb7eaf6ed11af20ec634ed4a5e}{system\-Type} $>$)}\label{d6/d8f/class_system_manager_a65a803bea95eaeb3bebab00aecf46f22}
+\hypertarget{class_system_manager_ae839969e1eda73bf39c29948bcc3fde2}{void \hyperlink{class_system_manager_ae839969e1eda73bf39c29948bcc3fde2}{add\-System} (std\-::shared\-\_\-ptr$<$ \hyperlink{_abstract_system_8h_a1411f3bb7eaf6ed11af20ec634ed4a5e}{system\-Type} $>$ system)}\label{d6/d8f/class_system_manager_ae839969e1eda73bf39c29948bcc3fde2}
 
-\item 
-\hypertarget{class_system_manager_af9be767096c20e7c9c5352743c6c25ec}{bool {\bfseries has\-System} (const std\-::string \&)}\label{d6/d8f/class_system_manager_af9be767096c20e7c9c5352743c6c25ec}
+\begin{DoxyCompactList}\small\item\em Adds a system to the system manager. \end{DoxyCompactList}\item 
+\hypertarget{class_system_manager_aa510ccbb5a6af14fe558cc14237ec692}{bool \hyperlink{class_system_manager_aa510ccbb5a6af14fe558cc14237ec692}{has\-System} (const std\-::string \&name)}\label{d6/d8f/class_system_manager_aa510ccbb5a6af14fe558cc14237ec692}
 
-\item 
-\hypertarget{class_system_manager_af36ad014cbc78142d48ca5a27646a8d7}{void {\bfseries remove\-System} (const std\-::string \&)}\label{d6/d8f/class_system_manager_af36ad014cbc78142d48ca5a27646a8d7}
+\begin{DoxyCompactList}\small\item\em Checks if a system by the given name exists. \end{DoxyCompactList}\item 
+\hypertarget{class_system_manager_a70a94ac38481c98cef33216ab335de6c}{void \hyperlink{class_system_manager_a70a94ac38481c98cef33216ab335de6c}{remove\-System} (const std\-::string \&name)}\label{d6/d8f/class_system_manager_a70a94ac38481c98cef33216ab335de6c}
 
-\item 
-\hypertarget{class_system_manager_a239491cad9990ede93d3bad25b381602}{int {\bfseries process\-System\-List} ()}\label{d6/d8f/class_system_manager_a239491cad9990ede93d3bad25b381602}
+\begin{DoxyCompactList}\small\item\em Removes a system by the given name. \end{DoxyCompactList}\item 
+\hypertarget{class_system_manager_a239491cad9990ede93d3bad25b381602}{int \hyperlink{class_system_manager_a239491cad9990ede93d3bad25b381602}{process\-System\-List} ()}\label{d6/d8f/class_system_manager_a239491cad9990ede93d3bad25b381602}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Processes each system within the system list. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_system_manager_a3cdbd045de051482a9b2342fc858e9bf}{static \hyperlink{class_system_manager}{System\-Manager} $\ast$ {\bfseries get\-Instance} ()}\label{d6/d8f/class_system_manager_a3cdbd045de051482a9b2342fc858e9bf}
+static \hyperlink{class_system_manager}{System\-Manager} $\ast$ \hyperlink{class_system_manager_a3cdbd045de051482a9b2342fc858e9bf}{get\-Instance} ()
+\begin{DoxyCompactList}\small\item\em Singleton instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\end{DoxyCompactItemize}
+
+\subsection{Detailed Description}
+Used to hold all of the systems and process them per frame. 
+
+System manager contains the 'systems' which you will run/process during the gameloop. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_system_manager_a3cdbd045de051482a9b2342fc858e9bf}{\index{System\-Manager@{System\-Manager}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!SystemManager@{System\-Manager}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf System\-Manager}$\ast$ System\-Manager\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{d6/d8f/class_system_manager_a3cdbd045de051482a9b2342fc858e9bf}
+
+
+Singleton instance. 
+
+\begin{DoxyReturn}{Returns}
+the singleton instance of system manager. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+71                                       \{
+72     \textcolor{keyword}{static} \hyperlink{class_system_manager}{SystemManager} \_instance;
+73     \textcolor{keywordflow}{return} &\_instance;
+74   \}
+\end{DoxyCode}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-System\-Manager.\-h\item 
+\hyperlink{_system_manager_8h}{System\-Manager.\-h}\item 
 System\-Manager.\-cpp\end{DoxyCompactItemize}

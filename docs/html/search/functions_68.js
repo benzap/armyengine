@@ -12,6 +12,8 @@ var searchData=
   ['hasrectangleshape',['hasRectangleShape',['../d0/d65/class_shape_manager.html#a335c932087dc017647046d2212e048b3',1,'ShapeManager']]],
   ['hasregisteredcollision',['hasRegisteredCollision',['../df/d14/class_collision_manager.html#a3dd0b50dcdee6bfd6ddcdaf7eec0c66b',1,'CollisionManager']]],
   ['hassprite',['hasSprite',['../d2/ddd/class_sprite_manager.html#a0b181cc3cec5eff62881911772e73a1a',1,'SpriteManager']]],
+  ['hasstate',['hasState',['../d4/d44/class_state_manager.html#a32bec464e01ca3cb16824c1dedf71bb9',1,'StateManager']]],
+  ['hassystem',['hasSystem',['../d6/d8f/class_system_manager.html#aa510ccbb5a6af14fe558cc14237ec692',1,'SystemManager']]],
   ['hastext',['hasText',['../d1/d47/class_text_manager.html#a3a68a4a9c574ca5a56990208fcf268ec',1,'TextManager']]],
   ['hastexture',['hasTexture',['../db/ddf/class_texture_manager.html#a12fec197f62b9427b8cdd2dde7019647',1,'TextureManager']]]
 ];

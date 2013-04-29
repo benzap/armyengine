@@ -28,7 +28,7 @@ typedef std::function<int(void)> functionStateMachineTemplate;
 typedef bool stateType;
 typedef std::map<std::string, stateType> stateListType;
 
-//BEGIN
+//! Used to to process the state components and perform callbacks.
 class StateSystem : public AbstractSystem {
 private:
 	functionStateMachineTemplate stateMachineFunction;

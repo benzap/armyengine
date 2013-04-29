@@ -1,6 +1,15 @@
 \hypertarget{class_input_component}{\section{Input\-Component Class Reference}
 \label{d7/dd5/class_input_component}\index{Input\-Component@{Input\-Component}}
 }
+
+
+Used to give an entity control over specific inputs from the user.  
+
+
+
+
+{\ttfamily \#include $<$Input\-Component.\-h$>$}
+
 Inheritance diagram for Input\-Component\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,42 +19,64 @@ Inheritance diagram for Input\-Component\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_input_component_a7ec9e027456cc12c71f5ecfae11902f0}{{\bfseries Input\-Component} (std\-::string)}\label{d7/dd5/class_input_component_a7ec9e027456cc12c71f5ecfae11902f0}
+\hyperlink{class_input_component_a903992fd159592568f3e365f2c625bd5}{Input\-Component} (std\-::string name)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_input_component_a1577c43e70f7e7f4ac6647fb4a8563fa}{int \hyperlink{class_input_component_a1577c43e70f7e7f4ac6647fb4a8563fa}{update} ()}\label{d7/dd5/class_input_component_a1577c43e70f7e7f4ac6647fb4a8563fa}
 
-\item 
-int \hyperlink{class_input_component_a1577c43e70f7e7f4ac6647fb4a8563fa}{update} ()
-\begin{DoxyCompactList}\small\item\em Updates the component based on the current set of attributes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Not implemented. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Member Function Documentation}
-\hypertarget{class_input_component_a1577c43e70f7e7f4ac6647fb4a8563fa}{\index{Input\-Component@{Input\-Component}!update@{update}}
-\index{update@{update}!InputComponent@{Input\-Component}}
-\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}int Input\-Component\-::update (
+\subsection{Detailed Description}
+Used to give an entity control over specific inputs from the user. 
+
+Input component is a special \hyperlink{class_state_component}{State\-Component} that will trigger a callback when a provided input is used.
+
+Provided inputs include \char`\"{}\-Keyboard\char`\"{} and \char`\"{}\-Mouse\char`\"{} Depending on which one is chosen, the resulting attributes searched will also vary. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_input_component_a903992fd159592568f3e365f2c625bd5}{\index{Input\-Component@{Input\-Component}!Input\-Component@{Input\-Component}}
+\index{Input\-Component@{Input\-Component}!InputComponent@{Input\-Component}}
+\subsubsection[{Input\-Component}]{\setlength{\rightskip}{0pt plus 5cm}Input\-Component\-::\-Input\-Component (
 \begin{DoxyParamCaption}
-{}
+\item[{std\-::string}]{name}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{d7/dd5/class_input_component_a1577c43e70f7e7f4ac6647fb4a8563fa}
+)}}\label{d7/dd5/class_input_component_a903992fd159592568f3e365f2c625bd5}
 
 
-Updates the component based on the current set of attributes. 
-
-Used to update the component. This should be performed after modifications have been made on the component's attributes or members.
-
-\begin{DoxyReturn}{Returns}
-Returns a non-\/zero value if it is successful. 
-\end{DoxyReturn}
+Constructor. 
 
 
-Implements \hyperlink{class_abstract_component_a35c9cab4e3845a947609b6ada8dc89cf}{Abstract\-Component}.
-
+\begin{DoxyParams}{Parameters}
+{\em name} & is the unique name assigned to this component. The family is overriden from the abstract component to be \char`\"{}\-Input\char`\"{} \\
+\hline
+\end{DoxyParams}
 
 \begin{DoxyCode}
-26                            \{
-27     \textcolor{keywordflow}{return} 0;
-28 \}\end{DoxyCode}
+6                                              :
+7     \hyperlink{class_abstract_component_ab08b845eddbdbe411b95a5385501ab97}{AbstractComponent}(name, COMPONENT\_FAMILY\_INPUT) \{
+8 
+9     \textcolor{comment}{//input component is processed only when it's enabled}
+10     this->\hyperlink{class_abstract_component_aca84c14d196467bda6aff90521b1ae7f}{setAttribute\_int}(\hyperlink{_a_e___attributes_8h_a4c775095baf8a9c99621ad9ad3b622db}{ATTRIBUTE\_ENABLE}, 1);
+11 
+12     \textcolor{comment}{//callback function key for the callback to be called from}
+13     \textcolor{comment}{// CallbackManager}
+14     this->\hyperlink{class_abstract_component_a702ec2cc2624561ef51afcd9c8061fd2}{setAttribute\_string}(\hyperlink{_a_e___attributes_8h_a8602d00b356bb7e6ba95069a94fd5555}{ATTRIBUTE\_CALLBACK}, \textcolor{stringliteral}{"None"});
+15 
+16     \textcolor{comment}{//determine the input type ["Move", "Scroll", "ButtonPressed", "ButtonReleased"]}
+17     \textcolor{comment}{//by default it will get button presses}
+18     this->\hyperlink{class_abstract_component_a702ec2cc2624561ef51afcd9c8061fd2}{setAttribute\_string}(\hyperlink{_a_e___attributes_8h_ac79ef953fa968e5d47da814b8d79263c}{ATTRIBUTE\_INPUT\_TYPE}, 
+      \hyperlink{_a_e___events_8h_a7274317c7bc468f9f3a2acb0c3c1af9e}{INPUT\_KEYBOARD\_PRESSED});
+19 
+20     \textcolor{comment}{//For events, we need to provide a means in which to retrieve the given event}
+21     \textcolor{comment}{//so we provide an index to resemble the position within the EventManager eventList}
+22 
+23     \textcolor{comment}{//Don't define it for safety reasons}
+24     \textcolor{comment}{//this->setAttribute\_int("EventIndex", 0);}
+\}
+\end{DoxyCode}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-Input\-Component.\-h\item 
+\hyperlink{_input_component_8h}{Input\-Component.\-h}\item 
 Input\-Component.\-cpp\end{DoxyCompactItemize}

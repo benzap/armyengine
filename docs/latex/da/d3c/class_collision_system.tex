@@ -1,6 +1,15 @@
 \hypertarget{class_collision_system}{\section{Collision\-System Class Reference}
 \label{da/d3c/class_collision_system}\index{Collision\-System@{Collision\-System}}
 }
+
+
+Used to process collisions.  
+
+
+
+
+{\ttfamily \#include $<$Collision\-System.\-h$>$}
+
 Inheritance diagram for Collision\-System\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -14,6 +23,13 @@ int \hyperlink{class_collision_system_a8172916254667a746b257c38f04018d8}{process
 \begin{DoxyCompactList}\small\item\em Processes the entities with collision components. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
+
+\subsection{Detailed Description}
+Used to process collisions. 
+
+Processes collision components with a position component and checks to see if the entity containing the collision component is colliding with another entity containing another collision component
+
+If it determines that the two components have collided, the system performs the desired callback within the \hyperlink{class_collision_manager}{Collision\-Manager} and includes information about both components to the callback 
 
 \subsection{Member Function Documentation}
 \hypertarget{class_collision_system_a8172916254667a746b257c38f04018d8}{\index{Collision\-System@{Collision\-System}!process@{process}}

@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.3.2)  27 APR 2013 16:53
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.3.2)  29 APR 2013 15:14
 entering extended mode
 **refman
-(c:\Users\benzap\Desktop\armyengine\docs\latex\refman.tex
+(C:\Users\benzap\Desktop\armyengine\docs\latex\refman.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -823,7 +823,7 @@ Package tocloft Info: The document has chapter divisions on input line 43.
 \cfttabindent=\skip83
 \cfttabnumwidth=\skip84
 )
-(c:\Users\benzap\Desktop\armyengine\docs\latex\doxygen.sty
+(C:\Users\benzap\Desktop\armyengine\docs\latex\doxygen.sty
 Package: doxygen 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
@@ -929,7 +929,56 @@ File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 \@indexfile=\write3
 
 Writing index file refman.idx
-(c:\Users\benzap\Desktop\armyengine\docs\latex\refman.aux
+(C:\Users\benzap\Desktop\armyengine\docs\latex\refman.aux
+
+LaTeX Warning: Label `d5/d67/_texture_manager_8h_LICENSE' multiply defined.
+
+
+LaTeX Warning: Label `d5/d67/_texture_manager_8h_DESCRIPTION' multiply defined.
+
+
+
+LaTeX Warning: Label `d5/d67/_texture_manager_8h_LICENSE' multiply defined.
+
+
+LaTeX Warning: Label `d5/d67/_texture_manager_8h_DESCRIPTION' multiply defined.
+
+
+
+LaTeX Warning: Label `d5/d67/_texture_manager_8h_LICENSE' multiply defined.
+
+
+LaTeX Warning: Label `d5/d67/_texture_manager_8h_DESCRIPTION' multiply defined.
+
+
+
+LaTeX Warning: Label `d5/d67/_texture_manager_8h_LICENSE' multiply defined.
+
+
+LaTeX Warning: Label `d5/d67/_texture_manager_8h_DESCRIPTION' multiply defined.
+
+
+
+LaTeX Warning: Label `d5/d67/_texture_manager_8h_LICENSE' multiply defined.
+
+
+LaTeX Warning: Label `d5/d67/_texture_manager_8h_DESCRIPTION' multiply defined.
+
+
+
+LaTeX Warning: Label `d5/d67/_texture_manager_8h_LICENSE' multiply defined.
+
+
+LaTeX Warning: Label `d5/d67/_texture_manager_8h_DESCRIPTION' multiply defined.
+
+
+
+LaTeX Warning: Label `d5/d67/_texture_manager_8h_LICENSE' multiply defined.
+
+
+LaTeX Warning: Label `d5/d67/_texture_manager_8h_DESCRIPTION' multiply defined.
+
+
 
 LaTeX Warning: Label `d5/d67/_texture_manager_8h_LICENSE' multiply defined.
 
@@ -1186,8 +1235,8 @@ LaTeX Info: Redefining \ref on input line 48.
 LaTeX Info: Redefining \pageref on input line 48.
 LaTeX Info: Redefining \nameref on input line 48.
 
-(c:\Users\benzap\Desktop\armyengine\docs\latex\refman.out)
-(c:\Users\benzap\Desktop\armyengine\docs\latex\refman.out)
+(C:\Users\benzap\Desktop\armyengine\docs\latex\refman.out)
+(C:\Users\benzap\Desktop\armyengine\docs\latex\refman.out)
 \@outlinefile=\write4
 \big@size=\dimen152
 Package hyperref Info: Option `pageanchor' set `false' on input line 49.
@@ -1217,7 +1266,7 @@ File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 LaTeX Font Info:    Font shape `OT1/phv/bc/n' will be
 (Font)              scaled to size 22.39185pt on input line 62.
 
-(c:\Users\benzap\Desktop\armyengine\docs\latex\refman.toc
+(C:\Users\benzap\Desktop\armyengine\docs\latex\refman.toc
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
@@ -1265,22 +1314,20 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <7> not available
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 6.29996pt on input line 71.
  [2] [3] [4]
-[5] [6] [7] [8]
+[5] [6] [7] [8] [9]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 319.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 368.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 319.
+(Font)              scaled to size 10.79993pt on input line 368.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 319.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 368.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 319.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 368.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 319.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 368.
 )
 \tf@toc=\write5
- [9] [10
-
-]
+ [10]
 Package hyperref Info: Option `pageanchor' set `true' on input line 65.
 
 Chapter 1.
@@ -1292,7 +1339,7 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 18.66588pt on input line 66.
 LaTeX Font Info:    Font shape `OT1/phv/bc/n' will be
 (Font)              scaled to size 18.66588pt on input line 66.
-(c:\Users\benzap\Desktop\armyengine\docs\latex\hierarchy.tex
+(C:\Users\benzap\Desktop\armyengine\docs\latex\hierarchy.tex
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
@@ -1301,13 +1348,18 @@ LaTeX Font Info:    Font shape `OT1/phv/bc/n' will be
 (Font)              scaled to size 12.9599pt on input line 1.
 ) [1
 
+
 ] [2
 
 ]
 Chapter 2.
-(c:\Users\benzap\Desktop\armyengine\docs\latex\annotated.tex [3]) [4]
+(C:\Users\benzap\Desktop\armyengine\docs\latex\annotated.tex
+Underfull \vbox (badness 2856) has occurred while \output is active []
+
+ [3])
+[4]
 Chapter 3.
-(c:\Users\benzap\Desktop\armyengine\docs\latex\files.tex
+(C:\Users\benzap\Desktop\armyengine\docs\latex\files.tex
 
 LaTeX Warning: Reference `da/d0a/_components_8h' on page 5 undefined on input l
 ine 15.
@@ -1321,18 +1373,6 @@ LaTeX Warning: Reference `de/d52/_health_component_8h' on page 5 undefined on i
 nput line 21.
 
 
-LaTeX Warning: Reference `d1/d1a/_input_component_8h' on page 5 undefined on in
-put line 22.
-
-
-LaTeX Warning: Reference `d4/d08/_input_system_8h' on page 5 undefined on input
- line 23.
-
-
-LaTeX Warning: Reference `df/d81/_main_entity_8h' on page 5 undefined on input 
-line 24.
-
-
 LaTeX Warning: Reference `d5/df9/_managers_8h' on page 5 undefined on input lin
 e 25.
 
@@ -1341,24 +1381,8 @@ LaTeX Warning: Reference `dc/d9b/_singleton_t_8h' on page 5 undefined on input
 line 29.
 
 
-LaTeX Warning: Reference `d9/d41/_sprite_component_8h' on page 5 undefined on i
-nput line 30.
-
-
-LaTeX Warning: Reference `d0/d47/_sprite_system_8h' on page 5 undefined on inpu
-t line 32.
-
-
-LaTeX Warning: Reference `db/d97/_state_manager_8h' on page 5 undefined on inpu
-t line 34.
-
-
 LaTeX Warning: Reference `df/d44/_state_system_8h' on page 5 undefined on input
  line 35.
-
-
-LaTeX Warning: Reference `db/d38/_system_manager_8h' on page 5 undefined on inp
-ut line 36.
 
 
 LaTeX Warning: Reference `d2/df7/_systems_8h' on page 5 undefined on input line
@@ -1371,13 +1395,13 @@ LaTeX Warning: Reference `d2/df7/_systems_8h' on page 5 undefined on input line
 ]
 Chapter 4.
 
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d1/dae/class_abstract_component.
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d1/dae/class_abstract_component.
 tex
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 11.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-<d1/dae/class_abstract_component.pdf, id=1873, 501.875pt x 690.58pt>
+<d1/dae/class_abstract_component.pdf, id=2140, 501.875pt x 690.58pt>
 File: d1/dae/class_abstract_component.pdf Graphic file (type pdf)
 
 <use d1/dae/class_abstract_component.pdf>
@@ -1397,7 +1421,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 24.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 8.09995pt on input line 24.
- [7 <c:/Users/benzap/Desktop/armyengine/docs/latex/d1/dae/class_abstract_compon
+ [7 <C:/Users/benzap/Desktop/armyengine/docs/latex/d1/dae/class_abstract_compon
 ent.pdf>]
 LaTeX Font Info:    Font shape `OT1/phv/bc/n' will be
 (Font)              scaled to size 8.99994pt on input line 90.
@@ -1482,15 +1506,15 @@ LaTeX Font Warning: Font shape `OT1/pcr/bc/n' undefined
 (Font)              using `OT1/pcr/m/n' instead on input line 537.
 
 [13])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\dd/d52/class_abstract_entity.tex
-<dd/d52/class_abstract_entity.pdf, id=2018, 501.875pt x 410.53375pt>
+(C:\Users\benzap\Desktop\armyengine\docs\latex\dd/d52/class_abstract_entity.tex
+<dd/d52/class_abstract_entity.pdf, id=2285, 501.875pt x 410.53375pt>
 File: dd/d52/class_abstract_entity.pdf Graphic file (type pdf)
 
 <use dd/d52/class_abstract_entity.pdf>
 Package pdftex.def Info: dd/d52/class_abstract_entity.pdf used on input line 16
 .
 (pdftex.def)             Requested size: 69.56514pt x 56.9055pt.
- [14 <c:/Users/benzap/Desktop/armyengine/docs/latex/dd/d52/class_abstract_entit
+ [14 <C:/Users/benzap/Desktop/armyengine/docs/latex/dd/d52/class_abstract_entit
 y.pdf>]
 Underfull \vbox (badness 10000) detected at line 71
  []
@@ -1512,33 +1536,33 @@ Underfull \vbox (badness 10000) detected at line 298
  []
 
 [17])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d0/d74/class_abstract_system.tex
-<d0/d74/class_abstract_system.pdf, id=2086, 501.875pt x 75.28125pt>
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d0/d74/class_abstract_system.tex
+<d0/d74/class_abstract_system.pdf, id=2353, 501.875pt x 75.28125pt>
 File: d0/d74/class_abstract_system.pdf Graphic file (type pdf)
 
 <use d0/d74/class_abstract_system.pdf>
 Package pdftex.def Info: d0/d74/class_abstract_system.pdf used on input line 16
 .
 (pdftex.def)             Requested size: 379.38428pt x 56.9055pt.
- [18 <c:/Users/benzap/Desktop/armyengine/docs/latex/d0/d74/class_abstract_syste
+ [18 <C:/Users/benzap/Desktop/armyengine/docs/latex/d0/d74/class_abstract_syste
 m.pdf>])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d4/d9d/class_army_engine.tex
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d4/d9d/class_army_engine.tex
 [19])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\db/d65/structattribute__struct.t
+(C:\Users\benzap\Desktop\armyengine\docs\latex\db/d65/structattribute__struct.t
 ex [20]
 Underfull \vbox (badness 10000) detected at line 35
  []
 
 )
-(c:\Users\benzap\Desktop\armyengine\docs\latex\dd/d8b/unionattribute_container_
+(C:\Users\benzap\Desktop\armyengine\docs\latex\dd/d8b/unionattribute_container_
 _union.tex)
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d6/dca/class_callback_function_w
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d6/dca/class_callback_function_w
 rapper.tex [21]
 Underfull \vbox (badness 10000) detected at line 56
  []
 
 )
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d6/d24/class_callback_manager.te
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d6/d24/class_callback_manager.te
 x [22]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
@@ -1571,21 +1595,21 @@ Underfull \vbox (badness 10000) detected at line 232
  []
 
 )
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d7/db6/class_collision_component
-.tex <d7/db6/class_collision_component.pdf, id=2262, 501.875pt x 307.1475pt>
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d7/db6/class_collision_component
+.tex <d7/db6/class_collision_component.pdf, id=2531, 501.875pt x 307.1475pt>
 File: d7/db6/class_collision_component.pdf Graphic file (type pdf)
 
 <use d7/db6/class_collision_component.pdf>
 Package pdftex.def Info: d7/db6/class_collision_component.pdf used on input lin
 e 16.
 (pdftex.def)             Requested size: 92.98326pt x 56.9055pt.
- [25 <c:/Users/benzap/Desktop/armyengine/docs/latex/d7/db6/class_collision_comp
+ [25 <C:/Users/benzap/Desktop/armyengine/docs/latex/d7/db6/class_collision_comp
 onent.pdf>]
 Underfull \vbox (badness 10000) detected at line 54
  []
 
 )
-(c:\Users\benzap\Desktop\armyengine\docs\latex\df/d14/class_collision_manager.t
+(C:\Users\benzap\Desktop\armyengine\docs\latex\df/d14/class_collision_manager.t
 ex [26]
 Underfull \vbox (badness 10000) detected at line 62
  []
@@ -1611,182 +1635,183 @@ Underfull \vbox (badness 10000) detected at line 208
  []
 
 )
-(c:\Users\benzap\Desktop\armyengine\docs\latex\da/d3c/class_collision_system.te
-x <da/d3c/class_collision_system.pdf, id=2372, 501.875pt x 372.39125pt>
+(C:\Users\benzap\Desktop\armyengine\docs\latex\da/d3c/class_collision_system.te
+x <da/d3c/class_collision_system.pdf, id=2641, 501.875pt x 372.39125pt>
 File: da/d3c/class_collision_system.pdf Graphic file (type pdf)
 
 <use da/d3c/class_collision_system.pdf>
-Package pdftex.def Info: da/d3c/class_collision_system.pdf used on input line 7
-.
+Package pdftex.def Info: da/d3c/class_collision_system.pdf used on input line 1
+6.
 (pdftex.def)             Requested size: 76.68706pt x 56.9055pt.
- [29 <c:/Users/benzap/Desktop/armyengine/docs/latex/da/d3c/class_collision_syst
+ [29 <C:/Users/benzap/Desktop/armyengine/docs/latex/da/d3c/class_collision_syst
 em.pdf>] [30]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [31])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\db/d28/class_component_factory.t
+(C:\Users\benzap\Desktop\armyengine\docs\latex\db/d28/class_component_factory.t
 ex [32]
-Underfull \vbox (badness 10000) detected at line 41
+Underfull \vbox (badness 10000) detected at line 53
  []
 
 
-Underfull \vbox (badness 10000) detected at line 66
+Underfull \vbox (badness 10000) detected at line 78
  []
-
-
-Underfull \vbox (badness 10000) detected at line 91
- []
-
-
-Underfull \vbox (badness 10000) detected at line 116
- []
-
-
-Overfull \vbox (4.35439pt too high) has occurred while \output is active []
-
 
 [33]
-Underfull \vbox (badness 10000) detected at line 141
+Underfull \vbox (badness 10000) detected at line 103
  []
 
 
-Underfull \vbox (badness 10000) detected at line 166
+Underfull \vbox (badness 10000) detected at line 128
  []
 
 
-Underfull \vbox (badness 10000) detected at line 191
+Underfull \vbox (badness 10000) detected at line 153
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 178
  []
 
 [34]
-Underfull \vbox (badness 10000) detected at line 216
+Underfull \vbox (badness 10000) detected at line 203
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 228
  []
 
 )
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d0/d08/class_entity_factory.tex
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d0/d08/class_entity_factory.tex
+[35]
 Underfull \vbox (badness 10000) detected at line 39
  []
 
-[35])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d0/d89/class_entity_manager.tex
+)
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d0/d89/class_entity_manager.tex
+[36]
 Underfull \vbox (badness 10000) detected at line 62
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [36]
 Underfull \vbox (badness 10000) detected at line 106
  []
 
-
+[37]
 Underfull \vbox (badness 10000) detected at line 139
  []
 
-[37]
+
 Underfull \vbox (badness 10000) detected at line 170
  []
 
-
+[38]
 Underfull \vbox (badness 10000) detected at line 222
  []
 
-[38]
+
 Underfull \vbox (badness 10000) detected at line 254
  []
 
 [39])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d6/d94/class_event_manager.tex
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d6/d94/class_event_manager.tex
 [40]
 Underfull \vbox (badness 10000) detected at line 118
  []
 
-) (c:\Users\benzap\Desktop\armyengine\docs\latex\dc/d0b/class_event_system.tex
-<dc/d0b/class_event_system.pdf, id=2598, 501.875pt x 375.4025pt>
+
+Overfull \vbox (9.78873pt too high) has occurred while \output is active []
+
+
+[41])
+(C:\Users\benzap\Desktop\armyengine\docs\latex\dc/d0b/class_event_system.tex
+<dc/d0b/class_event_system.pdf, id=2875, 501.875pt x 375.4025pt>
 File: dc/d0b/class_event_system.pdf Graphic file (type pdf)
 
 <use dc/d0b/class_event_system.pdf>
 Package pdftex.def Info: dc/d0b/class_event_system.pdf used on input line 16.
 (pdftex.def)             Requested size: 76.07442pt x 56.9055pt.
-
-Underfull \vbox (badness 3861) has occurred while \output is active []
-
- [41])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d1/da7/class_health_component.te
-x <d1/da7/class_health_component.pdf, id=2621, 501.875pt x 309.155pt>
+)
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d1/da7/class_health_component.te
+x <d1/da7/class_health_component.pdf, id=2892, 501.875pt x 309.155pt>
 File: d1/da7/class_health_component.pdf Graphic file (type pdf)
 
 <use d1/da7/class_health_component.pdf>
 Package pdftex.def Info: d1/da7/class_health_component.pdf used on input line 7
 .
 (pdftex.def)             Requested size: 92.37828pt x 56.9055pt.
- [42 <c:/Users/benzap/Desktop/armyengine/docs/latex/dc/d0b/class_event_system.p
-df> <c:/Users/benzap/Desktop/armyengine/docs/latex/d1/da7/class_health_componen
-t.pdf>])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d7/dd5/class_input_component.tex
-<d7/dd5/class_input_component.pdf, id=2643, 501.875pt x 309.155pt>
+ [42 <C:/Users/benzap/Desktop/armyengine/docs/latex/dc/d0b/class_event_system.p
+df>])
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d7/dd5/class_input_component.tex
+<d7/dd5/class_input_component.pdf, id=2911, 501.875pt x 309.155pt>
 File: d7/dd5/class_input_component.pdf Graphic file (type pdf)
 
 <use d7/dd5/class_input_component.pdf>
-Package pdftex.def Info: d7/dd5/class_input_component.pdf used on input line 7.
-
+Package pdftex.def Info: d7/dd5/class_input_component.pdf used on input line 16
+.
 (pdftex.def)             Requested size: 92.37828pt x 56.9055pt.
- [43 <c:/Users/benzap/Desktop/armyengine/docs/latex/d7/dd5/class_input_componen
-t.pdf>])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\da/dc2/class_input_system.tex
-<da/dc2/class_input_system.pdf, id=2658, 501.875pt x 375.4025pt>
+ [43 <C:/Users/benzap/Desktop/armyengine/docs/latex/d1/da7/class_health_compone
+nt.pdf> <C:/Users/benzap/Desktop/armyengine/docs/latex/d7/dd5/class_input_compo
+nent.pdf>]
+Underfull \vbox (badness 10000) detected at line 52
+ []
+
+) (C:\Users\benzap\Desktop\armyengine\docs\latex\da/dc2/class_input_system.tex
+<da/dc2/class_input_system.pdf, id=2937, 501.875pt x 375.4025pt>
 File: da/dc2/class_input_system.pdf Graphic file (type pdf)
 
 <use da/dc2/class_input_system.pdf>
-Package pdftex.def Info: da/dc2/class_input_system.pdf used on input line 7.
+Package pdftex.def Info: da/dc2/class_input_system.pdf used on input line 16.
 (pdftex.def)             Requested size: 76.07442pt x 56.9055pt.
- [44 <c:/Users/benzap/Desktop/armyengine/docs/latex/da/dc2/class_input_system.p
-df>])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d1/d6a/class_main_entity.tex
-<d1/d6a/class_main_entity.pdf, id=2683, 501.875pt x 410.53375pt>
+ [44])
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d1/d6a/class_main_entity.tex
+<d1/d6a/class_main_entity.pdf, id=2955, 501.875pt x 410.53375pt>
 File: d1/d6a/class_main_entity.pdf Graphic file (type pdf)
 
 <use d1/d6a/class_main_entity.pdf>
-Package pdftex.def Info: d1/d6a/class_main_entity.pdf used on input line 7.
+Package pdftex.def Info: d1/d6a/class_main_entity.pdf used on input line 16.
 (pdftex.def)             Requested size: 69.56514pt x 56.9055pt.
+ [45 <C:/Users/benzap/Desktop/armyengine/docs/latex/da/dc2/class_input_system.p
+df> <C:/Users/benzap/Desktop/armyengine/docs/latex/d1/d6a/class_main_entity.pdf
+>]
+Underfull \vbox (badness 10000) detected at line 46
+ []
 
-Underfull \vbox (badness 7649) has occurred while \output is active []
-
- [45])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d2/d9c/class_position_component.
-tex <d2/d9c/class_position_component.pdf, id=2702, 501.875pt x 309.155pt>
+)
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d2/d9c/class_position_component.
+tex <d2/d9c/class_position_component.pdf, id=2980, 501.875pt x 309.155pt>
 File: d2/d9c/class_position_component.pdf Graphic file (type pdf)
 
 <use d2/d9c/class_position_component.pdf>
 Package pdftex.def Info: d2/d9c/class_position_component.pdf used on input line
  16.
 (pdftex.def)             Requested size: 92.37828pt x 56.9055pt.
- [46 <c:/Users/benzap/Desktop/armyengine/docs/latex/d1/d6a/class_main_entity.pd
-f>]
+ [46]
 Underfull \vbox (badness 10000) detected at line 52
  []
 
 )
-(c:\Users\benzap\Desktop\armyengine\docs\latex\df/d41/class_shape_component.tex
-<df/d41/class_shape_component.pdf, id=2729, 501.875pt x 309.155pt>
+(C:\Users\benzap\Desktop\armyengine\docs\latex\df/d41/class_shape_component.tex
+[47 <C:/Users/benzap/Desktop/armyengine/docs/latex/d2/d9c/class_position_compon
+ent.pdf>] <df/d41/class_shape_component.pdf, id=3018, 501.875pt x 309.155pt>
 File: df/d41/class_shape_component.pdf Graphic file (type pdf)
 
 <use df/d41/class_shape_component.pdf>
 Package pdftex.def Info: df/d41/class_shape_component.pdf used on input line 16
 .
 (pdftex.def)             Requested size: 92.37828pt x 56.9055pt.
- [47 <c:/Users/benzap/Desktop/armyengine/docs/latex/d2/d9c/class_position_compo
-nent.pdf>]
+
 Underfull \vbox (badness 10000) detected at line 53
  []
 
-[48 <c:/Users/benzap/Desktop/armyengine/docs/latex/df/d41/class_shape_component
+[48 <C:/Users/benzap/Desktop/armyengine/docs/latex/df/d41/class_shape_component
 .pdf>] [49]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [50])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d0/d65/class_shape_manager.tex
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d0/d65/class_shape_manager.tex
 [51])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d4/dde/class_singleton_t.tex
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d4/dde/class_singleton_t.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
@@ -1811,26 +1836,29 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3.
 
 )
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d4/df5/class_sprite_component.te
-x <d4/df5/class_sprite_component.pdf, id=2944, 501.875pt x 309.155pt>
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d4/df5/class_sprite_component.te
+x <d4/df5/class_sprite_component.pdf, id=3220, 501.875pt x 309.155pt>
 File: d4/df5/class_sprite_component.pdf Graphic file (type pdf)
 
 <use d4/df5/class_sprite_component.pdf>
-Package pdftex.def Info: d4/df5/class_sprite_component.pdf used on input line 7
-.
+Package pdftex.def Info: d4/df5/class_sprite_component.pdf used on input line 1
+6.
 (pdftex.def)             Requested size: 92.37828pt x 56.9055pt.
- [52 <c:/Users/benzap/Desktop/armyengine/docs/latex/d4/df5/class_sprite_compone
-nt.pdf>])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d2/ddd/class_sprite_manager.tex
-[53]
+ [52 <C:/Users/benzap/Desktop/armyengine/docs/latex/d4/df5/class_sprite_compone
+nt.pdf>]
+Underfull \vbox (badness 10000) detected at line 47
+ []
+
+[53])
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d2/ddd/class_sprite_manager.tex
 Underfull \vbox (badness 10000) detected at line 55
  []
 
-
+[54]
 Underfull \vbox (badness 10000) detected at line 99
  []
 
-[54]
+
 Underfull \vbox (badness 10000) detected at line 124
  []
 
@@ -1838,20 +1866,25 @@ Underfull \vbox (badness 10000) detected at line 124
 Underfull \vbox (badness 10000) detected at line 152
  []
 
-) (c:\Users\benzap\Desktop\armyengine\docs\latex\d8/df1/class_sprite_system.tex
-<d8/df1/class_sprite_system.pdf, id=2991, 501.875pt x 375.4025pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55])
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d8/df1/class_sprite_system.tex
+<d8/df1/class_sprite_system.pdf, id=3299, 501.875pt x 375.4025pt>
 File: d8/df1/class_sprite_system.pdf Graphic file (type pdf)
 
 <use d8/df1/class_sprite_system.pdf>
-Package pdftex.def Info: d8/df1/class_sprite_system.pdf used on input line 7.
+Package pdftex.def Info: d8/df1/class_sprite_system.pdf used on input line 16.
 (pdftex.def)             Requested size: 76.07442pt x 56.9055pt.
- [55 <c:/Users/benzap/Desktop/armyengine/docs/latex/d8/df1/class_sprite_system.
-pdf>] [56]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [57])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d0/d07/class_state_component.tex
-[58] <d0/d07/class_state_component.pdf, id=3057, 501.875pt x 309.155pt>
+Underfull \vbox (badness 10000) detected at line 51
+ []
+
+[56 <C:/Users/benzap/Desktop/armyengine/docs/latex/d8/df1/class_sprite_system.p
+df>])
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d0/d07/class_state_component.tex
+<d0/d07/class_state_component.pdf, id=3319, 501.875pt x 309.155pt>
 File: d0/d07/class_state_component.pdf Graphic file (type pdf)
 
 <use d0/d07/class_state_component.pdf>
@@ -1862,35 +1895,56 @@ Package pdftex.def Info: d0/d07/class_state_component.pdf used on input line 16
 Underfull \vbox (badness 10000) detected at line 47
  []
 
-[59 <c:/Users/benzap/Desktop/armyengine/docs/latex/d0/d07/class_state_component
+[57 <C:/Users/benzap/Desktop/armyengine/docs/latex/d0/d07/class_state_component
 .pdf>])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d4/d44/class_state_manager.tex)
-(c:\Users\benzap\Desktop\armyengine\docs\latex\df/d94/class_state_system.tex
-<df/d94/class_state_system.pdf, id=3084, 501.875pt x 375.4025pt>
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d4/d44/class_state_manager.tex
+[58]
+Underfull \vbox (badness 10000) detected at line 57
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 101
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 131
+ []
+
+[59]
+Underfull \vbox (badness 10000) detected at line 160
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 184
+ []
+
+) (C:\Users\benzap\Desktop\armyengine\docs\latex\df/d94/class_state_system.tex
+<df/d94/class_state_system.pdf, id=3377, 501.875pt x 375.4025pt>
 File: df/d94/class_state_system.pdf Graphic file (type pdf)
 
 <use df/d94/class_state_system.pdf>
-Package pdftex.def Info: df/d94/class_state_system.pdf used on input line 7.
+Package pdftex.def Info: df/d94/class_state_system.pdf used on input line 16.
 (pdftex.def)             Requested size: 76.07442pt x 56.9055pt.
- [60 <c:/Users/benzap/Desktop/armyengine/docs/latex/df/d94/class_state_system.p
+ [60 <C:/Users/benzap/Desktop/armyengine/docs/latex/df/d94/class_state_system.p
 df>])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d6/d8f/class_system_manager.tex)
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d9/dde/class_text_component.tex
-[61] <d9/dde/class_text_component.pdf, id=3128, 501.875pt x 309.155pt>
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d6/d8f/class_system_manager.tex
+[61])
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d9/dde/class_text_component.tex
+<d9/dde/class_text_component.pdf, id=3414, 501.875pt x 309.155pt>
 File: d9/dde/class_text_component.pdf Graphic file (type pdf)
 
 <use d9/dde/class_text_component.pdf>
-Package pdftex.def Info: d9/dde/class_text_component.pdf used on input line 11.
+Package pdftex.def Info: d9/dde/class_text_component.pdf used on input line 16.
 
 (pdftex.def)             Requested size: 92.37828pt x 56.9055pt.
-
-Underfull \vbox (badness 10000) detected at line 44
+ [62]
+Underfull \vbox (badness 10000) detected at line 51
  []
 
-[62 <c:/Users/benzap/Desktop/armyengine/docs/latex/d9/dde/class_text_component.
-pdf>] [63])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d1/d47/class_text_manager.tex
-[64]
+[63 <C:/Users/benzap/Desktop/armyengine/docs/latex/d9/dde/class_text_component.
+pdf>] [64])
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d1/d47/class_text_manager.tex
+[65]
 Underfull \vbox (badness 10000) detected at line 63
  []
 
@@ -1902,7 +1956,7 @@ Underfull \vbox (badness 10000) detected at line 89
 Underfull \vbox (badness 10000) detected at line 112
  []
 
-[65]
+[66]
 Underfull \vbox (badness 10000) detected at line 158
  []
 
@@ -1914,7 +1968,7 @@ Underfull \vbox (badness 10000) detected at line 184
 Underfull \vbox (badness 10000) detected at line 212
  []
 
-[66]
+[67]
 Underfull \vbox (badness 10000) detected at line 240
  []
 
@@ -1923,8 +1977,8 @@ Underfull \vbox (badness 10000) detected at line 263
  []
 
 )
-(c:\Users\benzap\Desktop\armyengine\docs\latex\db/ddf/class_texture_manager.tex
-[67]
+(C:\Users\benzap\Desktop\armyengine\docs\latex\db/ddf/class_texture_manager.tex
+[68]
 Underfull \vbox (badness 10000) detected at line 57
  []
 
@@ -1936,27 +1990,27 @@ Underfull \vbox (badness 10000) detected at line 80
 Underfull \vbox (badness 10000) detected at line 125
  []
 
-[68]
+[69]
 Underfull \vbox (badness 10000) detected at line 150
  []
 
-) [69] [70
-
-]
+) [70]
 Chapter 5.
 
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d7/d6e/_abstract_component_8h.te
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d7/d6e/_abstract_component_8h.te
 x
 Underfull \hbox (badness 10000) in paragraph at lines 4--9
 
  []
 
-[71]
+[71
+
+]
 Underfull \vbox (badness 10000) detected at line 83
  []
 
 [72])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d8/d79/_abstract_entity_8h.tex
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d8/d79/_abstract_entity_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 
  []
@@ -1973,7 +2027,7 @@ re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
                    \relax 
 l.37 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
                                                   \subsection{D\-E\-S\-C\-R\...
-) (c:\Users\benzap\Desktop\armyengine\docs\latex\da/ddf/_abstract_system_8h.tex
+) (C:\Users\benzap\Desktop\armyengine\docs\latex\da/ddf/_abstract_system_8h.tex
 [73]
 Underfull \hbox (badness 10000) in paragraph at lines 4--9
 
@@ -1992,7 +2046,7 @@ re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
 l.33 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
                                                   \subsection{D\-E\-S\-C\-R\...
 )
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d0/d73/_a_e___attributes_8h.tex
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d0/d73/_a_e___attributes_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
@@ -2010,7 +2064,7 @@ exture_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
 l.151 ...d5/d67/_texture_manager_8h_DESCRIPTION}{}
                                                   \subsection{D\-E\-S\-C\-R\...
 [77])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d5/dea/_a_e___events_8h.texpdfTe
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d5/dea/_a_e___events_8h.texpdfTe
 X warning (ext4): destination with the same identifier (name{d5/d67/_texture_ma
 nager_8h_LICENSE}) has been already used, duplicate ignored
 <to be read again> 
@@ -2024,7 +2078,7 @@ re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
 l.38 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
                                                   \subsection{D\-E\-S\-C\-R\...
 [78])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\dd/d08/_a_e___utilities_8h.tex
+(C:\Users\benzap\Desktop\armyengine\docs\latex\dd/d08/_a_e___utilities_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
@@ -2067,7 +2121,7 @@ Underfull \vbox (badness 10000) detected at line 342
 Underfull \vbox (badness 10000) detected at line 384
  []
 
-) (c:\Users\benzap\Desktop\armyengine\docs\latex\d5/dc2/_army_engine_8h.tex
+) (C:\Users\benzap\Desktop\armyengine\docs\latex\d5/dc2/_army_engine_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--17
 
  []
@@ -2085,7 +2139,7 @@ exture_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
 l.67 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
                                                   \subsection{D\-E\-S\-C\-R\...
 )
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d6/d07/_callback_manager_8h.tex
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d6/d07/_callback_manager_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 
  []
@@ -2103,7 +2157,7 @@ exture_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
 l.45 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
                                                   \subsection{D\-E\-S\-C\-R\...
 )
-(c:\Users\benzap\Desktop\armyengine\docs\latex\db/d98/_collision_component_8h.t
+(C:\Users\benzap\Desktop\armyengine\docs\latex\db/d98/_collision_component_8h.t
 ex
 Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
@@ -2122,7 +2176,7 @@ re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
 l.24 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
                                                   \subsection{D\-E\-S\-C\-R\...
 [86])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d7/d3e/_collision_manager_8h.tex
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d7/d3e/_collision_manager_8h.tex
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--10
 
@@ -2141,7 +2195,7 @@ exture_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
 l.53 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
                                                   \subsection{D\-E\-S\-C\-R\...
 )
-(c:\Users\benzap\Desktop\armyengine\docs\latex\de/d26/_collision_system_8h.tex
+(C:\Users\benzap\Desktop\armyengine\docs\latex\de/d26/_collision_system_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--9
 
  []
@@ -2159,7 +2213,7 @@ re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
 l.33 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
                                                   \subsection{D\-E\-S\-C\-R\...
 )
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d2/df3/_component_factory_8h.tex
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d2/df3/_component_factory_8h.tex
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
@@ -2177,7 +2231,7 @@ re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
                    \relax 
 l.24 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
                                                   \subsection{D\-E\-S\-C\-R\...
-) (c:\Users\benzap\Desktop\armyengine\docs\latex\de/d95/_entity_factory_8h.tex
+) (C:\Users\benzap\Desktop\armyengine\docs\latex\de/d95/_entity_factory_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
  []
@@ -2195,7 +2249,7 @@ re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
 l.24 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
                                                   \subsection{D\-E\-S\-C\-R\...
 [90])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d8/dba/_entity_manager_8h.tex
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d8/dba/_entity_manager_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--9
 
  []
@@ -2212,13 +2266,14 @@ re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
                    \relax 
 l.38 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
                                                   \subsection{D\-E\-S\-C\-R\...
-) (c:\Users\benzap\Desktop\armyengine\docs\latex\db/d36/_event_manager_8h.tex
+) (C:\Users\benzap\Desktop\armyengine\docs\latex\db/d36/_event_manager_8h.tex
+[91]
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 
  []
 
-[91]pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_t
-exture_manager_8h_LICENSE}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_textu
+re_manager_8h_LICENSE}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.29 ...rget{d5/d67/_texture_manager_8h_LICENSE}{}
@@ -2229,7 +2284,7 @@ re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
                    \relax 
 l.36 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
                                                   \subsection{D\-E\-S\-C\-R\...
-) (c:\Users\benzap\Desktop\armyengine\docs\latex\d6/d63/_event_system_8h.tex
+) (C:\Users\benzap\Desktop\armyengine\docs\latex\d6/d63/_event_system_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--11
 
  []
@@ -2247,7 +2302,59 @@ re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
 l.53 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
                                                   \subsection{D\-E\-S\-C\-R\...
 [93])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d0/d9e/_position_component_8h.te
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d1/d1a/_input_component_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_textu
+re_manager_8h_LICENSE}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.23 ...rget{d5/d67/_texture_manager_8h_LICENSE}{}
+                                                  \subsection{L\-I\-C\-E\-N\...
+pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_textu
+re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.30 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
+                                                  \subsection{D\-E\-S\-C\-R\...
+) (C:\Users\benzap\Desktop\armyengine\docs\latex\d4/d08/_input_system_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--9
+
+ []
+
+[94]pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_t
+exture_manager_8h_LICENSE}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.20 ...rget{d5/d67/_texture_manager_8h_LICENSE}{}
+                                                  \subsection{L\-I\-C\-E\-N\...
+pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_textu
+re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.27 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
+                                                  \subsection{D\-E\-S\-C\-R\...
+) (C:\Users\benzap\Desktop\armyengine\docs\latex\df/d81/_main_entity_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+[95]pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_t
+exture_manager_8h_LICENSE}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.17 ...rget{d5/d67/_texture_manager_8h_LICENSE}{}
+                                                  \subsection{L\-I\-C\-E\-N\...
+pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_textu
+re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.24 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
+                                                  \subsection{D\-E\-S\-C\-R\...
+)
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d0/d9e/_position_component_8h.te
 x
 Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
@@ -2265,14 +2372,14 @@ re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
                    \relax 
 l.24 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
                                                   \subsection{D\-E\-S\-C\-R\...
-) (c:\Users\benzap\Desktop\armyengine\docs\latex\df/d3c/_shape_component_8h.tex
-
+) (C:\Users\benzap\Desktop\armyengine\docs\latex\df/d3c/_shape_component_8h.tex
+[96]
 Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
  []
 
-[94]pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_t
-exture_manager_8h_LICENSE}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_textu
+re_manager_8h_LICENSE}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.17 ...rget{d5/d67/_texture_manager_8h_LICENSE}{}
@@ -2283,13 +2390,13 @@ re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
                    \relax 
 l.24 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
                                                   \subsection{D\-E\-S\-C\-R\...
-) (c:\Users\benzap\Desktop\armyengine\docs\latex\d4/d09/_shape_manager_8h.tex
+) (C:\Users\benzap\Desktop\armyengine\docs\latex\d4/d09/_shape_manager_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_textu
-re_manager_8h_LICENSE}) has been already used, duplicate ignored
+[97]pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_t
+exture_manager_8h_LICENSE}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.19 ...rget{d5/d67/_texture_manager_8h_LICENSE}{}
@@ -2300,8 +2407,26 @@ re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
                    \relax 
 l.26 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
                                                   \subsection{D\-E\-S\-C\-R\...
-[95])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\dc/de1/_sprite_manager_8h.tex
+)
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d9/d41/_sprite_component_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_textu
+re_manager_8h_LICENSE}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.17 ...rget{d5/d67/_texture_manager_8h_LICENSE}{}
+                                                  \subsection{L\-I\-C\-E\-N\...
+pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_textu
+re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.24 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
+                                                  \subsection{D\-E\-S\-C\-R\...
+[98])
+(C:\Users\benzap\Desktop\armyengine\docs\latex\dc/de1/_sprite_manager_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 
  []
@@ -2318,14 +2443,32 @@ re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
                    \relax 
 l.45 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
                                                   \subsection{D\-E\-S\-C\-R\...
-[96])
-(c:\Users\benzap\Desktop\armyengine\docs\latex\d8/d8f/_state_component_8h.tex
-Underfull \hbox (badness 10000) in paragraph at lines 4--6
+) (C:\Users\benzap\Desktop\armyengine\docs\latex\d0/d47/_sprite_system_8h.tex
+[99]
+Underfull \hbox (badness 10000) in paragraph at lines 4--10
 
  []
 
 pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_textu
 re_manager_8h_LICENSE}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.30 ...rget{d5/d67/_texture_manager_8h_LICENSE}{}
+                                                  \subsection{L\-I\-C\-E\-N\...
+pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_textu
+re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.37 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
+                                                  \subsection{D\-E\-S\-C\-R\...
+) (C:\Users\benzap\Desktop\armyengine\docs\latex\d8/d8f/_state_component_8h.tex
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+[100]pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_
+texture_manager_8h_LICENSE}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.23 ...rget{d5/d67/_texture_manager_8h_LICENSE}{}
@@ -2336,31 +2479,13 @@ re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
                    \relax 
 l.30 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
                                                   \subsection{D\-E\-S\-C\-R\...
-) (c:\Users\benzap\Desktop\armyengine\docs\latex\d1/dbb/_text_component_8h.tex
-[97]
-Underfull \hbox (badness 10000) in paragraph at lines 4--6
+) (C:\Users\benzap\Desktop\armyengine\docs\latex\db/d97/_state_manager_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
 
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_textu
-re_manager_8h_LICENSE}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.17 ...rget{d5/d67/_texture_manager_8h_LICENSE}{}
-                                                  \subsection{L\-I\-C\-E\-N\...
-pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_textu
-re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.24 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
-                                                  \subsection{D\-E\-S\-C\-R\...
-) (c:\Users\benzap\Desktop\armyengine\docs\latex\d8/d78/_text_manager_8h.tex
-Underfull \hbox (badness 10000) in paragraph at lines 4--8
-
- []
-
-[98]pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_t
-exture_manager_8h_LICENSE}) has been already used, duplicate ignored
+[101]pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_
+texture_manager_8h_LICENSE}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.28 ...rget{d5/d67/_texture_manager_8h_LICENSE}{}
@@ -2371,8 +2496,59 @@ re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
                    \relax 
 l.35 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
                                                   \subsection{D\-E\-S\-C\-R\...
-) (c:\Users\benzap\Desktop\armyengine\docs\latex\d5/d67/_texture_manager_8h.tex
+) (C:\Users\benzap\Desktop\armyengine\docs\latex\db/d38/_system_manager_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--8
 
+ []
+
+[102]pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_
+texture_manager_8h_LICENSE}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.26 ...rget{d5/d67/_texture_manager_8h_LICENSE}{}
+                                                  \subsection{L\-I\-C\-E\-N\...
+pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_textu
+re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.33 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
+                                                  \subsection{D\-E\-S\-C\-R\...
+) (C:\Users\benzap\Desktop\armyengine\docs\latex\d1/dbb/_text_component_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_textu
+re_manager_8h_LICENSE}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.17 ...rget{d5/d67/_texture_manager_8h_LICENSE}{}
+                                                  \subsection{L\-I\-C\-E\-N\...
+[103]pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_
+texture_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.24 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
+                                                  \subsection{D\-E\-S\-C\-R\...
+) (C:\Users\benzap\Desktop\armyengine\docs\latex\d8/d78/_text_manager_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--8
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_textu
+re_manager_8h_LICENSE}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.28 ...rget{d5/d67/_texture_manager_8h_LICENSE}{}
+                                                  \subsection{L\-I\-C\-E\-N\...
+pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_textu
+re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.35 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
+                                                  \subsection{D\-E\-S\-C\-R\...
+[104])
+(C:\Users\benzap\Desktop\armyengine\docs\latex\d5/d67/_texture_manager_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 
  []
@@ -2383,25 +2559,23 @@ re_manager_8h_LICENSE}) has been already used, duplicate ignored
                    \relax 
 l.29 ...rget{d5/d67/_texture_manager_8h_LICENSE}{}
                                                   \subsection{L\-I\-C\-E\-N\...
-[99]pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_t
-exture_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{d5/d67/_textu
+re_manager_8h_DESCRIPTION}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.36 ...{d5/d67/_texture_manager_8h_DESCRIPTION}{}
                                                   \subsection{D\-E\-S\-C\-R\...
-) (c:\Users\benzap\Desktop\armyengine\docs\latex\refman.ind [100] [101
+) (C:\Users\benzap\Desktop\armyengine\docs\latex\refman.ind [105] [106
 
 ]
-[102] [103] [104
-
-])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 134.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 134.
- (c:\Users\benzap\Desktop\armyengine\docs\latex\refman.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 134.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 134.
+[107] [108] [109])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 141.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
+ (C:\Users\benzap\Desktop\armyengine\docs\latex\refman.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 141.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 141.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 861C467FF39636E37EF8DF02A8D6F41C;51971.
+(rerunfilecheck)             Checksum: 4F60948BF64601D86695E1643E1574AF;59859.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2412,13 +2586,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 134.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
  ) 
 Here is how much of TeX's memory you used:
- 15613 strings out of 493921
- 255913 string characters out of 3147280
+ 15794 strings out of 493921
+ 260393 string characters out of 3147280
  305886 words of memory out of 3000000
- 17492 multiletter control sequences out of 15000+200000
+ 17557 multiletter control sequences out of 15000+200000
  94733 words of font info for 153 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  41i,13n,58p,798b,526s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2433,9 +2607,9 @@ etic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8ac.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8ac.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (116 pages, 935497 bytes).
+Output written on refman.pdf (121 pages, 1007279 bytes).
 PDF statistics:
- 4276 PDF objects out of 4296 (max. 8388607)
- 941 named destinations out of 1000 (max. 500000)
- 2638 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4688 PDF objects out of 5155 (max. 8388607)
+ 1029 named destinations out of 1200 (max. 500000)
+ 3030 words of extra memory for PDF output out of 10000 (max. 10000000)
 
