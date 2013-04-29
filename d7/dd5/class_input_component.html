@@ -90,6 +90,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="title">InputComponent Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Used to give an entity control over specific inputs from the user.  
+ <a href="../../d7/dd5/class_input_component.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d1/d1a/_input_component_8h_source.html">InputComponent.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Inheritance diagram for InputComponent:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -104,11 +109,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7ec9e027456cc12c71f5ecfae11902f0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ec9e027456cc12c71f5ecfae11902f0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>InputComponent</b> (std::string)</td></tr>
-<tr class="separator:a7ec9e027456cc12c71f5ecfae11902f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1577c43e70f7e7f4ac6647fb4a8563fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_input_component.html#a1577c43e70f7e7f4ac6647fb4a8563fa">update</a> ()</td></tr>
-<tr class="memdesc:a1577c43e70f7e7f4ac6647fb4a8563fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the component based on the current set of attributes.  <a href="#a1577c43e70f7e7f4ac6647fb4a8563fa">More...</a><br/></td></tr>
+<tr class="memitem:a903992fd159592568f3e365f2c625bd5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_input_component.html#a903992fd159592568f3e365f2c625bd5">InputComponent</a> (std::string name)</td></tr>
+<tr class="memdesc:a903992fd159592568f3e365f2c625bd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a903992fd159592568f3e365f2c625bd5">More...</a><br/></td></tr>
+<tr class="separator:a903992fd159592568f3e365f2c625bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1577c43e70f7e7f4ac6647fb4a8563fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1577c43e70f7e7f4ac6647fb4a8563fa"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_input_component.html#a1577c43e70f7e7f4ac6647fb4a8563fa">update</a> ()</td></tr>
+<tr class="memdesc:a1577c43e70f7e7f4ac6647fb4a8563fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not implemented. <br/></td></tr>
 <tr class="separator:a1577c43e70f7e7f4ac6647fb4a8563fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_abstract_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_abstract_component')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d1/dae/class_abstract_component.html">AbstractComponent</a></td></tr>
 <tr class="memitem:ab08b845eddbdbe411b95a5385501ab97 inherit pub_methods_class_abstract_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab08b845eddbdbe411b95a5385501ab97"></a>
@@ -181,36 +187,53 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAttribute</b> (con
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setAttribute</b> (const std::string &amp;, <a class="el" href="../../d7/d6e/_abstract_component_8h.html#a8bf1376a7e433919172c6631520f34b4">componentIntegerArrayType</a>)</td></tr>
 <tr class="separator:aa3eaa7fd9ee9ad045d04c1b2cda62edb inherit pub_methods_class_abstract_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a1577c43e70f7e7f4ac6647fb4a8563fa"></a>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Used to give an entity control over specific inputs from the user. </p>
+<p>Input component is a special <a class="el" href="../../d0/d07/class_state_component.html" title="Used to store entity state (Not currently used)">StateComponent</a> that will trigger a callback when a provided input is used.</p>
+<p>Provided inputs include "Keyboard" and "Mouse" Depending on which one is chosen, the resulting attributes searched will also vary. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a903992fd159592568f3e365f2c625bd5"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int InputComponent::update </td>
+          <td class="memname">InputComponent::InputComponent </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Updates the component based on the current set of attributes. </p>
-<p>Used to update the component. This should be performed after modifications have been made on the component's attributes or members.</p>
-<dl class="section return"><dt>Returns</dt><dd>Returns a non-zero value if it is successful. </dd></dl>
-
-<p>Implements <a class="el" href="../../d1/dae/class_abstract_component.html#a35c9cab4e3845a947609b6ada8dc89cf">AbstractComponent</a>.</p>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                           {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div><!-- fragment -->
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>is the unique name assigned to this component. The family is overriden from the abstract component to be "Input" </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;                                             :</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="../../d1/dae/class_abstract_component.html#ab08b845eddbdbe411b95a5385501ab97" title="Constructor for abstract component.">AbstractComponent</a>(name, COMPONENT_FAMILY_INPUT) {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="comment">//input component is processed only when it&#39;s enabled</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    this-&gt;<a class="code" href="../../d1/dae/class_abstract_component.html#aca84c14d196467bda6aff90521b1ae7f" title="Set the attribute for the given key with the given integer value.">setAttribute_int</a>(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a4c775095baf8a9c99621ad9ad3b622db" title="Determines whether the given component is enabled.">ATTRIBUTE_ENABLE</a>, 1);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">//callback function key for the callback to be called from</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">// CallbackManager</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    this-&gt;<a class="code" href="../../d1/dae/class_abstract_component.html#a702ec2cc2624561ef51afcd9c8061fd2" title="Set the attribute for the given key with the given string value.">setAttribute_string</a>(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a8602d00b356bb7e6ba95069a94fd5555" title="Contains the name of the callback.">ATTRIBUTE_CALLBACK</a>, <span class="stringliteral">&quot;None&quot;</span>);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">//determine the input type [&quot;Move&quot;, &quot;Scroll&quot;, &quot;ButtonPressed&quot;, &quot;ButtonReleased&quot;]</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">//by default it will get button presses</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    this-&gt;<a class="code" href="../../d1/dae/class_abstract_component.html#a702ec2cc2624561ef51afcd9c8061fd2" title="Set the attribute for the given key with the given string value.">setAttribute_string</a>(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#ac79ef953fa968e5d47da814b8d79263c" title="Attribute to assign the type of input for the input component.">ATTRIBUTE_INPUT_TYPE</a>, <a class="code" href="../../d5/dea/_a_e___events_8h.html#a7274317c7bc468f9f3a2acb0c3c1af9e" title="Represents the keyboard button pressed event.">INPUT_KEYBOARD_PRESSED</a>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">//For events, we need to provide a means in which to retrieve the given event</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">//so we provide an index to resemble the position within the EventManager eventList</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">//Don&#39;t define it for safety reasons</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">//this-&gt;setAttribute_int(&quot;EventIndex&quot;, 0);</span></div>
+}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -220,7 +243,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAttribute</b> (con
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 27 2013 16:51:59 for Armyengine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 29 2013 15:13:29 for Armyengine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

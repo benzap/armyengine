@@ -90,6 +90,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="title">SpriteSystem Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Used to display Text, Sprite, and Shape components.  
+ <a href="../../d8/df1/class_sprite_system.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d0/d47/_sprite_system_8h_source.html">SpriteSystem.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Inheritance diagram for SpriteSystem:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -104,11 +109,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a48fdbbca36dc69068c31fdc065ea92a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48fdbbca36dc69068c31fdc065ea92a8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SpriteSystem</b> (sf::RenderWindow &amp;)</td></tr>
-<tr class="separator:a48fdbbca36dc69068c31fdc065ea92a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0303dbb745168bbf0278e4f9a6b5be0c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/df1/class_sprite_system.html#a0303dbb745168bbf0278e4f9a6b5be0c">process</a> ()</td></tr>
-<tr class="memdesc:a0303dbb745168bbf0278e4f9a6b5be0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform actions on entities.  <a href="#a0303dbb745168bbf0278e4f9a6b5be0c">More...</a><br/></td></tr>
+<tr class="memitem:ae08866e84466a0b6564f2a67cca629c9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/df1/class_sprite_system.html#ae08866e84466a0b6564f2a67cca629c9">SpriteSystem</a> (sf::RenderWindow &amp;window)</td></tr>
+<tr class="memdesc:ae08866e84466a0b6564f2a67cca629c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requires a window reference in order to display the sprites.  <a href="#ae08866e84466a0b6564f2a67cca629c9">More...</a><br/></td></tr>
+<tr class="separator:ae08866e84466a0b6564f2a67cca629c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0303dbb745168bbf0278e4f9a6b5be0c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0303dbb745168bbf0278e4f9a6b5be0c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/df1/class_sprite_system.html#a0303dbb745168bbf0278e4f9a6b5be0c">process</a> ()</td></tr>
+<tr class="memdesc:a0303dbb745168bbf0278e4f9a6b5be0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the entities and displays Text, Shape and Sprite components. <br/></td></tr>
 <tr class="separator:a0303dbb745168bbf0278e4f9a6b5be0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_abstract_system"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_abstract_system')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d0/d74/class_abstract_system.html">AbstractSystem</a></td></tr>
 <tr class="memitem:aa298e56d5a792e662f83a28b9a38ff6b inherit pub_methods_class_abstract_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa298e56d5a792e662f83a28b9a38ff6b"></a>
@@ -131,246 +137,38 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:ac0d16e94f5cea4b1a6bf489d35d7a14d inherit pro_attribs_class_abstract_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">a pointer to the entity manager singleton <br/></td></tr>
 <tr class="separator:ac0d16e94f5cea4b1a6bf489d35d7a14d inherit pro_attribs_class_abstract_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a0303dbb745168bbf0278e4f9a6b5be0c"></a>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Used to display Text, Sprite, and Shape components. </p>
+<p>Sprite system, used to read from entities, find the Sprite Component and determine if the entity should be drawn to the screen. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ae08866e84466a0b6564f2a67cca629c9"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int SpriteSystem::process </td>
+          <td class="memname">SpriteSystem::SpriteSystem </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">sf::RenderWindow &amp;&#160;</td>
+          <td class="paramname"><em>window</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Perform actions on entities. </p>
-<p>The process method is a pure virtual function that processes all of th entities stored within the entity manager. Some systems do not use the entity manager for processing, but may process other things that require processing per frame.</p>
-<p>What is processed is fully dependant on the implementation.</p>
-<dl class="section return"><dt>Returns</dt><dd>A non-zero value if the processing was successful. </dd></dl>
-
-<p>Implements <a class="el" href="../../d0/d74/class_abstract_system.html#af8bfe74feb5df2b5e3fff67bfe1106b9">AbstractSystem</a>.</p>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                          {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">//first we need to grab the list of entities</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">//for now, we&#39;re going to grab all of the entities</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">auto</span> entityVector = this-&gt;<a class="code" href="../../d0/d74/class_abstract_system.html#ac0d16e94f5cea4b1a6bf489d35d7a14d" title="a pointer to the entity manager singleton">entityManager</a>-&gt;<a class="code" href="../../d0/d89/class_entity_manager.html#a452113e422a9c501bb008761f7609e33" title="Gets all of the entities within the manager.">getAllEntities</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    std::list&lt;std::shared_ptr&lt;entityType&gt;&gt; entityList;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> entityValue : entityVector) {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        entityList.push_back(entityValue);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">//sort the entities based on it&#39;s Z-buffer. The sorting criteria is based on the minimum Z-buffer found</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// within the entities</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> entity : entityList) {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">//determine if the entity has the desired components to work with</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">if</span> ((!entity-&gt;hasComponentFamily(<span class="stringliteral">&quot;Sprite&quot;</span>) ||</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            !entity-&gt;hasComponentFamily(<span class="stringliteral">&quot;Position&quot;</span>)) &amp;&amp;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            (!entity-&gt;hasComponentFamily(<span class="stringliteral">&quot;Shape&quot;</span>) ||</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            !entity-&gt;hasComponentFamily(<span class="stringliteral">&quot;Position&quot;</span>)) &amp;&amp;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            (!entity-&gt;hasComponentFamily(<span class="stringliteral">&quot;Text&quot;</span>) ||</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            !entity-&gt;hasComponentFamily(<span class="stringliteral">&quot;Position&quot;</span>))) {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="comment">//grab all of the desired components</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">auto</span> theSpriteComponents = entity-&gt;getComponentsByFamily(<span class="stringliteral">&quot;Sprite&quot;</span>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">auto</span> theShapeComponents = entity-&gt;getComponentsByFamily(<span class="stringliteral">&quot;Shape&quot;</span>);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">auto</span> theTextComponents = entity-&gt;getComponentsByFamily(<span class="stringliteral">&quot;Text&quot;</span>);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">auto</span> thePositionComponents = entity-&gt;getComponentsByFamily(<span class="stringliteral">&quot;Position&quot;</span>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="comment">//merge the shape, sprite and text components within the same list</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        std::list&lt;std::shared_ptr&lt;componentType&gt;&gt; drawableComponents;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> sprite : theSpriteComponents) {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            drawableComponents.push_back(sprite);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> shape : theShapeComponents) {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            drawableComponents.push_back(shape);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> text : theTextComponents) {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            drawableComponents.push_back(text);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">//we need to sort the drawables based on the provided Z-Buffer Attribute</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        drawableComponents.sort([] (std::shared_ptr&lt;componentType&gt; first, std::shared_ptr&lt;componentType&gt; second) {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordtype">float</span> zFirst = first-&gt;getAttribute_float(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#af11539bb711833d6321aaccd369e9e4b" title="Represents depth.">ATTRIBUTE_ZBUFFER</a>);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordtype">float</span> zSecond = second-&gt;getAttribute_float(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#af11539bb711833d6321aaccd369e9e4b" title="Represents depth.">ATTRIBUTE_ZBUFFER</a>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">return</span> (zFirst &lt; zSecond);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        });</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment">//we are going limit the scope of entities to one position component for now</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        assert(thePositionComponents.size() == 1 &amp;&amp; <span class="stringliteral">&quot;Entities are limited to one position component&quot;</span>);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="comment">//now we can just assume that we have only one position component</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keyword">auto</span> positionComponent = thePositionComponents.front();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="comment">//grab and store the position and rotation for our entities</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">float</span> positionX = positionComponent-&gt;getAttribute_float(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#af6d494c0177e73da9ce2c06e77d8ca03" title="position attribute X">ATTRIBUTE_POSITION_X</a>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordtype">float</span> positionY = positionComponent-&gt;getAttribute_float(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a38e831ab6c249750393e3007fa035507" title="position attribute Y">ATTRIBUTE_POSITION_Y</a>);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">float</span> rotation = positionComponent-&gt;getAttribute_float(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a70254d936ce8b3662e1a7472c36832d5" title="position, sprite, and shape rotation">ATTRIBUTE_ROTATION</a>);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="comment">//next, we need to process each sprite component and offset it</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="comment">//by the position component</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="comment">//TODO: sort by Z-buffer</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> theComponent : drawableComponents) {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="comment">//first, we determine if the sprite is enabled to draw</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordtype">int</span> bEnabled = theComponent-&gt;getAttribute_int(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a4c775095baf8a9c99621ad9ad3b622db" title="Determines whether the given component is enabled.">ATTRIBUTE_ENABLE</a>);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">if</span> (!bEnabled) {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="comment">//Intialize our drawable ptr object</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            std::shared_ptr&lt;sf::Drawable&gt; theDrawable;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            std::shared_ptr&lt;sf::Transformable&gt; theTransform;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            std::shared_ptr&lt;sf::Shape&gt; theShape;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            std::shared_ptr&lt;spriteType&gt; theSprite;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            std::shared_ptr&lt;sf::CircleShape&gt; theCircle;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            std::shared_ptr&lt;sf::RectangleShape&gt; theRectangle;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            std::shared_ptr&lt;sf::ConvexShape&gt; theConvexShape;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            std::shared_ptr&lt;sf::Text&gt; theText;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="comment">//get our sprite from the shape component, or use the default</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordflow">if</span> (theComponent-&gt;getFamily() == <span class="stringliteral">&quot;Sprite&quot;</span>) {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                <span class="keywordtype">bool</span> bDefault = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="comment">//get the name of the sprite key name being stored in the manager</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                std::string spriteName = theComponent-&gt;getAttribute_string(<span class="stringliteral">&quot;SpriteName&quot;</span>);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                <span class="comment">//Check if the sprite being used is the default</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="keywordflow">if</span> (spriteName != <span class="stringliteral">&quot;None&quot;</span>) {</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    bDefault = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                }</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                <span class="comment">//if it&#39;s a default, use the default sprite image</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                <span class="keywordflow">if</span> (bDefault) {</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                    theSprite = this-&gt;spriteManager-&gt;<a class="code" href="../../d2/ddd/class_sprite_manager.html#a8473bca1fad87ad11cb2249eb810889e" title="Gets the sprite by the given unique name.">getSprite</a>(<a class="code" href="../../dc/de1/_sprite_manager_8h.html#a68f8f7c1ee25829a75d9c4f6a092ff8f" title="the default sprite to use when no sprite has been provided">DEFAULT_SPRITE</a>);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                }</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                <span class="comment">//else, grab our sprite TODO: checking</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                <span class="keywordflow">else</span> { <span class="comment">//bDefault == false</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                    theSprite = this-&gt;spriteManager-&gt;<a class="code" href="../../d2/ddd/class_sprite_manager.html#a8473bca1fad87ad11cb2249eb810889e" title="Gets the sprite by the given unique name.">getSprite</a>(spriteName);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                }</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <span class="comment">//cast to a drawable and a transformable</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                theTransform = std::static_pointer_cast&lt;sf::Transformable&gt; (theSprite);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                assert(theTransform != <span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;Nullptr in transform&quot;</span>);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                theDrawable = std::static_pointer_cast&lt;sf::Drawable&gt; (theSprite);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                assert(theDrawable != <span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;Nullptr in drawable&quot;</span>);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            } <span class="comment">//END if (theComponent-&gt;getFamily() == &quot;Sprite&quot;) { ...</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="comment">//figure out the shape to place within our sprite</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (theComponent-&gt;getFamily() == <span class="stringliteral">&quot;Shape&quot;</span>) {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                <span class="comment">//intialize the shape base class</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                std::string shapeType = theComponent-&gt;getAttribute_string(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a4f8798cc305e537725c57bb8f47ba740" title="Represents the shape type to use.">ATTRIBUTE_SHAPE_TYPE</a>);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                <span class="keywordflow">if</span> (shapeType == <a class="code" href="../../d0/d73/_a_e___attributes_8h.html#ab5acdc705507cd35bfe5a25d403aaef7" title="Circle Shape Type.">SHAPETYPE_CIRCLE</a>) {</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                    theCircle = shapeManager-&gt;<a class="code" href="../../d0/d65/class_shape_manager.html#a7767defde1e2e295054cbe7e0084b0f7" title="Get the circle shape by the given key name.">getCircleShape</a>(theComponent-&gt;getAttribute_string(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a38d48cad306c55d90faa362aa5023de8" title="Represents a unique keyname.">ATTRIBUTE_KEYNAME</a>));</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                    theShape = std::static_pointer_cast&lt;sf::Shape&gt; (theCircle);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                    assert(theShape != <span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;Nullptr in circle shape&quot;</span>);</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                }</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (shapeType == <a class="code" href="../../d0/d73/_a_e___attributes_8h.html#afcd66434a1fe0cb68cca8dbd87a596f9" title="Rectangle Shape Type.">SHAPETYPE_RECTANGLE</a>) {</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                    theRectangle = shapeManager-&gt;<a class="code" href="../../d0/d65/class_shape_manager.html#ae6db2abfe598532e3a04634377958bab" title="Get the rectangle shape by the given key name.">getRectangleShape</a>(theComponent-&gt;getAttribute_string(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a38d48cad306c55d90faa362aa5023de8" title="Represents a unique keyname.">ATTRIBUTE_KEYNAME</a>)); </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                    <span class="comment">//cast it to the base class sf::Shape</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                    theShape = std::static_pointer_cast&lt;sf::Shape&gt; (theRectangle);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                    assert(theShape != <span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;Nullptr in rectangle shape&quot;</span>);</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                }</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (shapeType == <a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a8cdd66786d6e0ac4a43efc26533ff4e1" title="Polygon Shape Type.">SHAPETYPE_POLYGON</a>) {</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                    theConvexShape = shapeManager-&gt;<a class="code" href="../../d0/d65/class_shape_manager.html#a0a07b7e7690736e972a17c31cf6ea7af" title="Get the convex polygon with the given key name.">getConvexShape</a>(theComponent-&gt;getAttribute_string(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a38d48cad306c55d90faa362aa5023de8" title="Represents a unique keyname.">ATTRIBUTE_KEYNAME</a>));</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                    <span class="comment">//cast to the base class sf::Shape</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                    theShape = std::static_pointer_cast&lt;sf::Shape&gt; (theConvexShape);</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                    assert(theShape != <span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;Nullptr in convex shape&quot;</span>);</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                }</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                    assert(0 &amp;&amp; <span class="stringliteral">&quot;Shape Type does not exist&quot;</span>);</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                }</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                <span class="comment">//we cast to pointers representing transformable</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                <span class="comment">//  and drawable objects in order to relate to the other given sprite</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                <span class="comment">//  class. This allows it to be transformed like the sprite</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                theTransform = std::static_pointer_cast&lt;sf::Transformable&gt; (theShape);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                assert(theTransform != <span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;Nullptr in shape transform&quot;</span>);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                theDrawable = std::static_pointer_cast&lt;sf::Drawable&gt; (theShape);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                assert(theDrawable != <span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;Nullptr in shape drawable&quot;</span>);</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            } <span class="comment">//END if (theComponent-&gt;getFamily() == &quot;Shape&quot;) { ...</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (theComponent-&gt;getFamily() == <span class="stringliteral">&quot;Text&quot;</span>) {</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                theText = textManager-&gt;<a class="code" href="../../d1/d47/class_text_manager.html#abb1b5688839e2da0a14e6c6527438b43" title="Get text from the text manager.">getText</a>(theComponent-&gt;getAttribute_string(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a38d48cad306c55d90faa362aa5023de8" title="Represents a unique keyname.">ATTRIBUTE_KEYNAME</a>));</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                <span class="comment">//we cast to pointers representing transformable</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                <span class="comment">//  and drawable objects in order to relate to the other given sprite</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                <span class="comment">//  class. This allows it to be transformed like the sprite</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                theTransform = std::static_pointer_cast&lt;sf::Transformable&gt; (theText);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                assert(theTransform != <span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;Nullptr in shape transform&quot;</span>);</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                theDrawable = std::static_pointer_cast&lt;sf::Drawable&gt; (theText);</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                assert(theDrawable != <span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;Nullptr in shape drawable&quot;</span>);</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            }<span class="comment">//END else if (theComponent-&gt;getFamily() == &quot;Text&quot;) {</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="comment">//grab the rest of the desired attributes</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="comment">//get the transformable offset, which is </span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <span class="comment">//  relative to the position component and its offset</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keywordtype">float</span> offsetX = theComponent-&gt;getAttribute_float(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#aa003b6ad3f43053c9d43e1acc0098691" title="Offset of the component from the position component X.">ATTRIBUTE_OFFSET_X</a>) +</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                positionComponent-&gt;getAttribute_float(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#aa003b6ad3f43053c9d43e1acc0098691" title="Offset of the component from the position component X.">ATTRIBUTE_OFFSET_X</a>);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="keywordtype">float</span> offsetY = theComponent-&gt;getAttribute_float(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a8ebf91b8ee9dfdfad18bc10c3c42d564" title="Offset of the component from the position component Y.">ATTRIBUTE_OFFSET_Y</a>) + </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                positionComponent-&gt;getAttribute_float(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a8ebf91b8ee9dfdfad18bc10c3c42d564" title="Offset of the component from the position component Y.">ATTRIBUTE_OFFSET_Y</a>);</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="comment">//get the transformable scale</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="keywordtype">float</span> scaleX = theComponent-&gt;getAttribute_float(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a8104e81b9e1e7fd7e21f1f5f850ca636" title="determines the scale of the the sprite, or shape X">ATTRIBUTE_SCALE_X</a>);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="keywordtype">float</span> scaleY = theComponent-&gt;getAttribute_float(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#aa800ca9799c1b216f086becf36509ea5" title="determines the scale of the the sprite, or shape Y">ATTRIBUTE_SCALE_Y</a>);</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="comment">//get the transformable origin point</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordtype">float</span> originX = theComponent-&gt;getAttribute_float(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a5c5a5ae3ea4130db3dfd08029a17a17c" title="Represents the center origin for X.">ATTRIBUTE_ORIGIN_X</a>);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="keywordtype">float</span> originY = theComponent-&gt;getAttribute_float(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#af45315d7cdc2f4ecdb28d0a9d6bb15c7" title="Represents the center origin for X.">ATTRIBUTE_ORIGIN_Y</a>);</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="comment">//get the rotation of the transformable relative to the position</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <span class="keywordtype">float</span> spriteRotation = theComponent-&gt;getAttribute_float(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a70254d936ce8b3662e1a7472c36832d5" title="position, sprite, and shape rotation">ATTRIBUTE_ROTATION</a>);</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <span class="comment">//PERFORM TRANSFORM OPERATIONS</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="comment">//First we set the origin of our transformable object</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            theTransform-&gt;setOrigin(originX, originY);</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="comment">//SFML rotation is presented in degrees, converting from radians</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="keywordtype">float</span> rot = ((rotation + spriteRotation) / (2.f * <a class="code" href="../../dd/d08/_a_e___utilities_8h.html#a598a3330b3c21701223ee0ca14316eca" title="The math constant Pi.">PI</a>)) * 360.f;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="comment">//fix the angle between 0 and 360 degrees</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <span class="keywordflow">if</span> (rot &gt;= 360) {</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                <span class="keywordtype">int</span> numRotations = (int)rot / 360;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                rot = rot - 360 * numRotations;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            }</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <span class="comment">//given situations where it is close to zero, set it to zero</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            <span class="keywordflow">if</span> ((<span class="keywordtype">int</span>)rot % 360 == 0){</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                <span class="keywordflow">if</span> ((rot - floor(rot)) &lt; FULL_ROTATION_THRESHOLD) {</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                    theComponent-&gt;setAttribute_float(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a70254d936ce8b3662e1a7472c36832d5" title="position, sprite, and shape rotation">ATTRIBUTE_ROTATION</a>, 0.);</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                    positionComponent-&gt;setAttribute_float(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a70254d936ce8b3662e1a7472c36832d5" title="position, sprite, and shape rotation">ATTRIBUTE_ROTATION</a>, 0.);</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                    rot = 0;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                }</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            }</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            theTransform-&gt;setRotation(rot);</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            <span class="comment">//Scale the sprite</span></div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            theTransform-&gt;setScale(scaleX, scaleY);</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            <span class="comment">//move the sprite</span></div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="comment">//we need to correct for the changed origin</span></div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            theTransform-&gt;setPosition(</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                positionX + offsetX, </div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                positionY + offsetY</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                );</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <span class="comment">//Finally, draw our sprite</span></div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            window.draw(*theDrawable);</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        } <span class="comment">//END for (auto theComponent : ...</span></div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    } <span class="comment">//END for (auto entity : ...</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;}</div><!-- fragment -->
+<p>Requires a window reference in order to display the sprites. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td>is the window reference. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                                                 : </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="../../d0/d74/class_abstract_system.html#aa298e56d5a792e662f83a28b9a38ff6b" title="Abstract system constructor.">AbstractSystem</a>(<span class="stringliteral">&quot;Sprite&quot;</span>), </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    window(window), </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    spriteManager(<a class="code" href="../../d2/ddd/class_sprite_manager.html#a575172f8b08b9e3f1f2d31f21412e14c" title="Singleton class method to get the single instance.">SpriteManager::getInstance</a>()),</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    textManager(<a class="code" href="../../d1/d47/class_text_manager.html#abf9e79079b6ccf917b3cd3a100c7e7bb" title="Singleton method, retrieves the single instance.">TextManager::getInstance</a>()),</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    shapeManager(<a class="code" href="../../d0/d65/class_shape_manager.html#a94d827d6ef5cd970b05886b95fd32ece" title="Singleton method to return the shape manager instance.">ShapeManager::getInstance</a>()) {}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -380,7 +178,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 27 2013 16:52:02 for Armyengine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 29 2013 15:13:31 for Armyengine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

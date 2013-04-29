@@ -90,6 +90,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="title">SpriteComponent Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Used to represent sprites for a given entity.  
+ <a href="../../d4/df5/class_sprite_component.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d9/d41/_sprite_component_8h_source.html">SpriteComponent.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Inheritance diagram for SpriteComponent:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -104,11 +109,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a823876c6030fe292839b4e4b35f46391"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a823876c6030fe292839b4e4b35f46391"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SpriteComponent</b> (std::string)</td></tr>
-<tr class="separator:a823876c6030fe292839b4e4b35f46391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36cebab8b302188e1d6eddd24a166708"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df5/class_sprite_component.html#a36cebab8b302188e1d6eddd24a166708">SpriteComponent</a> (std::string name)</td></tr>
+<tr class="separator:a36cebab8b302188e1d6eddd24a166708"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3518ccb69a3c829d5dcdc2dc024447ea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df5/class_sprite_component.html#a3518ccb69a3c829d5dcdc2dc024447ea">update</a> ()</td></tr>
-<tr class="memdesc:a3518ccb69a3c829d5dcdc2dc024447ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the component based on the current set of attributes.  <a href="#a3518ccb69a3c829d5dcdc2dc024447ea">More...</a><br/></td></tr>
+<tr class="memdesc:a3518ccb69a3c829d5dcdc2dc024447ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the sprite reference.  <a href="#a3518ccb69a3c829d5dcdc2dc024447ea">More...</a><br/></td></tr>
 <tr class="separator:a3518ccb69a3c829d5dcdc2dc024447ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_abstract_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_abstract_component')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d1/dae/class_abstract_component.html">AbstractComponent</a></td></tr>
 <tr class="memitem:ab08b845eddbdbe411b95a5385501ab97 inherit pub_methods_class_abstract_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab08b845eddbdbe411b95a5385501ab97"></a>
@@ -181,6 +185,67 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAttribute</b> (con
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setAttribute</b> (const std::string &amp;, <a class="el" href="../../d7/d6e/_abstract_component_8h.html#a8bf1376a7e433919172c6631520f34b4">componentIntegerArrayType</a>)</td></tr>
 <tr class="separator:aa3eaa7fd9ee9ad045d04c1b2cda62edb inherit pub_methods_class_abstract_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Used to represent sprites for a given entity. </p>
+<p>Sprite component is included in an entity to have it display itself given a set of attributes that describe the sprite to use, and the position. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a36cebab8b302188e1d6eddd24a166708"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SpriteComponent::SpriteComponent </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Family is overloaded to "Sprite"</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>is the unique name assigned to the sprite component. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                                               : </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <a class="code" href="../../d1/dae/class_abstract_component.html#ab08b845eddbdbe411b95a5385501ab97" title="Constructor for abstract component.">AbstractComponent</a>(name, <span class="stringliteral">&quot;Sprite&quot;</span>) {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="comment">//determines if the given sprite should be shown</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        <span class="comment">//1 - show sprite</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <span class="comment">//0 - don&#39;t show sprite</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    this-&gt;<a class="code" href="../../d1/dae/class_abstract_component.html#aca84c14d196467bda6aff90521b1ae7f" title="Set the attribute for the given key with the given integer value.">setAttribute_int</a>(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a4c775095baf8a9c99621ad9ad3b622db" title="Determines whether the given component is enabled.">ATTRIBUTE_ENABLE</a>, 1);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="comment">//provides a name of a sprite which is stored within the sprite manager</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="comment">//None is a default sprite, which will be a white square with an X in it</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    this-&gt;<a class="code" href="../../d1/dae/class_abstract_component.html#a702ec2cc2624561ef51afcd9c8061fd2" title="Set the attribute for the given key with the given string value.">setAttribute_string</a>(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a374d6a23ea1ee16468fa4f002bef492f" title="Represents the sprite name.">ATTRIBUTE_SPRITE_NAME</a>, <span class="stringliteral">&quot;None&quot;</span>);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">//This provides the offset of the sprite from its origin within the X and Y direction</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="comment">//Useful for a multisprite entity, you provide an offset to change its placement</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    this-&gt;<a class="code" href="../../d1/dae/class_abstract_component.html#aadaf9dfbb371db5fb21f9c7cf2cbea98" title="Set the attribute for the given key with the given float value.">setAttribute_float</a>(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#aa003b6ad3f43053c9d43e1acc0098691" title="Offset of the component from the position component X.">ATTRIBUTE_OFFSET_X</a>, 0.0);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    this-&gt;<a class="code" href="../../d1/dae/class_abstract_component.html#aadaf9dfbb371db5fb21f9c7cf2cbea98" title="Set the attribute for the given key with the given float value.">setAttribute_float</a>(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a8ebf91b8ee9dfdfad18bc10c3c42d564" title="Offset of the component from the position component Y.">ATTRIBUTE_OFFSET_Y</a>, 0.0);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">//This provides the origin, or center point where rotation and the point of positioning is determined</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    this-&gt;<a class="code" href="../../d1/dae/class_abstract_component.html#aadaf9dfbb371db5fb21f9c7cf2cbea98" title="Set the attribute for the given key with the given float value.">setAttribute_float</a>(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a5c5a5ae3ea4130db3dfd08029a17a17c" title="Represents the center origin for X.">ATTRIBUTE_ORIGIN_X</a>, 0.0);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    this-&gt;<a class="code" href="../../d1/dae/class_abstract_component.html#aadaf9dfbb371db5fb21f9c7cf2cbea98" title="Set the attribute for the given key with the given float value.">setAttribute_float</a>(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#af45315d7cdc2f4ecdb28d0a9d6bb15c7" title="Represents the center origin for X.">ATTRIBUTE_ORIGIN_Y</a>, 0.0);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">//Provides the depth of the sprite, lower means farther away, which means it</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="comment">//will be covered by anything with a higher z-buffer {ex A(0.1) covers B(0.0)}</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    this-&gt;<a class="code" href="../../d1/dae/class_abstract_component.html#aadaf9dfbb371db5fb21f9c7cf2cbea98" title="Set the attribute for the given key with the given float value.">setAttribute_float</a>(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#af11539bb711833d6321aaccd369e9e4b" title="Represents depth.">ATTRIBUTE_ZBUFFER</a>, 1.0);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">//The scale of the sprite being used</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment">//relative to the position component</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    this-&gt;<a class="code" href="../../d1/dae/class_abstract_component.html#aadaf9dfbb371db5fb21f9c7cf2cbea98" title="Set the attribute for the given key with the given float value.">setAttribute_float</a>(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a8104e81b9e1e7fd7e21f1f5f850ca636" title="determines the scale of the the sprite, or shape X">ATTRIBUTE_SCALE_X</a>, 1.0);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    this-&gt;<a class="code" href="../../d1/dae/class_abstract_component.html#aadaf9dfbb371db5fb21f9c7cf2cbea98" title="Set the attribute for the given key with the given float value.">setAttribute_float</a>(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#aa800ca9799c1b216f086becf36509ea5" title="determines the scale of the the sprite, or shape Y">ATTRIBUTE_SCALE_Y</a>, 1.0);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">//Determines the rotation of the sprite</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">//relative to a given position component</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">//given in radians</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    this-&gt;<a class="code" href="../../d1/dae/class_abstract_component.html#aadaf9dfbb371db5fb21f9c7cf2cbea98" title="Set the attribute for the given key with the given float value.">setAttribute_float</a>(<a class="code" href="../../d0/d73/_a_e___attributes_8h.html#a70254d936ce8b3662e1a7472c36832d5" title="position, sprite, and shape rotation">ATTRIBUTE_ROTATION</a>, 0.0);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a3518ccb69a3c829d5dcdc2dc024447ea"></a>
 <div class="memitem">
@@ -203,9 +268,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAttribute</b> (con
 </table>
 </div><div class="memdoc">
 
-<p>Updates the component based on the current set of attributes. </p>
-<p>Used to update the component. This should be performed after modifications have been made on the component's attributes or members.</p>
-<dl class="section return"><dt>Returns</dt><dd>Returns a non-zero value if it is successful. </dd></dl>
+<p>Updates the sprite reference. </p>
+<p>Within the sprite component, the update command is used to set the correct width and height of the rectangular sprite. </p>
 
 <p>Implements <a class="el" href="../../d1/dae/class_abstract_component.html#a35c9cab4e3845a947609b6ada8dc89cf">AbstractComponent</a>.</p>
 <div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                            {</div>
@@ -220,7 +284,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAttribute</b> (con
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 27 2013 16:52:01 for Armyengine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 29 2013 15:13:31 for Armyengine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

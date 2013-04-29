@@ -5,6 +5,7 @@ var searchData=
   ['callbackmanager_2eh',['CallbackManager.h',['../d6/d07/_callback_manager_8h.html',1,'']]],
   ['callbackmaptype',['callbackMapType',['../d6/d07/_callback_manager_8h.html#a02157da2afdd895e55a8749149588e44',1,'CallbackManager.h']]],
   ['checkpolygonlineintersections',['checkPolygonLineIntersections',['../dd/d08/_a_e___utilities_8h.html#a311821f673793602d4fa4e875f637bf7',1,'AE_Utilities.cpp']]],
+  ['circle_5fnum_5fpoints',['CIRCLE_NUM_POINTS',['../d0/d47/_sprite_system_8h.html#a1fe9c7f4d046c1f2f0d8cd0480e815bd',1,'SpriteSystem.h']]],
   ['collision_5fbound_5fcircle',['COLLISION_BOUND_CIRCLE',['../d0/d73/_a_e___attributes_8h.html#a50b28a4aee049371f130f3eafa9c942f',1,'AE_Attributes.h']]],
   ['collision_5fbound_5fpolygon',['COLLISION_BOUND_POLYGON',['../d0/d73/_a_e___attributes_8h.html#a71ab491ab7b44947b07d7b05974387d9',1,'AE_Attributes.h']]],
   ['collision_5fbound_5frectangle',['COLLISION_BOUND_RECTANGLE',['../d0/d73/_a_e___attributes_8h.html#a3a31a6297a55375fdc090f881de08327',1,'AE_Attributes.h']]],
