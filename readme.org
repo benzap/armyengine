@@ -43,6 +43,8 @@
   
   Their is also an html site available at ./docs/html/
 
+  Site for armyengine documentation [[http://benzap.github.io/armyengine/]]
+
 * Upcoming Changes
 
   - Physics Component with Physics System
